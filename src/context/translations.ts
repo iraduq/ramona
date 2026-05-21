@@ -716,7 +716,7 @@ export const translations = {
           tag: "Focus Break",
           detail:
             "Resetare rapida cervicala si trapez. Ideal pentru pauze scurte.",
-          zone: "Cervical & Trapez",
+          zone: "aaa",
         },
         {
           time: "20 Min",
