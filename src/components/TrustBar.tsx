@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
-import pozaDubla from "../assets/pozadubla.jpeg";
+import pozaDubla from "../assets/abcdef.jpeg";
 
 const trustBarStyles = `
   @keyframes botanical-sway { 0%, 100% { transform: rotate(-3deg) translateX(0px); } 50% { transform: rotate(-0.5deg) translateX(5px); } }
@@ -156,7 +156,7 @@ export function TrustBar() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => setHoveredIndex(isHovered ? null : index)}
-                className={`relative rounded-[2rem] sm:rounded-[2.2rem] overflow-hidden transition-all duration-750 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col lg:flex-row ${flexBasis} h-[180px] sm:h-[220px] lg:h-full bg-[#eae6df] cursor-pointer border border-[#1a1816]/5 group`}
+                className={`relative rounded-[2xl] sm:rounded-[2.2rem] overflow-hidden transition-all duration-750 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col lg:flex-row ${flexBasis} aspect-[3/4] sm:aspect-[4/5] lg:aspect-auto lg:h-full bg-[#eae6df] cursor-pointer border border-[#1a1816]/5 group`}
               >
                 <div
                   className="absolute inset-y-0 right-0 transition-all duration-770 ease-[cubic-bezier(0.16,1,0.3,1)] bg-cover bg-center z-0"

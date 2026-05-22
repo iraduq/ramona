@@ -154,24 +154,25 @@ export function Hero() {
                   />
 
                   {/* Desktop stats */}
+                  {/* Desktop stats */}
                   <dl className="grid grid-cols-3 w-full">
                     {[
                       {
-                        value: "120+",
+                        value: t.hero.stats.val1,
                         label: t.hero.stats.companii,
                         sub: t.hero.stats.partenere,
                         s: "si1",
                         l: "sl1",
                       },
                       {
-                        value: "18k",
+                        value: t.hero.stats.val2,
                         label: t.hero.stats.sedinte,
                         sub: t.hero.stats.livrate,
                         s: "si2",
                         l: "sl2",
                       },
                       {
-                        value: "4.9★",
+                        value: t.hero.stats.val3,
                         label: t.hero.stats.scor,
                         sub: t.hero.stats.feedback,
                         s: "si3",
@@ -182,11 +183,6 @@ export function Hero() {
                         key={label}
                         className={`${s} flex flex-col cursor-default ${i > 0 ? "border-l border-foreground/8 pl-6" : ""}`}
                       >
-                        {/*
-                          FIX: <dl> nu poate conține direct elemente care nu sunt <dt>, <dd> sau <div>
-                          (cu condiția că div-ul conține doar <dt>/<dd>).
-                          Linia decorativă este mutată într-un <dd aria-hidden> ca prim copil.
-                        */}
                         <dd
                           aria-hidden="true"
                           className={`${l} sal w-5 h-[1.5px] bg-accent/35 mb-2`}
@@ -334,9 +330,21 @@ export function Hero() {
                 {/* Mobile stats dl */}
                 <dl className="grid grid-cols-3 w-full max-w-[270px] xs:max-w-[290px]">
                   {[
-                    { value: "120+", label: t.hero.stats.companii, s: "si1" },
-                    { value: "18k", label: t.hero.stats.sedinte, s: "si2" },
-                    { value: "4.9★", label: t.hero.stats.scor, s: "si3" },
+                    {
+                      value: t.hero.stats.val1,
+                      label: t.hero.stats.companii,
+                      s: "si1",
+                    },
+                    {
+                      value: t.hero.stats.val2,
+                      label: t.hero.stats.sedinte,
+                      s: "si2",
+                    },
+                    {
+                      value: t.hero.stats.val3,
+                      label: t.hero.stats.scor,
+                      s: "si3",
+                    },
                   ].map(({ value, label, s }, i) => (
                     <div
                       key={label}
