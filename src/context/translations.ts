@@ -47,7 +47,7 @@ export const translations = {
       intro:
         "Diese AGB regeln die Nutzung dieser Website und die Buchung der Dienstleistungen von Ramona's Mobile Massage.",
       callout:
-        'Diese Allgemeinen Geschäftsbedingungen bilden eine rechtlich bindende Vereinbarung zwischen Ihnen und Ramona\'s Mobile Massage („Anbieterin", „wir"). Mit der Nutzung dieser Website oder der Buchung unserer Dienstleistungen bestätigen Sie, die AGB gelesen, verstanden und akzeptiert zu haben.',
+        'Diese Allgemeinen Geschäftsbedingungen bilden eine rechtlich bindende Vereinbarung zwischen Ihnen und Ramona\'s Mobile Massage (\u201eAnbieterin", \u201ewir"). Mit der Nutzung dieser Website oder der Buchung unserer Dienstleistungen bestätigen Sie, die AGB gelesen, verstanden und akzeptiert zu haben.',
       sections: [
         {
           index: "01.",
@@ -204,34 +204,38 @@ export const translations = {
       metaTitle: "Dienstleistungen & Tarife — Mobile Massage Münster",
       metaDesc:
         "Mobile Massagedienste in Münster und NRW. Anwendungen für Büros, Events, Hotels und Gesundheitstage. Flexible Pakete ab 15 Minuten.",
-      topBadge: "Tarife & Mobile Dienste // 2026",
-      titlu1: "tarife ",
-      titluItalic: "sculpte.",
+      topBadge: "Preise / Prețuri",
+      titlu1: "Masaj la birou & ",
+      titluItalic: "Evenimente Business",
       descriere:
-        "Mathematisch kalibriert für den geschäftlichen Kontext — effizient, diskret und völlig autonom direkt an Ihren Arbeitsplatz in Münster und Umgebung geliefert.",
+        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage. Prețurile afișate încep de la:",
       ethicalBadge: "Richtlinie für ethisches Verhalten",
       ethicalTitle: "Exklusiver Medical-Wellness-Charakter",
       ethicalSub: "Service 100% Non-Erotik",
-      module1Badge: "Modul 01 — Corporate",
-      module1Title: "Mobile Anwendungen im Büro",
+      module1Badge: "Büro & Business-Events",
+      module1Title: "Masaj la birou & Evenimente Business",
       quote:
-        "„Jede Sitzung fungiert als mobile posturale Mikro-Architektur, die myofasziale Spannungen eliminiert.“",
-      module2Badge: "Modul 02 — VIP Ecosystem",
-      module2Title: "Hotel & VIP Retreats",
-      vipMinBadge: "Mindestintervall-Sicherung",
+        "\u201eJede Sitzung fungiert als mobile posturale Mikro-Architektur, die myofasziale Spannungen eliminiert.\u201c",
+      module2Badge: "Hoteluri & Ocazii Speciale",
+      module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
+      vipMinBadge: "Mindestbuchungsdauer",
       vipMinText:
-        "Flexible asymmetrische Verwaltung: 4 × 30 Minuten oder erweiterte Rituale für VIP-Gäste des Hotels.",
-      logisticTitle: "Logistische Unabhängigkeit",
+        "Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+      logisticTitle: "Vin cu ulei și echipament",
       logisticDesc:
-        "Hydraulische Liegen, Premium-Handtücher und Einweg-Verbrauchsmaterialien.",
-      transportTitle: "Kostenloser Transport NRW",
-      transportDesc: "Alle operativen Reisekosten sind im Paket enthalten.",
-      btnProposal: "Individuelles Business-Angebot anfordern",
-      legalBadge: "Rechtliches Protokoll / European Wellness Standard",
+        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta.",
+      transportTitle: "Deplasare inclusă Münsterland",
+      transportDesc:
+        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland. Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr.",
+      btnProposal: "📩 Contactează-mă pentru o ofertă",
+      legalBadge: "Notă",
       legalDesc:
-        "Mobile Anwendungen halten sich strikt an die Vorschriften der europäischen Verbände für betriebliche Gesundheit. Wir verurteilen und lehnen jede Anfrage im Zusammenhang mit Dienstleistungen intimer, sexueller oder erotischer Natur absolut ab. Das einzige Ziel der Verfahren ist die Optimierung der myofaszialen Posturalstruktur.",
-      perSession: "/ Sitzung",
-      popular: "Beliebt",
+        "Aplicările sunt orientate exclusiv spre relaxare și nu au caracter erotic. Nu reprezintă tratamente medicale sau terapeutice și nu înlocuiesc consultul medical, diagnosticul sau tratamentele de specialitate.",
+      paymentTitle: "Plată",
+      paymentDesc:
+        "Plata se poate efectua în numerar sau prin transfer bancar (factură).",
+      perSession: "/ sedință",
+      popular: "Popular",
       rates: [
         {
           time: "15 Min",
@@ -265,6 +269,13 @@ export const translations = {
             "Globale Behandlung mit myofaszialer Freisetzung und mentalem Reset, inklusive Kopfhaut.",
           zone: "Full Body + Kopfhaut",
         },
+      ],
+      practicalInfoTitle: "Informații practice",
+      practicalInfo: [
+        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta",
+        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland",
+        "Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr",
+        "Plata se poate efectua în numerar sau prin transfer bancar (factură)",
       ],
     },
     nav: {
@@ -519,33 +530,33 @@ export const translations = {
         "Unsere mobilen Anwendungen dienen ausschließlich der körperlichen Entspannung und dem Wohlbefinden und haben einen strikt professionellen und nicht-erotischen Charakter. Diese Dienste stellen keine medizinischen Behandlungen, therapeutischen oder kurativen Interventionen dar, behandeln keine Beschwerden oder Krankheiten und ersetzen in keinem Fall eine fachärztliche Beratung, eine autorisierte Diagnose oder von Ärzten oder qualifiziertem medizinischem Personal verschriebene Behandlungspläne.",
       items: [
         {
-          title: "Corporate Wellness",
+          title: "Masaj la birou",
           label:
-            "Mobile Entspannungsdienste direkt vor Ort, angepasst an den Kontext Ihres Unternehmens.",
-          metricLabel: "Teamszufriedenheit",
-        },
-        {
-          title: "Chair Massage",
-          label:
-            "Entspannungsorientierte Massage, ideal als erholsame Pause während der Arbeitszeit.",
+            "Aplicări mobile disponibile direct la locul de muncă, cu ulei, echipament complet, discret și complet pregătit. Ședința se concentrează pe zona gâtului, umerilor și a spatelui. La cerere, pot fi incluse capul, brațele, mâinile sau tălpile. Se realizează pe scaun de masaj sau pe masa de masaj, adaptat spațiului și cerințelor locației.",
           metricLabel: "Entspannungspause",
         },
         {
-          title: "Gesundheitstag",
+          title: "Evenimente Business & Workshopuri",
           label:
-            "Eine passende Ergänzung für Tage, die ausschließlich der Erholung am Arbeitsplatz gewidmet sind.",
-          metricLabel: "Wohlbefinden",
-        },
-        {
-          title: "Business Events",
-          label:
-            "Flexible Momente der körperlichen Entspannung für Firmenveranstaltungen, Workshops oder Konferenzen.",
+            "Aplicări mobile pentru evenimente corporate sau workshopuri — o completare profesională care contribuie la o atmosferă plăcută și oferă participanților momente de relaxare într-un cadru bine organizat și îngrijit.",
           metricLabel: "organisierte Kontexte",
         },
         {
-          title: "Stress Relief",
+          title: "Gesundheitstage",
           label:
-            "Zeit für sich selbst und Aufmerksamkeit für den Körper, um Balance und Entspannung wiederherzustellen.",
+            "O completare potrivită pentru zilele dedicate relaxării și confortului la locul de muncă. Aplicările mobile sunt disponibile direct la locația companiei, într-un cadru organizat și profesional, adaptat programului și nevoilor echipei.",
+          metricLabel: "Wohlbefinden",
+        },
+        {
+          title: "Hoteluri & Centre Wellness",
+          label:
+            "Aplicări mobile adaptate individual pentru hoteluri, centre wellness sau sauna events, disponibile direct la locația ta. Se adresează întregului corp sau zonei dorite, la alegere. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+          metricLabel: "Teamszufriedenheit",
+        },
+        {
+          title: "Ocazii Speciale",
+          label:
+            "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
           metricLabel: "Müdigkeitsgefühl",
         },
       ],
@@ -680,34 +691,37 @@ export const translations = {
       metaTitle: "Servicii & Tarife — Masaj corporativ Munster",
       metaDesc:
         "Servicii mobile de masaj in Münster si NRW. Aplicari pentru birouri, evenimente, hoteluri si Gesundheitstage. Pachete flexibile de la 15 minute.",
-      topBadge: "Tarife & Servicii Mobile // 2026",
-      titlu1: "tarife ",
-      titluItalic: "sculptate.",
+      topBadge: "Preise / Prețuri",
+      titlu1: "Masaj la birou & ",
+      titluItalic: "Evenimente Business",
       descriere:
-        "Calibrat matematic pentru contextul corporativ — eficient, discret si livrat complet autonom direct la biroul tau din Münster si imprejurimi.",
+        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage. Prețurile afișate încep de la:",
       ethicalBadge: "Directiva De Conduita Etica",
       ethicalTitle: "Caracter exclusiv medical-wellness",
       ethicalSub: "Serviciu 100% Non-Erotic",
-      module1Badge: "Module 01 — Corporate",
-      module1Title: "Aplicatii Mobile la Birou",
+      module1Badge: "Birou & Evenimente Business",
+      module1Title: "Masaj la birou & Evenimente Business",
       quote:
-        "„Fiecare sesiune functioneaza ca o micro-arhitectura posturala mobila, eliminand tensiunea miofasciala.”",
-      module2Badge: "Module 02 — VIP Ecosystem",
-      module2Title: "Hotel & VIP Retreats",
-      vipMinBadge: "Securizare Interval Minim",
+        "\u201eFiecare sesiune functioneaza ca o micro-arhitectura posturala mobila, eliminand tensiunea miofasciala.\u201c",
+      module2Badge: "Hoteluri & Ocazii Speciale",
+      module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
+      vipMinBadge: "Durata minima de rezervare",
       vipMinText:
-        "Gestiune flexibila asimetrica: 4 × 30 minute sau ritualuri extinse dedicate oaspetilor VIP ai hotelului.",
-      logisticTitle: "Independența Logistica",
+        "Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+      logisticTitle: "Vin cu ulei și echipament",
       logisticDesc:
-        "Mese hidraulice, prosoape premium si consumabile de unica folosinta.",
-      transportTitle: "Transport Gratuit NRW",
+        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta.",
+      transportTitle: "Deplasare inclusă Münsterland",
       transportDesc:
-        "Toate costurile operationale de deplasare sunt absorbite in pachet.",
-      btnProposal: "Solicita propunere individuala business",
-      legalBadge: "Protocol Legal / European Wellness Standard",
+        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland. Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr.",
+      btnProposal: "📩 Contactează-mă pentru o ofertă",
+      legalBadge: "Notă",
       legalDesc:
-        "Aplicatiile mobile respecta cu strictete normele asociatiilor europene de sanatate corporativa. Condamnam si respingem absolut orice solicitare legata de servicii cu caracter intim, sexual sau erotic. Procedurile au ca unic obiectiv optimizarea structurii posturale miofasciale.",
-      perSession: "/ sedinta",
+        "Aplicările sunt orientate exclusiv spre relaxare și nu au caracter erotic. Nu reprezintă tratamente medicale sau terapeutice și nu înlocuiesc consultul medical, diagnosticul sau tratamentele de specialitate.",
+      paymentTitle: "Plată",
+      paymentDesc:
+        "Plata se poate efectua în numerar sau prin transfer bancar (factură).",
+      perSession: "/ sedință",
       popular: "Popular",
       rates: [
         {
@@ -716,7 +730,7 @@ export const translations = {
           tag: "Focus Break",
           detail:
             "Resetare rapida cervicala si trapez. Ideal pentru pauze scurte.",
-          zone: "aaa",
+          zone: "Cervical & Trapez",
         },
         {
           time: "20 Min",
@@ -742,6 +756,13 @@ export const translations = {
             "Tratament global cu eliberare miofasciala si reset mental, include scalp.",
           zone: "Full Body + Scalp",
         },
+      ],
+      practicalInfoTitle: "Informații practice",
+      practicalInfo: [
+        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta",
+        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland",
+        "Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr",
+        "Plata se poate efectua în numerar sau prin transfer bancar (factură)",
       ],
     },
     contactPage: {
@@ -1072,33 +1093,33 @@ export const translations = {
         "Aplicarile noastre mobile sunt orientate exclusiv spre relaxare corporala si stare de bine, avand un character strict profesional si non-erotic. Aceste servicii nu reprezinta tratamente medicale, interventii terapeutice sau curative, nu trateaza afectiuni sau boli si nu inlocuiesc in niciun context consultul medical de specialitate, diagnosticul autorizat sau schemele de tratament prescrise de medici ori personalul medical calificat.",
       items: [
         {
-          title: "Corporate Wellness",
+          title: "Masaj la birou",
           label:
-            "Servicii mobile de relaxare realizate direct la locatie, adaptate contextului companiei tale.",
-          metricLabel: "satisfactie echipe",
-        },
-        {
-          title: "Chair Massage",
-          label:
-            "Masaj orientat spre relaxare, ideal ca o pauza de relaxare in timpul programului.",
+            "Aplicări mobile disponibile direct la locul de muncă, cu ulei, echipament complet, discret și complet pregătit. Ședința se concentrează pe zona gâtului, umerilor și a spatelui. La cerere, pot fi incluse capul, brațele, mâinile sau tălpile. Se realizează pe scaun de masaj sau pe masa de masaj, adaptat spațiului și cerințelor locației.",
           metricLabel: "pauza de relaxare",
         },
         {
-          title: "Gesundheitstag",
+          title: "Evenimente Business & Workshopuri",
           label:
-            "O completare potrivita pentru zilele dedicate exclusiv relaxarii la locul de munca.",
-          metricLabel: "stare de bine",
-        },
-        {
-          title: "Business Events",
-          label:
-            "Momente de relaxare corporala flexibile pentru evenimente corporate, workshopuri sau conferinte.",
+            "Aplicări mobile pentru evenimente corporate sau workshopuri — o completare profesională care contribuie la o atmosferă plăcută și oferă participanților momente de relaxare într-un cadru bine organizat și îngrijit.",
           metricLabel: "contexte organizate",
         },
         {
-          title: "Stress Relief",
+          title: "Gesundheitstage",
           label:
-            "Timp pentru tine si atentie acordata corpului, restabilind echilibrul si relaxarea.",
+            "O completare potrivită pentru zilele dedicate relaxării și confortului la locul de muncă. Aplicările mobile sunt disponibile direct la locația companiei, într-un cadru organizat și profesional, adaptat programului și nevoilor echipei.",
+          metricLabel: "stare de bine",
+        },
+        {
+          title: "Hoteluri & Centre Wellness",
+          label:
+            "Aplicări mobile adaptate individual pentru hoteluri, centre wellness sau sauna events, disponibile direct la locația ta. Se adresează întregului corp sau zonei dorite, la alegere. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+          metricLabel: "satisfactie echipe",
+        },
+        {
+          title: "Ocazii Speciale",
+          label:
+            "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
           metricLabel: "resimtire oboseala",
         },
       ],

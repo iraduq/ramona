@@ -1,14 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import {
-  Briefcase,
-  UserRound,
-  CalendarHeart,
-  GlassWater,
-  Brain,
+  Armchair,
+  Presentation,
+  HeartPulse,
+  Hotel,
+  PartyPopper,
 } from "lucide-react";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
+import pozaDubla from "../assets/pozadubla.jpeg";
 
 const trustBarStyles = `
   @keyframes botanical-sway { 0%, 100% { transform: rotate(-3deg) translateX(0px); } 50% { transform: rotate(-0.5deg) translateX(5px); } }
@@ -42,16 +43,9 @@ export function TrustBar() {
     return () => window.removeEventListener("mousemove", handler);
   }, [mouseX, mouseY]);
 
-  const icons = [Briefcase, UserRound, CalendarHeart, GlassWater, Brain];
-  const metrics = ["94%", "15'", "2×", "500+", "−62%"];
-  const bgImages = [
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-  ];
-
+  const icons = [Armchair, Presentation, HeartPulse, Hotel, PartyPopper];
+  const metrics = ["15–30 min", "grup", "echipă", "120+ min", "120+ min"];
+  const bgImages = [pozaDubla, pozaDubla, pozaDubla, pozaDubla, pozaDubla];
   const categories = t.trustBar.items.map((item, index) => ({
     id: `0${index + 1}`,
     title: item.title,
