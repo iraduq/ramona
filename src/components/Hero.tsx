@@ -50,8 +50,9 @@ export function Hero() {
     <>
       <style dangerouslySetInnerHTML={{ __html: heroStyles }} />
 
-      <section className="relative overflow-hidden bg-background w-full min-h-[80vh] flex items-center">
-        <div className="w-full pt-12 pb-16 sm:pt-20 sm:pb-20 md:pt-28 md:pb-28 lg:pt-36 lg:pb-36 relative z-20">
+      <section className="relative overflow-hidden bg-background w-full min-h-[70vh] flex items-center">
+        {/* Padding redus drastic pe mobil (pt-6 pb-6) */}
+        <div className="w-full pt-6 pb-6 sm:pt-12 sm:pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20 relative z-20">
           <div
             className="absolute inset-0 pointer-events-none overflow-hidden z-0"
             aria-hidden="true"
@@ -69,9 +70,10 @@ export function Hero() {
           </div>
 
           <div className="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16 lg:items-center gap-y-8">
+            {/* gap-y-6 în loc de gap-y-8 pentru spații mai mici pe mobil */}
+            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-10 xl:gap-12 lg:items-center gap-y-6">
               <div className="w-full lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 order-1">
-                <div className="ha1 flex items-center gap-3 tracking-[0.2em] text-[9px] sm:text-[10px] font-semibold uppercase select-none mb-3">
+                <div className="ha1 flex items-center gap-3 tracking-[0.2em] text-[9px] sm:text-[10px] font-semibold uppercase select-none mb-2">
                   <span className="flex items-center gap-2 text-[#7a4f2f]">
                     <span
                       className="pdot w-1 h-1 rounded-full bg-[#7a4f2f]/80"
@@ -89,9 +91,9 @@ export function Hero() {
                 </div>
 
                 <h1
-                  className="ha2 mt-2 sm:mt-4 font-light tracking-tight leading-[1.08] text-foreground"
+                  className="ha2 mt-1 sm:mt-3 font-light tracking-tight leading-[1.05] text-foreground"
                   style={{
-                    fontSize: "clamp(2.1rem, 8.5vw, 4.5rem)",
+                    fontSize: "clamp(1.8rem, 6.5vw, 3.8rem)",
                     letterSpacing: "-0.025em",
                   }}
                 >
@@ -121,17 +123,17 @@ export function Hero() {
                   {t.hero.titlu2}
                 </h1>
 
-                {/* FIX: text-muted-foreground/78 → text-muted-foreground pentru contrast */}
-                <p className="ha3 mt-4 max-w-[34ch] sm:max-w-[44ch] text-[0.875rem] sm:text-[0.975rem] lg:text-[1.05rem] text-neutral-700  leading-[1.75] font-light px-1 sm:px-0">
+                {/* mt-3 în loc de mt-4 */}
+                <p className="ha3 mt-3 max-w-[34ch] sm:max-w-[44ch] text-[0.875rem] sm:text-[0.975rem] lg:text-[1.05rem] text-neutral-700 leading-[1.6] font-light px-1 sm:px-0">
                   {t.hero.descriere}
                 </p>
 
-                <div className="ha4 hidden lg:flex flex-col w-full mt-8">
+                <div className="ha4 hidden lg:flex flex-col w-full mt-6">
                   <div className="flex flex-row gap-4">
                     <Button
                       asChild
                       size="lg"
-                      className="btn-shimmer rounded-full px-8 h-[54px] text-[0.875rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.25),0_1px_4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(44,36,32,0.35)] active:translate-y-0"
+                      className="btn-shimmer rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.25),0_1px_4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(44,36,32,0.35)] active:translate-y-0"
                     >
                       <Link to="/contact" className="flex items-center gap-2.5">
                         {t.hero.butonConversatie}
@@ -142,18 +144,17 @@ export function Hero() {
                       asChild
                       variant="outline"
                       size="lg"
-                      className="rounded-full px-8 h-[54px] text-[0.875rem] font-medium bg-card border border-foreground/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:bg-muted hover:border-foreground/20 hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] active:translate-y-0"
+                      className="rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-card border border-foreground/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:bg-muted hover:border-foreground/20 hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] active:translate-y-0"
                     >
                       <Link to="/services">{t.hero.butonServicii}</Link>
                     </Button>
                   </div>
 
                   <div
-                    className="w-full h-px bg-gradient-to-r from-foreground/10 to-transparent mt-10 mb-8"
+                    className="w-full h-px bg-gradient-to-r from-foreground/10 to-transparent mt-8 mb-6"
                     aria-hidden="true"
                   />
 
-                  {/* Desktop stats */}
                   {/* Desktop stats */}
                   <dl className="grid grid-cols-3 w-full">
                     {[
@@ -197,11 +198,9 @@ export function Hero() {
                           {value}
                         </dt>
                         <dd className="mt-1.5 flex flex-col gap-0.5">
-                          {/* FIX: /70 → text-muted-foreground (fără opacitate redusă) */}
                           <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">
                             {label}
                           </span>
-                          {/* FIX: /38 → /60 pentru contrast minim */}
                           <span className="text-[9px] uppercase tracking-wider text-muted-foreground/60 font-medium">
                             {sub}
                           </span>
@@ -213,7 +212,8 @@ export function Hero() {
               </div>
 
               <div className="w-full lg:col-span-6 relative z-20 order-2">
-                <div className="relative mx-auto w-full max-w-[270px] xs:max-w-[290px] sm:max-w-[420px] lg:max-w-none">
+                {/* Lățime redusă considerabil pentru mobil: max-w-[220px] xs:max-w-[250px] */}
+                <div className="relative mx-auto w-full max-w-[220px] xs:max-w-[250px] sm:max-w-[340px] lg:max-w-[440px] xl:max-w-[480px] lg:ml-auto">
                   <div
                     className="hidden lg:block absolute -inset-3 bg-muted/55 rounded-[2rem] transform rotate-[1.5deg] scale-[0.985] pointer-events-none"
                     aria-hidden="true"
@@ -237,25 +237,25 @@ export function Hero() {
                       aria-hidden="true"
                     />
 
-                    <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 z-20">
-                      <div className="inline-flex items-center gap-2 bg-card/90 backdrop-blur-2xl border border-border/60 rounded-xl px-2.5 py-2 shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+                    <div className="badge-in lg:hidden absolute bottom-2 left-2 right-2 z-20">
+                      <div className="inline-flex items-center gap-1.5 bg-card/90 backdrop-blur-2xl border border-border/60 rounded-xl px-2 py-1.5 shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
                         <div
                           className="p-1 rounded-md bg-accent/10 shrink-0"
                           aria-hidden="true"
                         >
                           <Sparkles
-                            className="h-3 w-3 text-accent"
+                            className="h-2.5 w-2.5 text-accent"
                             aria-hidden="true"
                           />
                         </div>
-                        <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-accent whitespace-nowrap">
+                        <span className="text-[8px] font-bold uppercase tracking-[0.08em] text-accent whitespace-nowrap">
                           {t.hero.badgeTimp}
                         </span>
                         <span
-                          className="w-px h-2.5 bg-foreground/15 shrink-0"
+                          className="w-px h-2 bg-foreground/15 shrink-0"
                           aria-hidden="true"
                         />
-                        <p className="text-[10px] font-light text-foreground/80 leading-none truncate">
+                        <p className="text-[9px] font-light text-foreground/80 leading-none truncate">
                           {t.hero.badgeDescriere}
                         </p>
                       </div>
@@ -291,12 +291,14 @@ export function Hero() {
               </div>
 
               {/* Mobile stats + buttons */}
-              <div className="ha5 w-full lg:hidden flex flex-col items-center order-3 mt-2">
-                <div className="flex flex-col gap-3 w-full max-w-[270px] xs:max-w-[290px]">
+              <div className="ha5 w-full lg:hidden flex flex-col items-center order-3 mt-0">
+                {/* Lățime buton adaptată la imagine max-w-[250px] */}
+                <div className="flex flex-col gap-2 w-full max-w-[220px] xs:max-w-[250px]">
+                  {/* h-[46px] în loc de h-[50px] */}
                   <Button
                     asChild
                     size="lg"
-                    className="btn-shimmer rounded-full w-full h-[50px] text-[0.85rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.22)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
+                    className="btn-shimmer rounded-full w-full h-[46px] text-[0.85rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.22)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
                   >
                     <Link
                       to="/contact"
@@ -310,7 +312,7 @@ export function Hero() {
                     asChild
                     variant="ghost"
                     size="lg"
-                    className="rounded-full w-full h-[50px] text-[0.85rem] font-medium bg-transparent border border-foreground/15 transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/25 text-foreground/80"
+                    className="rounded-full w-full h-[46px] text-[0.85rem] font-medium bg-transparent border border-foreground/15 transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/25 text-foreground/80"
                   >
                     <Link to="/services" className="justify-center">
                       {t.hero.butonServicii}
@@ -318,8 +320,9 @@ export function Hero() {
                   </Button>
                 </div>
 
+                {/* my-4 în loc de my-6 */}
                 <div
-                  className="w-full my-6 flex items-center gap-3 max-w-[270px] xs:max-w-[290px]"
+                  className="w-full my-4 flex items-center gap-3 max-w-[220px] xs:max-w-[250px]"
                   aria-hidden="true"
                 >
                   <div className="flex-1 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
@@ -328,7 +331,7 @@ export function Hero() {
                 </div>
 
                 {/* Mobile stats dl */}
-                <dl className="grid grid-cols-3 w-full max-w-[270px] xs:max-w-[290px]">
+                <dl className="grid grid-cols-3 w-full max-w-[240px] xs:max-w-[270px]">
                   {[
                     {
                       value: t.hero.stats.val1,
@@ -350,27 +353,22 @@ export function Hero() {
                       key={label}
                       className={`${s} flex flex-col items-center text-center cursor-default ${i > 0 ? "border-l border-foreground/8" : ""}`}
                     >
-                      {/*
-                        FIX: linia decorativă era un <div> copil direct al <dl>, ceea ce este invalid.
-                        Înlocuit cu <dd aria-hidden="true"> care este permis în <dl>.
-                      */}
                       <dd
                         aria-hidden="true"
-                        className="sal w-4 h-[1px] bg-accent/35 mb-1.5"
+                        className="sal w-3 h-[1px] bg-accent/35 mb-1"
                       />
                       <dt
                         className="font-light text-foreground"
                         style={{
-                          fontSize: "clamp(1.2rem, 5vw, 1.5rem)",
+                          fontSize: "clamp(1.1rem, 4.5vw, 1.4rem)",
                           fontFamily: "var(--font-serif, Georgia, serif)",
                           letterSpacing: "-0.02em",
                         }}
                       >
                         {value}
                       </dt>
-                      <dd className="mt-1">
-                        {/* FIX: /70 → text-muted-foreground */}
-                        <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold whitespace-nowrap">
+                      <dd className="mt-0.5">
+                        <span className="text-[8px] uppercase tracking-wider text-muted-foreground font-semibold whitespace-nowrap">
                           {label}
                         </span>
                       </dd>

@@ -948,11 +948,11 @@ export const translations = {
     },
     hero: {
       badge: "Corporate Wellbeing",
-      titlu1: "Masaj mobil profesional — ",
-      titluItalic: "vin eu la tine.",
+      titlu1: "Masaj mobil profesional – acolo unde ai nevoie,",
+      titluItalic: "Exact când ai nevoie.",
       titlu2: "",
       descriere:
-        "Ulei, echipament complet, totul pregătit. Fiecare ședință este adaptată individual. Tu alegi momentul — eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
+        "Vin cu ulei, echipament complet și toată atenția mea. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
       butonConversatie: "Rezervă acum",
       butonServicii: "Vezi detalii",
       imgAlt: "Masaj mobil profesional",
@@ -1089,26 +1089,29 @@ export const translations = {
       ],
     },
 
+    // ... în interiorul obiectului translations, la trustBar
+
     trustBar: {
-      badge: "Münster · Münsterland · NRW / Servicii Mobile",
-      titlu1: "Echilibru si relaxare",
+      badge: "",
+      titlu1: "Fiecare persoană este unică",
       wordRelaxare: "RELAXARE",
-      titluItalic: "in timpul programului",
+      titluItalic: "și exact asta mă inspiră.",
       descriere:
-        "Aplicari mobile realizate direct la locatie, adaptate diferitelor contexte si organizate cu atentie la confort si atmosfera.",
-      statRegiune: "Acoperire regionala",
-      statExperienta: "Experienta servicii mobile",
-      legalBadge: "Gewerbliche Entspannung / Servicii Non-Medicale",
-      legalTitlu: "Nota legala importanta:",
+        "Folosesc o varietate de tehnici, de la masaj wellness, masaj al țesuturilor profunde, masaj fascial, masaj al capului și feței și reflexoterapie plantară, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi aplicate individual sau combinate, în funcție de preferințe și nevoi. Dincolo de tehnică, atenția la detalii face parte din fiecare ședință. Disponibil în regiunea Münsterland și împrejurimi.",
+      statRegiune: "Acoperire regională",
+      statExperienta: "Experiență în servicii mobile",
+      legalBadge: "Relaxare profesională / Servicii Non-Medicale",
+      legalTitlu: "Notă legală importantă:",
       legalDescriere:
-        "Aplicarile noastre mobile sunt orientate exclusiv spre relaxare corporala si stare de bine, avand un character strict profesional si non-erotic. Aceste servicii nu reprezinta tratamente medicale, interventii terapeutice sau curative, nu trateaza afectiuni sau boli si nu inlocuiesc in niciun context consultul medical de specialitate, diagnosticul autorizat sau schemele de tratament prescrise de medici ori personalul medical calificat.",
+        "Aplicările noastre mobile sunt orientate exclusiv spre relaxare corporală și stare de bine, având un caracter strict profesional și non-erotic. Aceste servicii nu reprezintă tratamente medicale, intervenții terapeutice sau curative, nu tratează afecțiuni sau boli și nu înlocuiesc în niciun context consultul medical de specialitate, diagnosticul autorizat sau schemele de tratament prescrise de medici ori personalul medical calificat.",
       items: [
         {
           title: "Masaj la birou",
           label:
-            "Aplicări mobile disponibile direct la locul de muncă, cu ulei, echipament complet, discret și complet pregătit. Ședința se concentrează pe zona gâtului, umerilor și a spatelui. La cerere, pot fi incluse capul, brațele, mâinile sau tălpile. Se realizează pe scaun de masaj sau pe masa de masaj, adaptat spațiului și cerințelor locației.",
-          metricLabel: "pauza de relaxare",
+            "Masaj mobil profesional, acolo unde ești tu, exact când ai nevoie. Vin cu ulei, echipament complet și toată atenția mea. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot.",
+          metricLabel: "pauză de relaxare",
         },
+
         {
           title: "Evenimente Business & Workshopuri",
           label:

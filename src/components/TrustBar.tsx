@@ -118,7 +118,7 @@ export function TrustBar() {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-          className="mb-12 sm:mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-[#1a1816]/10 pb-8"
+          className="mb-12 sm:mb-20 flex flex-col gap-6 border-b border-[#1a1816]/10 pb-8"
         >
           <div className="space-y-2">
             <span className="font-mono text-[9px] tracking-[0.35em] text-[#baa090] uppercase block font-semibold">
@@ -134,7 +134,8 @@ export function TrustBar() {
               </span>
             </h2>
           </div>
-          <p className="text-[12px] text-[#8c827a] font-light max-w-xs md:text-right leading-relaxed font-sans">
+          {/* Aici am scos textul din dreapta și l-am pus dedesubt cu un max-width care arată mult mai elegant */}
+          <p className="text-[13px] md:text-[14px] text-[#6b6661] font-light max-w-4xl leading-[1.8] font-sans mt-2">
             {t.trustBar.descriere}
           </p>
         </motion.div>
