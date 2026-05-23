@@ -948,11 +948,11 @@ export const translations = {
     },
     hero: {
       badge: "Corporate Wellbeing",
-      titlu1: "Masaj mobil profesional – acolo unde ai nevoie,",
+      titlu1: "Masaj mobil profesional  acolo unde ai nevoie,",
       titluItalic: "Exact când ai nevoie.",
       titlu2: "",
       descriere:
-        "Vin cu ulei, echipament complet și toată atenția mea. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
+        "Vin cu echipament complet și atenție deplină. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
       butonConversatie: "Rezervă acum",
       butonServicii: "Vezi detalii",
       imgAlt: "Masaj mobil profesional",

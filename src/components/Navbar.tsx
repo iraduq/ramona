@@ -7,15 +7,10 @@ import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-
   const { language, setLanguage, t } = useLanguage();
-
-  // react-router-dom
-  const location = useLocation();
-  const pathname = location.pathname;
+  const pathname = useLocation().pathname;
 
   const navTranslations = (t?.nav || {}) as Record<string, string>;
-
   const links = [
     { to: "/", label: navTranslations.acasa || "Acasa" },
     { to: "/services", label: navTranslations.servicii || "Servicii" },
@@ -23,16 +18,19 @@ export function Navbar() {
     { to: "/contact", label: navTranslations.contact || "Contact" },
   ] as const;
 
-  const textProgrameaza = navTranslations.programeaza || "Book Now";
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#F7F5F2] border-b border-neutral-300">
-      <div className="h-[3px] w-full bg-[#b7744f]" />
+    <header className="sticky top-0 z-50 w-full bg-[#F7F5F2]/95 backdrop-blur-sm border-b border-neutral-200">
+      <div className="h-[3px] w-full bg-gradient-to-r from-[#b7744f] to-[#965935]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10 h-[64px] flex items-center justify-between">
-        {/* Brand */}
-        <Link to="/" className="flex items-center gap-3 group shrink-0">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-200">
+      {/* Inaltime echilibrata pe desktop (72px in loc de 80px) */}
+      <div className="mx-auto max-w-7xl px-4 lg:px-10 h-[64px] lg:h-[72px] flex items-center justify-between transition-all duration-300">
+        {/* Logo Section */}
+        <Link
+          to="/"
+          className="flex items-center gap-3 shrink min-w-0 pr-2 group"
+        >
+          {/* Iconita usor ajustata */}
+          <div className="flex h-10 w-10 lg:h-11 lg:w-11 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm border border-neutral-100 transition-all group-hover:border-[#b7744f]/30">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -49,92 +47,96 @@ export function Navbar() {
             </svg>
           </div>
 
-          <div className="flex flex-col">
-            <span className="text-[13px] font-bold tracking-[0.15em] uppercase text-neutral-950">
-              Ramona's
+          {/* Text proportionat elegant */}
+          <div className="flex flex-col min-w-0 justify-center py-1">
+            {/* Randul 1: Nume (15px pe desktop, echilibrat) */}
+            <span className="text-[13px] lg:text-[15px] font-extrabold tracking-[0.08em] uppercase text-[#4a3b32] truncate leading-tight transition-colors">
+              Ramona’s Mobile Massage
             </span>
 
-            <span className="text-[8px] font-bold tracking-[0.18em] uppercase text-neutral-700 -mt-0.5">
-              Mobile Balance Therapie
+            {/* Randul 2: Locatie (10px pe desktop) */}
+            <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.15em] uppercase text-[#b7744f] mt-[1px] lg:mt-[2px] truncate leading-tight">
+              Münsterland | NRW
+            </span>
+
+            {/* Randul 3: Detalii (8.5px pe desktop) */}
+            <span className="text-[7.5px] lg:text-[8.5px] font-semibold tracking-[0.1em] uppercase text-neutral-500 mt-[2px] lg:mt-[2px] truncate leading-tight">
+              Arbeitsplatz | Büro | Unternehmen | Business Events
             </span>
           </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => {
-            const active = pathname === l.to;
-
-            return (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`text-[11px] tracking-[0.2em] uppercase font-bold transition-colors py-[25px] ${
-                  active ? "text-[#965935]" : "text-[#404040] hover:text-black"
-                }`}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
+        {/* Desktop Nav - text de 12px pe desktop */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className={`text-[11px] lg:text-[12px] tracking-[0.15em] uppercase font-bold transition-colors ${
+                pathname === l.to
+                  ? "text-[#b7744f]"
+                  : "text-neutral-500 hover:text-[#4a3b32]"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
-          <div className="flex items-center bg-neutral-200/50 rounded-full p-0.5 border border-neutral-300">
+        <div className="hidden lg:flex items-center gap-4 lg:gap-5 shrink-0">
+          <div className="flex bg-white rounded-full p-1 border border-neutral-200 shadow-sm">
             {["DE", "EN"].map((lang) => (
               <button
                 key={lang}
                 onClick={() => setLanguage(lang as "DE" | "EN")}
-                className={`text-[10px] font-bold px-3 py-1 rounded-full transition-all duration-300 ${
+                className={`text-[10px] lg:text-[10px] font-bold px-3 py-1.5 rounded-full transition-colors ${
                   language === lang
-                    ? "bg-[#4a3b32] text-white shadow-sm"
-                    : "text-neutral-700 hover:text-neutral-950"
+                    ? "bg-[#4a3b32] text-white"
+                    : "text-neutral-500 hover:text-[#4a3b32]"
                 }`}
               >
                 {lang}
               </button>
             ))}
           </div>
-
           <Button
             asChild
-            className="h-9 rounded-full px-5 text-[10px] font-bold bg-[#4a3b32] text-white hover:bg-[#2d2825]"
+            className="h-9 rounded-full px-5 lg:px-6 text-[10px] lg:text-[11px] uppercase font-bold bg-[#4a3b32] text-white hover:bg-[#b7744f] transition-all"
           >
-            <Link to="/contact">{textProgrameaza}</Link>
+            <Link to="/contact">
+              {navTranslations.programeaza || "Book Now"}
+            </Link>
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2"
+          className="lg:hidden p-2 z-50 text-[#4a3b32] hover:text-[#b7744f] transition-colors"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
         >
-          {open ? (
-            <X className="w-5 h-5 text-neutral-950" />
-          ) : (
-            <Menu className="w-5 h-5 text-neutral-950" />
-          )}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Dropdown */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#F7F5F2] border-b border-neutral-300 overflow-hidden"
+            className="lg:hidden bg-[#F7F5F2] border-b border-neutral-200 overflow-hidden"
           >
-            <div className="px-6 py-6 flex flex-col gap-4">
+            <div className="px-5 py-6 flex flex-col gap-4">
               {links.map((l) => (
                 <Link
                   key={l.to}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="text-[13px] uppercase font-bold text-neutral-950 py-2 border-b border-neutral-200"
+                  className={`text-[13px] tracking-wider uppercase font-bold py-2 border-b border-neutral-200/60 transition-colors ${
+                    pathname === l.to ? "text-[#b7744f]" : "text-[#4a3b32]"
+                  }`}
                 >
                   {l.label}
                 </Link>
@@ -145,10 +147,10 @@ export function Navbar() {
                   <button
                     key={lang}
                     onClick={() => setLanguage(lang as "DE" | "EN")}
-                    className={`flex-1 py-3 text-[12px] font-bold rounded-xl border ${
+                    className={`flex-1 py-2.5 text-[12px] font-bold rounded-lg border transition-colors ${
                       language === lang
                         ? "bg-[#4a3b32] text-white border-[#4a3b32]"
-                        : "bg-white text-neutral-800 border-neutral-300"
+                        : "bg-white text-neutral-600 border-neutral-200 hover:border-[#4a3b32]/30"
                     }`}
                   >
                     {lang}
