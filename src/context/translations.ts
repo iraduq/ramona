@@ -952,7 +952,7 @@ export const translations = {
       titluItalic: "Exact când ai nevoie.",
       titlu2: "",
       descriere:
-        "Vin cu echipament complet și atenție deplină. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
+        "Vin cu tot echipamentul necesar și atenție deplină. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
       butonConversatie: "Rezervă acum",
       butonServicii: "Vezi detalii",
       imgAlt: "Masaj mobil profesional",
@@ -1097,7 +1097,7 @@ export const translations = {
       wordRelaxare: "RELAXARE",
       titluItalic: "și exact asta mă inspiră.",
       descriere:
-        "Folosesc o varietate de tehnici, de la masaj wellness, masaj al țesuturilor profunde, masaj fascial, masaj al capului și feței și reflexoterapie plantară, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi aplicate individual sau combinate, în funcție de preferințe și nevoi. Dincolo de tehnică, atenția la detalii face parte din fiecare ședință. Disponibil în regiunea Münsterland și împrejurimi.",
+        "Folosesc o varietate de tehnici, de la masaj wellness, masaj al țesuturilor profunde, masaj fascial, masaj al capului și feței și reflexoterapie plantară, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi aplicate individual sau combinate, în funcție de preferințe și nevoi. Dincolo de tehnică, atenția la detalii face parte din fiecare ședință.",
       statRegiune: "Acoperire regională",
       statExperienta: "Experiență în servicii mobile",
       legalBadge: "Relaxare profesională / Servicii Non-Medicale",

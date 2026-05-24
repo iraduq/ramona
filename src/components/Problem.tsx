@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
-import tensionImg from "../assets/office-tension.jpg";
+import tensionImg from "../assets/imageProblem.png";
 
 const problemStyles = `
   @keyframes problem-sway { 0%, 100% { transform: rotate(-2deg) scale(1) translateX(0px); } 50% { transform: rotate(1deg) scale(1.04) translateX(6px); } }
@@ -150,36 +150,6 @@ export function Problem() {
             <p className="text-[15px] leading-relaxed text-[#6f645d] font-light max-w-xl tracking-wide">
               {t.problem.descriere}
             </p>
-            <div className="mt-8 grid grid-cols-3 gap-8 w-full border-t border-[#1a1816]/10 pt-10">
-              {t.problem.stats.map((s, idx) => (
-                <motion.div
-                  key={s.n}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={isInView ? { opacity: 1, y: 0 } : {}}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 1,
-                    ease: [0.16, 1, 0.3, 1],
-                    delay: 0.1 + idx * 0.08,
-                  }}
-                  className="flex flex-col border-l border-[#1a1816]/10 pl-4 cursor-default group"
-                >
-                  <div className="w-4 h-px bg-[#baa090]/40 group-hover:bg-[#baa090] group-hover:w-6 transition-all duration-500 mb-3" />
-                  <div
-                    className="text-3xl lg:text-[2.4rem] font-light tracking-tight text-[#1a1816] group-hover:text-[#8c7a6b] transition-colors duration-300"
-                    style={{
-                      fontFamily: "'Georgia', serif",
-                      letterSpacing: "-0.02em",
-                    }}
-                  >
-                    {s.n}
-                  </div>
-                  <p className="text-[12px] font-light text-[#7a6f66] leading-relaxed mt-2 tracking-wide">
-                    {s.t}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
 

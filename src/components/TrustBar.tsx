@@ -313,12 +313,8 @@ export function TrustBar() {
 
               {/* Stat 2 */}
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-xl font-light font-serif text-neutral-950">
-                  8 ani
-                </span>
-                <span className="text-[10px] tracking-[0.2em] text-neutral-600 uppercase font-bold">
-                  {t.trustBar.statExperienta}
-                </span>
+                <span className="text-xl font-light font-serif text-neutral-950"></span>
+                <span className="text-[10px] tracking-[0.2em] text-neutral-600 uppercase font-bold"></span>
               </div>
             </div>
 
