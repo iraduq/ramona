@@ -537,25 +537,25 @@ export const translations = {
         {
           title: "Masaj la birou",
           label:
-            "Aplicări mobile disponibile direct la locul de muncă, cu ulei, echipament complet, discret și complet pregătit. Ședința se concentrează pe zona gâtului, umerilor și a spatelui. La cerere, pot fi incluse capul, brațele, mâinile sau tălpile. Se realizează pe scaun de masaj sau pe masa de masaj, adaptat spațiului și cerințelor locației.",
+            "Potrivit pentru companii și spații profesionale. Ședințele se concentrează în principal pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masa de masaj, în funcție de spațiul disponibil.",
           metricLabel: "Entspannungspause",
         },
         {
           title: "Evenimente Business & Workshopuri",
           label:
-            "Aplicări mobile pentru evenimente corporate sau workshopuri — o completare profesională care contribuie la o atmosferă plăcută și oferă participanților momente de relaxare într-un cadru bine organizat și îngrijit.",
+            "O completare apreciată pentru conferințe, workshopuri, târguri și evenimente corporate, oferind participanților un moment dedicat relaxării într-un cadru profesionist.",
           metricLabel: "organisierte Kontexte",
         },
         {
           title: "Gesundheitstage",
           label:
-            "O completare potrivită pentru zilele dedicate relaxării și confortului la locul de muncă. Aplicările mobile sunt disponibile direct la locația companiei, într-un cadru organizat și profesional, adaptat programului și nevoilor echipei.",
+            "Potrivit pentru programele dedicate angajaților și inițiativele orientate către starea de bine la locul de muncă.",
           metricLabel: "Wohlbefinden",
         },
         {
           title: "Hoteluri & Centre Wellness",
           label:
-            "Aplicări mobile adaptate individual pentru hoteluri, centre wellness sau sauna events, disponibile direct la locația ta. Se adresează întregului corp sau zonei dorite, la alegere. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+            "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți. Fie că este vorba despre o aniversare, o reuniune privată sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe",
           metricLabel: "Teamszufriedenheit",
         },
         {
@@ -926,14 +926,14 @@ export const translations = {
       butonPachete: "Vezi pachetele",
     },
     events: {
-      imgAlt: "Spatiu de relaxare la evenimente corporate",
-      tagHover: "Experiente All-Inclusive",
-      badge: "// Organizare Evenimente",
-      titlu1: "Evenimente pe care",
-      titluItalic: "le vor tine minte",
-      titlu2: ".",
+      imgAlt: "Moment de relaxare la birou",
+      tagHover: "Timp de calitate",
+      badge: "// Relaxare",
+      titlu1: "Timp pentru",
+      titluItalic: "tine.",
+      titlu2: "", // Lăsăm gol deoarece am mutat totul în 1 și Italic
       descriere:
-        "Lansari, kick-off-uri, town hall-uri sau Gesundheitstage — venim cu echipa dedicata, infrastructura completa si o ambianta discreta. Ne ocupam de fiecare detaliu al relaxarii corporale, astfel incat sa ramana doar amintirea experientei, nu logistica.",
+        "Într-o zi aglomerată, pauzele sunt adesea primele care dispar din program. De aceea, serviciile mele sunt concepute pentru a aduce un moment de relaxare direct acolo unde oamenii își desfășoară activitatea, fără deplasări suplimentare și fără organizare complicată.",
     },
     footer: {
       descriere:
@@ -998,27 +998,27 @@ export const translations = {
       ],
     },
     process: {
-      badge: "// Organizarea Aplicarilor",
+      badge: "// Organizare",
       titlu1: "Patru pasi simpli",
       titluItalic: "zero efort de organizare",
       titlu2: "din partea voastra.",
       pas: "PAS",
       steps: [
         {
-          t: "Conversatie initiala",
-          d: "Intelegem ritmul echipei, structura spatiului disponibil si obiectivele de organizare.",
+          t: "Discuție inițială",
+          d: "Stabilim împreună detaliile și formatul potrivit.",
         },
         {
-          t: "Sesiune demonstrativa",
-          d: "Organizam o prima aplicare mobila la locatie pentru a stabili detaliile logistice si de confort.",
+          t: "Planificare",
+          d: "Organizarea este adaptată locației, programului și numărului de participanți.",
         },
         {
-          t: "Planificare flexibila",
-          d: "Stabilim calendarul pauzelor de relaxare, recurenta aplicarilor si logistica completa.",
+          t: "Implementare",
+          d: "Mă ocup de pregătirea și desfășurarea serviciului la locație.",
         },
         {
-          t: "Ajustare continua",
-          d: "Colectam impresii anonime privind starea de confort si adaptam aplicarile in mod individual.",
+          t: "Experiență fără griji",
+          d: "Tu și invitații tăi vă puteți bucura de eveniment, în timp ce eu mă ocup de restul.",
         },
       ],
     },
@@ -1108,30 +1108,30 @@ export const translations = {
         {
           title: "Masaj la birou",
           label:
-            "Masaj mobil profesional, acolo unde ești tu, exact când ai nevoie. Vin cu ulei, echipament complet și toată atenția mea. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot.",
+            "Potrivit pentru companii și spații profesionale. Ședințele se concentrează în principal pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masa de masaj, în funcție de spațiul disponibil.",
           metricLabel: "pauză de relaxare",
         },
 
         {
           title: "Evenimente Business & Workshopuri",
           label:
-            "Aplicări mobile pentru evenimente corporate sau workshopuri — o completare profesională care contribuie la o atmosferă plăcută și oferă participanților momente de relaxare într-un cadru bine organizat și îngrijit.",
+            "O completare apreciată pentru conferințe, workshopuri, târguri și evenimente corporate, oferind participanților un moment dedicat relaxării într-un cadru profesionist.",
           metricLabel: "contexte organizate",
         },
         {
           title: "Gesundheitstage",
           label:
-            "O completare potrivită pentru zilele dedicate relaxării și confortului la locul de muncă. Aplicările mobile sunt disponibile direct la locația companiei, într-un cadru organizat și profesional, adaptat programului și nevoilor echipei.",
+            "Potrivit pentru programele dedicate angajaților și inițiativele orientate către starea de bine la locul de muncă.",
           metricLabel: "stare de bine",
         },
         {
           title: "Hoteluri & Centre Wellness",
           label:
-            "Aplicări mobile adaptate individual pentru hoteluri, centre wellness sau sauna events, disponibile direct la locația ta. Se adresează întregului corp sau zonei dorite, la alegere. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+            "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți.Fie că este vorba despre o aniversare, o reuniune privată sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe.",
           metricLabel: "satisfactie echipe",
         },
         {
-          title: "Ocazii Speciale",
+          title: "Ocazii speciale",
           label:
             "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
           metricLabel: "resimtire oboseala",

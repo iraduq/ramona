@@ -44,14 +44,14 @@ export function TrustBar() {
   }, [mouseX, mouseY]);
 
   const icons = [Armchair, Presentation, HeartPulse, Hotel, PartyPopper];
-  const metrics = ["15–30 min", "grup", "echipă", "120+ min", "120+ min"];
+
   const bgImages = [pozaDubla, pozaDubla, pozaDubla, pozaDubla, pozaDubla];
   const categories = t.trustBar.items.map((item, index) => ({
     id: `0${index + 1}`,
     title: item.title,
     label: item.label,
     icon: icons[index],
-    metric: metrics[index],
+
     metricLabel: item.metricLabel,
     bgImage: bgImages[index],
   }));
@@ -219,9 +219,7 @@ export function TrustBar() {
 
                   <div className="flex items-end justify-between border-t border-[#1a1816]/10 pt-6">
                     <div className="space-y-0.5">
-                      <span className="text-[2.2rem] font-light leading-none tracking-tighter font-serif text-[#1a1816] block">
-                        {item.metric}
-                      </span>
+                      <span className="text-[2.2rem] font-light leading-none tracking-tighter font-serif text-[#1a1816] block"></span>
                       <span className="text-[8px] tracking-[0.15em] uppercase font-mono block text-[#948b82]">
                         {item.metricLabel}
                       </span>
@@ -283,9 +281,7 @@ export function TrustBar() {
                     </motion.p>
 
                     <div className="flex items-baseline gap-2 pt-1">
-                      <span className="text-[1.3rem] sm:text-[1.6rem] font-light font-serif text-white leading-none">
-                        {item.metric}
-                      </span>
+                      <span className="text-[1.3rem] sm:text-[1.6rem] font-light font-serif text-white leading-none"></span>
                       <span className="text-[8px] tracking-wider uppercase font-mono opacity-50">
                         {item.metricLabel}
                       </span>
