@@ -807,53 +807,49 @@ export const translations = {
       },
     },
     aboutPage: {
-      metaTitle: "Despre — Ramona's Mobile Massage",
+      metaTitle: "Despre Mine — Ramona's Mobile Massage",
       metaDesc:
-        "Masaj mobil premium adaptat individual pentru companii si evenimente business in Münster, Münsterland si NRW.",
-      badge: "Editorial Wellness Concept",
-      titlu1: "construim ",
-      titluItalic: "linistea",
-      titlu2: "direct la locatie.",
-      descriere:
-        "Ramona's Mobile Massage redefineste wellbeing-ul corporate prin experiente mobile de inalta rezolutie create exclusiv pentru companii moderne si spatii profesionale rafinate.",
-      ariaBadge: "Aria Operationala",
-      ariaText: "Münster · NRW · Münsterland",
-      butonConversatie: "Programeaza conversatie",
-      philosophyBadge: "// Philosophy & Vision",
-      philosophyTitlu1: "wellbeing-ul este o structura de performanta, ",
-      philosophyItalic: "nu un lux temporar.",
-      philosophyDesc:
-        "Aplicarile noastre terapeutice mobile sunt realizate direct la sediu pentru companii si evenimente corporate organizate in Münster si intreaga regiune NRW.",
-      philosophyParagraphs: [
-        "Fiecare experienta este construita individual, cu accent pe relaxare profunda, echilibru si confort emotional intr-un mod elegant si discret.",
-        "Reducem tensiunea musculara acumulata in urma posturii la birou, imbunatatim concentrarea si oferim echipelor un moment autentic de reset mental chiar in timpul programului.",
-        "Nu aducem doar un serviciu fizic — construim o cultura a starii de bine, calibrata cerintelor companiilor moderne.",
+        "În spatele Ramona's Mobile Massage mă aflu eu, Ramona. Află povestea proiectului meu...",
+      badge: "Povestea Mea",
+      titlu1: "despre ",
+      titluItalic: "mine.",
+      titlu2: "",
+      descriere: [
+        "În spatele Ramona's Mobile Massage mă aflu eu, Ramona.",
+        "Ideea acestui proiect s-a născut din experiențele mele profesionale și din convingerea că, în ritmul alert al vieții de astăzi, oamenii au nevoie de momente în care să se oprească și să își acorde atenție. De multe ori suntem concentrați pe responsabilități, termene și grija față de ceilalți, iar timpul pentru noi înșine rămâne pe ultimul loc.",
+        "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății, al întâlnirilor de afaceri sau al altor ocazii speciale.",
+        "Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea evenimentului sau a programului de lucru.",
+        "Ramona's Mobile Massage reprezintă mai mult decât un serviciu mobil. Reprezintă dorința de a aduce mai aproape un moment de atenție și grijă față de oameni, într-un mod flexibil, profesionist și autentic.",
       ],
+      ariaBadge: "Aria Operațională",
+      ariaText: "Münster · NRW · Münsterland",
+      butonConversatie: "Programează conversație",
+
+      // Secțiunile de mai jos rămân la fel (dacă vrei să le păstrezi pe pagină)
       valuesBadge: "// Valorile Noastre",
-      valuesTitlu: "Ce ne diferentiaza",
+      valuesTitlu: "Ce ne diferențiază",
       valuesItems: [
         {
-          title: "Discretie & Respect",
-          desc: "Fiecare aplicare este realizata cu atentie maxima la confortul si intimitatea persoanei, intr-un cadru strict profesional.",
+          title: "Discreție & Respect",
+          desc: "Fiecare aplicare este realizată cu atenție maximă la confortul și intimitatea persoanei, într-un cadru strict profesional.",
         },
         {
           title: "Calitate Premium",
-          desc: "Echipamente profesionale, consumabile biodegradabile si uleiuri organice selectionate — nimic nu este lasat la intamplare.",
+          desc: "Echipamente profesionale, consumabile biodegradabile și uleiuri organice selecționate — nimic nu este lăsat la întâmplare.",
         },
         {
-          title: "Orientat spre Echipa",
-          desc: "Proiectam fiecare program pentru cultura specifica a companiei tale, nu dupa un sablon generic.",
+          title: "Orientat spre Echipă",
+          desc: "Proiectăm fiecare program pentru cultura specifică a companiei tale, nu după un șablon generic.",
         },
       ],
       ctaGlowBadge: "// Oferta B2B Pilot",
-      ctaGlowTitlu1: "incepe cu o ",
-      ctaGlowItalic: "demonstratie gratuita",
+      ctaGlowTitlu1: "începe cu o ",
+      ctaGlowItalic: "demonstrație gratuită",
       ctaGlowTitlu2: "la birou.",
       ctaGlowDesc:
-        "Oferim jumatate de zi de testare cu un terapeut licentiat, complet autonom, fara niciun fel de obligatii contractuale sau financiare ulterioare.",
-      ctaGlowButton: "Solicita demo gratuit",
+        "Oferim jumătate de zi de testare cu un terapeut licențiat, complet autonom, fără niciun fel de obligații contractuale sau financiare ulterioare.",
+      ctaGlowButton: "Solicită demo gratuit",
     },
-    // În translations.ts, în interiorul obiectului EN (sau RO)
     impressumPage: {
       metaTitle: "Abc — Ramona's Mobile Massage",
       metaDesc: "Identificarea furnizorului conform § 5 DDG și § 18 MStV.",
@@ -1089,8 +1085,6 @@ export const translations = {
       ],
     },
 
-    // ... în interiorul obiectului translations, la trustBar
-
     trustBar: {
       badge: "",
       titlu1: "Fiecare persoană este unică",
@@ -1133,7 +1127,7 @@ export const translations = {
         {
           title: "Ocazii speciale",
           label:
-            "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
+            "Fie că este vorba despre o aniversare sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe.",
           metricLabel: "resimtire oboseala",
         },
       ],

@@ -46,7 +46,7 @@ export function HeroImage() {
 
 export function AboutUs() {
   const { t } = useLanguage();
-  const s = t.aboutPage; // Alias pentru a simplifica accesul
+  const s = t.aboutPage;
   const sectionRef = useRef<HTMLElement>(null);
   useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -83,7 +83,9 @@ export function AboutUs() {
           content={s.metaDesc || "Descoperă serviciile de masaj mobil..."}
         />
       </Helmet>
-      <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/30 to-transparent pt-4 sm:pt-16 lg:pt-28 pb-10 lg:pb-24 w-full">
+
+      {/* HERO SECTION - Ajustat padding-ul de sus pentru o înălțime optimă */}
+      <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/30 to-transparent pt-12 sm:pt-24 lg:pt-6 pb-10 lg:pb-24 w-full">
         <div
           className="pointer-events-none absolute inset-0 select-none overflow-hidden"
           aria-hidden="true"
@@ -100,7 +102,8 @@ export function AboutUs() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 w-full box-border">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full">
+            {/* TEXT COLUMN */}
             <div className="lg:col-span-6 flex flex-col items-start w-full box-border">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -124,10 +127,14 @@ export function AboutUs() {
                 <span className="block mt-1 lg:mt-2 text-accent italic font-normal">
                   {t.aboutPage.titluItalic}
                 </span>
-                <span className="block mt-1 lg:mt-2">{t.aboutPage.titlu2}</span>
+                {t.aboutPage.titlu2 && (
+                  <span className="block mt-1 lg:mt-2">
+                    {t.aboutPage.titlu2}
+                  </span>
+                )}
               </motion.h1>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -135,16 +142,23 @@ export function AboutUs() {
                   delay: 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-5 lg:mt-8 max-w-lg text-xs sm:text-sm lg:text-lg leading-relaxed font-light text-muted-foreground"
+                className="mt-6 lg:mt-8 text-[14px] sm:text-[15px] lg:text-[15.5px] leading-relaxed font-light text-muted-foreground space-y-3 lg:pr-6 w-full"
               >
-                {t.aboutPage.descriere}
-              </motion.p>
+                {Array.isArray(t.aboutPage.descriere) ? (
+                  t.aboutPage.descriere.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))
+                ) : (
+                  <p>{t.aboutPage.descriere}</p>
+                )}
+              </motion.div>
 
+              {/* MOBILE IMAGE */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="lg:hidden w-full mt-6 relative"
+                className="lg:hidden w-full mt-8 relative"
               >
                 <div className="absolute -top-2 -left-2 w-10 h-10 border-t border-l border-border/40 pointer-events-none" />
                 <div className="absolute -bottom-2 -right-2 w-10 h-10 border-b border-r border-border/40 pointer-events-none" />
@@ -159,7 +173,7 @@ export function AboutUs() {
                   delay: 0.15,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-6 lg:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full"
+                className="mt-8 lg:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full"
               >
                 <div className="flex items-center gap-3 bg-card/60 p-3 lg:p-0 rounded-xl border border-border/30 lg:border-0 lg:bg-transparent shrink-0">
                   <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-border/50 bg-card flex items-center justify-center shrink-0 shadow-2xs">
@@ -193,6 +207,7 @@ export function AboutUs() {
               </motion.div>
             </div>
 
+            {/* DESKTOP IMAGE COLUMN */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -207,6 +222,7 @@ export function AboutUs() {
         </div>
       </section>
 
+      {/* STATS SECTION */}
       <section className="border-b border-border/40 bg-card w-full">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 py-6 lg:py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 lg:divide-x divide-border/30 w-full">
@@ -231,14 +247,13 @@ export function AboutUs() {
         </div>
       </section>
 
+      {/* VALUES SECTION */}
       <section className="relative w-full bg-muted/10 border-y border-border/30 overflow-hidden">
-        {/* subtle background glow */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/10 blur-3xl rounded-full" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 py-16 lg:py-28">
-          {/* HEADER */}
           <div className="mb-12 lg:mb-20 text-center">
             <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.35em] font-mono text-accent">
               {t.aboutPage.valuesBadge}
@@ -254,7 +269,6 @@ export function AboutUs() {
             </p>
           </div>
 
-          {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-10">
             {values.map((v, i) => (
               <motion.div
@@ -265,33 +279,24 @@ export function AboutUs() {
                 transition={{ delay: i * 0.08, duration: 0.6 }}
                 className="group relative"
               >
-                {/* glow border */}
                 <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-accent/0 via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
 
                 <div
                   className={`relative h-full rounded-2xl bg-card/80 backdrop-blur-md border border-border/30 p-6 lg:p-8
-            shadow-sm hover:shadow-xl transition-all duration-500
-            hover:-translate-y-1`}
+            shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1`}
                 >
-                  {/* icon */}
                   <div
                     className="w-11 h-11 lg:w-12 lg:h-12 rounded-xl bg-muted/60 border border-border/40 flex items-center justify-center mb-6
               group-hover:bg-accent/10 group-hover:border-accent/30 transition"
                   >
                     <v.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
                   </div>
-
-                  {/* title */}
                   <h3 className="text-[13px] lg:text-[14px] font-semibold uppercase tracking-wide text-foreground mb-2">
                     {v.title}
                   </h3>
-
-                  {/* desc */}
                   <p className="text-[13px] text-muted-foreground leading-relaxed font-light">
                     {v.desc}
                   </p>
-
-                  {/* subtle underline accent */}
                   <div className="mt-5 h-px w-10 bg-accent/40 group-hover:w-16 transition-all duration-500" />
                 </div>
               </motion.div>
@@ -300,6 +305,7 @@ export function AboutUs() {
         </div>
       </section>
 
+      {/* CTA SECTION */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 pt-16 lg:pt-28 w-full box-border overflow-hidden">
         <div
           className="relative text-background p-6 sm:p-10 lg:p-16 overflow-hidden shadow-xl w-full box-border bg-foreground"
