@@ -15,6 +15,7 @@ const COMPANY = {
   phone: "+49 176 63167411",
   email: "hello@ramonamassage.de",
   taxId: "[Steuernummer]",
+  vat: "[USt-IdNr.]",
 };
 
 export function ImpressumPage() {
