@@ -1,16 +1,25 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import {
-  ArrowRight,
-  Sparkles,
-  ShieldCheck,
-  Briefcase,
-  Truck,
-} from "lucide-react";
+import { Sparkles, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { BotanicalSVG } from "../components/BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
-import { Link } from "react-router-dom";
+
+// --- REZOLVARE EROARE TYPESCRIPT ---
+interface RateItem {
+  time: string;
+  price: string;
+  detail?: string;
+  featured?: boolean;
+}
+
+interface RateCardProps {
+  item: RateItem;
+  perSession: string;
+  popularLabel?: string;
+  index: number;
+}
+// -----------------------------------
 
 export function Servicii() {
   const { t } = useLanguage();
@@ -62,13 +71,13 @@ export function Servicii() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <h1 className="font-serif text-5xl sm:text-7xl lg:text-[6rem] font-light tracking-[-0.04em] leading-[0.88] lowercase">
+              <h1 className="font-serif text-5xl sm:text-7xl lg:text-[5.5rem] font-light tracking-[-0.04em] leading-[0.88]">
                 {s.titlu1}
-                <span className="text-accent italic font-normal block">
+                <span className="text-accent italic font-normal block mt-1">
                   {s.titluItalic}
                 </span>
               </h1>
-              <p className="mt-4 text-sm text-muted-foreground font-light leading-relaxed max-w-lg">
+              <p className="mt-6 text-[15px] text-muted-foreground font-light leading-relaxed max-w-xl">
                 {s.descriere}
               </p>
             </motion.div>
@@ -101,14 +110,40 @@ export function Servicii() {
         </div>
       </section>
 
-      {/* ─── MAIN ─── */}
+      {/* ─── WHY CHOOSE US STRIP ─── */}
+      <div className="mx-auto max-w-6xl px-5 lg:px-12 pt-10">
+        <div className="bg-card border border-border/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden shadow-sm">
+          <div className="absolute top-0 left-0 w-1 h-full bg-accent"></div>
+          <div className="relative z-10">
+            <h3 className="font-serif text-2xl text-foreground font-light mb-2">
+              {s.whyTitle}
+            </h3>
+            <p className="text-[14px] text-muted-foreground font-light leading-relaxed max-w-2xl">
+              {s.whyDesc}
+            </p>
+          </div>
+          <div className="relative z-10 hidden md:flex shrink-0 w-14 h-14 bg-muted/50 rounded-full items-center justify-center border border-border/50">
+            <CheckCircle2 className="w-6 h-6 text-accent" strokeWidth={1.5} />
+          </div>
+        </div>
+      </div>
+
+      {/* ─── MAIN LAYOUT ─── */}
       <div className="mx-auto max-w-6xl px-5 lg:px-12 py-10 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] gap-0">
-          {/* LEFT COLUMN */}
-          <div className="lg:pr-10 pb-10">
+          {/* LEFT COLUMN: Tarife & Durată */}
+          <div className="lg:pr-12 pb-10">
             <ColHeader badge={s.module1Badge} title={s.module1Title} />
-            <div className="space-y-2 mt-5">
-              {s.rates.map((item, idx) => (
+
+            {/* INCEPAND DE LA */}
+            <div className="mt-8 mb-2">
+              <span className="text-xs uppercase tracking-widest font-mono text-muted-foreground font-semibold">
+                {s.startingFrom}
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              {s.rates.map((item: RateItem, idx: number) => (
                 <RateCard
                   key={idx}
                   item={item}
@@ -118,78 +153,79 @@ export function Servicii() {
                 />
               ))}
             </div>
-            <div className="mt-6 border-l-2 border-accent/25 pl-4">
-              <p className="font-serif italic text-[13px] text-muted-foreground leading-relaxed font-light">
-                {s.quote}
-              </p>
-            </div>
+
+            {s.quote && (
+              <div className="mt-8 border-l-2 border-accent/25 pl-4">
+                <p className="font-serif italic text-[14px] text-muted-foreground leading-relaxed font-light">
+                  {s.quote}
+                </p>
+              </div>
+            )}
           </div>
 
+          {/* DESPĂRȚITOR */}
           <div className="hidden lg:block bg-border/40 self-stretch mx-0" />
 
-          {/* RIGHT COLUMN */}
-          <div className="lg:pl-10 pt-10 lg:pt-0 border-t border-border/30 lg:border-t-0">
+          {/* RIGHT COLUMN: Hoteluri, Ocazii Speciale, Info Practice & Legal */}
+          <div className="lg:pl-12 pt-10 lg:pt-0 border-t border-border/30 lg:border-t-0">
             <ColHeader badge={s.module2Badge} title={s.module2Title} />
-            <div className="relative mt-5 overflow-hidden rounded-xl bg-neutral-900 text-white p-6">
+
+            {/* VIP Card - 120 min */}
+            <div className="relative mt-7 overflow-hidden rounded-xl bg-neutral-900 text-white p-6 shadow-md">
               <div className="relative z-10">
-                <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-neutral-400 block mb-2 font-bold">
+                <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-neutral-400 block mb-3 font-bold">
                   {s.vipMinBadge}
                 </span>
-                <div className="font-serif text-5xl font-light tracking-[-0.04em] text-white leading-none">
-                  120
-                  <span className="text-[#b7744f] text-lg ml-1.5 italic font-serif">
-                    min.
-                  </span>
-                </div>
-                <p className="mt-3 text-[13px] text-neutral-300 font-normal leading-relaxed">
+                <p className="text-[14px] text-neutral-200 font-light leading-relaxed">
                   {s.vipMinText}
                 </p>
               </div>
             </div>
 
-            <div className="mt-4 space-y-2">
-              <LogisticsRow
-                icon={Briefcase}
-                title={s.logisticTitle}
-                desc={s.logisticDesc}
-              />
-              <LogisticsRow
-                icon={Truck}
-                title={s.transportTitle}
-                desc={s.transportDesc}
-              />
+            {/* Informații practice */}
+            <div className="mt-8">
+              <h3 className="font-serif text-2xl font-light text-foreground mb-4 tracking-tight">
+                {s.practicalInfoTitle}
+              </h3>
+              <div className="space-y-3">
+                {s.practicalInfo.map((info: string, idx: number) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3 px-4 py-3 rounded-lg bg-card border border-border/30"
+                  >
+                    <div className="mt-0.5 shrink-0">
+                      <CheckCircle2
+                        className="w-4 h-4 text-accent"
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                    <p className="text-[12.5px] text-muted-foreground font-light leading-relaxed">
+                      {info}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-4 overflow-hidden rounded-lg border border-border/30 bg-card">
-              <div className="flex items-center gap-2 px-4 py-2.5 border-b border-border/30 bg-muted/40">
+            {/* Notă importantă (Legal box) */}
+            <div className="mt-6 overflow-hidden rounded-lg border border-border/30 bg-card">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border/30 bg-muted/40">
                 <ShieldCheck
-                  className="w-3.5 h-3.5 text-accent"
+                  className="w-4 h-4 text-accent"
                   strokeWidth={1.5}
                 />
-                <span className="text-[8px] font-mono uppercase tracking-[0.25em] text-foreground font-bold">
+                <span className="text-[9px] font-mono uppercase tracking-[0.25em] text-foreground font-bold">
                   {s.legalBadge}
                 </span>
               </div>
-              <p className="px-4 py-3 text-[11px] leading-relaxed text-muted-foreground font-light">
+              <p className="px-4 py-3.5 text-[12px] leading-relaxed text-muted-foreground font-light">
                 {s.legalDesc}
               </p>
             </div>
           </div>
         </div>
 
-        {/* CTA BUTON MUTAT JOS */}
-        <div className="mt-10 lg:mt-0 flex justify-center lg:justify-start">
-          <Link
-            to="/contact"
-            className="group flex items-center justify-between w-full max-w-md lg:max-w-[300px] rounded-full bg-foreground text-background px-6 py-4 text-[9px] font-mono uppercase tracking-[0.22em] font-bold transition-all duration-300 hover:bg-accent hover:scale-[1.01]"
-          >
-            <span>{s.btnProposal}</span>
-            <ArrowRight
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
-              strokeWidth={1.5}
-            />
-          </Link>
-        </div>
+        {/* CTA BUTON */}
       </div>
     </div>
   );
@@ -202,14 +238,14 @@ function ColHeader({ badge, title }: { badge: string; title: string }) {
       <span className="inline-block text-[9px] font-bold uppercase tracking-[0.3em] text-[#965935] bg-[#f0e8e0] px-3 py-1 rounded-full">
         {badge}
       </span>
-      <h2 className="mt-3 font-serif text-3xl font-light tracking-tight text-neutral-950">
+      <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-light tracking-tight text-neutral-950 leading-tight">
         {title}
       </h2>
     </div>
   );
 }
 
-function RateCard({ item, perSession, popularLabel, index }: any) {
+function RateCard({ item, perSession, popularLabel, index }: RateCardProps) {
   const [hovered, setHovered] = useState(false);
   return (
     <motion.div
@@ -219,55 +255,57 @@ function RateCard({ item, perSession, popularLabel, index }: any) {
       transition={{ duration: 0.4, delay: index * 0.07 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className={`relative flex items-center justify-between gap-4 px-4 py-3.5 rounded-xl border transition-all duration-300 cursor-default ${item.featured ? "bg-foreground text-background border-foreground shadow-md" : "bg-card border-border/30 hover:border-accent/30 hover:-translate-y-px hover:shadow-sm"}`}
+      className={`relative flex items-center justify-between gap-4 px-5 py-4 rounded-xl border transition-all duration-300 cursor-default ${
+        item.featured
+          ? "bg-foreground text-background border-foreground shadow-md"
+          : "bg-card border-border/30 hover:border-accent/30 hover:-translate-y-px hover:shadow-sm"
+      }`}
     >
       {item.featured && (
-        <span className="absolute top-2.5 right-3 text-[7px] font-mono uppercase tracking-widest bg-accent text-white px-2 py-0.5 rounded-full font-bold">
+        <span className="absolute top-2 right-3 text-[7px] font-mono uppercase tracking-widest bg-accent text-white px-2 py-0.5 rounded-full font-bold">
           {popularLabel}
         </span>
       )}
       <div
-        className={`w-0.5 h-10 rounded-full shrink-0 ${item.featured ? "bg-accent" : "bg-accent/25"}`}
+        className={`w-0.5 h-10 rounded-full shrink-0 ${
+          item.featured ? "bg-accent" : "bg-accent/25"
+        }`}
       />
-      <div className="flex-1 min-w-0 space-y-0.5">
+      <div className="flex-1 min-w-0 space-y-1">
         <span
-          className={`font-serif text-xl font-light ${item.featured ? "text-background" : "text-foreground"}`}
+          className={`font-serif text-2xl font-light block ${
+            item.featured ? "text-background" : "text-foreground"
+          }`}
         >
           {item.time}
         </span>
-        <p
-          className={`text-[11px] font-light ${item.featured ? "text-background/60" : "text-muted-foreground"}`}
-        >
-          {item.detail}
-        </p>
+        {item.detail && (
+          <p
+            className={`text-[12px] font-light ${
+              item.featured ? "text-background/60" : "text-muted-foreground"
+            }`}
+          >
+            {item.detail}
+          </p>
+        )}
       </div>
       <div className="text-right shrink-0">
         <span
-          className={`font-serif text-2xl font-light transition-colors ${item.featured ? "text-background" : hovered ? "text-accent" : "text-foreground"}`}
+          className={`font-serif text-3xl font-light transition-colors ${
+            item.featured
+              ? "text-background"
+              : hovered
+                ? "text-accent"
+                : "text-foreground"
+          }`}
         >
           {item.price}
         </span>
-        <span className="block text-[8px] font-mono uppercase tracking-widest text-neutral-600">
+        <span className="block text-[9px] mt-1 font-mono uppercase tracking-widest text-neutral-500">
           {perSession}
         </span>
       </div>
     </motion.div>
-  );
-}
-
-function LogisticsRow({ icon: Icon, title, desc }: any) {
-  return (
-    <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-card border border-border/30">
-      <div className="w-8 h-8 rounded-md bg-muted flex items-center justify-center shrink-0">
-        <Icon className="w-4 h-4 text-accent" strokeWidth={1.5} />
-      </div>
-      <div>
-        <p className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-foreground">
-          {title}
-        </p>
-        <p className="text-[11px] text-muted-foreground font-light">{desc}</p>
-      </div>
-    </div>
   );
 }
 

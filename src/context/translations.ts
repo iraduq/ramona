@@ -201,81 +201,63 @@ export const translations = {
       },
     },
     servicesPage: {
-      metaTitle: "Dienstleistungen & Tarife — Mobile Massage Münster",
-      metaDesc:
-        "Mobile Massagedienste in Münster und NRW. Anwendungen für Büros, Events, Hotels und Gesundheitstage. Flexible Pakete ab 15 Minuten.",
-      topBadge: "Preise / Prețuri",
-      titlu1: "Masaj la birou & ",
-      titluItalic: "Evenimente Business",
+      metaTitle: "Preise & Dienstleistungen — Ramona's Mobile Massage",
+      metaDesc: "Büromassage, Corporate Events, Hotels und besondere Anlässe.",
+      topBadge: "Preise / Tarife",
+      titlu1: "Massage im Büro & ",
+      titluItalic: "Business Events",
       descriere:
-        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage. Prețurile afișate încep de la:",
-      ethicalBadge: "Richtlinie für ethisches Verhalten",
-      ethicalTitle: "Exklusiver Medical-Wellness-Charakter",
-      ethicalSub: "Service 100% Non-Erotik",
-      module1Badge: "Büro & Business-Events",
-      module1Title: "Masaj la birou & Evenimente Business",
-      quote:
-        "\u201eJede Sitzung fungiert als mobile posturale Mikro-Architektur, die myofasziale Spannungen eliminiert.\u201c",
-      module2Badge: "Hoteluri & Ocazii Speciale",
-      module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
+        "Für Unternehmen, Büros, Corporate Events, Workshops und Gesundheitstage.",
+      whyTitle: "Warum Ramona's Mobile Massage?",
+      whyDesc:
+        "Direkt vor Ort, mit kompletter Ausrüstung, flexibel und individuell angepasst – diskret und professionell.",
+      ethicalBadge: "Ethikrichtlinie",
+      ethicalTitle: "Ausschließlich Entspannung & Wohlbefinden",
+      ethicalSub: "100% Non-Erotik",
+      module1Badge: "Büro & Business",
+      module1Title: "Preise & Dauer",
+      startingFrom: "Ab:", // Text nou pentru "Incepand de la"
+      quote: "",
+      module2Badge: "Hotels & Wellness-Center",
+      module2Title: "Hotels, Wellness-Center & besondere Anlässe",
       vipMinBadge: "Mindestbuchungsdauer",
       vipMinText:
-        "Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
-      logisticTitle: "Vin cu ulei și echipament",
-      logisticDesc:
-        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta.",
-      transportTitle: "Deplasare inclusă Münsterland",
-      transportDesc:
-        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland. Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr.",
-      btnProposal: "📩 Contactează-mă pentru o ofertă",
-      legalBadge: "Notă",
+        "Die Sitzungen werden am ganzen Körper in einem entspannten und individuellen Rahmen durchgeführt. Die Mindestbuchungsdauer beträgt 120 Minuten, die flexibel auf die Teilnehmer aufgeteilt werden können – zum Beispiel 2 × 60 Minuten oder 3 × 40 Minuten.",
+      practicalInfoTitle: "Praktische Informationen",
+      practicalInfo: [
+        "Die Preise können je nach Art der Veranstaltung und Kontext, Buchungsdauer und Ort variieren.",
+        "Fahrtkosten sind für die Region Münsterland inklusive. Für Orte außerhalb dieser Region können zusätzliche Kosten anfallen.",
+        "Buchungen erfolgen nach Verfügbarkeit und werden im Voraus bestätigt.",
+        "Die Zahlung kann in bar oder per Überweisung (mit Rechnung) erfolgen.",
+        "Ausschließlich für Hotels und besondere Anlässe (Events) ist die vollständige Zahlung bei Bestätigung erforderlich.", // Informatie clara pentru evenimente
+      ],
+      btnProposal: "📩 Termin buchen / Angebot anfordern",
+      legalBadge: "Wichtiger Hinweis",
       legalDesc:
-        "Aplicările sunt orientate exclusiv spre relaxare și nu au caracter erotic. Nu reprezintă tratamente medicale sau terapeutice și nu înlocuiesc consultul medical, diagnosticul sau tratamentele de specialitate.",
-      paymentTitle: "Plată",
-      paymentDesc:
-        "Plata se poate efectua în numerar sau prin transfer bancar (factură).",
-      perSession: "/ sedință",
-      popular: "Popular",
+        "Alle angebotenen Dienstleistungen dienen ausschließlich der Entspannung, dem Komfort und dem allgemeinen Wohlbefinden. Sie haben keinen erotischen Charakter und stellen keine medizinischen oder therapeutischen Behandlungen dar. Die Dienstleistungen ersetzen keine medizinische Beratung, Diagnose oder Empfehlungen von medizinischem Fachpersonal.",
+      perSession: "/ Sitzung",
+      popular: "Empfohlen",
       rates: [
         {
-          time: "15 Min",
+          time: "15 Minuten",
           price: "21 €",
-          tag: "Focus Break",
-          detail:
-            "Schneller Reset für Nacken und Trapezmuskel. Ideal für kurze Pausen.",
-          zone: "Nacken & Trapezmuskel",
+          detail: "Schnelle Pause für mentalen und physischen Reset.",
         },
         {
-          time: "20 Min",
+          time: "20 Minuten",
           price: "26 €",
-          tag: "Optimal",
-          detail:
-            "Das ideale Intervall für skapuläre Dekontraktion und tiefe Entspannung.",
-          zone: "Skapulär & Hals",
+          detail: "Optimale Entspannung während der Arbeitszeit.",
         },
         {
-          time: "25 Min",
+          time: "25 Minuten",
           price: "31 €",
-          tag: "Intense Release",
-          detail:
-            "Erweiterte Wiederherstellung der durch die Körperhaltung betroffenen starren Muskelketten.",
-          zone: "Lenden & Arme",
+          detail: "Tiefe Entspannung der beanspruchten Muskulatur.",
         },
         {
-          time: "30 Min",
+          time: "30 Minuten",
           price: "36 €",
-          tag: "Elite Ritual",
-          detail:
-            "Globale Behandlung mit myofaszialer Freisetzung und mentalem Reset, inklusive Kopfhaut.",
-          zone: "Full Body + Kopfhaut",
+          detail: "Komplette Sitzung zur Entspannung und Stressabbau.",
         },
-      ],
-      practicalInfoTitle: "Informații practice",
-      practicalInfo: [
-        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta",
-        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland",
-        "Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr",
-        "Plata se poate efectua în numerar sau prin transfer bancar (factură)",
       ],
     },
     nav: {
@@ -520,6 +502,7 @@ export const translations = {
         },
       ],
     },
+
     trustBar: {
       badge: "Münster · Münsterland · NRW / Mobile Dienste",
       titlu1: "Fokus und Balance",
@@ -568,6 +551,70 @@ export const translations = {
     },
   },
   EN: {
+    servicesPage: {
+      metaTitle: "Prețuri & Servicii — Ramona's Mobile Massage",
+      metaDesc:
+        "Masaj la birou, evenimente corporate, hoteluri și ocazii speciale.",
+      topBadge: "Prețuri / Tarife",
+      titlu1: "Masaj la birou & ",
+      titluItalic: "Evenimente Business",
+      descriere:
+        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage.",
+      whyTitle: "De ce Ramona's Mobile Massage?",
+      whyDesc:
+        "Direct la locație, cu echipament complet, flexibil și adaptat individual – discret și profesionist.",
+      ethicalBadge: "Directivă de etică",
+      ethicalTitle: "Exclusiv Relaxare & Stare de bine",
+      ethicalSub: "100% Non-Erotic",
+      module1Badge: "Birou & Business",
+      module1Title: "Tarife & Durată",
+      startingFrom: "Începând de la:", // Text nou adaugat aici
+      quote: "",
+      module2Badge: "Hoteluri & Centre Wellness",
+      module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
+      vipMinBadge: "Durată minimă de rezervare",
+      vipMinText:
+        "Ședințele de masaj sunt realizate pe întregul corp, într-un cadru relaxat și personalizat. Durata minimă de rezervare este de 120 de minute, care poate fi împărțită flexibil, de exemplu 2 × 60 de minute sau 3 × 40 de minute.",
+      practicalInfoTitle: "Informații practice",
+      practicalInfo: [
+        "Prețurile pot varia în funcție de tipul evenimentului și al contextului, durata rezervării și locație.",
+        "Costurile de deplasare sunt incluse pentru regiunea Münsterland. Pentru locații în afara acestei regiuni pot fi percepute costuri suplimentare.",
+        "Rezervările se realizează în funcție de disponibilitate și se confirmă în prealabil.",
+        "Plata se poate efectua în numerar sau prin transfer bancar, cu emitere de factură.",
+        "Exclusiv pentru hoteluri și ocazii speciale (evenimente), plata integrală se solicită la confirmare.", // Informatie clarificata
+      ],
+      btnProposal: "📩 Programează / Cere ofertă",
+      legalBadge: "Notă importantă",
+      legalDesc:
+        "Toate serviciile oferite sunt destinate exclusiv relaxării, confortului și stării generale de bine. Acestea nu au caracter erotic și nu reprezintă tratamente medicale sau terapeutice. Serviciile nu înlocuiesc consultul medical, diagnosticul sau recomandările personalului medical de specialitate.",
+      perSession: "/ ședință",
+      popular: "Recomandat",
+      rates: [
+        {
+          time: "15 minute",
+          price: "21 €",
+          detail:
+            "O scurtă evadare pentru reîmprospătarea stării de bine în timpul zilei.",
+        },
+        {
+          time: "20 minute",
+          price: "26 €",
+          detail:
+            "Momente dedicate echilibrului personal și relaxării imediate.",
+        },
+        {
+          time: "25 minute",
+          price: "31 €",
+          detail:
+            "O experiență de relaxare extinsă pentru o stare de spirit optimistă.",
+        },
+        {
+          time: "30 minute",
+          price: "36 €",
+          detail: "O pauză completă de reconectare și liniște interioară.",
+        },
+      ],
+    },
     agbPage: {
       eyebrow: "Legal",
       title: "Terms & Conditions",
@@ -692,84 +739,7 @@ export const translations = {
           "Putem actualiza această politică. Versiunea curentă este întotdeauna disponibilă pe această pagină.",
       },
     },
-    servicesPage: {
-      metaTitle: "Servicii & Tarife — Masaj corporativ Munster",
-      metaDesc:
-        "Servicii mobile de masaj in Münster si NRW. Aplicari pentru birouri, evenimente, hoteluri si Gesundheitstage. Pachete flexibile de la 15 minute.",
-      topBadge: "Preise / Prețuri",
-      titlu1: "Masaj la birou & ",
-      titluItalic: "Evenimente Business",
-      descriere:
-        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage. Prețurile afișate încep de la:",
-      ethicalBadge: "Directiva De Conduita Etica",
-      ethicalTitle: "Caracter exclusiv medical-wellness",
-      ethicalSub: "Serviciu 100% Non-Erotic",
-      module1Badge: "Birou & Evenimente Business",
-      module1Title: "Masaj la birou & Evenimente Business",
-      quote:
-        "\u201eFiecare sesiune functioneaza ca o micro-arhitectura posturala mobila, eliminand tensiunea miofasciala.\u201c",
-      module2Badge: "Hoteluri & Ocazii Speciale",
-      module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
-      vipMinBadge: "Durata minima de rezervare",
-      vipMinText:
-        "Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
-      logisticTitle: "Vin cu ulei și echipament",
-      logisticDesc:
-        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta.",
-      transportTitle: "Deplasare inclusă Münsterland",
-      transportDesc:
-        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland. Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr.",
-      btnProposal: "📩 Contactează-mă pentru o ofertă",
-      legalBadge: "Notă",
-      legalDesc:
-        "Aplicările sunt orientate exclusiv spre relaxare și nu au caracter erotic. Nu reprezintă tratamente medicale sau terapeutice și nu înlocuiesc consultul medical, diagnosticul sau tratamentele de specialitate.",
-      paymentTitle: "Plată",
-      paymentDesc:
-        "Plata se poate efectua în numerar sau prin transfer bancar (factură).",
-      perSession: "/ sedință",
-      popular: "Popular",
-      rates: [
-        {
-          time: "15 Min",
-          price: "21 €",
-          tag: "Focus Break",
-          detail:
-            "Resetare rapida cervicala si trapez. Ideal pentru pauze scurte.",
-          zone: "Cervical & Trapez",
-        },
-        {
-          time: "20 Min",
-          price: "26 €",
-          tag: "Optimal",
-          detail:
-            "Intervalul ideal pentru decontracturare scapulara si detensionare profunda.",
-          zone: "Scapular & Gat",
-        },
-        {
-          time: "25 Min",
-          price: "31 €",
-          tag: "Intense Release",
-          detail:
-            "Restaurare extinsa pe lanturile musculare rigide afectate de postura.",
-          zone: "Lombar & Brate",
-        },
-        {
-          time: "30 Min",
-          price: "36 €",
-          tag: "Elite Ritual",
-          detail:
-            "Tratament global cu eliberare miofasciala si reset mental, include scalp.",
-          zone: "Full Body + Scalp",
-        },
-      ],
-      practicalInfoTitle: "Informații practice",
-      practicalInfo: [
-        "Vin cu ulei și cu tot echipamentul necesar — niciun efort din partea ta",
-        "Costurile și timpul de deplasare sunt incluse în preț pentru zona Münsterland",
-        "Pentru alte zone, prețurile pot varia în funcție de locație, distanță și număr",
-        "Plata se poate efectua în numerar sau prin transfer bancar (factură)",
-      ],
-    },
+
     contactPage: {
       metaTitle: "Contact",
       metaDesc:
@@ -816,16 +786,14 @@ export const translations = {
       titlu2: "",
       descriere: [
         "În spatele Ramona's Mobile Massage mă aflu eu, Ramona.",
-        "Ideea acestui proiect s-a născut din experiențele mele profesionale și din convingerea că, în ritmul alert al vieții de astăzi, oamenii au nevoie de momente în care să se oprească și să își acorde atenție. De multe ori suntem concentrați pe responsabilități, termene și grija față de ceilalți, iar timpul pentru noi înșine rămâne pe ultimul loc.",
-        "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății, al întâlnirilor de afaceri sau al altor ocazii speciale.",
-        "Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea evenimentului sau a programului de lucru.",
+        "Ideea acestui proiect s-a născut din experiențele mele profesionale și din convingerea că, în ritmul alert al vieții de astăzi, oamenii au nevoie de momente în care să se oprească și să își acorde atenție. De multe ori suntem concentrați pe responsabilități, termene și ritmul activităților zilnice, iar timpul pentru noi înșine rămâne pe ultimul loc.",
+        "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății, întâlnirilor de afaceri cât și la ocazii speciale. Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea programului de lucru sau a evenimentului.",
         "Ramona's Mobile Massage reprezintă mai mult decât un serviciu mobil. Reprezintă dorința de a aduce mai aproape un moment de atenție și grijă față de oameni, într-un mod flexibil, profesionist și autentic.",
       ],
       ariaBadge: "Aria Operațională",
       ariaText: "Münster · NRW · Münsterland",
       butonConversatie: "Programează conversație",
 
-      // Secțiunile de mai jos rămân la fel (dacă vrei să le păstrezi pe pagină)
       valuesBadge: "// Valorile Noastre",
       valuesTitlu: "Ce ne diferențiază",
       valuesItems: [
@@ -849,41 +817,6 @@ export const translations = {
       ctaGlowDesc:
         "Oferim jumătate de zi de testare cu un terapeut licențiat, complet autonom, fără niciun fel de obligații contractuale sau financiare ulterioare.",
       ctaGlowButton: "Solicită demo gratuit",
-    },
-    impressumPage: {
-      metaTitle: "Abc — Ramona's Mobile Massage",
-      metaDesc: "Identificarea furnizorului conform § 5 DDG și § 18 MStV.",
-      eyebrow: "Legal",
-      title: "Impressum",
-      intro:
-        "Identificarea furnizorului conform § 5 din Legea serviciilor digitale (DDG) și § 18 din Tratatul privind mass-media (MStV) pentru site-ul Ramona's Mobile Massage.",
-      sections: {
-        provider: "Furnizor",
-        disclaimer:
-          "Notă: Masajele oferite servesc exclusiv relaxării și stării de bine. Acestea nu constituie tratamente medicale conform Heilpraktikergesetz.",
-        contact: "Contact",
-        phone: "Telefon",
-        email: "E-Mail",
-        tax: "TVA & Număr de identificare fiscală",
-        taxNumber: "Număr de identificare fiscală (§ 27a UStG): ",
-        smallBusiness:
-          "Notă: Ca mică întreprindere conform § 19 UStG, TVA-ul nu este perceput.",
-        titleLabel: "Titlu profesional",
-        profession: "Maseuză (Masaj de relaxare și wellness)",
-        grantedIn: "Acordat în: Germania",
-        responsibility: "Responsabil editorial (§ 18 alin. 2 MStV)",
-        dispute: "Soluționarea litigiilor UE",
-        disputeDesc:
-          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS):",
-        disputeObligation:
-          "Nu suntem dispuși sau obligați să participăm la proceduri de soluționare a litigiilor în fața unei comisii de arbitraj pentru consumatori.",
-        liability: "Răspunderea pentru conținut și link-uri",
-        liabilityDesc:
-          "În calitate de furnizor de servicii, suntem responsabili pentru propriul conținut conform § 7 alin. 1 DDG. Conform §§ 8-10 DDG, nu suntem obligați să monitorizăm informațiile transmise de terți. Furnizorul respectiv este răspunzător pentru conținutul paginilor externe legate prin link-uri.",
-        copyright: "Drepturi de autor",
-        copyrightDesc:
-          "Conținutul acestui site web este supus legislației germane privind drepturile de autor. Orice reproducere, modificare, distribuție sau utilizare comercială care depășește limitele drepturilor de autor necesită acordul scris al autorului.",
-      },
     },
     meta: {
       title: "Ramona ",
@@ -945,10 +878,10 @@ export const translations = {
     hero: {
       badge: "Corporate Wellbeing",
       titlu1: "Masaj mobil profesional  acolo unde ai nevoie,",
-      titluItalic: "Exact când ai nevoie.",
+      titluItalic: "exact când e nevoie.",
       titlu2: "",
       descriere:
-        "Vin cu tot echipamentul necesar și atenție deplină. Fiecare ședință adaptată individual pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
+        "Vin cu echipament complet și atenție deplină. Fiecare ședință este adaptată individual, pentru orice context profesional sau ocazie specială. Tu alegi momentul, eu mă ocup de tot. Disponibil în regiunea Münsterland și împrejurimi.",
       butonConversatie: "Rezervă acum",
       butonServicii: "Vezi detalii",
       imgAlt: "Masaj mobil profesional",
@@ -995,9 +928,9 @@ export const translations = {
     },
     process: {
       badge: "// Organizare",
-      titlu1: "Patru pasi simpli",
-      titluItalic: "zero efort de organizare",
-      titlu2: "din partea voastra.",
+      titlu1: "Patru pași simpli",
+      titluItalic: "",
+      titlu2: "",
       pas: "PAS",
       steps: [
         {
@@ -1013,8 +946,8 @@ export const translations = {
           d: "Mă ocup de pregătirea și desfășurarea serviciului la locație.",
         },
         {
-          t: "Experiență fără griji",
-          d: "Tu și invitații tăi vă puteți bucura de eveniment, în timp ce eu mă ocup de restul.",
+          t: "Final relaxat",
+          d: "Participanții se bucură de moment, iar eu mă ocup de restul.",
         },
       ],
     },
@@ -1087,11 +1020,11 @@ export const translations = {
 
     trustBar: {
       badge: "",
-      titlu1: "Fiecare persoană este unică",
+      titlu1: "Fiecare persoană este unică.",
       wordRelaxare: "RELAXARE",
-      titluItalic: "și exact asta mă inspiră.",
+      titluItalic: "Exact asta mă inspiră.",
       descriere:
-        "Folosesc o varietate de tehnici, de la masaj wellness, masaj al țesuturilor profunde, masaj fascial, masaj al capului și feței și reflexoterapie plantară, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi aplicate individual sau combinate, în funcție de preferințe și nevoi. Dincolo de tehnică, atenția la detalii face parte din fiecare ședință.",
+        "Fiecare persoană este unică. Exact asta mă inspiră.Folosesc o varietate de tehnici – de la Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage și Fußreflexzonenmassage, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi folosite individual sau combinate, în funcție de preferințe și moment.Dincolo de orice tehnică, atenția la detalii și o abordare echilibrată definesc fiecare experiență.Pauza care face diferența într-o zi la birou.Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea – simplu, confortabil și ușor de integrat în orice program.",
       statRegiune: "Acoperire regională",
       statExperienta: "Experiență în servicii mobile",
       legalBadge: "Relaxare profesională / Servicii Non-Medicale",
@@ -1102,7 +1035,7 @@ export const translations = {
         {
           title: "Masaj la birou",
           label:
-            "Potrivit pentru companii și spații profesionale. Ședințele se concentrează în principal pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masa de masaj, în funcție de spațiul disponibil.",
+            "Potrivit pentru companii și spații profesionale. Ședințele se concentrează pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masă de masaj, adaptat spațiului și cerințelor locației.",
           metricLabel: "pauză de relaxare",
         },
 
@@ -1121,14 +1054,13 @@ export const translations = {
         {
           title: "Hoteluri & Centre Wellness",
           label:
-            "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți.Fie că este vorba despre o aniversare, o reuniune privată sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe.",
+            "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți.",
           metricLabel: "satisfactie echipe",
         },
         {
           title: "Ocazii speciale",
           label:
-            "Fie că este vorba despre o aniversare sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe.",
-          metricLabel: "resimtire oboseala",
+            "Fie că este vorba despre o aniversare sau o altă ocazie deosebită, serviciile sunt integrate discret și elegant în desfășurarea evenimentului.",
         },
       ],
     },
