@@ -545,12 +545,47 @@ export const translations = {
           title: "Ocazii Speciale",
           label:
             "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
-          metricLabel: "Müdigkeitsgefühl",
+          metricLabel: "",
         },
       ],
     },
   },
   EN: {
+    impressumPage: {
+      metaTitle: "Impressum — Ramona's Mobile Massage",
+      metaDesc: "Identificarea furnizorului conform § 5 DDG și § 18 MStV.",
+      eyebrow: "Legal",
+      title: "Impressum (Informații legale)",
+      intro:
+        "Identificarea furnizorului conform Legii serviciilor digitale (DDG) § 5 și Tratatului media (MStV) § 18 pentru site-ul Ramona's Mobile Massage.",
+      sections: {
+        provider: "Furnizor",
+        disclaimer:
+          "Notă: Masajele oferite servesc exclusiv relaxării și stării de bine. Acestea nu reprezintă un tratament medical în sensul Legii privind practicienii în medicină (Heilpraktikergesetz).",
+        contact: "Contact",
+        phone: "Telefon",
+        email: "E-Mail",
+        tax: "TVA și Număr de identificare fiscală",
+        taxNumber: "Număr de identificare fiscală (§ 27a UStG): ",
+        smallBusiness:
+          "Notă: În calitate de mic întreprinzător conform § 19 UStG, este posibil ca TVA-ul să nu fie perceput/afișat.",
+        titleLabel: "Titlu profesional",
+        profession: "Maseur (Masaj de wellness și relaxare)",
+        grantedIn: "Acordat în: Germania",
+        responsibility: "Responsabil editorial (§ 18 alin. 2 MStV)",
+        dispute: "Soluționarea litigiilor UE",
+        disputeDesc:
+          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS):",
+        disputeObligation:
+          "Nu suntem dispuși sau obligați să participăm la proceduri de soluționare a litigiilor în fața unei entități de arbitraj pentru consumatori.",
+        liability: "Răspunderea pentru conținut și link-uri",
+        liabilityDesc:
+          "În calitate de furnizor de servicii, suntem responsabili pentru propriul conținut conform § 7 alin. 1 DDG. Conform §§ 8 până la 10 DDG, nu avem obligația de a monitoriza informațiile transmise de terți. Furnizorul extern respectiv este responsabil pentru conținutul paginilor către care există link-uri.",
+        copyright: "Drepturi de autor",
+        copyrightDesc:
+          "Conținutul și lucrările de pe acest site sunt supuse legislației germane privind drepturile de autor. Multiplicarea, prelucrarea, distribuirea și orice tip de utilizare în afara limitelor dreptului de autor necesită acordul scris al autorului.",
+      },
+    },
     servicesPage: {
       metaTitle: "Prețuri & Servicii — Ramona's Mobile Massage",
       metaDesc:
@@ -1061,6 +1096,7 @@ export const translations = {
           title: "Ocazii speciale",
           label:
             "Fie că este vorba despre o aniversare sau o altă ocazie deosebită, serviciile sunt integrate discret și elegant în desfășurarea evenimentului.",
+          metricLabel: "",
         },
       ],
     },

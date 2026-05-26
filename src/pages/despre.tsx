@@ -73,7 +73,6 @@ export function AboutUs() {
                   {t.aboutPage.badge}
                 </span>
               </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -90,7 +89,6 @@ export function AboutUs() {
                   </span>
                 )}
               </motion.h1>
-
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -109,7 +107,7 @@ export function AboutUs() {
                   <p>{t.aboutPage.descriere}</p>
                 )}
               </motion.div>
-
+              //abc
               {/* MOBILE IMAGE */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -121,7 +119,6 @@ export function AboutUs() {
                 <div className="absolute -bottom-2 -right-2 w-10 h-10 border-b border-r border-border/40 pointer-events-none" />
                 <HeroImage />
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
