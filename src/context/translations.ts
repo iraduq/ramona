@@ -280,6 +280,8 @@ export const translations = {
         "Erzahlen Sie uns ein paar Worte uber Ihr Team und Ihre Ziele. Wir antworten personlich, ohne Verkaufstrichter.",
       infoMailSub: "Antwort innerhalb von 24 Werktagen",
       infoPhoneSub: "Montag–Freitag · 09:00 – 18:00",
+      infoWhatsappSub: "WhatsApp Nachricht", // <--- ADAUGĂ ASTA ȘI AICI (DE)
+      infoLinkedinSub: "LinkedIn Profil", // <--- ADAUGĂ ASTA ȘI AICI (DE)
       infoMapSub: "Wir decken das gesamte Land fur Veranstaltungen ab",
       form: {
         name: "Name",
@@ -778,37 +780,40 @@ export const translations = {
     contactPage: {
       metaTitle: "Contact",
       metaDesc:
-        "Programeaza o demonstratie gratuita sau cere o oferta pentru programul tau de wellbeing corporate.",
+        "Programează o demonstrație gratuită sau cere o ofertă pentru programul tău de wellbeing corporate.",
       badge: "Contact",
-      titlu1: "Hai sa",
+      titlu1: "Hai să",
       titluItalic: "vorbim",
+
+      infoWhatsappSub: "Trimite un mesaj pe WhatsApp",
+      infoLinkedinSub: "Conectează-te pe LinkedIn",
       titlu2: ".",
-      descriere:
-        "Spune-ne cateva cuvinte despre echipa si obiective. Raspundem personal, fara palnii de vanzari.",
-      infoMailSub: "Raspuns in 24h lucratoare",
-      infoPhoneSub: "Luni–Vineri · 09:00 – 18:00",
-      infoMapSub: "Acoperim toata tara pentru evenimente",
+      descriere: "Doar mesaj pe WhatsApp sau email.",
+      infoMailSub: "Trimite un email",
+      infoPhoneSub: "Trimite un mesaj pe WhatsApp",
+      infoMapSub:
+        "Münsterland · Tecklenburger Land · Osnabrücker Land · părți limitrofe din Emsland, OWL și Ruhrgebiet · Până la aproximativ 80 km în jurul orașului Münster",
       form: {
         name: "Nume",
         company: "Companie",
         email: "Email de business",
-        phone: "Telefon (optional)",
-        size: "Numar angajati",
+        phone: "Telefon (opțional)",
+        size: "Număr angajați",
         sizeOptions: ["Sub 30", "30–100", "100–300", "300+"],
         topic: "Interes",
         topicOptions: [
           "Program lunar",
           "Eveniment / Gesundheitstag",
-          "Demonstratie gratuita",
-          "Doar informatii",
+          "Demonstrație gratuită",
+          "Doar informații",
         ],
         msg: "Mesaj",
-        placeholder: "Spune-ne ce ai in minte...",
+        placeholder: "Spune-ne ce ai în minte...",
         btnSend: "Trimite mesajul",
-        btnSent: "Trimis · multumim",
-        toastSuccess: "Multumim! Te contactam in maxim 24h.",
+        btnSent: "Trimis · Mulțumim",
+        toastSuccess: "Mulțumim! Te contactăm în scurt timp.",
         privacy:
-          "Prin trimiterea formularului esti de acord cu prelucrarea datelor conform politicii noastre de confidentialitate.",
+          "Prin trimiterea formularului ești de acord cu procesarea datelor conform politicii noastre de confidențialitate.",
       },
     },
     aboutPage: {
@@ -945,7 +950,7 @@ export const translations = {
       titlu1: "Opt ore pe scaun",
       titluItalic: "apoi timp pentru tine.",
       descriere:
-        "Orele prelungite in pozitie sezanda aduc o incarcare statica la nivelul spatelui si gatului. Solutia nu consta in modificarea radicala a spatiului de lucru — ci in integrarea unor momente de relaxare corporala si pauze flexibile direct in timpul programului.",
+        "Într-o zi aglomerată, pauzele sunt adesea primele care dispar din program. De aceea, serviciile mele sunt concepute pentru a aduce un moment de relaxare direct acolo unde oamenii îşi desfășoară activitatea, fără deplasări suplimentare și fără organizare complicată.",
       stats: [
         {
           n: "−42%",

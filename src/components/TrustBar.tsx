@@ -10,6 +10,8 @@ import {
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
 import pozaDubla from "../assets/abcdef.jpeg";
+import pozaBirou from "../assets/work.jpeg";
+import logoRomana from "../assets/logoR.png";
 
 const trustBarStyles = `
   @keyframes botanical-sway { 0%, 100% { transform: rotate(-3deg) translateX(0px); } 50% { transform: rotate(-0.5deg) translateX(5px); } }
@@ -45,7 +47,7 @@ export function TrustBar() {
 
   const icons = [Armchair, Presentation, HeartPulse, Hotel, PartyPopper];
 
-  const bgImages = [pozaDubla, pozaDubla, pozaDubla, pozaDubla, pozaDubla];
+  const bgImages = [pozaBirou, logoRomana, logoRomana, logoRomana, pozaDubla];
   const categories = t.trustBar.items.map((item, index) => ({
     id: `0${index + 1}`,
     title: item.title,

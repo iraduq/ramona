@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import eventImg from "../assets/corporate-event.jpg";
+import eventImg from "../assets/imageProblem.png";
 
 import type { Variants } from "framer-motion";
 const containerVariants: Variants = {

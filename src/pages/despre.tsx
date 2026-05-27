@@ -107,7 +107,7 @@ export function AboutUs() {
                   <p>{t.aboutPage.descriere}</p>
                 )}
               </motion.div>
-              //abc
+
               {/* MOBILE IMAGE */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}

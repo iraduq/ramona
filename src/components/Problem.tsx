@@ -122,7 +122,7 @@ export function Problem() {
             <div className="absolute -bottom-4 -right-4 w-10 h-10 border-b border-r border-[#1a1816]/10 pointer-events-none" />
             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#f4f1eb] border border-[#1a1816]/5 shadow-[0_40px_90px_rgba(26,24,22,0.03)] group">
               <img
-                src={tensionImg}
+                // trebuie scoasa tensioonImg src={tensionImg}
                 alt={t.problem.imgAlt}
                 className="w-full h-full object-cover grayscale-[15%] brightness-[0.96] contrast-[98%] transition-transform duration-[2.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                 loading="lazy"
