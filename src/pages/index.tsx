@@ -1,7 +1,6 @@
 // src/pages/Index.tsx
 import { Hero } from "../components/Hero";
 import { TrustBar } from "../components/TrustBar";
-import { Problem } from "../components/Problem";
 import { Process } from "../components/Process";
 import { Events } from "../components/Events";
 
@@ -24,9 +23,7 @@ export default function Index() {
       <WaveDividerInverted colorTop="#F7F0EA" colorBottom="#F7F4F0" />
       <TrustBar />
       <br />
-      <WaveDividerNormal colorTop="#F7F1EB" colorBottom="#F8F6F3" />
-      <Problem />
-      <WaveDividerNormal colorTop="#FDFCFB" colorBottom="#F7F1EB" />
+
       <Events />
       <WaveDividerNormal colorTop="#F7F1EB" colorBottom="#FCFBF9" />
       <Process />
