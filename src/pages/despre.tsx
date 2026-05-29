@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { BotanicalSVG } from "../components/BotanicalSVG";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
-import officeImg from "../assets/aboutUs.jpeg";
+import officeImg from "../assets/aboutUs.avif";
 import { Link } from "react-router-dom";
 
 export function HeroImage() {
@@ -62,17 +62,6 @@ export function AboutUs() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full">
             {/* TEXT COLUMN */}
             <div className="lg:col-span-6 flex flex-col items-start w-full box-border">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card px-3 lg:px-4 py-1.5 lg:py-2 mb-4 lg:mb-8 shadow-2xs"
-              >
-                <Sparkles className="w-3 h-3 text-accent animate-pulse" />
-                <span className="text-[9px] lg:text-[10px] uppercase tracking-[0.2em] font-mono text-muted-foreground font-semibold">
-                  {t.aboutPage.badge}
-                </span>
-              </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}

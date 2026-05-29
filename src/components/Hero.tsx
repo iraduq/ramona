@@ -2,7 +2,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { BotanicalSVG } from "../components/BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
-import heroImg from "../assets/hero.jpeg";
+import heroImg from "../assets/hero.avif";
 import { Link } from "react-router-dom";
 
 const heroStyles = `
@@ -51,8 +51,7 @@ export function Hero() {
       <style dangerouslySetInnerHTML={{ __html: heroStyles }} />
 
       <section className="relative overflow-hidden bg-background w-full min-h-[70vh] flex items-center">
-        {/* Padding redus drastic pe mobil (pt-6 pb-6) */}
-        <div className="w-full pt-6 pb-6 sm:pt-12 sm:pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20 relative z-20">
+        <div className="w-full pt-8 pb-8 sm:pt-12 sm:pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20 relative z-20">
           <div
             className="absolute inset-0 pointer-events-none overflow-hidden z-0"
             aria-hidden="true"
@@ -70,8 +69,8 @@ export function Hero() {
           </div>
 
           <div className="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            {/* gap-y-6 în loc de gap-y-8 pentru spații mai mici pe mobil */}
-            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-10 xl:gap-12 lg:items-center gap-y-6">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16 lg:items-center gap-y-6">
+              {/* LEFT: Text content */}
               <div className="w-full lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 order-1">
                 <div className="ha1 flex items-center gap-3 tracking-[0.2em] text-[9px] sm:text-[10px] font-semibold uppercase select-none mb-2">
                   <span className="flex items-center gap-2 text-[#7a4f2f]">
@@ -93,7 +92,7 @@ export function Hero() {
                 <h1
                   className="ha2 mt-1 sm:mt-3 font-light tracking-tight leading-[1.05] text-foreground"
                   style={{
-                    fontSize: "clamp(1.8rem, 6.5vw, 3.8rem)",
+                    fontSize: "clamp(2.2rem, 7vw, 3.8rem)",
                     letterSpacing: "-0.025em",
                   }}
                 >
@@ -123,11 +122,11 @@ export function Hero() {
                   {t.hero.titlu2}
                 </h1>
 
-                {/* mt-3 în loc de mt-4 */}
                 <p className="ha3 mt-3 max-w-[34ch] sm:max-w-[44ch] text-[0.875rem] sm:text-[0.975rem] lg:text-[1.05rem] text-neutral-700 leading-[1.6] font-light px-1 sm:px-0">
                   {t.hero.descriere}
                 </p>
 
+                {/* Desktop buttons + stats */}
                 <div className="ha4 hidden lg:flex flex-col w-full mt-6">
                   <div className="flex flex-row gap-4">
                     <Button
@@ -211,9 +210,9 @@ export function Hero() {
                 </div>
               </div>
 
+              {/* RIGHT: Image */}
               <div className="w-full lg:col-span-6 relative z-20 order-2">
-                {/* Lățime redusă considerabil pentru mobil: max-w-[220px] xs:max-w-[250px] */}
-                <div className="relative mx-auto w-full max-w-[220px] xs:max-w-[250px] sm:max-w-[340px] lg:max-w-[440px] xl:max-w-[480px] lg:ml-auto">
+                <div className="relative mx-auto w-full max-w-[95vw] sm:max-w-[420px] lg:max-w-none xl:max-w-none lg:ml-auto">
                   <div
                     className="hidden lg:block absolute -inset-3 bg-muted/55 rounded-[2rem] transform rotate-[1.5deg] scale-[0.985] pointer-events-none"
                     aria-hidden="true"
@@ -223,7 +222,7 @@ export function Hero() {
                     aria-hidden="true"
                   />
 
-                  <div className="img-reveal img-wrap relative aspect-[4/5] rounded-2xl lg:rounded-[1.75rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-border/20">
+                  <div className="img-reveal img-wrap relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] rounded-2xl lg:rounded-[1.75rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-border/20">
                     <img
                       src={heroImg}
                       alt={t.hero.imgAlt}
@@ -237,32 +236,29 @@ export function Hero() {
                       aria-hidden="true"
                     />
 
-                    <div className="badge-in lg:hidden absolute bottom-2 left-2 right-2 z-20">
-                      <div className="inline-flex items-center gap-1.5 bg-card/90 backdrop-blur-2xl border border-border/60 rounded-xl px-2 py-1.5 shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
-                        <div
-                          className="p-1 rounded-md bg-accent/10 shrink-0"
-                          aria-hidden="true"
-                        >
+                    {/* Mobile badge — over image, bigger & readable */}
+                    <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 z-20">
+                      <div className="flex items-center gap-2.5 bg-card/92 backdrop-blur-md border border-border/40 rounded-2xl px-4 py-3 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                        <div className="p-1.5 rounded-xl bg-accent/15 shrink-0">
                           <Sparkles
-                            className="h-2.5 w-2.5 text-accent"
+                            className="h-4 w-4 text-accent"
                             aria-hidden="true"
                           />
                         </div>
-                        <span className="text-[8px] font-bold uppercase tracking-[0.08em] text-accent whitespace-nowrap">
-                          {t.hero.badgeTimp}
-                        </span>
-                        <span
-                          className="w-px h-2 bg-foreground/15 shrink-0"
-                          aria-hidden="true"
-                        />
-                        <p className="text-[9px] font-light text-foreground/80 leading-none truncate">
-                          {t.hero.badgeDescriere}
-                        </p>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-accent leading-none">
+                            {t.hero.badgeTimp}
+                          </span>
+                          <p className="text-[11px] font-medium text-foreground/65 leading-tight">
+                            {t.hero.badgeDescriere}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="badge-float hidden lg:block absolute bottom-8 -left-8 z-20">
+                  {/* Desktop floating badge */}
+                  <div className="badge-float hidden lg:block absolute -bottom-4 -left-16 z-20">
                     <div className="bg-card/90 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] max-w-[240px] transition-transform duration-500 ease-out hover:-translate-y-1.5">
                       <div className="flex items-center gap-2">
                         <div
@@ -290,15 +286,13 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Mobile stats + buttons */}
+              {/* Mobile: buttons + stats */}
               <div className="ha5 w-full lg:hidden flex flex-col items-center order-3 mt-0">
-                {/* Lățime buton adaptată la imagine max-w-[250px] */}
-                <div className="flex flex-col gap-2 w-full max-w-[220px] xs:max-w-[250px]">
-                  {/* h-[46px] în loc de h-[50px] */}
+                <div className="flex flex-col gap-2.5 w-full max-w-[95vw] sm:max-w-[420px]">
                   <Button
                     asChild
                     size="lg"
-                    className="btn-shimmer rounded-full w-full h-[46px] text-[0.85rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.22)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
+                    className="btn-shimmer rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.22)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
                   >
                     <Link
                       to="/contact"
@@ -312,7 +306,7 @@ export function Hero() {
                     asChild
                     variant="ghost"
                     size="lg"
-                    className="rounded-full w-full h-[46px] text-[0.85rem] font-medium bg-transparent border border-foreground/15 transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/25 text-foreground/80"
+                    className="rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-transparent border border-foreground/15 transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/25 text-foreground/80"
                   >
                     <Link to="/services" className="justify-center">
                       {t.hero.butonServicii}
@@ -320,9 +314,8 @@ export function Hero() {
                   </Button>
                 </div>
 
-                {/* my-4 în loc de my-6 */}
                 <div
-                  className="w-full my-4 flex items-center gap-3 max-w-[220px] xs:max-w-[250px]"
+                  className="w-full my-5 flex items-center gap-3 max-w-[95vw] sm:max-w-[420px]"
                   aria-hidden="true"
                 >
                   <div className="flex-1 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
@@ -330,8 +323,8 @@ export function Hero() {
                   <div className="flex-1 h-px bg-gradient-to-l from-transparent via-foreground/10 to-transparent" />
                 </div>
 
-                {/* Mobile stats dl */}
-                <dl className="grid grid-cols-3 w-full max-w-[240px] xs:max-w-[270px]">
+                {/* Mobile stats */}
+                <dl className="grid grid-cols-3 w-full max-w-[95vw] sm:max-w-[420px] divide-x divide-foreground/8">
                   {[
                     {
                       value: t.hero.stats.val1,
@@ -348,27 +341,28 @@ export function Hero() {
                       label: t.hero.stats.scor,
                       s: "si3",
                     },
-                  ].map(({ value, label, s }, i) => (
+                  ].map(({ value, label, s }) => (
                     <div
                       key={label}
-                      className={`${s} flex flex-col items-center text-center cursor-default ${i > 0 ? "border-l border-foreground/8" : ""}`}
+                      className={`${s} flex flex-col items-center text-center cursor-default py-2 px-3`}
                     >
                       <dd
                         aria-hidden="true"
-                        className="sal w-3 h-[1px] bg-accent/35 mb-1"
+                        className="sal w-4 h-[1.5px] bg-accent/40 mb-2"
                       />
                       <dt
                         className="font-light text-foreground"
                         style={{
-                          fontSize: "clamp(1.1rem, 4.5vw, 1.4rem)",
+                          fontSize: "clamp(1.5rem, 5.5vw, 1.8rem)",
                           fontFamily: "var(--font-serif, Georgia, serif)",
                           letterSpacing: "-0.02em",
+                          lineHeight: 1.1,
                         }}
                       >
                         {value}
                       </dt>
-                      <dd className="mt-0.5">
-                        <span className="text-[8px] uppercase tracking-wider text-muted-foreground font-semibold whitespace-nowrap">
+                      <dd className="mt-1.5">
+                        <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold leading-tight block">
                           {label}
                         </span>
                       </dd>

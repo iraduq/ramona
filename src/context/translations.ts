@@ -820,7 +820,7 @@ export const translations = {
       metaTitle: "Despre Mine — Ramona's Mobile Massage",
       metaDesc:
         "În spatele Ramona's Mobile Massage mă aflu eu, Ramona. Află povestea proiectului meu...",
-      badge: "Povestea Mea",
+      badge: "",
       titlu1: "Despre ",
       titluItalic: "mine",
       titlu2: "",
@@ -933,15 +933,15 @@ export const translations = {
       stats: {
         val1: "5.0 ★",
         companii: "recenzii",
-        partenere: "pe google",
+        partenere: " google",
 
-        val2: "100%",
-        sedinte: "echipament",
-        livrate: "profesional inclus",
+        val2: "Mobil",
+        sedinte: "Echipament complet inclus",
+        livrate: "",
 
         val3: "Premium",
-        scor: "produse &",
-        feedback: "uleiuri naturale",
+        scor: "Produse atent alese",
+        feedback: "",
       },
     },
     problem: {

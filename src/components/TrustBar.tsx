@@ -9,10 +9,11 @@ import {
 } from "lucide-react";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
-import pozaDubla from "../assets/abcdef.jpeg";
-import pozaHotel from "../assets/hotele.jpeg";
-import pozaBirou from "../assets/work.jpeg";
-import logoRomana from "../assets/logoR.png";
+import sanatate from "../assets/sanatate.avif";
+import pozaHotel from "../assets/hotele.avif";
+import pozaBus from "../assets/bus.avif";
+import pozaBirou from "../assets/work.avif";
+import pozaOcazii from "../assets/pozadubla.avif";
 
 const trustBarStyles = `
   @keyframes botanical-sway { 0%, 100% { transform: rotate(-3deg) translateX(0px); } 50% { transform: rotate(-0.5deg) translateX(5px); } }
@@ -48,13 +49,12 @@ export function TrustBar() {
 
   const icons = [Armchair, Presentation, HeartPulse, Hotel, PartyPopper];
 
-  const bgImages = [pozaBirou, logoRomana, logoRomana, pozaHotel, pozaDubla];
+  const bgImages = [pozaBirou, pozaBus, sanatate, pozaHotel, pozaOcazii];
   const categories = t.trustBar.items.map((item, index) => ({
     id: `0${index + 1}`,
     title: item.title,
     label: item.label,
     icon: icons[index],
-
     metricLabel: item.metricLabel,
     bgImage: bgImages[index],
   }));
