@@ -10,6 +10,7 @@ import {
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
 import pozaDubla from "../assets/abcdef.jpeg";
+import pozaHotel from "../assets/hotele.jpeg";
 import pozaBirou from "../assets/work.jpeg";
 import logoRomana from "../assets/logoR.png";
 
@@ -47,7 +48,7 @@ export function TrustBar() {
 
   const icons = [Armchair, Presentation, HeartPulse, Hotel, PartyPopper];
 
-  const bgImages = [pozaBirou, logoRomana, logoRomana, logoRomana, pozaDubla];
+  const bgImages = [pozaBirou, logoRomana, logoRomana, pozaHotel, pozaDubla];
   const categories = t.trustBar.items.map((item, index) => ({
     id: `0${index + 1}`,
     title: item.title,

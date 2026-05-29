@@ -108,7 +108,7 @@ export function Problem() {
 
       {/* ── MOBILE LAYOUT (< lg) ── stacked în 4 blocuri */}
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12 z-10">
-        {/* DESKTOP: grid 12 col cu imagine stânga + tot textul dreapta */}
+        {/* DESKTOP */}
         <div className="hidden lg:grid grid-cols-12 gap-24 items-center">
           {/* Imagine */}
           <motion.div
@@ -120,9 +120,11 @@ export function Problem() {
           >
             <div className="absolute -top-4 -left-4 w-10 h-10 border-t border-l border-[#1a1816]/10 pointer-events-none" />
             <div className="absolute -bottom-4 -right-4 w-10 h-10 border-b border-r border-[#1a1816]/10 pointer-events-none" />
+
+            {/* AM PUS aspect-square AICI */}
             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#f4f1eb] border border-[#1a1816]/5 shadow-[0_40px_90px_rgba(26,24,22,0.03)] group">
               <img
-                // trebuie scoasa tensioonImg src={tensionImg}
+                src={tensionImg}
                 alt={t.problem.imgAlt}
                 className="w-full h-full object-cover grayscale-[15%] brightness-[0.96] contrast-[98%] transition-transform duration-[2.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                 loading="lazy"
@@ -153,7 +155,7 @@ export function Problem() {
           </div>
         </div>
 
-        {/* MOBILE: 4 blocuri stacked */}
+        {/* MOBILE */}
         <div className="flex flex-col gap-10 lg:hidden">
           {/* 1. Badge + Titlu */}
           <motion.div
@@ -187,6 +189,8 @@ export function Problem() {
           >
             <div className="absolute -top-4 -left-4 w-10 h-10 border-t border-l border-[#1a1816]/10 pointer-events-none" />
             <div className="absolute -bottom-4 -right-4 w-10 h-10 border-b border-r border-[#1a1816]/10 pointer-events-none" />
+
+            {/* AM PUS aspect-square AICI */}
             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#f4f1eb] border border-[#1a1816]/5 shadow-[0_40px_90px_rgba(26,24,22,0.03)] group">
               <img
                 src={tensionImg}

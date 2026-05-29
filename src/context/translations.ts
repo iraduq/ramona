@@ -821,14 +821,14 @@ export const translations = {
       metaDesc:
         "În spatele Ramona's Mobile Massage mă aflu eu, Ramona. Află povestea proiectului meu...",
       badge: "Povestea Mea",
-      titlu1: "despre ",
-      titluItalic: "mine.",
+      titlu1: "Despre ",
+      titluItalic: "mine",
       titlu2: "",
       descriere: [
         "În spatele Ramona's Mobile Massage mă aflu eu, Ramona.",
-        "Ideea acestui proiect s-a născut din experiențele mele profesionale și din convingerea că, în ritmul alert al vieții de astăzi, oamenii au nevoie de momente în care să se oprească și să își acorde atenție. De multe ori suntem concentrați pe responsabilități, termene și ritmul activităților zilnice, iar timpul pentru noi înșine rămâne pe ultimul loc.",
-        "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății, întâlnirilor de afaceri cât și la ocazii speciale. Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea programului de lucru sau a evenimentului.",
-        "Ramona's Mobile Massage reprezintă mai mult decât un serviciu mobil. Reprezintă dorința de a aduce mai aproape un moment de atenție și grijă față de oameni, într-un mod flexibil, profesionist și autentic.",
+        "Ideea acestui proiect s-a născut din experiențele mele profesionale anterioare și din convingerea că, în ritmul alert al vieții de astăzi, oamenii au nevoie de momente în care să se oprească și să își acorde putina atenție. De multe ori suntem concentrați pe responsabilități, termene și ritmul activităților zilnice, iar timpul pentru noi înșine rămâne pe ultimul loc.",
+        "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății , întâlnirilor de afaceri cat si la ocazii speciale . Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea  programului de lucru sau a evenimentului.",
+        "Ramona's Mobile Massage reprezintă mai mult decât un serviciu mobil.Reprezintă dorința de a aduce mai aproape un moment de atenție și grijă față de oameni, într-un mod flexibil, profesionist și autentic.",
       ],
       ariaBadge: "Aria Operațională",
       ariaText: "Münster · NRW · Münsterland",
@@ -902,7 +902,7 @@ export const translations = {
       titluItalic: "tine.",
       titlu2: "", // Lăsăm gol deoarece am mutat totul în 1 și Italic
       descriere:
-        "Într-o zi aglomerată, pauzele sunt adesea primele care dispar din program. De aceea, serviciile mele sunt concepute pentru a aduce un moment de relaxare direct acolo unde oamenii își desfășoară activitatea, fără deplasări suplimentare și fără organizare complicată.",
+        "Pauza care face diferența într-o zi la birou. Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea – simplu, confortabil și ușor de integrat în orice program.",
     },
     footer: {
       descriere:
