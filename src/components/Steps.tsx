@@ -3,7 +3,7 @@ import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 
 import type { Variants } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import { BotanicalSVG } from "../components/BotanicalSVG";
+import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants: Variants = {

@@ -59,9 +59,9 @@ export function Navbar() {
               Münsterland | NRW
             </span>
 
-            {/* Randul 3: Detalii (8.5px pe desktop) */}
             <span className="text-[7.5px] lg:text-[8.5px] font-semibold tracking-[0.1em] uppercase text-neutral-500 mt-[2px] lg:mt-[2px] truncate leading-tight">
-              Arbeitsplatz | Büro | Unternehmen | Business Events
+              {navTranslations.subtitle ||
+                "Arbeitsplatz | Büro | Unternehmen | Business Events"}
             </span>
           </div>
         </Link>

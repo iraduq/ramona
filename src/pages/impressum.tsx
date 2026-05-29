@@ -13,7 +13,7 @@ const COMPANY = {
   city: "[PLZ] [Ort]",
   country: "Deutschland",
   phone: "+49 176 63167411",
-  email: "hello@ramonamassage.de",
+  email: "ramonasmobilemassage@gmail.com",
   taxId: "[Steuernummer]",
   vat: "[USt-IdNr.]",
 };

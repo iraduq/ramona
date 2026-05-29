@@ -399,7 +399,6 @@ export const translations = {
       navTitle: "Navigation",
       contactTitle: "Kontakt",
       tara: "Deutschland",
-      moto: "Wellbeing is a structure.",
       impressum: "Impressum",
       datenschutz: "Datenschutz",
     },
@@ -911,7 +910,6 @@ export const translations = {
       navTitle: "Navigare",
       contactTitle: "Contact",
       tara: "Germania",
-      moto: "Starea de bine este o structura.",
       impressum: "Date legale",
       datenschutz: "Confidentialitate",
     },
@@ -925,11 +923,12 @@ export const translations = {
       butonConversatie: "Rezervă acum",
       butonServicii: "Vezi detalii",
       imgAlt: "Masaj mobil profesional",
-      badgeTimp: "Zero stres",
-      badgeTimpLung: "Zero deplasare",
-      badgeDescriere: "Eu vin la tine.",
+      badgeTimp: "",
+      badgeTimpLung: "",
+      badgeDescriere:
+        "Fara deplasare din partea ta si fara timp pierdut in trafic.",
       badgeDescriereLunga:
-        "Fără timp pierdut în trafic. Mă ocup eu de drum, tu doar te relaxezi.",
+        "Fara deplasare din partea ta si fara timp pierdut in trafic.",
       stats: {
         val1: "5.0 ★",
         companii: "recenzii",

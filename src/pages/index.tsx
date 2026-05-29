@@ -1,7 +1,7 @@
 // src/pages/Index.tsx
 import { Hero } from "../components/Hero";
 import { TrustBar } from "../components/TrustBar";
-import { Process } from "../components/Process";
+import { Process } from "../components/Steps";
 import { Events } from "../components/Events";
 
 import { Helmet } from "react-helmet-async";

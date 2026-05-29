@@ -237,19 +237,25 @@ export function Hero() {
                     />
 
                     {/* Mobile badge — over image, bigger & readable */}
-                    <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 z-20">
-                      <div className="flex items-center gap-2.5 bg-card/92 backdrop-blur-md border border-border/40 rounded-2xl px-4 py-3 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
-                        <div className="p-1.5 rounded-xl bg-accent/15 shrink-0">
+                    <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-20">
+                      <div className="flex items-center gap-3 bg-card/95 backdrop-blur-xl border border-border/40 rounded-2xl p-3.5 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+                        {/* Container Iconiță - cu fundal subtil ca pe desktop */}
+                        <div
+                          className="p-1.5 rounded-xl bg-accent/10 shrink-0"
+                          aria-hidden="true"
+                        >
                           <Sparkles
                             className="h-4 w-4 text-accent"
                             aria-hidden="true"
                           />
                         </div>
-                        <div className="flex flex-col gap-0.5">
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-accent leading-none">
+
+                        {/* Container Text */}
+                        <div className="flex flex-col gap-1">
+                          <span className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-accent leading-none">
                             {t.hero.badgeTimp}
                           </span>
-                          <p className="text-[11px] font-medium text-foreground/65 leading-tight">
+                          <p className="text-[11.5px] font-medium text-foreground/80 leading-snug">
                             {t.hero.badgeDescriere}
                           </p>
                         </div>
@@ -259,26 +265,28 @@ export function Hero() {
 
                   {/* Desktop floating badge */}
                   <div className="badge-float hidden lg:block absolute -bottom-4 -left-16 z-20">
-                    <div className="bg-card/90 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] max-w-[240px] transition-transform duration-500 ease-out hover:-translate-y-1.5">
-                      <div className="flex items-center gap-2">
-                        <div
-                          className="p-1.5 rounded-lg bg-accent/10"
-                          aria-hidden="true"
-                        >
-                          <Sparkles
-                            className="h-4 w-4 text-accent"
+                    <div className="bg-white/95 backdrop-blur-xl border border-accent/10 rounded-2xl p-5 shadow-[0_20px_60px_rgba(168,123,93,0.12)] max-w-[240px] transition-all duration-300 hover:scale-105 group">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="relative shrink-0">
+                          {/* Umbra colorată (Glow) din spatele iconiței */}
+                          <div
+                            className="absolute inset-0 bg-accent blur-md opacity-40 group-hover:opacity-70 transition-opacity rounded-full"
                             aria-hidden="true"
-                          />
+                          ></div>
+                          {/* Iconița propriu-zisă */}
+                          <div className="relative p-1.5 rounded-full bg-white border border-accent/20">
+                            <Sparkles
+                              className="h-4 w-4 text-accent"
+                              aria-hidden="true"
+                            />
+                          </div>
                         </div>
-                        <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-accent">
+                        <span className="text-[10.5px] font-extrabold uppercase tracking-[0.15em] text-foreground leading-none mt-px">
                           {t.hero.badgeTimpLung}
                         </span>
                       </div>
-                      <div
-                        className="my-2.5 h-px bg-foreground/7"
-                        aria-hidden="true"
-                      />
-                      <p className="text-xs font-light text-foreground/75 leading-relaxed">
+
+                      <p className="text-[12.5px] font-medium text-foreground/75 leading-[1.6]">
                         {t.hero.badgeDescriereLunga}
                       </p>
                     </div>

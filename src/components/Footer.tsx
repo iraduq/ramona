@@ -48,10 +48,10 @@ export function Footer() {
           {/* ───── CONTACT QUICK (LEGAL BEST PRACTICE) ───── */}
           <div className="pt-3 space-y-1 text-[12px] text-neutral-700">
             <a
-              href="mailto:hello@ramonamassage.de"
+              href="mailto:ramonasmobilemassage@gmail.com"
               className="hover:text-black"
             >
-              hello@ramonamassage.de
+              ramonasmobilemassage@gmail.com
             </a>
             <br />
             <a href="tel:+4917663167411" className="hover:text-black">
@@ -140,18 +140,13 @@ export function Footer() {
 
       {/* ───── LEGAL COMPANY LINE (IMPORTANT IN GERMANY) ───── */}
       <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-10 text-[10px] text-neutral-500 leading-relaxed">
-        Ramona [Nachname] · Mobile Balance Therapie · Deutschland ·
-        Verantwortlich gemäß §5 DDG & §18 MStV
+        Ramona · Mobile Balance Therapie · Deutschland ·
       </div>
 
       {/* ───── COPYRIGHT ───── */}
       <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-6 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row justify-between gap-4">
         <p className="text-[11px] text-neutral-600 uppercase tracking-widest font-bold">
           © {new Date().getFullYear()} Ramona's Mobile Balance Therapie
-        </p>
-
-        <p className="text-[11px] text-[#7a6456] italic font-bold tracking-widest">
-          {t.footer.moto}
         </p>
       </div>
     </footer>
