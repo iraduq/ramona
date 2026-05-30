@@ -267,6 +267,7 @@ export const translations = {
       contact: "Kontakt",
       programeaza: "Termin buchen",
       programeazaLungi: "Einen Termin buchen",
+      subtitle: "Arbeitsplatz | Büro | Unternehmen | Business Events",
     },
     contactPage: {
       metaTitle: "abcdefg",
@@ -522,31 +523,26 @@ export const translations = {
           title: "Masaj la birou",
           label:
             "Potrivit pentru companii și spații profesionale. Ședințele se concentrează în principal pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masa de masaj, în funcție de spațiul disponibil.",
-          metricLabel: "Entspannungspause",
         },
         {
           title: "Evenimente Business & Workshopuri",
           label:
             "O completare apreciată pentru conferințe, workshopuri, târguri și evenimente corporate, oferind participanților un moment dedicat relaxării într-un cadru profesionist.",
-          metricLabel: "organisierte Kontexte",
         },
         {
           title: "Gesundheitstage",
           label:
             "Potrivit pentru programele dedicate angajaților și inițiativele orientate către starea de bine la locul de muncă.",
-          metricLabel: "Wohlbefinden",
         },
         {
           title: "Hoteluri & Centre Wellness",
           label:
             "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți. Fie că este vorba despre o aniversare, o reuniune privată sau o altă ocazie specială, serviciile sunt integrate discret și elegant în desfășurarea evenimentului. Timpul rezervat poate fi distribuit flexibil între participanți, în funcție de preferințe",
-          metricLabel: "Teamszufriedenheit",
         },
         {
           title: "Ocazii Speciale",
           label:
             "Aplicări mobile pentru aniversări sau alte ocazii organizate, într-o atmosferă caldă, calmă și relaxată. Adaptate individual și disponibile direct la locația ta. Durată minimă de rezervare 120 de minute, împărțite flexibil între mai multe persoane, după preferință.",
-          metricLabel: "",
         },
       ],
     },
@@ -877,6 +873,7 @@ export const translations = {
       contact: "Contact",
       programeaza: "Programeaza",
       programeazaLungi: "Programeaza o intalnire",
+      subtitle: "Loc de muncă | Birou | Companii | Evenimente Business",
     },
     error: {
       title: "Ceva nu a mers bine",
@@ -897,11 +894,11 @@ export const translations = {
       imgAlt: "Moment de relaxare la birou",
       tagHover: "Timp de calitate",
       badge: "// Relaxare",
-      titlu1: "Timp pentru",
-      titluItalic: "tine.",
+      titlu1: "Pauza care face diferența ",
+      titluItalic: "într-o zi la birou.",
       titlu2: "", // Lăsăm gol deoarece am mutat totul în 1 și Italic
       descriere:
-        "Pauza care face diferența într-o zi la birou. Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea – simplu, confortabil și ușor de integrat în orice program.",
+        "Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea, simplu, confortabil și ușor de integrat în orice program.",
     },
     footer: {
       descriere:
@@ -925,10 +922,8 @@ export const translations = {
       imgAlt: "Masaj mobil profesional",
       badgeTimp: "",
       badgeTimpLung: "",
-      badgeDescriere:
-        "Fara deplasare din partea ta si fara timp pierdut in trafic.",
-      badgeDescriereLunga:
-        "Fara deplasare din partea ta si fara timp pierdut in trafic.",
+      badgeDescriere: "Fara deplasare si fara timp pierdut din partea ta.",
+      badgeDescriereLunga: "Fara deplasare si fara timp pierdut din partea ta.",
       stats: {
         val1: "5.0 ★",
         companii: "recenzii",
@@ -1063,7 +1058,7 @@ export const translations = {
       wordRelaxare: "RELAXARE",
       titluItalic: "Exact asta mă inspiră.",
       descriere:
-        "Fiecare persoană este unică. Exact asta mă inspiră.Folosesc o varietate de tehnici – de la Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage și Fußreflexzonenmassage, până la Lomi Lomi și uleiuri aromate atent alese. Tehnicile pot fi folosite individual sau combinate, în funcție de preferințe și moment.Dincolo de orice tehnică, atenția la detalii și o abordare echilibrată definesc fiecare experiență.Pauza care face diferența într-o zi la birou.Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea – simplu, confortabil și ușor de integrat în orice program.",
+        "Folosesc o varietate de tehnici de la Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage şi Fußreflexzonenmassage, până la Lomi Lomi şi uleiuri aromate atent alese. Tehnicile pot fi folosite individual sau combinate, în funcție de preferinţe şi moment. Dincolo de orice tehnică, atenția la detalii şi o abordare echilibrată definesc fiecare experienţă.",
       statRegiune: "Acoperire regională",
       statExperienta: "Experiență în servicii mobile",
       legalBadge: "Relaxare profesională / Servicii Non-Medicale",
@@ -1075,32 +1070,27 @@ export const translations = {
           title: "Masaj la birou",
           label:
             "Potrivit pentru companii și spații profesionale. Ședințele se concentrează pe zona gâtului, umerilor și spatelui, iar la cerere pot fi incluse și alte zone. Se realizează pe scaun de masaj sau pe masă de masaj, adaptat spațiului și cerințelor locației.",
-          metricLabel: "pauză de relaxare",
         },
 
         {
           title: "Evenimente Business & Workshopuri",
           label:
             "O completare apreciată pentru conferințe, workshopuri, târguri și evenimente corporate, oferind participanților un moment dedicat relaxării într-un cadru profesionist.",
-          metricLabel: "contexte organizate",
         },
         {
           title: "Gesundheitstage",
           label:
             "Potrivit pentru programele dedicate angajaților și inițiativele orientate către starea de bine la locul de muncă.",
-          metricLabel: "stare de bine",
         },
         {
           title: "Hoteluri & Centre Wellness",
           label:
             "Servicii disponibile pentru hoteluri, centre wellness și evenimente speciale organizate pentru oaspeți.",
-          metricLabel: "satisfactie echipe",
         },
         {
           title: "Ocazii speciale",
           label:
             "Fie că este vorba despre o aniversare sau o altă ocazie deosebită, serviciile sunt integrate discret și elegant în desfășurarea evenimentului.",
-          metricLabel: "",
         },
       ],
     },

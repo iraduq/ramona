@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { BotanicalSVG } from "../components/BotanicalSVG";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
 import officeImg from "../assets/aboutUs.avif";
@@ -9,18 +9,41 @@ import { Link } from "react-router-dom";
 
 export function HeroImage() {
   return (
-    <div className="relative group overflow-hidden rounded-xl lg:rounded-[2.5rem] border border-border/20 shadow-sm lg:shadow-elevated bg-muted w-full">
-      <div className="aspect-[16/10] lg:aspect-[4/5] overflow-hidden w-full">
-        <img
-          src={officeImg}
-          alt="Mobile Massage Office Context"
-          className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-[1.03]"
-          loading="lazy"
-          width={1280}
-          height={896}
-        />
+    <div className="relative w-full group z-10 lg:max-h-[80vh]">
+      {/* Chenar decalat (Offset Border) pentru un efect arhitectural pe desktop */}
+      <div
+        className="absolute -inset-4 border border-foreground/10 rounded-[2.5rem] transform translate-x-4 translate-y-4 -z-10 hidden lg:block transition-transform duration-700 ease-out group-hover:translate-x-6 group-hover:translate-y-6"
+        aria-hidden="true"
+      />
+
+      {/* Umbră colorată subtilă sub imagine pe desktop */}
+      <div className="absolute inset-4 bg-accent/20 blur-[40px] -z-10 hidden lg:block opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+      <div className="relative overflow-hidden rounded-2xl lg:rounded-[2rem] border border-border/20 shadow-xl lg:shadow-2xl bg-muted w-full h-full">
+        {/* Aspect ratio controlat: pe PC folosește procente din înălțimea ecranului pentru a se încadra într-o pagină */}
+        <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[70vh] xl:h-[75vh] overflow-hidden w-full">
+          <img
+            src={officeImg}
+            alt="Mobile Massage Office Context"
+            className="w-full h-full object-cover transition-transform duration-[2s] cubic-bezier(0.16, 1, 0.3, 1) group-hover:scale-[1.04]"
+            loading="lazy"
+            width={1280}
+            height={896}
+          />
+        </div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-white/10" />
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-white/5" />
+
+      {/* Element vizual plutitor cu efect de sticlă */}
+      <div className="absolute -left-4 sm:-left-6 lg:-left-8 xl:-left-12 bottom-6 sm:bottom-8 lg:bottom-12 z-20 hidden sm:flex items-center gap-3 bg-white/90 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border border-white/40 shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:-translate-y-2">
+        <div className="p-1.5 sm:p-2 bg-accent/10 rounded-full shrink-0">
+          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent animate-pulse" />
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <div className="w-10 sm:w-12 h-1 bg-accent/40 rounded-full" />
+          <div className="w-5 sm:w-6 h-1 bg-foreground/10 rounded-full" />
+        </div>
+      </div>
     </div>
   );
 }
@@ -29,8 +52,19 @@ export function AboutUs() {
   const { t } = useLanguage();
   const s = t.aboutPage;
 
+  // REZOLVARE EROARE TYPESCRIPT:
+  const descriereData = s.descriere as string | string[];
+  const descArray: string[] = Array.isArray(descriereData)
+    ? descriereData
+    : typeof descriereData === "string"
+      ? [descriereData]
+      : [];
+
+  const leadParagraph = descArray[0] || "";
+  const restOfParagraphs = descArray.slice(1);
+
   return (
-    <div className="w-full min-h-screen bg-background text-foreground antialiased pb-12 max-w-full overflow-x-hidden">
+    <div className="w-full min-h-screen lg:h-screen lg:overflow-hidden bg-background text-foreground antialiased max-w-full relative flex flex-col justify-start pb-12 lg:pb-0">
       <Helmet>
         <title>{s.metaTitle || "Despre Mine | Ramona's Mobile Massage"}</title>
         <meta
@@ -41,124 +75,212 @@ export function AboutUs() {
         />
       </Helmet>
 
-      {/* HERO SECTION (Singura secțiune rămasă) */}
-      <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/30 to-transparent pt-12 sm:pt-24 lg:pt-6 pb-10 lg:pb-24 w-full">
+      {/* Pattern de fundal subtil (Dot Grid) */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03] z-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, black 1px, transparent 0)",
+          backgroundSize: "32px 32px",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* 
+        AICI ESTE MODIFICAREA PRINCIPALĂ:
+        Pe Desktop (lg/xl) am adăugat pt-6 / pt-8. 
+        Astfel, stă lipit aproape de tot de meniul de navigație.
+      */}
+      <section className="relative overflow-hidden w-full z-10 pt-4 sm:pt-28 lg:pt-6 xl:pt-8 flex-grow flex items-start bg-gradient-to-b from-muted/20 via-transparent to-transparent">
+        {/* =========================================
+            ELEMENTE DECORATIVE ȘI BOTANICE
+            ========================================= */}
         <div
           className="pointer-events-none absolute inset-0 select-none overflow-hidden"
           aria-hidden="true"
         >
-          <div className="absolute top-0 right-0 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] rounded-full bg-muted/50 blur-[100px]" />
-          <div className="absolute -bottom-20 -left-10 w-[280px] lg:w-[400px] h-[280px] lg:h-[400px] rounded-full bg-accent/5 blur-[80px]" />
+          <div className="absolute top-0 right-0 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] rounded-full bg-muted/50 blur-[120px]" />
+          <div className="absolute top-[40%] lg:-bottom-20 -left-10 w-[280px] lg:w-[500px] h-[280px] lg:h-[500px] rounded-full bg-accent/10 blur-[100px]" />
+
+          {/* Botanica 1 (Stânga Sus) */}
           <motion.div
-            animate={{ y: [0, -8, 0], rotate: [-14, -11, -14] }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            className="hidden lg:block absolute left-[-5rem] top-20 w-[26rem] text-sage/10"
+            animate={{ y: [0, -10, 0], rotate: [-8, -5, -8] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -left-16 sm:-left-10 top-0 sm:top-10 w-[20rem] sm:w-[26rem] lg:w-[28rem] xl:w-[32rem] text-sage/30 opacity-80 z-0"
           >
             <BotanicalSVG variant="branch" className="w-full h-full" />
           </motion.div>
+
+          {/* Botanica 2 (Dreapta Mijloc) */}
+          <motion.div
+            animate={{ y: [0, 10, 0], rotate: [5, 8, 5] }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -right-20 top-[45%] lg:top-[30%] w-[16rem] lg:w-[20rem] xl:w-[24rem] text-accent/20 opacity-60 z-0"
+          >
+            <BotanicalSVG variant="bloom" className="w-full h-full" />
+          </motion.div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 w-full box-border">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 w-full box-border">
+          {/* =========================================
+              CONTENT GRID
+              ========================================= */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start w-full">
             {/* TEXT COLUMN */}
-            <div className="lg:col-span-6 flex flex-col items-start w-full box-border">
-              <motion.h1
-                initial={{ opacity: 0, y: 15 }}
+            <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left w-full box-border relative pt-0">
+              {/* Supratitlu (Eyebrow) */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="text-display text-[clamp(2.5rem,6.5vw,5.5rem)] leading-[0.95] lg:leading-[0.92] tracking-[-0.03em] lg:tracking-[-0.04em] font-light text-foreground lowercase w-full"
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex items-center justify-center lg:justify-start gap-4 mb-2 lg:mb-3 w-full"
+              >
+                <span
+                  className="w-8 lg:w-12 h-px bg-accent/60 block"
+                  aria-hidden="true"
+                />
+                <span className="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-accent mt-1">
+                  Povestea Mea
+                </span>
+                <span
+                  className="lg:hidden w-8 h-px bg-accent/60 block"
+                  aria-hidden="true"
+                />
+              </motion.div>
+
+              {/* Titlul Principal */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.16, 1, 0.3, 1],
+                  delay: 0.1,
+                }}
+                className="text-[clamp(2.4rem,5.5vw,3.5rem)] xl:text-[4rem] leading-[1.05] lg:leading-[1.1] tracking-[-0.02em] font-light text-foreground max-w-3xl mb-4 lg:mb-4 w-full"
+                style={{ fontFamily: "'Georgia', serif" }}
               >
                 {t.aboutPage.titlu1}
-                <span className="block mt-1 lg:mt-2 text-accent italic font-normal">
+                <span className="block mt-1 lg:mt-2 text-accent italic font-normal text-[clamp(1.6rem,4vw,2.2rem)] xl:text-[2.5rem]">
                   {t.aboutPage.titluItalic}
                 </span>
                 {t.aboutPage.titlu2 && (
-                  <span className="block mt-1 lg:mt-2">
-                    {t.aboutPage.titlu2}
-                  </span>
+                  <span className="block mt-1">{t.aboutPage.titlu2}</span>
                 )}
               </motion.h1>
+
+              {/* Primul Paragraf (Lead text) */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.7,
-                  delay: 0.1,
+                  duration: 0.8,
+                  delay: 0.2,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-6 lg:mt-10 text-[14.5px] sm:text-[15.5px] lg:text-[16px] leading-[1.8] font-light text-muted-foreground space-y-5 lg:pr-6 w-full"
+                className="relative text-left text-[15px] sm:text-[16px] xl:text-[17px] leading-[1.7] lg:leading-[1.8] font-normal text-foreground/80 pl-0 lg:pl-5 border-l-0 lg:border-l-[1.5px] border-accent/40 mb-4 lg:mb-6 w-full"
               >
-                {Array.isArray(t.aboutPage.descriere) ? (
-                  t.aboutPage.descriere.map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))
-                ) : (
-                  <p>{t.aboutPage.descriere}</p>
-                )}
+                <p>{leadParagraph}</p>
               </motion.div>
 
-              {/* MOBILE IMAGE */}
+              {/* --- IMAGINEA PE MOBIL --- */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="lg:hidden w-full mt-10 relative"
+                transition={{
+                  duration: 0.8,
+                  ease: [0.16, 1, 0.3, 1],
+                  delay: 0.3,
+                }}
+                className="lg:hidden w-full mb-8 mt-2 relative max-w-lg self-center"
               >
-                <div className="absolute -top-2 -left-2 w-10 h-10 border-t border-l border-border/40 pointer-events-none" />
-                <div className="absolute -bottom-2 -right-2 w-10 h-10 border-b border-r border-border/40 pointer-events-none" />
                 <HeroImage />
               </motion.div>
+
+              {/* Restul Paragrafelor (Text Normal) */}
+              {restOfParagraphs.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.3,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="text-left text-[14px] xl:text-[15px] leading-[1.7] font-light text-muted-foreground space-y-4 lg:space-y-4 lg:pr-8 w-full"
+                >
+                  {restOfParagraphs.map((paragraph: string, idx: number) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </motion.div>
+              )}
+
+              {/* Bara de Acțiune (Contact & Locație) */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.7,
-                  delay: 0.15,
+                  duration: 0.8,
+                  delay: 0.45,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-10 lg:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full"
+                className="mt-6 lg:mt-6 xl:mt-8 bg-white/50 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none p-4 lg:p-0 rounded-3xl sm:rounded-full border border-border/30 lg:border-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-8 w-full shadow-sm lg:shadow-none"
               >
-                <div className="flex items-center gap-3 bg-card/60 p-3 lg:p-0 rounded-xl border border-border/30 lg:border-0 lg:bg-transparent shrink-0">
-                  <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-border/50 bg-card flex items-center justify-center shrink-0 shadow-2xs">
-                    <MapPin className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-accent" />
+                <Button
+                  asChild
+                  className="group relative overflow-hidden h-12 xl:h-14 rounded-xl sm:rounded-full bg-foreground text-background hover:bg-foreground px-8 transition-all duration-500 text-sm font-medium w-full sm:w-auto shadow-xl shadow-foreground/10 order-2 sm:order-1"
+                >
+                  <Link
+                    to="/contact"
+                    className="flex items-center justify-center gap-3 w-full"
+                  >
+                    <div className="absolute inset-0 w-full h-full bg-accent -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10" />
+                    <span className="relative z-10">
+                      {t.aboutPage.butonConversatie}
+                    </span>
+                    <div className="relative z-10 w-6 h-6 xl:w-7 xl:h-7 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-500 group-hover:bg-white/20">
+                      <ArrowRight
+                        className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5"
+                        strokeWidth={2}
+                      />
+                    </div>
+                  </Link>
+                </Button>
+
+                <div className="flex items-center text-left gap-3 px-2 py-1 lg:p-0 shrink-0 order-1 sm:order-2 w-full sm:w-auto justify-center sm:justify-start">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 bg-accent/20 rounded-full blur-[8px] animate-pulse" />
+                    <div className="w-10 h-10 rounded-full border border-accent/20 bg-white flex items-center justify-center shrink-0 shadow-sm relative z-10">
+                      <MapPin className="w-4 h-4 text-accent" />
+                    </div>
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[8px] lg:text-[10px] uppercase tracking-[0.2em] font-mono text-muted-foreground/60 leading-none">
+                    <p className="text-[9px] uppercase tracking-[0.2em] font-mono text-muted-foreground/60 leading-none mb-1">
                       {t.aboutPage.ariaBadge}
                     </p>
-                    <p className="text-xs lg:text-sm text-foreground font-medium truncate mt-0.5 lg:mt-1">
+                    <p className="text-[13px] lg:text-[14px] text-foreground font-semibold truncate">
                       {t.aboutPage.ariaText}
                     </p>
                   </div>
                 </div>
-
-                <Button
-                  asChild
-                  className="group h-12 lg:h-12 rounded-full bg-foreground text-background hover:bg-accent hover:text-white px-6 lg:px-8 transition-all duration-400 text-xs lg:text-sm shadow-xs font-medium w-full sm:w-auto sm:ml-auto lg:ml-4"
-                >
-                  <Link
-                    to="/contact"
-                    className="flex items-center justify-between gap-2.5"
-                  >
-                    <span>{t.aboutPage.butonConversatie}</span>
-                    <ArrowRight
-                      className="w-3.5 h-3.5 lg:w-4 lg:h-4 transition-transform group-hover:translate-x-1"
-                      strokeWidth={2}
-                    />
-                  </Link>
-                </Button>
               </motion.div>
             </div>
 
-            {/* DESKTOP IMAGE COLUMN */}
+            {/* IMAGE COLUMN (Dreapta pe PC) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden lg:block lg:col-span-6 relative w-full box-border"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="hidden lg:block lg:col-span-6 relative w-full box-border xl:pl-6"
             >
-              <div className="absolute -top-3 -left-3 w-12 h-12 border-t border-l border-border/40 pointer-events-none" />
-              <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b border-r border-border/40 pointer-events-none" />
+              {/* Crosshair decorativ */}
+              <div
+                className="absolute -top-6 right-4 w-5 h-5 z-20"
+                aria-hidden="true"
+              >
+                <div className="absolute top-1/2 left-0 w-full h-px bg-foreground/30" />
+                <div className="absolute left-1/2 top-0 h-full w-px bg-foreground/30" />
+              </div>
               <HeroImage />
             </motion.div>
           </div>

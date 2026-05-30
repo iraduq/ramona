@@ -55,7 +55,7 @@ export function TrustBar() {
     title: item.title,
     label: item.label,
     icon: icons[index],
-    metricLabel: item.metricLabel,
+
     bgImage: bgImages[index],
   }));
 
@@ -152,7 +152,6 @@ export function TrustBar() {
               : anyHovered
                 ? "lg:flex-[0.55]"
                 : "lg:flex-1";
-            const IconComponent = item.icon;
 
             return (
               <div
@@ -195,18 +194,6 @@ export function TrustBar() {
                   }}
                 >
                   <div className="space-y-6 relative">
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono text-[10px] tracking-widest text-[#baa090] font-bold">
-                        {t.trustBar.wordRelaxare} / {item.id}
-                      </span>
-                      <div className="w-5 h-5 flex items-center justify-center text-[#1a1816]">
-                        <IconComponent
-                          strokeWidth={1}
-                          className="w-full h-full"
-                        />
-                      </div>
-                    </div>
-
                     <div className="space-y-3 relative z-10">
                       <h3
                         className="text-[1.5rem] font-light tracking-tight text-[#1a1816]"
@@ -221,29 +208,8 @@ export function TrustBar() {
                   </div>
 
                   <div className="flex items-end justify-between border-t border-[#1a1816]/10 pt-6">
-                    <div className="space-y-0.5">
-                      <span className="text-[2.2rem] font-light leading-none tracking-tighter font-serif text-[#1a1816] block"></span>
-                      <span className="text-[8px] tracking-[0.15em] uppercase font-mono block text-[#948b82]">
-                        {item.metricLabel}
-                      </span>
-                    </div>
-                    <div className="text-[#1a1816] mb-1">
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 11L11 1M11 1H4M11 1V8"
-                          stroke="currentColor"
-                          strokeWidth="1"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <div className="space-y-0.5"></div>
+                    <div className="text-[#1a1816] mb-1"></div>
                   </div>
                 </div>
 
@@ -253,16 +219,6 @@ export function TrustBar() {
                     opacity: isHovered && window.innerWidth >= 1024 ? 0 : 1,
                   }}
                 >
-                  <div className="flex items-center justify-between w-full">
-                    <span className="font-mono text-[10px] opacity-60 tracking-wider">
-                      {item.id}
-                    </span>
-                    <IconComponent
-                      strokeWidth={1.2}
-                      className="w-4 h-4 opacity-70"
-                    />
-                  </div>
-
                   <div className="mt-auto space-y-1 lg:space-y-2 relative z-20">
                     <h3
                       className="text-[1.2rem] sm:text-[1.4rem] font-light tracking-tight text-white"
@@ -283,12 +239,7 @@ export function TrustBar() {
                       {item.label}
                     </motion.p>
 
-                    <div className="flex items-baseline gap-2 pt-1">
-                      <span className="text-[1.3rem] sm:text-[1.6rem] font-light font-serif text-white leading-none"></span>
-                      <span className="text-[8px] tracking-wider uppercase font-mono opacity-50">
-                        {item.metricLabel}
-                      </span>
-                    </div>
+                    <div className="flex items-baseline gap-2 pt-1"></div>
                   </div>
                 </div>
               </div>
