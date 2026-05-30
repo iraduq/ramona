@@ -67,7 +67,8 @@ export function TrustBar() {
       {/* ... (Codul de fundal și header rămâne neschimbat) ... */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-4 w-full h-auto lg:h-[380px] items-stretch relative z-10">
+        {/* GRID PE MOBIL - carduri patratice, FLEX PE DESKTOP */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-row gap-3 sm:gap-4 w-full h-auto lg:h-[420px] items-stretch relative z-10">
           {categories.map((item, index) => {
             const isHovered = hoveredIndex === index;
             const anyHovered = hoveredIndex !== null;
@@ -76,11 +77,6 @@ export function TrustBar() {
               : anyHovered
                 ? "lg:flex-[0.5]"
                 : "lg:flex-1";
-            const mobileHeight = isHovered
-              ? "h-[280px] sm:h-[320px]"
-              : anyHovered
-                ? "h-[70px] sm:h-[90px]"
-                : "h-[140px] sm:h-[160px]";
 
             return (
               <div
@@ -88,11 +84,11 @@ export function TrustBar() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => setHoveredIndex(isHovered ? null : index)}
-                className={`relative rounded-[1.5rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col lg:flex-row ${flexBasis} ${mobileHeight} lg:h-full bg-[#eae6df] cursor-pointer border border-[#1a1816]/5 group`}
+                className={`relative rounded-2xl lg:rounded-[1.5rem] overflow-hidden transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ${flexBasis} aspect-square lg:aspect-auto lg:h-full bg-[#d8d4cc] cursor-pointer border border-[#1a1816]/5 group`}
               >
-                {/* CONTAINER IMAGINE - CU OBJECT-COVER PENTRU A UMPLE CARDUL */}
+                {/* CONTAINER IMAGINE - OBJECT-CONTAIN PE MOBIL, OBJECT-COVER PE DESKTOP */}
                 <div
-                  className="absolute inset-y-0 right-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden z-0"
+                  className="absolute inset-0 lg:inset-y-0 lg:right-0 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden z-0"
                   style={{
                     left: isHovered && window.innerWidth >= 1024 ? "45%" : "0%",
                     width:
@@ -102,23 +98,22 @@ export function TrustBar() {
                   <img
                     src={item.bgImage}
                     alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[800ms]"
+                    className="absolute inset-0 w-full h-full object-contain lg:object-cover transition-transform duration-[600ms]"
                   />
-                  {/* Overlay pentru text mai lizibil pe mobil */}
+                  {/* Overlay gradient de jos pentru text lizibil */}
                   <div
-                    className="absolute inset-0 transition-opacity duration-700 pointer-events-none"
+                    className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
                     style={{
-                      background:
-                        "linear-gradient(to bottom, rgba(26,24,22,0.1) 0%, rgba(26,24,22,0.7) 100%)",
-                      opacity:
-                        isHovered && window.innerWidth < 1024 ? 0.9 : 0.5,
+                      background: isHovered && window.innerWidth < 1024
+                        ? "linear-gradient(to bottom, rgba(26,24,22,0.1) 0%, rgba(26,24,22,0.85) 100%)"
+                        : "linear-gradient(to bottom, rgba(26,24,22,0) 40%, rgba(26,24,22,0.75) 100%)",
                     }}
                   />
                 </div>
 
-                {/* TEXT PE PC */}
+                {/* TEXT PE PC - panel alb la hover */}
                 <div
-                  className="absolute left-0 inset-y-0 w-[45%] bg-white p-8 hidden lg:flex flex-col justify-between z-20 transition-all duration-[800ms]"
+                  className="absolute left-0 inset-y-0 w-[45%] bg-white p-8 hidden lg:flex flex-col justify-between z-20 transition-all duration-[600ms]"
                   style={{
                     opacity: isHovered ? 1 : 0,
                     transform: isHovered
@@ -135,9 +130,29 @@ export function TrustBar() {
                   <p className="text-[13px] text-[#8c827a]">{item.label}</p>
                 </div>
 
-                {/* TEXT PE MOBIL */}
-                <div className="relative p-6 flex flex-col justify-end z-20 text-white w-full h-full lg:hidden">
-                  <h3 className="text-[1.2rem] font-light">{item.title}</h3>
+                {/* TEXT PE MOBIL - jos, cu descriere care se deschide la click */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col justify-end z-20 text-white lg:hidden">
+                  <h3 
+                    className="text-[0.95rem] sm:text-[1.1rem] font-light leading-tight"
+                    style={{ fontFamily: "'Georgia', serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {/* Descrierea care se deschide la click */}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: isHovered ? "auto" : 0,
+                      opacity: isHovered ? 1 : 0,
+                      marginTop: isHovered ? 8 : 0,
+                    }}
+                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-[10px] sm:text-[11px] font-light text-white/90 leading-relaxed">
+                      {item.label}
+                    </p>
+                  </motion.div>
                 </div>
               </div>
             );
