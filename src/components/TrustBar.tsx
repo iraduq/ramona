@@ -67,7 +67,7 @@ export function TrustBar() {
       {/* ... (Codul de fundal și header rămâne neschimbat) ... */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-4 w-full h-auto lg:h-[460px] items-stretch relative z-10">
+        <div className="flex flex-col lg:flex-row gap-4 w-full h-auto lg:h-[380px] items-stretch relative z-10">
           {categories.map((item, index) => {
             const isHovered = hoveredIndex === index;
             const anyHovered = hoveredIndex !== null;
@@ -77,10 +77,10 @@ export function TrustBar() {
                 ? "lg:flex-[0.5]"
                 : "lg:flex-1";
             const mobileHeight = isHovered
-              ? "h-[320px] sm:h-[400px]"
+              ? "h-[280px] sm:h-[320px]"
               : anyHovered
-                ? "h-[90px] sm:h-[110px]"
-                : "h-[180px] sm:h-[200px]";
+                ? "h-[70px] sm:h-[90px]"
+                : "h-[140px] sm:h-[160px]";
 
             return (
               <div
@@ -90,9 +90,9 @@ export function TrustBar() {
                 onClick={() => setHoveredIndex(isHovered ? null : index)}
                 className={`relative rounded-[1.5rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col lg:flex-row ${flexBasis} ${mobileHeight} lg:h-full bg-[#eae6df] cursor-pointer border border-[#1a1816]/5 group`}
               >
-                {/* CONTAINER IMAGINE - CU OBJECT-CONTAIN PENTRU A ARATA TOATA IMAGINEA */}
+                {/* CONTAINER IMAGINE - CU OBJECT-COVER PENTRU A UMPLE CARDUL */}
                 <div
-                  className="absolute inset-y-0 right-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden z-0 bg-[#eae6df]"
+                  className="absolute inset-y-0 right-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden z-0"
                   style={{
                     left: isHovered && window.innerWidth >= 1024 ? "45%" : "0%",
                     width:
@@ -102,7 +102,7 @@ export function TrustBar() {
                   <img
                     src={item.bgImage}
                     alt={item.title}
-                    className="absolute inset-0 w-full h-full object-contain transition-transform duration-[800ms]"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[800ms]"
                   />
                   {/* Overlay pentru text mai lizibil pe mobil */}
                   <div
