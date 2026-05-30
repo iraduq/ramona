@@ -83,7 +83,7 @@ export function Events() {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="mt-6 text-[14.5px] leading-relaxed font-light text-[#8c827a] max-w-md"
+            className="mt-6 text-[16px] leading-relaxed font-normal text-ink-soft max-w-md"
           >
             {t.events.descriere}
           </motion.p>
@@ -154,7 +154,7 @@ export function Events() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="text-[14.5px] leading-relaxed font-light text-[#8c827a]"
+          className="text-[15px] leading-relaxed font-normal text-ink-soft tracking-wide"
         >
           {t.events.descriere}
         </motion.p>

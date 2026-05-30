@@ -61,7 +61,7 @@ export function TrustBar() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#f6f4f0] py-24 md:py-32 select-none overflow-hidden antialiased text-[#1a1816]"
+      className="relative w-full bg-bg-soft py-24 md:py-32 select-none overflow-hidden antialiased text-ink"
     >
       <style dangerouslySetInnerHTML={{ __html: trustBarStyles }} />
 
@@ -80,13 +80,13 @@ export function TrustBar() {
       >
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -left-24 top-6 w-64 sm:w-80 lg:w-[460px] text-[#9eab95] opacity-40 lg:opacity-65 hidden lg:block"
+          className="absolute -left-24 top-6 w-64 sm:w-80 lg:w-[460px] text-sage-soft opacity-40 lg:opacity-65 hidden lg:block"
         >
           <BotanicalSVG variant="leaf" className="bot-sway w-full h-full" />
         </motion.div>
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -left-12 top-[42%] w-44 sm:w-56 lg:w-[320px] text-[#b5a898] opacity-35 lg:opacity-55 hidden lg:block"
+          className="absolute -left-12 top-[42%] w-44 sm:w-56 lg:w-[320px] text-border opacity-35 lg:opacity-55 hidden lg:block"
         >
           <BotanicalSVG
             variant="bloom"
@@ -95,13 +95,13 @@ export function TrustBar() {
         </motion.div>
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -right-24 bottom-16 w-44 sm:w-56 lg:w-[380px] text-[#bd9b84] opacity-45 lg:opacity-70 hidden lg:block rotate-12"
+          className="absolute -right-24 bottom-16 w-44 sm:w-56 lg:w-[380px] text-brand-soft opacity-45 lg:opacity-70 hidden lg:block rotate-12"
         >
           <BotanicalSVG variant="bloom" className="bot-float w-full h-full" />
         </motion.div>
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -right-16 top-20 w-52 sm:w-64 lg:w-[360px] text-[#9eab95] opacity-35 lg:opacity-55 hidden lg:block"
+          className="absolute -right-16 top-20 w-52 sm:w-64 lg:w-[360px] text-sage-soft opacity-35 lg:opacity-55 hidden lg:block"
         >
           <BotanicalSVG
             variant="leaf"
@@ -110,7 +110,7 @@ export function TrustBar() {
         </motion.div>
         <BotanicalSVG
           variant="leaf"
-          className="bot-sway absolute left-[46%] -top-28 w-[300px] text-[#9eab95] opacity-15 hidden xl:block rotate-90"
+          className="bot-sway absolute left-[46%] -top-28 w-[300px] text-sage-soft opacity-15 hidden xl:block rotate-90"
         />
       </div>
 
@@ -119,29 +119,25 @@ export function TrustBar() {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-          className="mb-12 sm:mb-20 flex flex-col gap-6 border-b border-[#1a1816]/10 pb-8 max-w-7xl mx-auto"
+          className="mb-12 sm:mb-20 flex flex-col gap-6 border-b border-ink/10 pb-8 max-w-7xl mx-auto"
         >
           <div className="space-y-2">
-            <span className="font-mono text-[9px] tracking-[0.35em] text-[#baa090] uppercase block font-semibold">
+            <span className="font-mono text-[9px] tracking-[0.35em] text-brand-soft uppercase block font-semibold">
               {t.trustBar.badge}
             </span>
-            <h2
-              className="text-[2rem] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.1] text-[#1a1816]"
-              style={{ fontFamily: "'Georgia', serif" }}
-            >
+            <h2 className="text-display text-[2rem] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.1] text-ink">
               {t.trustBar.titlu1} <br />
-              <span className="italic font-normal text-[#8c827a]">
+              <span className="italic font-normal text-ink-subtle">
                 {t.trustBar.titluItalic}
               </span>
             </h2>
           </div>
-          <p className="text-[13px] md:text-[14px] text-[#6b6661] font-light max-w-4xl leading-[1.8] font-sans mt-2">
+          <p className="text-[15px] md:text-[16px] lg:text-[16px] text-ink-soft font-normal max-w-3xl leading-[1.7] font-sans mt-2">
             {t.trustBar.descriere}
           </p>
         </motion.div>
 
         {/* ── GRID MODERN EXOTIC (Zig-Zag) ── */}
-        {/* Folosim grid-cols-5 și items-start pentru a lăsa fiecare card să curgă natural */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 w-full relative z-10 items-start lg:pb-20">
           {categories.map((item, index) => {
             const isHovered = hoveredIndex === index;
@@ -156,9 +152,9 @@ export function TrustBar() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 // h-fit se mulează exact pe poză, iar staggerClass le dă forma de "Val"
-                className={`h-fit relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-[#1a1816] cursor-pointer group shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl transition-all duration-500 ${staggerClass}`}
+                className={`h-fit relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-ink cursor-pointer group shadow-[0_8px_30px_color-mix(in_srgb,var(--color-ink)_4%,transparent)] hover:shadow-2xl transition-all duration-500 ${staggerClass}`}
               >
-                {/* 1. IMAGINEA PRINCIPALĂ (Nimic tăiat, nicio dungă neagră) */}
+                {/* 1. IMAGINEA PRINCIPALĂ */}
                 <img
                   src={item.bgImage}
                   alt={item.title}
@@ -172,20 +168,17 @@ export function TrustBar() {
                   className="absolute inset-0 pointer-events-none transition-opacity duration-500"
                   style={{
                     background:
-                      "linear-gradient(to top, rgba(26,24,22,0.95) 0%, rgba(26,24,22,0.3) 50%, transparent 100%)",
+                      "linear-gradient(to top, color-mix(in srgb, var(--color-ink) 95%, transparent) 0%, color-mix(in srgb, var(--color-ink) 30%, transparent) 50%, transparent 100%)",
                   }}
                 />
 
                 {/* 3. CONȚINUT TEXT */}
-                <div className="absolute inset-0 p-5 sm:p-6 lg:p-5 xl:p-6 flex flex-col justify-end z-20 text-white">
+                <div className="absolute inset-0 p-5 sm:p-6 lg:p-5 xl:p-6 flex flex-col justify-end z-20 text-surface">
                   <div className="mt-auto relative z-20">
-                    <span className="text-[9px] tracking-[0.3em] text-white/60 font-mono mb-2 block">
+                    <span className="text-[9px] tracking-[0.3em] text-surface/60 font-mono mb-2 block">
                       {item.id}
                     </span>
-                    <h3
-                      className="text-[1.2rem] sm:text-[1.4rem] lg:text-[1.05rem] xl:text-[1.2rem] font-light tracking-tight text-white mb-2 leading-snug"
-                      style={{ fontFamily: "'Georgia', serif" }}
-                    >
+                    <h3 className="text-display text-[1.2rem] sm:text-[1.4rem] lg:text-[1.05rem] xl:text-[1.2rem] font-light tracking-tight text-surface mb-2 leading-snug">
                       {item.title}
                     </h3>
 
@@ -198,7 +191,7 @@ export function TrustBar() {
                       }}
                     >
                       <div className="overflow-hidden">
-                        <p className="text-[11px] xl:text-[12px] font-light opacity-90 text-[#eae6df] leading-relaxed mt-1">
+                        <p className="text-[11px] xl:text-[12px] font-light opacity-90 text-surface/90 leading-relaxed mt-1">
                           {item.label}
                         </p>
                       </div>
@@ -211,20 +204,20 @@ export function TrustBar() {
         </div>
 
         {/* FOOTER */}
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-neutral-300 flex flex-col space-y-8 relative z-10">
+        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-border-soft flex flex-col space-y-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 px-1 text-center sm:text-left">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-12 gap-y-4">
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-xl font-light font-serif text-neutral-950">
+                <span className="text-display text-xl font-light text-ink">
                   NRW
                 </span>
-                <span className="text-[10px] tracking-[0.2em] text-neutral-600 uppercase font-bold">
+                <span className="text-[10px] tracking-[0.2em] text-ink-muted uppercase font-bold">
                   {t.trustBar.statRegiune}
                 </span>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-2 tracking-[0.2em] uppercase font-bold text-[10px] text-neutral-900">
-              <span className="w-2 h-2 rounded-full bg-[#b7744f] block animate-pulse" />
+            <div className="flex items-center justify-center gap-2 tracking-[0.2em] uppercase font-bold text-[10px] text-ink">
+              <span className="w-2 h-2 rounded-full bg-brand block animate-pulse" />
               {t.trustBar.legalBadge}
             </div>
           </div>

@@ -32,14 +32,14 @@ const heroStyles = `
   .si3 { animation: hero-fade-up .6s cubic-bezier(.22,1,.36,1) .82s both; }
   .pdot { animation: pulse-dot 2.2s ease-in-out infinite; }
   .btn-shimmer { position: relative; overflow: hidden; }
-  .btn-shimmer::after { content: ''; position: absolute; inset: 0; left: -100%; width: 55%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.13), transparent); transition: left .55s ease; }
+  .btn-shimmer::after { content: ''; position: absolute; inset: 0; left: -100%; width: 55%; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-primary-foreground) 15%, transparent), transparent); transition: left .55s ease; }
   .btn-shimmer:hover::after { left: 160%; }
   .img-wrap { overflow: hidden; }
   .img-wrap img { transition: transform 900ms cubic-bezier(.22,1,.36,1); }
   .img-wrap:hover img { transform: scale(1.04); }
   .sal { transition: width .35s cubic-bezier(.22,1,.36,1), background-color .3s; }
-  .si1:hover .sal, .si2:hover .sal, .si3:hover .sal { width: 32px !important; background-color: rgba(168,123,93,.55); }
-  .si1:hover dt, .si2:hover dt, .si3:hover dt { color: var(--color-accent); }
+  .si1:hover .sal, .si2:hover .sal, .si3:hover .sal { width: 32px !important; background-color: color-mix(in srgb, var(--color-brand-deep) 55%, transparent); }
+  .si1:hover dt, .si2:hover dt, .si3:hover dt { color: var(--color-brand-deep); }
   dt { transition: color .3s ease; }
 `;
 
@@ -64,7 +64,7 @@ export function Hero() {
               variant="bloom"
               className="bot-float absolute right-2 sm:right-6 top-[20%] w-28 sm:w-36 lg:w-44 text-accent/30 md:text-accent/40 opacity-40 md:opacity-50"
             />
-            <div className="absolute top-[-15%] right-[-10%] w-[260px] sm:w-[380px] md:w-[600px] h-[260px] sm:h-[380px] md:h-[600px] rounded-full bg-white/60 blur-[40px] sm:blur-[90px] md:blur-[120px]" />
+            <div className="absolute top-[-15%] right-[-10%] w-[260px] sm:w-[380px] md:w-[600px] h-[260px] sm:h-[380px] md:h-[600px] rounded-full bg-card/60 blur-[40px] sm:blur-[90px] md:blur-[120px]" />
             <div className="absolute bottom-[10%] left-[5%] w-[200px] sm:w-[350px] h-[200px] sm:h-[350px] rounded-full bg-muted/50 blur-[40px] sm:blur-[80px]" />
           </div>
 
@@ -73,9 +73,9 @@ export function Hero() {
               {/* LEFT: Text content */}
               <div className="w-full lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 order-1">
                 <div className="ha1 flex items-center gap-3 tracking-[0.2em] text-[9px] sm:text-[10px] font-semibold uppercase select-none mb-2">
-                  <span className="flex items-center gap-2 text-[#7a4f2f]">
+                  <span className="flex items-center gap-2 text-brand-deep">
                     <span
-                      className="pdot w-1 h-1 rounded-full bg-[#7a4f2f]/80"
+                      className="pdot w-1 h-1 rounded-full bg-brand-deep/80"
                       aria-hidden="true"
                     />
                     {t.hero.badge}
@@ -84,9 +84,7 @@ export function Hero() {
                     className="w-6 h-px bg-foreground/20"
                     aria-hidden="true"
                   />
-                  <span className="text-neutral-500 font-medium">
-                    Est. 2019
-                  </span>
+                  <span className="text-ink-muted font-medium">Est. 2019</span>
                 </div>
 
                 <h1
@@ -122,7 +120,7 @@ export function Hero() {
                   {t.hero.titlu2}
                 </h1>
 
-                <p className="ha3 mt-3 max-w-[34ch] sm:max-w-[44ch] text-[0.875rem] sm:text-[0.975rem] lg:text-[1.05rem] text-neutral-700 leading-[1.6] font-light px-1 sm:px-0">
+                <p className="ha3 mt-3 max-w-[34ch] sm:max-w-[44ch] text-[0.875rem] sm:text-[0.975rem] lg:text-[1.05rem] text-ink-soft leading-[1.6] font-sans px-1 sm:px-0">
                   {t.hero.descriere}
                 </p>
 
@@ -132,7 +130,7 @@ export function Hero() {
                     <Button
                       asChild
                       size="lg"
-                      className="btn-shimmer rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.25),0_1px_4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(44,36,32,0.35)] active:translate-y-0"
+                      className="btn-shimmer rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-primary text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-xl hover:shadow-primary/30 active:translate-y-0"
                     >
                       <Link to="/contact" className="flex items-center gap-2.5">
                         {t.hero.butonConversatie}
@@ -143,7 +141,7 @@ export function Hero() {
                       asChild
                       variant="outline"
                       size="lg"
-                      className="rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-card border border-foreground/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:bg-muted hover:border-foreground/20 hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] active:translate-y-0"
+                      className="rounded-full px-8 h-[50px] text-[0.875rem] font-medium bg-card border border-foreground/10 shadow-sm shadow-foreground/5 transition-all duration-300 hover:bg-muted hover:border-foreground/20 hover:-translate-y-[1px] hover:shadow-md hover:shadow-foreground/10 active:translate-y-0"
                     >
                       <Link to="/services">{t.hero.butonServicii}</Link>
                     </Button>
@@ -222,7 +220,7 @@ export function Hero() {
                     aria-hidden="true"
                   />
 
-                  <div className="img-reveal img-wrap relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] rounded-2xl lg:rounded-[1.75rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-border/20">
+                  <div className="img-reveal img-wrap relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] rounded-2xl lg:rounded-[1.75rem] shadow-2xl shadow-foreground/10 border border-border/20">
                     <img
                       src={heroImg}
                       alt={t.hero.imgAlt}
@@ -232,14 +230,13 @@ export function Hero() {
                       loading="eager"
                     />
                     <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent lg:from-black/20 pointer-events-none"
+                      className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent lg:from-foreground/25 pointer-events-none"
                       aria-hidden="true"
                     />
 
-                    {/* Mobile badge — over image, bigger & readable */}
+                    {/* Mobile badge — over image */}
                     <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-20">
-                      <div className="flex items-center gap-3 bg-card/95 backdrop-blur-xl border border-border/40 rounded-2xl p-3.5 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
-                        {/* Container Iconiță - cu fundal subtil ca pe desktop */}
+                      <div className="flex items-center gap-3 bg-card/95 backdrop-blur-xl border border-border/40 rounded-2xl p-3.5 shadow-lg shadow-foreground/15">
                         <div
                           className="p-1.5 rounded-xl bg-accent/10 shrink-0"
                           aria-hidden="true"
@@ -249,8 +246,6 @@ export function Hero() {
                             aria-hidden="true"
                           />
                         </div>
-
-                        {/* Container Text */}
                         <div className="flex flex-col gap-1">
                           <span className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-accent leading-none">
                             {t.hero.badgeTimp}
@@ -265,16 +260,14 @@ export function Hero() {
 
                   {/* Desktop floating badge */}
                   <div className="badge-float hidden lg:block absolute -bottom-4 -left-16 z-20">
-                    <div className="bg-white/95 backdrop-blur-xl border border-accent/10 rounded-2xl p-5 shadow-[0_20px_60px_rgba(168,123,93,0.12)] max-w-[240px] transition-all duration-300 hover:scale-105 group">
+                    <div className="bg-card/95 backdrop-blur-xl border border-accent/10 rounded-2xl p-5 shadow-2xl shadow-accent/20 max-w-[240px] transition-all duration-300 hover:scale-105 group">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="relative shrink-0">
-                          {/* Umbra colorată (Glow) din spatele iconiței */}
                           <div
                             className="absolute inset-0 bg-accent blur-md opacity-40 group-hover:opacity-70 transition-opacity rounded-full"
                             aria-hidden="true"
                           ></div>
-                          {/* Iconița propriu-zisă */}
-                          <div className="relative p-1.5 rounded-full bg-white border border-accent/20">
+                          <div className="relative p-1.5 rounded-full bg-card border border-accent/20">
                             <Sparkles
                               className="h-4 w-4 text-accent"
                               aria-hidden="true"
@@ -300,7 +293,7 @@ export function Hero() {
                   <Button
                     asChild
                     size="lg"
-                    className="btn-shimmer rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-primary text-primary-foreground shadow-[0_4px_20px_rgba(44,36,32,0.22)] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
+                    className="btn-shimmer rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-primary text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:bg-primary/90 hover:-translate-y-[2px] active:scale-[0.99]"
                   >
                     <Link
                       to="/contact"
@@ -314,7 +307,7 @@ export function Hero() {
                     asChild
                     variant="ghost"
                     size="lg"
-                    className="rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-transparent border border-foreground/15 transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/25 text-foreground/80"
+                    className="rounded-full w-full h-[52px] text-[0.9rem] font-medium bg-surface border border-ink/15 text-ink-soft transition-all duration-300 hover:bg-muted hover:border-ink/25 active:scale-[0.99]"
                   >
                     <Link to="/services" className="justify-center">
                       {t.hero.butonServicii}

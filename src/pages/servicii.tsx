@@ -26,18 +26,33 @@ interface RateItem {
   featured?: boolean;
 }
 
-/* ─── COMPONENTE VIZUALE EXTRA ─── */
+const botanicalStyles = `
+  @keyframes bot-sway { 0%, 100% { transform: rotate(-3deg) translateX(0px); } 50% { transform: rotate(-0.5deg) translateX(5px); } }
+  @keyframes bot-sway-r { 0%, 100% { transform: rotate(3deg) translateX(0px); } 50% { transform: rotate(0.5deg) translateX(-5px); } }
+  @keyframes bot-sway-light { 0%, 100% { transform: rotate(5deg) scale(0.95); } 50% { transform: rotate(8deg) scale(0.98) translateY(4px); } }
+  @keyframes bot-float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+  @keyframes bot-float-slow { 0%, 100% { transform: translateY(0px) rotate(180deg); } 50% { transform: translateY(8px) rotate(182deg); } }
+  @keyframes bot-float-alt { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-8px) rotate(-2deg); } }
+
+  .b-sway { animation: bot-sway 10s ease-in-out infinite; }
+  .b-sway-r { animation: bot-sway-r 12s ease-in-out infinite 1s; }
+  .b-sway-l { animation: bot-sway-light 14s ease-in-out infinite 2s; }
+  .b-float { animation: bot-float 8s ease-in-out infinite 0.5s; }
+  .b-float-s { animation: bot-float-slow 13s ease-in-out infinite 1.5s; }
+  .b-float-a { animation: bot-float-alt 9s ease-in-out infinite 0.8s; }
+`;
+
 const SectionDivider = () => (
   <div className="w-full flex items-center justify-center py-8 lg:py-16 opacity-60">
-    <div className="w-20 md:w-32 h-px bg-gradient-to-r from-transparent via-[#b7744f] to-transparent" />
+    <div className="w-20 md:w-32 h-px bg-gradient-to-r from-transparent via-brand to-transparent" />
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      className="mx-3 md:mx-4 text-[#b7744f]"
+      className="mx-3 md:mx-4 text-brand"
     >
       <Sparkles className="w-4 h-4 md:w-5 md:h-5 opacity-70" />
     </motion.div>
-    <div className="w-20 md:w-32 h-px bg-gradient-to-l from-transparent via-[#b7744f] to-transparent" />
+    <div className="w-20 md:w-32 h-px bg-gradient-to-l from-transparent via-brand to-transparent" />
   </div>
 );
 
@@ -82,14 +97,13 @@ function RateCard({
       }}
       className={`group relative flex flex-col rounded-[2rem] p-6 lg:p-9 transition-all duration-500 ${
         featured
-          ? "bg-gradient-to-b from-[#4a3b32] to-[#362b24] text-[#F7F5F2] shadow-[0_20px_40px_-15px_rgba(74,59,50,0.5)] lg:-translate-y-4 ring-1 ring-white/10"
-          : "bg-white text-[#4a3b32] border border-[#e5e0d8] hover:border-[#b7744f] hover:shadow-[0_15px_30px_-10px_rgba(183,116,79,0.15)] hover:-translate-y-1 lg:hover:-translate-y-2 backdrop-blur-sm"
+          ? "bg-gradient-to-b from-ink-soft to-ink text-surface shadow-[0_20px_40px_-15px_color-mix(in_srgb,var(--color-ink-soft)_50%,transparent)] lg:-translate-y-4 ring-1 ring-surface/10"
+          : "bg-surface text-ink-soft border border-border-soft hover:border-brand hover:shadow-[0_15px_30px_-10px_color-mix(in_srgb,var(--color-brand)_15%,transparent)] hover:-translate-y-1 lg:hover:-translate-y-2 backdrop-blur-sm"
       }`}
     >
-      {/* Background Glow for Featured */}
       {featured && (
         <div className="absolute inset-0 rounded-[2rem] overflow-hidden pointer-events-none">
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#b7744f] rounded-full blur-[60px] opacity-20" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand rounded-full blur-[60px] opacity-20" />
         </div>
       )}
 
@@ -98,7 +112,7 @@ function RateCard({
           initial={{ scale: 0.9 }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 3, repeat: Infinity }}
-          className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#b7744f] to-[#965935] px-3.5 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.25em] text-white shadow-md shadow-[#b7744f]/30 z-10 whitespace-nowrap"
+          className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand to-brand-deep px-3.5 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.25em] text-surface shadow-md shadow-brand/30 z-10 whitespace-nowrap"
         >
           <Star className="w-3 h-3 md:w-3.5 md:h-3.5 fill-current" />{" "}
           {popularLabel}
@@ -107,7 +121,7 @@ function RateCard({
 
       <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.28em] opacity-70">
         <Clock
-          className={`w-3.5 h-3.5 md:w-4 md:h-4 ${featured ? "text-[#d6a68d]" : "text-[#b7744f]"}`}
+          className={`w-3.5 h-3.5 md:w-4 md:h-4 ${featured ? "text-brand-soft" : "text-brand"}`}
         />
         <span className="font-medium">{item.time}</span>
       </div>
@@ -124,20 +138,20 @@ function RateCard({
 
       {item.detail && (
         <p
-          className={`relative z-10 mt-6 md:mt-8 text-sm leading-relaxed ${featured ? "text-white/80" : "text-[#73655c]"}`}
+          className={`relative z-10 mt-6 md:mt-8 text-sm leading-relaxed ${featured ? "text-surface/80" : "text-ink-muted"}`}
         >
           {item.detail}
         </p>
       )}
 
       <div
-        className={`relative z-10 mt-auto pt-5 md:pt-6 border-t ${featured ? "border-white/10" : "border-[#e5e0d8]"} flex items-center justify-between text-[11px] md:text-xs`}
+        className={`relative z-10 mt-auto pt-5 md:pt-6 border-t ${featured ? "border-surface/10" : "border-border-soft"} flex items-center justify-between text-[11px] md:text-xs`}
       >
         <span className="uppercase tracking-[0.25em] font-medium opacity-60">
           Inkl. Setup
         </span>
         <CheckCircle2
-          className={`w-4 h-4 md:w-5 md:h-5 ${featured ? "text-[#d6a68d]" : "text-[#c2baaf]"}`}
+          className={`w-4 h-4 md:w-5 md:h-5 ${featured ? "text-brand-soft" : "text-ink-subtle"}`}
         />
       </div>
     </motion.article>
@@ -153,72 +167,98 @@ export function Servicii() {
   const sx = useSpring(mouseX, { stiffness: 15, damping: 40 });
   const sy = useSpring(mouseY, { stiffness: 15, damping: 40 });
 
+  // Parallax separat pentru secțiuni de jos (mișcare inversă pentru varietate)
+  const mx2 = useMotionValue(0);
+  const my2 = useMotionValue(0);
+  const sx2 = useSpring(mx2, { stiffness: 18, damping: 25 });
+  const sy2 = useSpring(my2, { stiffness: 18, damping: 25 });
+
   useEffect(() => {
-    // Only apply mouse parallax on desktop
     if (window.innerWidth < 1024) return;
     const h = (e: MouseEvent) => {
-      mouseX.set((e.clientX - window.innerWidth / 2) / 60);
-      mouseY.set((e.clientY - window.innerHeight / 2) / 60);
+      const cx = (e.clientX - window.innerWidth / 2) / 60;
+      const cy = (e.clientY - window.innerHeight / 2) / 60;
+      mouseX.set(cx);
+      mouseY.set(cy);
+      mx2.set((e.clientX - window.innerWidth / 2) / 45);
+      my2.set((e.clientY - window.innerHeight / 2) / 45);
     };
     window.addEventListener("mousemove", h);
     return () => window.removeEventListener("mousemove", h);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, mx2, my2]);
 
   const rates = s.rates as readonly RateItem[];
-  const featuredIdx = 2; // 25 min
+  const featuredIdx = 2;
 
   return (
-    <div className="w-full min-h-screen bg-[#F7F5F2] text-[#4a3b32] antialiased selection:bg-[#b7744f]/20 overflow-hidden font-sans">
+    <div className="w-full min-h-screen bg-background text-ink-soft antialiased selection:bg-brand/20 overflow-hidden font-sans">
+      <style dangerouslySetInnerHTML={{ __html: botanicalStyles }} />
+
       <Helmet>
         <title>{s.metaTitle}</title>
         <meta name="description" content={s.metaDesc} />
       </Helmet>
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-4 pb-16 md:pb-20 lg:pb-24 overflow-hidden">
-        {/* Decorative Background Elements */}
+      <section className="relative pt-4 pb-16 md:pb-20 lg:pb-24 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
+          {/* Glows */}
           <div
             className="absolute -top-20 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 md:opacity-60"
             style={{
-              background: "radial-gradient(circle, #f2e8de, transparent 70%)",
+              background:
+                "radial-gradient(circle, var(--color-bg-warm), transparent 70%)",
             }}
           />
           <div
             className="absolute top-40 -left-20 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full blur-[80px] md:blur-[120px] opacity-40 md:opacity-50"
             style={{
-              background: "radial-gradient(circle, #e8dfd5, transparent 70%)",
+              background:
+                "radial-gradient(circle, var(--color-bg-warmer), transparent 70%)",
             }}
           />
 
-          {/* Parallax Botanicals (Desktop Only) */}
+          {/* Parallax botanicals — desktop */}
           <motion.div
             style={{ x: sx, y: sy }}
             className="absolute -right-10 top-0 w-[38rem] opacity-[0.05] hidden lg:block"
           >
             <BotanicalSVG
               variant="branch"
-              className="w-full h-full text-[#4a3b32]"
+              className="b-sway w-full h-full text-ink-soft"
             />
           </motion.div>
           <motion.div
             style={{ x: sy, y: sx }}
-            className="absolute -left-16 top-[25%] w-[20rem] opacity-[0.06] hidden lg:block"
+            className="absolute -left-16 top-[20%] w-[22rem] opacity-[0.06] hidden lg:block"
           >
             <BotanicalSVG
               variant="leaf"
-              className="w-full h-full text-[#b7744f]"
+              className="b-sway-r w-full h-full text-brand"
+            />
+          </motion.div>
+          <motion.div
+            style={{ x: sx, y: sy }}
+            className="absolute right-[8%] bottom-[5%] w-[14rem] opacity-[0.07] hidden lg:block"
+          >
+            <BotanicalSVG
+              variant="bloom"
+              className="b-float w-full h-full text-brand-soft"
             />
           </motion.div>
 
-          {/* Floating Leaves (Hidden on very small screens to avoid clutter) */}
+          {/* Floating leaves — toate ecranele */}
           <FloatingLeaf
-            className="top-[15%] left-[10%] w-12 opacity-10 text-[#4a3b32] hidden sm:block lg:w-16 lg:left-[20%]"
+            className="top-[12%] left-[8%] w-10 sm:w-14 opacity-10 text-ink-soft hidden sm:block lg:w-16 lg:left-[18%]"
             delay={0}
           />
           <FloatingLeaf
-            className="bottom-[20%] right-[10%] w-16 opacity-15 text-[#b7744f] hidden sm:block lg:w-24 lg:right-[25%]"
+            className="bottom-[18%] right-[8%] w-14 sm:w-16 opacity-15 text-brand hidden sm:block lg:w-20 lg:right-[22%]"
             delay={2}
+          />
+          <FloatingLeaf
+            className="top-[45%] right-[3%] w-8 sm:w-10 opacity-8 text-sage-soft hidden sm:block lg:hidden"
+            delay={1}
           />
         </div>
 
@@ -230,15 +270,15 @@ export function Servicii() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-center lg:text-left"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#b7744f]/10 border border-[#b7744f]/20 px-3.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-[#b7744f] font-bold mb-6 md:mb-8">
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand/10 border border-brand/20 px-3.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-brand font-bold mb-6 md:mb-8">
                 <Leaf className="w-3 h-3 md:w-3.5 md:h-3.5" /> {s.topBadge}
               </div>
               <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
                 {s.titlu1}{" "}
-                <em className="not-italic text-[#b7744f] font-light italic relative whitespace-nowrap">
+                <em className="not-italic text-brand font-light italic relative whitespace-nowrap">
                   {s.titluItalic}
                   <svg
-                    className="absolute w-full h-2 md:h-3 -bottom-0.5 md:-bottom-1 left-0 text-[#b7744f] opacity-30"
+                    className="absolute w-full h-2 md:h-3 -bottom-0.5 md:-bottom-1 left-0 text-brand opacity-30"
                     viewBox="0 0 100 10"
                     preserveAspectRatio="none"
                   >
@@ -251,7 +291,7 @@ export function Servicii() {
                   </svg>
                 </em>
               </h1>
-              <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg lg:text-xl text-[#73655c] leading-relaxed font-light">
+              <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg lg:text-xl text-ink-muted leading-relaxed font-light">
                 {s.descriere}
               </p>
             </motion.div>
@@ -264,68 +304,116 @@ export function Servicii() {
                 delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative rounded-[2rem] bg-white/80 backdrop-blur-xl border border-white p-7 sm:p-8 lg:p-10 shadow-[0_20px_50px_-20px_rgba(74,59,50,0.1)]"
+              className="relative rounded-[2rem] bg-surface/80 backdrop-blur-xl border border-surface p-7 sm:p-8 lg:p-10 shadow-[0_20px_50px_-20px_color-mix(in_srgb,var(--color-ink-soft)_10%,transparent)]"
             >
               <div className="absolute top-0 right-0 p-5 md:p-6 opacity-5 pointer-events-none">
-                <ShieldCheck className="w-16 h-16 md:w-24 md:h-24 text-[#4a3b32]" />
+                <ShieldCheck className="w-16 h-16 md:w-24 md:h-24 text-ink-soft" />
               </div>
-              <div className="flex items-center gap-2.5 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-[#b7744f] font-bold">
+              <div className="flex items-center gap-2.5 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-brand font-bold">
                 <ShieldCheck className="w-4 h-4" /> {s.ethicalBadge}
               </div>
-              <p className="mt-4 md:mt-5 text-[#4a3b32] text-lg md:text-xl leading-snug font-medium pr-4">
+              <p className="mt-4 md:mt-5 text-ink-soft text-lg md:text-xl leading-snug font-medium pr-4">
                 {s.ethicalTitle}
               </p>
-              <button className="mt-6 md:mt-8 group inline-flex items-center gap-3 rounded-full bg-[#4a3b32] hover:bg-[#b7744f] text-white px-5 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-bold transition-all duration-300 w-full sm:w-auto justify-center">
+              <button className="mt-6 md:mt-8 group inline-flex items-center gap-3 rounded-full bg-ink-soft hover:bg-brand text-surface px-5 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-bold transition-all duration-300 w-full sm:w-auto justify-center">
                 {s.ethicalSub}
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.aside>
           </div>
 
-          {/* Why bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16 md:mt-24 lg:mt-32 rounded-[2rem] border border-[#e5e0d8] bg-gradient-to-br from-white to-[#F7F5F2] px-6 sm:px-8 lg:px-12 py-7 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 lg:gap-12 shadow-sm"
+            className="mt-16 md:mt-24 lg:mt-32 rounded-[2rem] border border-border-soft bg-gradient-to-br from-surface to-bg-soft px-6 sm:px-8 lg:px-12 py-7 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 lg:gap-12 shadow-sm"
           >
             <div className="flex items-center gap-4 md:min-w-[240px] lg:min-w-[280px]">
-              <span className="w-1.5 h-10 md:h-12 bg-gradient-to-b from-[#b7744f] to-[#965935] rounded-full shrink-0" />
+              <span className="w-1.5 h-10 md:h-12 bg-gradient-to-b from-brand to-brand-deep rounded-full shrink-0" />
               <h3 className="text-display text-xl md:text-2xl tracking-tight">
                 {s.whyTitle}
               </h3>
             </div>
-            <div className="hidden md:block w-px h-12 bg-[#e5e0d8]" />
-            <p className="text-[#73655c] text-sm md:text-base leading-relaxed flex-1 font-light">
+            <div className="hidden md:block w-px h-12 bg-border-soft" />
+            <p className="text-ink-muted text-sm md:text-base leading-relaxed flex-1 font-light">
               {s.whyDesc}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* ─── PREISE ─── */}
+      {/* ─── WAVE: bg-background → bg-bg-soft ─── */}
       <div className="relative z-20 -mb-1">
-        <WaveDividerInverted colorTop="#F7F5F2" colorBottom="#f0ece6" />
+        <WaveDividerInverted
+          colorTop="var(--color-background)"
+          colorBottom="var(--color-bg-soft)"
+        />
       </div>
 
-      <section className="relative py-16 md:py-24 lg:py-32 bg-[#f0ece6]">
+      {/* ─── PREȚURI ─── */}
+      <section className="relative py-16 md:py-24 lg:py-32 bg-bg-soft overflow-hidden">
+        {/* Botanicals Prețuri */}
+        <div
+          className="absolute inset-0 pointer-events-none overflow-hidden z-0"
+          aria-hidden
+        >
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -left-20 top-10 w-[420px] text-sage-soft opacity-40 lg:opacity-60 hidden lg:block"
+          >
+            <BotanicalSVG variant="leaf" className="b-sway w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -left-10 top-[45%] w-[280px] text-border opacity-30 lg:opacity-50 hidden lg:block"
+          >
+            <BotanicalSVG variant="bloom" className="b-sway-l w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -right-20 bottom-10 w-[360px] text-brand-soft opacity-40 lg:opacity-65 hidden lg:block rotate-12"
+          >
+            <BotanicalSVG variant="bloom" className="b-float w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -right-14 top-16 w-[320px] text-sage-soft opacity-30 lg:opacity-50 hidden lg:block"
+          >
+            <BotanicalSVG variant="leaf" className="b-float-s w-full h-full" />
+          </motion.div>
+          {/* top centru */}
+          <BotanicalSVG
+            variant="branch"
+            className="b-sway absolute left-[44%] -top-24 w-[280px] text-sage-soft opacity-10 hidden xl:block rotate-90"
+          />
+          {/* Mobile */}
+          <FloatingLeaf
+            className="top-[8%] right-[5%] w-10 opacity-10 text-brand sm:w-14 lg:hidden"
+            delay={0.5}
+          />
+          <FloatingLeaf
+            className="bottom-[10%] left-[4%] w-12 opacity-8 text-sage-soft lg:hidden"
+            delay={1.5}
+          />
+        </div>
+
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16 lg:mb-20 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/60 border border-[#e5e0d8] px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-[#b7744f] font-bold shadow-sm">
+              <span className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-border-soft px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand font-bold shadow-sm">
                 {s.module1Badge}
               </span>
               <h2 className="mt-4 md:mt-6 text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
                 {s.module1Title}
               </h2>
             </div>
-            <div className="inline-flex items-center justify-center gap-2.5 bg-white/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-[#e5e0d8] mx-auto md:mx-0">
-              <Wallet className="w-4 h-4 md:w-5 md:h-5 text-[#b7744f]" />
-              <p className="text-xs md:text-sm text-[#73655c]">
-                <span className="uppercase tracking-[0.2em] md:tracking-[0.22em] text-[#4a3b32] font-bold mr-1.5">
+            <div className="inline-flex items-center justify-center gap-2.5 bg-surface/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-border-soft mx-auto md:mx-0">
+              <Wallet className="w-4 h-4 md:w-5 md:h-5 text-brand" />
+              <p className="text-xs md:text-sm text-ink-muted">
+                <span className="uppercase tracking-[0.2em] md:tracking-[0.22em] text-ink-soft font-bold mr-1.5">
                   {s.startingFrom}
                 </span>
-                <span className="text-base md:text-lg text-[#4a3b32] font-medium">
+                <span className="text-base md:text-lg text-ink-soft font-medium">
                   {rates[0]?.price}
                 </span>{" "}
                 <span className="opacity-80">{s.perSession}</span>
@@ -348,12 +436,61 @@ export function Servicii() {
         </div>
       </section>
 
-      {/* ─── HOTELS / SPECIAL ─── */}
+      {/* ─── WAVE: bg-bg-soft → bg-background ─── */}
       <div className="relative z-20 -mb-1">
-        <WaveDividerInverted colorTop="#f0ece6" colorBottom="#F7F5F2" />
+        <WaveDividerInverted
+          colorTop="var(--color-bg-soft)"
+          colorBottom="var(--color-background)"
+        />
       </div>
 
-      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-[#F7F5F2]">
+      {/* ─── HOTELS / SPECIAL ─── */}
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-background">
+        {/* Botanicals Hotels */}
+        <div
+          className="absolute inset-0 pointer-events-none overflow-hidden z-0"
+          aria-hidden
+        >
+          <motion.div
+            style={{ x: sx, y: sy }}
+            className="absolute -right-24 top-8 w-[460px] text-sage-soft opacity-40 lg:opacity-60 hidden lg:block"
+          >
+            <BotanicalSVG variant="leaf" className="b-float-s w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx, y: sy }}
+            className="absolute -left-20 bottom-20 w-[380px] text-brand-soft opacity-35 lg:opacity-55 hidden lg:block -rotate-12"
+          >
+            <BotanicalSVG variant="bloom" className="b-float w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sy, y: sx }}
+            className="absolute -left-16 top-[30%] w-[300px] text-border opacity-30 lg:opacity-50 hidden lg:block"
+          >
+            <BotanicalSVG variant="branch" className="b-sway-r w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx, y: sy }}
+            className="absolute right-[5%] bottom-[15%] w-[220px] text-sage-soft opacity-25 lg:opacity-45 hidden lg:block rotate-6"
+          >
+            <BotanicalSVG variant="leaf" className="b-float-a w-full h-full" />
+          </motion.div>
+          {/* top-centru branch */}
+          <BotanicalSVG
+            variant="branch"
+            className="b-sway absolute right-[42%] -top-20 w-[260px] text-sage-soft opacity-10 hidden xl:block -rotate-90"
+          />
+          {/* Mobile */}
+          <FloatingLeaf
+            className="top-[6%] left-[4%] w-10 opacity-10 text-ink-soft sm:w-12 lg:hidden"
+            delay={0}
+          />
+          <FloatingLeaf
+            className="bottom-[8%] right-[4%] w-12 opacity-10 text-brand sm:w-14 lg:hidden"
+            delay={2}
+          />
+        </div>
+
         <SectionDivider />
 
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10 mt-8 lg:mt-0">
@@ -365,7 +502,7 @@ export function Servicii() {
               transition={{ duration: 0.6 }}
               className="text-center lg:text-left"
             >
-              <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-[#b7744f]/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-[#965935] font-bold">
+              <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-brand/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-deep font-bold">
                 <MapPin className="w-3 h-3 md:w-3.5 md:h-3.5" />{" "}
                 {s.module2Badge}
               </span>
@@ -373,20 +510,20 @@ export function Servicii() {
                 {s.module2Title}
               </h2>
 
-              <div className="mt-8 md:mt-10 rounded-[2rem] border border-[#e5e0d8] bg-white/60 backdrop-blur-md p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden text-left">
-                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-[#e8dfd5] rounded-full blur-2xl md:blur-3xl -z-10" />
-                <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.26em] text-[#b7744f] font-bold">
+              <div className="mt-8 md:mt-10 rounded-[2rem] border border-border-soft bg-surface/60 backdrop-blur-md p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden text-left">
+                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-bg-warmer rounded-full blur-2xl md:blur-3xl -z-10" />
+                <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.26em] text-brand font-bold">
                   <CalendarCheck className="w-4 h-4 md:w-5 md:h-5" />{" "}
                   {s.vipMinBadge}
                 </div>
-                <p className="mt-4 md:mt-5 text-[#73655c] leading-relaxed text-sm md:text-base font-light">
+                <p className="mt-4 md:mt-5 text-ink-muted leading-relaxed text-sm md:text-base font-light">
                   {s.vipMinText}
                 </p>
               </div>
 
               <Link
                 to="/contact"
-                className="group mt-8 md:mt-10 inline-flex items-center justify-center gap-3 md:gap-4 rounded-full bg-[#4a3b32] hover:bg-[#b7744f] text-white px-6 md:px-8 py-3.5 md:py-4 text-[13px] md:text-sm font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
+                className="group mt-8 md:mt-10 inline-flex items-center justify-center gap-3 md:gap-4 rounded-full bg-ink-soft hover:bg-brand text-surface px-6 md:px-8 py-3.5 md:py-4 text-[13px] md:text-sm font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
               >
                 {s.btnProposal}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -398,18 +535,18 @@ export function Servicii() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#4a3b32] to-[#2a221c] text-white p-7 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl shadow-[#4a3b32]/20 mt-4 lg:mt-0"
+              className="rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-br from-ink-soft to-ink text-surface p-7 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl shadow-ink-soft/20 mt-4 lg:mt-0"
             >
               <div
                 className="absolute -top-20 -right-20 w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full opacity-20 md:opacity-30 blur-[80px] md:blur-[100px]"
-                style={{ background: "#b7744f" }}
+                style={{ background: "var(--color-brand)" }}
               />
               <div
                 className="absolute -bottom-10 -left-10 w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full opacity-10 blur-[60px] md:blur-[80px]"
-                style={{ background: "#F7F5F2" }}
+                style={{ background: "var(--color-bg-soft)" }}
               />
 
-              <h3 className="relative text-display text-2xl sm:text-3xl lg:text-4xl tracking-tight text-[#F7F5F2]">
+              <h3 className="relative text-display text-2xl sm:text-3xl lg:text-4xl tracking-tight text-bg-soft">
                 {s.practicalInfoTitle}
               </h3>
 
@@ -423,10 +560,10 @@ export function Servicii() {
                       key={i}
                       className="flex gap-4 md:gap-5 items-start group"
                     >
-                      <span className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-[1rem] bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#b7744f]/20 group-hover:border-[#b7744f]/30 transition-all duration-300">
-                        <Icon className="w-4 h-4 md:w-5 md:h-5 text-[#d6a68d]" />
+                      <span className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-[1rem] bg-surface/5 border border-surface/10 flex items-center justify-center group-hover:bg-brand/20 group-hover:border-brand/30 transition-all duration-300">
+                        <Icon className="w-4 h-4 md:w-5 md:h-5 text-brand-soft" />
                       </span>
-                      <span className="text-sm md:text-base leading-relaxed text-white/80 font-light pt-0.5 md:pt-1">
+                      <span className="text-sm md:text-base leading-relaxed text-surface/80 font-light pt-0.5 md:pt-1">
                         {info}
                       </span>
                     </li>
@@ -439,13 +576,32 @@ export function Servicii() {
       </section>
 
       {/* ─── LEGAL ─── */}
-      <section className="pb-16 md:pb-24 relative z-10 bg-[#F7F5F2]">
-        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-12">
-          <div className="rounded-[2rem] border border-[#e5e0d8] bg-white/40 backdrop-blur-sm p-6 sm:p-8 lg:p-10 text-center">
-            <div className="flex items-center justify-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-[#73655c] font-bold mb-3 md:mb-4">
+      <section className="pb-16 md:pb-24 relative z-10 bg-background overflow-hidden">
+        {/* Botanicals Legal — discret */}
+        <div
+          className="absolute inset-0 pointer-events-none overflow-hidden z-0"
+          aria-hidden
+        >
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -left-16 top-0 w-[260px] text-sage-soft opacity-20 lg:opacity-35 hidden lg:block"
+          >
+            <BotanicalSVG variant="leaf" className="b-float-a w-full h-full" />
+          </motion.div>
+          <motion.div
+            style={{ x: sx2, y: sy2 }}
+            className="absolute -right-12 bottom-0 w-[220px] text-brand-soft opacity-20 lg:opacity-30 hidden lg:block rotate-180"
+          >
+            <BotanicalSVG variant="bloom" className="b-float-s w-full h-full" />
+          </motion.div>
+        </div>
+
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 relative z-10">
+          <div className="rounded-[2rem] border border-border-soft bg-surface/40 backdrop-blur-sm p-6 sm:p-8 lg:p-10 text-center">
+            <div className="flex items-center justify-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-ink-muted font-bold mb-3 md:mb-4">
               <Info className="w-3.5 h-3.5 md:w-4 md:h-4" /> {s.legalBadge}
             </div>
-            <p className="text-[13px] md:text-sm leading-relaxed text-[#73655c] max-w-3xl mx-auto font-light">
+            <p className="text-[13px] md:text-sm leading-relaxed text-ink-muted max-w-3xl mx-auto font-light">
               {s.legalDesc}
             </p>
           </div>

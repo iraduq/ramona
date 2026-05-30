@@ -12,36 +12,36 @@ export function HeroImage() {
     <div className="relative w-full group z-10 lg:max-h-[80vh]">
       {/* Chenar decalat (Offset Border) pentru un efect arhitectural pe desktop */}
       <div
-        className="absolute -inset-4 border border-foreground/10 rounded-[2.5rem] transform translate-x-4 translate-y-4 -z-10 hidden lg:block transition-transform duration-700 ease-out group-hover:translate-x-6 group-hover:translate-y-6"
+        className="absolute -inset-4 border border-ink/10 rounded-[2.5rem] transform translate-x-4 translate-y-4 -z-10 hidden lg:block transition-transform duration-700 ease-out group-hover:translate-x-6 group-hover:translate-y-6"
         aria-hidden="true"
       />
 
       {/* Umbră colorată subtilă sub imagine pe desktop */}
-      <div className="absolute inset-4 bg-accent/20 blur-[40px] -z-10 hidden lg:block opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      <div className="absolute inset-4 bg-brand/20 blur-[40px] -z-10 hidden lg:block opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-      <div className="relative overflow-hidden rounded-2xl lg:rounded-[2rem] border border-border/20 shadow-xl lg:shadow-2xl bg-muted w-full h-full">
+      <div className="relative overflow-hidden rounded-2xl lg:rounded-[2rem] border border-border-soft/60 shadow-xl lg:shadow-2xl bg-bg-warm w-full h-full">
         {/* Aspect ratio controlat: pe PC folosește procente din înălțimea ecranului pentru a se încadra într-o pagină */}
         <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[70vh] xl:h-[75vh] overflow-hidden w-full">
           <img
             src={officeImg}
             alt="Mobile Massage Office Context"
-            className="w-full h-full object-cover transition-transform duration-[2s] cubic-bezier(0.16, 1, 0.3, 1) group-hover:scale-[1.04]"
+            className="w-full h-full object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
             loading="lazy"
             width={1280}
             height={896}
           />
         </div>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-white/10" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-surface/10" />
       </div>
 
       {/* Element vizual plutitor cu efect de sticlă */}
-      <div className="absolute -left-4 sm:-left-6 lg:-left-8 xl:-left-12 bottom-6 sm:bottom-8 lg:bottom-12 z-20 hidden sm:flex items-center gap-3 bg-white/90 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border border-white/40 shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:-translate-y-2">
-        <div className="p-1.5 sm:p-2 bg-accent/10 rounded-full shrink-0">
-          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent animate-pulse" />
+      <div className="absolute -left-4 sm:-left-6 lg:-left-8 xl:-left-12 bottom-6 sm:bottom-8 lg:bottom-12 z-20 hidden sm:flex items-center gap-3 bg-surface/90 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border border-surface/40 shadow-[0_15px_30px_color-mix(in_srgb,var(--color-ink)_10%,transparent)] transition-transform duration-500 hover:-translate-y-2">
+        <div className="p-1.5 sm:p-2 bg-brand/10 rounded-full shrink-0">
+          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand animate-pulse" />
         </div>
         <div className="flex flex-col gap-1.5">
-          <div className="w-10 sm:w-12 h-1 bg-accent/40 rounded-full" />
-          <div className="w-5 sm:w-6 h-1 bg-foreground/10 rounded-full" />
+          <div className="w-10 sm:w-12 h-1 bg-brand/40 rounded-full" />
+          <div className="w-5 sm:w-6 h-1 bg-ink/10 rounded-full" />
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@ export function AboutUs() {
   const restOfParagraphs = descArray.slice(1);
 
   return (
-    <div className="w-full min-h-screen lg:h-screen lg:overflow-hidden bg-background text-foreground antialiased max-w-full relative flex flex-col justify-start pb-12 lg:pb-0">
+    <div className="w-full min-h-screen lg:h-screen lg:overflow-hidden bg-bg text-ink antialiased max-w-full relative flex flex-col justify-start pb-12 lg:pb-0">
       <Helmet>
         <title>{s.metaTitle || "Despre Mine | Ramona's Mobile Massage"}</title>
         <meta
@@ -80,18 +80,13 @@ export function AboutUs() {
         className="absolute inset-0 pointer-events-none opacity-[0.03] z-0"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, black 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, var(--color-ink) 1px, transparent 0)",
           backgroundSize: "32px 32px",
         }}
         aria-hidden="true"
       />
 
-      {/* 
-        AICI ESTE MODIFICAREA PRINCIPALĂ:
-        Pe Desktop (lg/xl) am adăugat pt-6 / pt-8. 
-        Astfel, stă lipit aproape de tot de meniul de navigație.
-      */}
-      <section className="relative overflow-hidden w-full z-10 pt-4 sm:pt-28 lg:pt-6 xl:pt-8 flex-grow flex items-start bg-gradient-to-b from-muted/20 via-transparent to-transparent">
+      <section className="relative overflow-hidden w-full z-10 pt-4 sm:pt-28 lg:pt-6 xl:pt-8 flex-grow flex items-start bg-gradient-to-b from-bg-warm/20 via-transparent to-transparent">
         {/* =========================================
             ELEMENTE DECORATIVE ȘI BOTANICE
             ========================================= */}
@@ -99,8 +94,8 @@ export function AboutUs() {
           className="pointer-events-none absolute inset-0 select-none overflow-hidden"
           aria-hidden="true"
         >
-          <div className="absolute top-0 right-0 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] rounded-full bg-muted/50 blur-[120px]" />
-          <div className="absolute top-[40%] lg:-bottom-20 -left-10 w-[280px] lg:w-[500px] h-[280px] lg:h-[500px] rounded-full bg-accent/10 blur-[100px]" />
+          <div className="absolute top-0 right-0 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] rounded-full bg-bg-warm/50 blur-[120px]" />
+          <div className="absolute top-[40%] lg:-bottom-20 -left-10 w-[280px] lg:w-[500px] h-[280px] lg:h-[500px] rounded-full bg-brand/10 blur-[100px]" />
 
           {/* Botanica 1 (Stânga Sus) */}
           <motion.div
@@ -115,7 +110,7 @@ export function AboutUs() {
           <motion.div
             animate={{ y: [0, 10, 0], rotate: [5, 8, 5] }}
             transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -right-20 top-[45%] lg:top-[30%] w-[16rem] lg:w-[20rem] xl:w-[24rem] text-accent/20 opacity-60 z-0"
+            className="absolute -right-20 top-[45%] lg:top-[30%] w-[16rem] lg:w-[20rem] xl:w-[24rem] text-brand/20 opacity-60 z-0"
           >
             <BotanicalSVG variant="bloom" className="w-full h-full" />
           </motion.div>
@@ -136,14 +131,14 @@ export function AboutUs() {
                 className="flex items-center justify-center lg:justify-start gap-4 mb-2 lg:mb-3 w-full"
               >
                 <span
-                  className="w-8 lg:w-12 h-px bg-accent/60 block"
+                  className="w-8 lg:w-12 h-px bg-brand/60 block"
                   aria-hidden="true"
                 />
-                <span className="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-accent mt-1">
+                <span className="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-brand mt-1">
                   Povestea Mea
                 </span>
                 <span
-                  className="lg:hidden w-8 h-px bg-accent/60 block"
+                  className="lg:hidden w-8 h-px bg-brand/60 block"
                   aria-hidden="true"
                 />
               </motion.div>
@@ -157,11 +152,10 @@ export function AboutUs() {
                   ease: [0.16, 1, 0.3, 1],
                   delay: 0.1,
                 }}
-                className="text-[clamp(2.4rem,5.5vw,3.5rem)] xl:text-[4rem] leading-[1.05] lg:leading-[1.1] tracking-[-0.02em] font-light text-foreground max-w-3xl mb-4 lg:mb-4 w-full"
-                style={{ fontFamily: "'Georgia', serif" }}
+                className="text-display text-[clamp(2.4rem,5.5vw,3.5rem)] xl:text-[4rem] leading-[1.05] lg:leading-[1.1] tracking-[-0.02em] font-light text-ink max-w-3xl mb-4 lg:mb-4 w-full"
               >
                 {t.aboutPage.titlu1}
-                <span className="block mt-1 lg:mt-2 text-accent italic font-normal text-[clamp(1.6rem,4vw,2.2rem)] xl:text-[2.5rem]">
+                <span className="block mt-1 lg:mt-2 text-brand italic font-normal text-[clamp(1.6rem,4vw,2.2rem)] xl:text-[2.5rem]">
                   {t.aboutPage.titluItalic}
                 </span>
                 {t.aboutPage.titlu2 && (
@@ -178,7 +172,7 @@ export function AboutUs() {
                   delay: 0.2,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="relative text-left text-[15px] sm:text-[16px] xl:text-[17px] leading-[1.7] lg:leading-[1.8] font-normal text-foreground/80 pl-0 lg:pl-5 border-l-0 lg:border-l-[1.5px] border-accent/40 mb-4 lg:mb-6 w-full"
+                className="relative text-left text-[15px] sm:text-[16px] xl:text-[17px] leading-[1.7] lg:leading-[1.8] font-normal text-ink/80 pl-0 lg:pl-5 border-l-0 lg:border-l-[1.5px] border-brand/40 mb-4 lg:mb-6 w-full"
               >
                 <p>{leadParagraph}</p>
               </motion.div>
@@ -207,7 +201,7 @@ export function AboutUs() {
                     delay: 0.3,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-left text-[14px] xl:text-[15px] leading-[1.7] font-light text-muted-foreground space-y-4 lg:space-y-4 lg:pr-8 w-full"
+                  className="text-left text-[14px] xl:text-[15px] leading-[1.7] font-light text-ink-muted space-y-4 lg:space-y-4 lg:pr-8 w-full"
                 >
                   {restOfParagraphs.map((paragraph: string, idx: number) => (
                     <p key={idx}>{paragraph}</p>
@@ -224,21 +218,21 @@ export function AboutUs() {
                   delay: 0.45,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-6 lg:mt-6 xl:mt-8 bg-white/50 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none p-4 lg:p-0 rounded-3xl sm:rounded-full border border-border/30 lg:border-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-8 w-full shadow-sm lg:shadow-none"
+                className="mt-6 lg:mt-6 xl:mt-8 bg-surface/50 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none p-4 lg:p-0 rounded-3xl sm:rounded-full border border-border-soft lg:border-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-8 w-full shadow-sm lg:shadow-none"
               >
                 <Button
                   asChild
-                  className="group relative overflow-hidden h-12 xl:h-14 rounded-xl sm:rounded-full bg-foreground text-background hover:bg-foreground px-8 transition-all duration-500 text-sm font-medium w-full sm:w-auto shadow-xl shadow-foreground/10 order-2 sm:order-1"
+                  className="group relative overflow-hidden h-12 xl:h-14 rounded-xl sm:rounded-full bg-ink text-surface hover:bg-ink px-8 transition-all duration-500 text-sm font-medium w-full sm:w-auto shadow-xl shadow-ink/10 order-2 sm:order-1"
                 >
                   <Link
                     to="/contact"
                     className="flex items-center justify-center gap-3 w-full"
                   >
-                    <div className="absolute inset-0 w-full h-full bg-accent -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10" />
+                    <div className="absolute inset-0 w-full h-full bg-brand -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10" />
                     <span className="relative z-10">
                       {t.aboutPage.butonConversatie}
                     </span>
-                    <div className="relative z-10 w-6 h-6 xl:w-7 xl:h-7 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-500 group-hover:bg-white/20">
+                    <div className="relative z-10 w-6 h-6 xl:w-7 xl:h-7 rounded-full bg-surface/10 flex items-center justify-center transition-transform duration-500 group-hover:bg-surface/20">
                       <ArrowRight
                         className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5"
                         strokeWidth={2}
@@ -249,16 +243,16 @@ export function AboutUs() {
 
                 <div className="flex items-center text-left gap-3 px-2 py-1 lg:p-0 shrink-0 order-1 sm:order-2 w-full sm:w-auto justify-center sm:justify-start">
                   <div className="relative flex items-center justify-center">
-                    <div className="absolute inset-0 bg-accent/20 rounded-full blur-[8px] animate-pulse" />
-                    <div className="w-10 h-10 rounded-full border border-accent/20 bg-white flex items-center justify-center shrink-0 shadow-sm relative z-10">
-                      <MapPin className="w-4 h-4 text-accent" />
+                    <div className="absolute inset-0 bg-brand/20 rounded-full blur-[8px] animate-pulse" />
+                    <div className="w-10 h-10 rounded-full border border-brand/20 bg-surface flex items-center justify-center shrink-0 shadow-sm relative z-10">
+                      <MapPin className="w-4 h-4 text-brand" />
                     </div>
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[9px] uppercase tracking-[0.2em] font-mono text-muted-foreground/60 leading-none mb-1">
+                    <p className="text-[9px] uppercase tracking-[0.2em] font-mono text-ink-muted/60 leading-none mb-1">
                       {t.aboutPage.ariaBadge}
                     </p>
-                    <p className="text-[13px] lg:text-[14px] text-foreground font-semibold truncate">
+                    <p className="text-[13px] lg:text-[14px] text-ink font-semibold truncate">
                       {t.aboutPage.ariaText}
                     </p>
                   </div>
@@ -278,8 +272,8 @@ export function AboutUs() {
                 className="absolute -top-6 right-4 w-5 h-5 z-20"
                 aria-hidden="true"
               >
-                <div className="absolute top-1/2 left-0 w-full h-px bg-foreground/30" />
-                <div className="absolute left-1/2 top-0 h-full w-px bg-foreground/30" />
+                <div className="absolute top-1/2 left-0 w-full h-px bg-ink/30" />
+                <div className="absolute left-1/2 top-0 h-full w-px bg-ink/30" />
               </div>
               <HeroImage />
             </motion.div>

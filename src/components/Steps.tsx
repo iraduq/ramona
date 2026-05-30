@@ -52,22 +52,22 @@ export function Process() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-gradient-to-b from-[#fcfbf9] via-[#faf8f5] to-[#f6f3ef] py-36 lg:py-44 text-[#1a1816] overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-bg via-bg-soft to-bg-warm/30 py-36 lg:py-44 text-ink overflow-hidden"
     >
       {/* background glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/3 w-[60%] h-[60%] bg-white/60 blur-[140px]" />
+        <div className="absolute top-1/2 left-1/3 w-[60%] h-[60%] bg-surface/60 blur-[140px]" />
 
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -right-28 -bottom-24 w-[40rem] opacity-10 text-[#9aa896] hidden md:block"
+          className="absolute -right-28 -bottom-24 w-[40rem] opacity-10 text-sage-soft hidden md:block"
         >
           <BotanicalSVG variant="branch" className="w-full h-full" />
         </motion.div>
 
         <motion.div
           style={{ x: springX, y: springY }}
-          className="absolute -left-20 -top-16 w-[30rem] opacity-10 text-[#b8a090] hidden lg:block"
+          className="absolute -left-20 -top-16 w-[30rem] opacity-10 text-brand-soft hidden lg:block"
         >
           <BotanicalSVG variant="bloom" className="w-full h-full" />
         </motion.div>
@@ -79,23 +79,20 @@ export function Process() {
           initial={{ opacity: 0, y: 18 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl mb-24 border-b border-black/10 pb-10"
+          className="max-w-3xl mb-24 border-b border-ink/10 pb-10"
         >
           {/* BADGE — mai vizibil */}
-          <div className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-white/70 border border-black/10 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#b08d7a]" />
-            <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-[#7a6a60] font-semibold">
+          <div className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface/70 border border-ink/10 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-brand-soft" />
+            <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-ink-muted font-semibold">
               {t.process.badge}
             </p>
           </div>
 
-          <h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] tracking-tight"
-            style={{ fontFamily: "'Georgia', serif" }}
-          >
+          <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] tracking-tight">
             {t.process.titlu1}
-            <span className="text-[#b08d7a]">.</span> <br />
-            <span className="italic text-[#8a7b72] font-normal">
+            <span className="text-brand-soft">.</span> <br />
+            <span className="italic text-ink-subtle font-normal">
               {t.process.titluItalic}
             </span>{" "}
             {t.process.titlu2}
@@ -111,7 +108,7 @@ export function Process() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-10 relative"
         >
           {/* line */}
-          <div className="absolute top-2 left-0 right-0 h-px bg-black/10 hidden lg:block" />
+          <div className="absolute top-2 left-0 right-0 h-px bg-ink/10 hidden lg:block" />
 
           {t.process.steps.map((s, idx) => (
             <motion.li
@@ -120,29 +117,26 @@ export function Process() {
               className="relative flex flex-col pt-8 group"
             >
               {/* dot */}
-              <div className="absolute top-[4px] left-0 w-2.5 h-2.5 rounded-full bg-[#b08d7a] shadow-[0_0_0_6px_rgba(176,141,122,0.12)] transition-transform duration-500 group-hover:scale-150" />
+              <div className="absolute top-[4px] left-0 w-2.5 h-2.5 rounded-full bg-brand-soft shadow-[0_0_0_6px_color-mix(in_srgb,var(--color-brand-soft)_12%,transparent)] transition-transform duration-500 group-hover:scale-150" />
 
               {/* step index */}
-              <div className="font-mono text-[10px] tracking-[0.3em] text-[#8f7f75] mb-4 group-hover:text-[#b08d7a] transition-colors">
+              <div className="font-mono text-[10px] tracking-[0.3em] text-ink-subtle mb-4 group-hover:text-brand-soft transition-colors">
                 STEP 0{idx + 1}
               </div>
 
               {/* content */}
               <div className="space-y-3 transition-transform duration-500 group-hover:-translate-y-1">
-                <h3
-                  className="text-lg lg:text-xl font-light text-[#1a1816] group-hover:text-[#b08d7a] transition-colors"
-                  style={{ fontFamily: "'Georgia', serif" }}
-                >
+                <h3 className="text-display text-lg lg:text-xl font-light text-ink group-hover:text-brand-soft transition-colors">
                   {s.t}
                 </h3>
 
-                <p className="text-[13px] leading-relaxed text-[#7f726a] border-l border-black/10 pl-4 group-hover:border-[#b08d7a]/40 transition-colors">
+                <p className="text-[13px] leading-relaxed text-ink-muted border-l border-ink/10 pl-4 group-hover:border-brand-soft/40 transition-colors">
                   {s.d}
                 </p>
               </div>
 
               {/* underline accent */}
-              <div className="w-8 h-px bg-[#b08d7a] mt-6 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              <div className="w-8 h-px bg-brand-soft mt-6 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </motion.li>
           ))}
         </motion.ol>
