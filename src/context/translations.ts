@@ -1063,8 +1063,6 @@ export const translations = {
       statExperienta: "Experiență în servicii mobile",
       legalBadge: "Relaxare profesională / Servicii Non-Medicale",
       legalTitlu: "Notă legală importantă:",
-      legalDescriere:
-        "Aplicările noastre mobile sunt orientate exclusiv spre relaxare corporală și stare de bine, având un caracter strict profesional și non-erotic. Aceste servicii nu reprezintă tratamente medicale, intervenții terapeutice sau curative, nu tratează afecțiuni sau boli și nu înlocuiesc în niciun context consultul medical de specialitate, diagnosticul autorizat sau schemele de tratament prescrise de medici ori personalul medical calificat.",
       items: [
         {
           title: "Masaj la birou",

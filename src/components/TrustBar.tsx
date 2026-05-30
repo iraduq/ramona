@@ -228,14 +228,6 @@ export function TrustBar() {
               {t.trustBar.legalBadge}
             </div>
           </div>
-          <div className="border-t border-neutral-300 pt-6 sm:pl-6 sm:border-t-0 sm:border-l sm:border-neutral-300">
-            <p className="text-[11px] leading-[1.8] text-neutral-700 font-medium tracking-wide font-sans max-w-4xl text-center sm:text-left">
-              <strong className="text-neutral-950 font-bold block mb-1 uppercase tracking-widest text-[10px]">
-                {t.trustBar.legalTitlu}
-              </strong>
-              {t.trustBar.legalDescriere}
-            </p>
-          </div>
         </div>
       </div>
     </section>
