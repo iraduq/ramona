@@ -21,9 +21,9 @@ export default function Index() {
       </Helmet>
       <Hero />
       <WaveDividerInverted colorTop="#F7F0EA" colorBottom="#F7F4F0" />
-      <TrustBar />
-      <WaveDividerInverted colorTop="#F7F4F0" colorBottom="#F7F0EA" />
       <Events />
+      <WaveDividerInverted colorTop="#F7F4F0" colorBottom="#F7F0EA" />
+      <TrustBar />
       <WaveDividerNormal colorTop="#F7F1EB" colorBottom="#FCFBF9" />
       <Process />
     </div>
