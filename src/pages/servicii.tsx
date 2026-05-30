@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import {
   Sparkles,
@@ -41,7 +41,6 @@ export function Servicii() {
   const { t } = useLanguage();
   const s = t.servicesPage;
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   // Parallax subtil pentru mouse
   const mouseX = useMotionValue(0);
