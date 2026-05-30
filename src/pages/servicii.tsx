@@ -40,7 +40,7 @@ const luxuryStyles = `
 export function Servicii() {
   const { t } = useLanguage();
   const s = t.servicesPage;
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   // Parallax subtil pentru mouse
