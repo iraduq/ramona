@@ -22,8 +22,7 @@ export default function Index() {
       <Hero />
       <WaveDividerInverted colorTop="#F7F0EA" colorBottom="#F7F4F0" />
       <TrustBar />
-      <br />
-
+      <WaveDividerInverted colorTop="#F7F4F0" colorBottom="#F7F0EA" />
       <Events />
       <WaveDividerNormal colorTop="#F7F1EB" colorBottom="#FCFBF9" />
       <Process />
