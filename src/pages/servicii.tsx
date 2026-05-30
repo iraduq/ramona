@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import {
@@ -6,12 +6,19 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
-  Asterisk,
+  Clock,
+  Star,
+  MapPin,
+  Wallet,
+  CalendarCheck,
+  Info,
+  Leaf,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { BotanicalSVG } from "../components/BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
+import { WaveDividerInverted } from "../components/ShapeDividers";
 
-// --- INTERFEȚE TYPESCRIPT ---
 interface RateItem {
   time: string;
   price: string;
@@ -19,469 +26,433 @@ interface RateItem {
   featured?: boolean;
 }
 
-interface RateCardProps {
+/* ─── COMPONENTE VIZUALE EXTRA ─── */
+const SectionDivider = () => (
+  <div className="w-full flex items-center justify-center py-8 lg:py-16 opacity-60">
+    <div className="w-20 md:w-32 h-px bg-gradient-to-r from-transparent via-[#b7744f] to-transparent" />
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      className="mx-3 md:mx-4 text-[#b7744f]"
+    >
+      <Sparkles className="w-4 h-4 md:w-5 md:h-5 opacity-70" />
+    </motion.div>
+    <div className="w-20 md:w-32 h-px bg-gradient-to-l from-transparent via-[#b7744f] to-transparent" />
+  </div>
+);
+
+const FloatingLeaf = ({
+  className,
+  delay = 0,
+}: {
+  className: string;
+  delay?: number;
+}) => (
+  <motion.div
+    animate={{ y: [0, -12, 0], rotate: [-4, 4, -4] }}
+    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay }}
+    className={`absolute pointer-events-none ${className}`}
+  >
+    <BotanicalSVG variant="leaf" className="w-full h-full" />
+  </motion.div>
+);
+
+function RateCard({
+  item,
+  perSession,
+  popularLabel,
+  index,
+  featured,
+}: {
   item: RateItem;
   perSession: string;
-  popularLabel?: string;
+  popularLabel: string;
   index: number;
-}
-// -----------------------------------
-
-const luxuryStyles = `
-  @keyframes shimmer-slow {
-    0% { transform: translateX(-150%) skewX(-15deg); }
-    100% { transform: translateX(200%) skewX(-15deg); }
-  }
-  .animate-shimmer-slow {
-    animation: shimmer-slow 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
-  }
-`;
-
-export function Servicii() {
-  const { t } = useLanguage();
-  const s = t.servicesPage;
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  // Parallax subtil pentru mouse
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 15, damping: 40 });
-  const springY = useSpring(mouseY, { stiffness: 15, damping: 40 });
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      mouseX.set((e.clientX - window.innerWidth / 2) / 50);
-      mouseY.set((e.clientY - window.innerHeight / 2) / 50);
-    };
-    window.addEventListener("mousemove", handler);
-    return () => window.removeEventListener("mousemove", handler);
-  }, [mouseX, mouseY]);
-
+  featured: boolean;
+}) {
   return (
-    <div className="w-full min-h-screen bg-[#fcfbf9] text-[#1a1816] antialiased overflow-hidden selection:bg-[#b08d7a]/30 relative">
-      <Helmet>
-        <title>{s.metaTitle || "Servicii | Ramona's Mobile Massage"}</title>
-        <meta
-          name="description"
-          content={s.metaDesc || "Descoperă serviciile noastre de masaj mobil."}
-        />
-      </Helmet>
-
-      <style dangerouslySetInnerHTML={{ __html: luxuryStyles }} />
-
-      {/* ─── TEXTURĂ DE FUNDAL (NOISE FIN) ─── */}
-      <div
-        className="absolute inset-0 opacity-[0.018] pointer-events-none z-0 fixed mix-blend-multiply"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* ─── HERO EDITORIAL ─── */}
-      <section className="relative pt-24 pb-32 lg:pt-36 lg:pb-40 overflow-hidden z-10">
-        {/* Glow & Botanicals VIZIBILE */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-        >
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#b08d7a]/15 to-transparent rounded-full blur-[100px] -translate-y-1/3 translate-x-1/4" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#9aa896]/15 to-transparent rounded-full blur-[100px] translate-y-1/4 -translate-x-1/4" />
-
-          {/* Ramă delicată în dreapta */}
-          <motion.div
-            style={{ x: springX, y: springY }}
-            animate={{ rotate: [0, 2, 0], y: [0, -10, 0] }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute -right-10 top-10 w-[35rem] opacity-30 hidden lg:block"
-          >
-            <BotanicalSVG
-              variant="branch"
-              className="w-full h-full text-[#7a6a60]"
-            />
-          </motion.div>
-
-          {/* Frunză subtilă în stânga */}
-          <motion.div
-            style={{ x: springY, y: springX }}
-            animate={{ rotate: [0, -3, 0], x: [0, -10, 0] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -left-12 top-[40%] w-[18rem] opacity-30 hidden lg:block"
-          >
-            <BotanicalSVG
-              variant="leaf"
-              className="w-full h-full text-[#9aa896]"
-            />
-          </motion.div>
-        </div>
-
-        <div className="relative mx-auto max-w-[85rem] px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
-            {/* TEXT ECHILIBRAT (Mai fin, mai elegant) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.9,
-                delay: 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              {/* Titlul este acum mai mic și mai rafinat (text-3xl la 4xl/5xl) */}
-              <h1 className="font-serif text-[2.2rem] sm:text-4xl lg:text-[3.25rem] font-light tracking-[-0.01em] leading-[1.2] text-[#1a1816]">
-                {s.titlu1}
-                <span className="text-[#b08d7a] italic font-normal block mt-2 lg:mt-3 lg:ml-8">
-                  {s.titluItalic}
-                </span>
-              </h1>
-
-              <div className="mt-8 lg:mt-10 flex items-start gap-4 border-l border-[#b08d7a]/30 pl-6 lg:ml-2 relative">
-                <div className="absolute -left-[3px] top-0 w-1.5 h-1.5 rounded-full bg-[#b08d7a]/60" />
-                <p className="text-[13.5px] lg:text-[14.5px] text-[#7a6a60] font-light leading-[1.9] max-w-md">
-                  {s.descriere}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* ETHICAL BADGE - FLOAT DELICAT */}
-            <motion.div
-              initial={{ opacity: 0, x: 20, rotate: 1 }}
-              animate={{ opacity: 1, x: 0, rotate: 0 }}
-              transition={{
-                duration: 1.2,
-                delay: 0.2,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative lg:ml-auto w-full max-w-[22rem]"
-            >
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 7,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden rounded-[2rem] bg-white/40 backdrop-blur-2xl border border-white/70 p-8 shadow-[0_20px_40px_-15px_rgba(176,141,122,0.1)] group"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#b08d7a]/15 to-transparent blur-2xl transition-all duration-700 group-hover:scale-125" />
-
-                <div className="flex items-center gap-3 mb-5 relative z-10">
-                  <Asterisk className="w-3.5 h-3.5 text-[#b08d7a] animate-[spin_6s_linear_infinite]" />
-                  <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-[#1a1816] font-bold mt-px">
-                    {s.ethicalBadge}
-                  </span>
-                </div>
-
-                <p className="text-[13.5px] text-[#1a1816] font-light leading-relaxed mb-6 relative z-10">
-                  {s.ethicalTitle}
-                </p>
-
-                <div className="flex items-center justify-between bg-[#1a1816] text-[#fcfbf9] py-1.5 pl-5 pr-1.5 rounded-full relative z-10 transition-all cursor-pointer hover:bg-[#b08d7a] duration-500 shadow-sm">
-                  <span className="font-mono font-medium tracking-[0.2em] uppercase text-[9px]">
-                    {s.ethicalSub}
-                  </span>
-                  <div className="w-7 h-7 bg-white/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-95 border border-white/5">
-                    <ArrowRight className="w-3 h-3" />
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── FLOATING RIBBON (WHY US) ─── */}
-      <div className="w-full px-6 lg:px-12 -mt-12 lg:-mt-16 relative z-30 pointer-events-none">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto max-w-[85rem] bg-white/80 backdrop-blur-xl rounded-[1.5rem] p-6 lg:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.03)] border border-white pointer-events-auto"
-        >
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#b08d7a] to-[#d8c3b5] rounded-l-[1.5rem]" />
-
-          <div className="relative z-10 flex-1 pl-4 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 w-full">
-            <h3 className="font-serif text-[1.2rem] lg:text-[1.4rem] text-[#1a1816] font-light whitespace-nowrap">
-              {s.whyTitle}
-            </h3>
-            <div className="h-px bg-gradient-to-r from-[#b08d7a]/20 to-transparent flex-1 hidden lg:block" />
-            <p className="text-[13px] lg:text-[13.5px] text-[#7a6a60] font-light leading-relaxed max-w-xl">
-              {s.whyDesc}
-            </p>
-          </div>
-
-          <div className="hidden md:flex shrink-0 w-10 h-10 bg-[#fcfbf9] rounded-full items-center justify-center border border-[#b08d7a]/15 shadow-inner">
-            <CheckCircle2
-              className="w-4 h-4 text-[#b08d7a]"
-              strokeWidth={1.5}
-            />
-          </div>
-        </motion.div>
-      </div>
-
-      {/* ─── MAIN LAYOUT (SPA MENU) ─── */}
-      <div
-        ref={sectionRef}
-        className="relative z-10 mx-auto max-w-[85rem] px-6 lg:px-12 py-20 lg:py-32"
-      >
-        {/* Frunze imense în fundal (opacity-10) vizibile clar */}
-        <motion.div
-          animate={{ rotate: [0, 3, 0], x: [0, 10, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute right-[-15%] top-[10%] w-[50rem] opacity-[0.3] hidden xl:block pointer-events-none"
-        >
-          <BotanicalSVG
-            variant="bloom"
-            className="w-full h-full text-[#b08d7a]"
-          />
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 relative z-10">
-          {/* LEFT COLUMN: Tarife */}
-          <div className="flex flex-col">
-            <ColHeader badge={s.module1Badge} title={s.module1Title} />
-
-            <div className="mt-10 mb-6 flex items-center gap-3">
-              <span className="w-6 h-[1px] bg-[#b08d7a]/40 block" />
-              <span className="text-[9px] uppercase tracking-[0.3em] font-mono text-[#b08d7a] font-bold">
-                {s.startingFrom}
-              </span>
-            </div>
-
-            <div className="space-y-3">
-              {s.rates.map((item: RateItem, idx: number) => (
-                <RateCard
-                  key={idx}
-                  item={item}
-                  perSession={s.perSession}
-                  popularLabel={s.popular}
-                  index={idx}
-                />
-              ))}
-            </div>
-
-            {/* QUOTE EDITORIAL */}
-            {s.quote && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="mt-12 bg-white/40 border border-[#1a1816]/5 p-8 rounded-[1.5rem] relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-4 opacity-5">
-                  <Sparkles className="w-12 h-12" />
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-px bg-gradient-to-b from-[#b08d7a]/40 to-transparent shrink-0" />
-                  <p className="font-serif italic text-[14.5px] lg:text-[15.5px] text-[#5c524c] leading-[1.8] font-light relative z-10">
-                    "{s.quote}"
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-
-          {/* RIGHT COLUMN: VIP & Info */}
-          <div className="flex flex-col border-t border-[#1a1816]/5 lg:border-t-0 pt-12 lg:pt-0">
-            <ColHeader badge={s.module2Badge} title={s.module2Title} />
-
-            {/* VIP CARD "OBSIDIAN" */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="relative mt-10 overflow-hidden rounded-[1.5rem] bg-[#141312] text-[#fcfbf9] p-8 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)] group border border-white/5"
-            >
-              <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer-slow pointer-events-none" />
-              <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#b08d7a] rounded-full blur-[60px] opacity-[0.15] group-hover:opacity-30 transition-opacity duration-1000" />
-
-              <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center border border-white/20 backdrop-blur-md">
-                    <Sparkles className="w-3 h-3 text-[#e4d5cc]" />
-                  </div>
-                  <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-[#e4d5cc] font-semibold mt-px">
-                    {s.vipMinBadge}
-                  </span>
-                </div>
-                <div>
-                  <h4 className="font-serif text-[1.4rem] font-light mb-2 text-white tracking-wide">
-                    The Signature Experience
-                  </h4>
-                  <p className="text-[13px] text-white/60 font-light leading-[1.8] max-w-sm">
-                    {s.vipMinText}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* PRACTICAL INFO - DELICAT */}
-            <div className="mt-12">
-              <h3 className="font-serif text-[1.2rem] lg:text-[1.4rem] font-light text-[#1a1816] mb-5">
-                {s.practicalInfoTitle}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {s.practicalInfo.map((info: string, idx: number) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1, duration: 0.6 }}
-                    className="bg-white p-5 rounded-[1rem] border border-[#1a1816]/5 shadow-sm flex flex-col justify-start group hover:border-[#b08d7a]/20 transition-colors"
-                  >
-                    <Asterisk className="w-3 h-3 text-[#b08d7a]/50 mb-3 group-hover:text-[#b08d7a] transition-colors duration-300" />
-                    <p className="text-[12.5px] text-[#7a6a60] font-light leading-[1.7]">
-                      {info}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* LEGAL BOX */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-6 p-6 rounded-[1rem] bg-[#f0e8e0]/30 border border-[#b08d7a]/15 flex items-start gap-4"
-            >
-              <ShieldCheck
-                className="w-4 h-4 text-[#b08d7a] shrink-0 mt-0.5"
-                strokeWidth={1.5}
-              />
-              <div>
-                <span className="text-[9px] font-mono uppercase tracking-[0.25em] text-[#1a1816] font-bold block mb-1.5">
-                  {s.legalBadge}
-                </span>
-                <p className="text-[12px] leading-[1.7] text-[#8a7b72] font-light">
-                  {s.legalDesc}
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ─── SUB-COMPONENTS ─── */
-function ColHeader({ badge, title }: { badge: string; title: string }) {
-  return (
-    <div className="flex flex-col items-start relative">
-      <span className="inline-block text-[9px] font-semibold font-mono uppercase tracking-[0.3em] text-[#b08d7a] border border-[#b08d7a]/20 px-3 py-1 rounded-full mb-5 bg-white">
-        {badge}
-      </span>
-      {/* Mai rafinat: text-2xl/3xl în loc de 4xl */}
-      <h2 className="font-serif text-[1.6rem] sm:text-[2rem] lg:text-[2.2rem] font-light tracking-tight text-[#1a1816] leading-[1.2]">
-        {title}
-      </h2>
-    </div>
-  );
-}
-
-function RateCard({ item, perSession, popularLabel, index }: RateCardProps) {
-  const [hovered, setHovered] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-30px" }}
       transition={{
         duration: 0.6,
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
-      className={`group relative flex items-center justify-between p-5 lg:p-6 rounded-[1.25rem] transition-all duration-500 cursor-pointer overflow-hidden ${
-        item.featured
-          ? "bg-[#1f1d1b] text-[#fcfbf9] shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] scale-[1.01] origin-left border border-[#33302d] z-10 my-3"
-          : "bg-white/60 backdrop-blur-sm border border-[#1a1816]/5 hover:bg-white hover:border-[#b08d7a]/20 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.03)]"
+      className={`group relative flex flex-col rounded-[2rem] p-6 lg:p-9 transition-all duration-500 ${
+        featured
+          ? "bg-gradient-to-b from-[#4a3b32] to-[#362b24] text-[#F7F5F2] shadow-[0_20px_40px_-15px_rgba(74,59,50,0.5)] lg:-translate-y-4 ring-1 ring-white/10"
+          : "bg-white text-[#4a3b32] border border-[#e5e0d8] hover:border-[#b7744f] hover:shadow-[0_15px_30px_-10px_rgba(183,116,79,0.15)] hover:-translate-y-1 lg:hover:-translate-y-2 backdrop-blur-sm"
       }`}
     >
-      {/* Săgeată interactivă la hover */}
-      {!item.featured && (
-        <div className="absolute left-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-          <ArrowRight className="w-3.5 h-3.5 text-[#b08d7a]" />
+      {/* Background Glow for Featured */}
+      {featured && (
+        <div className="absolute inset-0 rounded-[2rem] overflow-hidden pointer-events-none">
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#b7744f] rounded-full blur-[60px] opacity-20" />
         </div>
       )}
 
-      {/* Featured Badge */}
-      {item.featured && (
-        <div className="absolute top-0 right-6">
-          <span className="text-[8.5px] font-mono uppercase tracking-[0.3em] bg-[#b08d7a] text-white px-3 py-1 rounded-b-md font-semibold shadow-sm">
-            {popularLabel}
-          </span>
-        </div>
+      {featured && (
+        <motion.span
+          initial={{ scale: 0.9 }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 3, repeat: Infinity }}
+          className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#b7744f] to-[#965935] px-3.5 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.25em] text-white shadow-md shadow-[#b7744f]/30 z-10 whitespace-nowrap"
+        >
+          <Star className="w-3 h-3 md:w-3.5 md:h-3.5 fill-current" />{" "}
+          {popularLabel}
+        </motion.span>
       )}
 
-      {/* Linie verticală decorativă animată */}
-      <div
-        className={`w-[2px] h-10 rounded-full shrink-0 transition-all duration-700 ease-out ${
-          item.featured
-            ? "bg-[#b08d7a]"
-            : hovered
-              ? "opacity-0 scale-y-50"
-              : "bg-[#1a1816]/10"
-        }`}
-      />
+      <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.28em] opacity-70">
+        <Clock
+          className={`w-3.5 h-3.5 md:w-4 md:h-4 ${featured ? "text-[#d6a68d]" : "text-[#b7744f]"}`}
+        />
+        <span className="font-medium">{item.time}</span>
+      </div>
+
+      <div className="relative z-10 mt-5 md:mt-6 flex items-baseline gap-1.5">
+        <span className="text-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-none font-light tracking-tighter">
+          {item.price.replace(/[^0-9.,]/g, "")}
+        </span>
+        <span className="text-base md:text-lg opacity-70 font-medium">€</span>
+      </div>
+      <span className="relative z-10 mt-1 md:mt-2 text-[9px] md:text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">
+        {perSession}
+      </span>
+
+      {item.detail && (
+        <p
+          className={`relative z-10 mt-6 md:mt-8 text-sm leading-relaxed ${featured ? "text-white/80" : "text-[#73655c]"}`}
+        >
+          {item.detail}
+        </p>
+      )}
 
       <div
-        className={`flex-1 min-w-0 space-y-1 ml-4 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          !item.featured && "group-hover:translate-x-5"
-        }`}
+        className={`relative z-10 mt-auto pt-5 md:pt-6 border-t ${featured ? "border-white/10" : "border-[#e5e0d8]"} flex items-center justify-between text-[11px] md:text-xs`}
       >
-        <div className="flex items-baseline gap-4">
-          {/* Mărime preț: 2xl / nu exagerat */}
-          <span
-            className={`font-serif text-[1.3rem] sm:text-[1.6rem] font-light tracking-tight block transition-colors duration-500 ${
-              item.featured
-                ? "text-white"
-                : "text-[#1a1816] group-hover:text-[#b08d7a]"
-            }`}
-          >
-            {item.time}
-          </span>
-        </div>
-
-        {item.detail && (
-          <p
-            className={`text-[12.5px] font-light leading-snug ${
-              item.featured ? "text-white/50" : "text-[#8a7b72]"
-            }`}
-          >
-            {item.detail}
-          </p>
-        )}
-      </div>
-
-      <div className="text-right shrink-0 relative z-10 flex flex-col items-end justify-center">
-        {/* Preț: text-2xl */}
-        <span
-          className={`font-serif text-[1.4rem] sm:text-[1.8rem] font-light leading-none transition-colors duration-500 ${
-            item.featured
-              ? "text-white"
-              : hovered
-                ? "text-[#b08d7a]"
-                : "text-[#1a1816]"
-          }`}
-        >
-          {item.price}
+        <span className="uppercase tracking-[0.25em] font-medium opacity-60">
+          Inkl. Setup
         </span>
-        <span
-          className={`block text-[8.5px] mt-2 font-mono uppercase tracking-[0.3em] ${
-            item.featured ? "text-[#b08d7a]" : "text-[#8a7b72]"
-          }`}
-        >
-          {perSession}
-        </span>
+        <CheckCircle2
+          className={`w-4 h-4 md:w-5 md:h-5 ${featured ? "text-[#d6a68d]" : "text-[#c2baaf]"}`}
+        />
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
+
+export function Servicii() {
+  const { t } = useLanguage();
+  const s = t.servicesPage;
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const sx = useSpring(mouseX, { stiffness: 15, damping: 40 });
+  const sy = useSpring(mouseY, { stiffness: 15, damping: 40 });
+
+  useEffect(() => {
+    // Only apply mouse parallax on desktop
+    if (window.innerWidth < 1024) return;
+    const h = (e: MouseEvent) => {
+      mouseX.set((e.clientX - window.innerWidth / 2) / 60);
+      mouseY.set((e.clientY - window.innerHeight / 2) / 60);
+    };
+    window.addEventListener("mousemove", h);
+    return () => window.removeEventListener("mousemove", h);
+  }, [mouseX, mouseY]);
+
+  const rates = s.rates as readonly RateItem[];
+  const featuredIdx = 2; // 25 min
+
+  return (
+    <div className="w-full min-h-screen bg-[#F7F5F2] text-[#4a3b32] antialiased selection:bg-[#b7744f]/20 overflow-hidden font-sans">
+      <Helmet>
+        <title>{s.metaTitle}</title>
+        <meta name="description" content={s.metaDesc} />
+      </Helmet>
+
+      {/* ─── HERO ─── */}
+      <section className="relative pt-4 pb-16 md:pb-20 lg:pb-24 overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden>
+          <div
+            className="absolute -top-20 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 md:opacity-60"
+            style={{
+              background: "radial-gradient(circle, #f2e8de, transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute top-40 -left-20 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full blur-[80px] md:blur-[120px] opacity-40 md:opacity-50"
+            style={{
+              background: "radial-gradient(circle, #e8dfd5, transparent 70%)",
+            }}
+          />
+
+          {/* Parallax Botanicals (Desktop Only) */}
+          <motion.div
+            style={{ x: sx, y: sy }}
+            className="absolute -right-10 top-0 w-[38rem] opacity-[0.05] hidden lg:block"
+          >
+            <BotanicalSVG
+              variant="branch"
+              className="w-full h-full text-[#4a3b32]"
+            />
+          </motion.div>
+          <motion.div
+            style={{ x: sy, y: sx }}
+            className="absolute -left-16 top-[25%] w-[20rem] opacity-[0.06] hidden lg:block"
+          >
+            <BotanicalSVG
+              variant="leaf"
+              className="w-full h-full text-[#b7744f]"
+            />
+          </motion.div>
+
+          {/* Floating Leaves (Hidden on very small screens to avoid clutter) */}
+          <FloatingLeaf
+            className="top-[15%] left-[10%] w-12 opacity-10 text-[#4a3b32] hidden sm:block lg:w-16 lg:left-[20%]"
+            delay={0}
+          />
+          <FloatingLeaf
+            className="bottom-[20%] right-[10%] w-16 opacity-15 text-[#b7744f] hidden sm:block lg:w-24 lg:right-[25%]"
+            delay={2}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 mt-6 lg:mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#b7744f]/10 border border-[#b7744f]/20 px-3.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-[#b7744f] font-bold mb-6 md:mb-8">
+                <Leaf className="w-3 h-3 md:w-3.5 md:h-3.5" /> {s.topBadge}
+              </div>
+              <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+                {s.titlu1}{" "}
+                <em className="not-italic text-[#b7744f] font-light italic relative whitespace-nowrap">
+                  {s.titluItalic}
+                  <svg
+                    className="absolute w-full h-2 md:h-3 -bottom-0.5 md:-bottom-1 left-0 text-[#b7744f] opacity-30"
+                    viewBox="0 0 100 10"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0 5 Q 50 10 100 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="transparent"
+                    />
+                  </svg>
+                </em>
+              </h1>
+              <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg lg:text-xl text-[#73655c] leading-relaxed font-light">
+                {s.descriere}
+              </p>
+            </motion.div>
+
+            <motion.aside
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="relative rounded-[2rem] bg-white/80 backdrop-blur-xl border border-white p-7 sm:p-8 lg:p-10 shadow-[0_20px_50px_-20px_rgba(74,59,50,0.1)]"
+            >
+              <div className="absolute top-0 right-0 p-5 md:p-6 opacity-5 pointer-events-none">
+                <ShieldCheck className="w-16 h-16 md:w-24 md:h-24 text-[#4a3b32]" />
+              </div>
+              <div className="flex items-center gap-2.5 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-[#b7744f] font-bold">
+                <ShieldCheck className="w-4 h-4" /> {s.ethicalBadge}
+              </div>
+              <p className="mt-4 md:mt-5 text-[#4a3b32] text-lg md:text-xl leading-snug font-medium pr-4">
+                {s.ethicalTitle}
+              </p>
+              <button className="mt-6 md:mt-8 group inline-flex items-center gap-3 rounded-full bg-[#4a3b32] hover:bg-[#b7744f] text-white px-5 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-bold transition-all duration-300 w-full sm:w-auto justify-center">
+                {s.ethicalSub}
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </motion.aside>
+          </div>
+
+          {/* Why bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-16 md:mt-24 lg:mt-32 rounded-[2rem] border border-[#e5e0d8] bg-gradient-to-br from-white to-[#F7F5F2] px-6 sm:px-8 lg:px-12 py-7 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 lg:gap-12 shadow-sm"
+          >
+            <div className="flex items-center gap-4 md:min-w-[240px] lg:min-w-[280px]">
+              <span className="w-1.5 h-10 md:h-12 bg-gradient-to-b from-[#b7744f] to-[#965935] rounded-full shrink-0" />
+              <h3 className="text-display text-xl md:text-2xl tracking-tight">
+                {s.whyTitle}
+              </h3>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-[#e5e0d8]" />
+            <p className="text-[#73655c] text-sm md:text-base leading-relaxed flex-1 font-light">
+              {s.whyDesc}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── PREISE ─── */}
+      <div className="relative z-20 -mb-1">
+        <WaveDividerInverted colorTop="#F7F5F2" colorBottom="#f0ece6" />
+      </div>
+
+      <section className="relative py-16 md:py-24 lg:py-32 bg-[#f0ece6]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16 lg:mb-20 text-center md:text-left">
+            <div className="flex flex-col items-center md:items-start">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/60 border border-[#e5e0d8] px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-[#b7744f] font-bold shadow-sm">
+                {s.module1Badge}
+              </span>
+              <h2 className="mt-4 md:mt-6 text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+                {s.module1Title}
+              </h2>
+            </div>
+            <div className="inline-flex items-center justify-center gap-2.5 bg-white/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-[#e5e0d8] mx-auto md:mx-0">
+              <Wallet className="w-4 h-4 md:w-5 md:h-5 text-[#b7744f]" />
+              <p className="text-xs md:text-sm text-[#73655c]">
+                <span className="uppercase tracking-[0.2em] md:tracking-[0.22em] text-[#4a3b32] font-bold mr-1.5">
+                  {s.startingFrom}
+                </span>
+                <span className="text-base md:text-lg text-[#4a3b32] font-medium">
+                  {rates[0]?.price}
+                </span>{" "}
+                <span className="opacity-80">{s.perSession}</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
+            {rates.map((r, i) => (
+              <RateCard
+                key={i}
+                item={r}
+                index={i}
+                featured={i === featuredIdx}
+                perSession={s.perSession}
+                popularLabel={s.popular}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── HOTELS / SPECIAL ─── */}
+      <div className="relative z-20 -mb-1">
+        <WaveDividerInverted colorTop="#f0ece6" colorBottom="#F7F5F2" />
+      </div>
+
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-[#F7F5F2]">
+        <SectionDivider />
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10 mt-8 lg:mt-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-[#b7744f]/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-[#965935] font-bold">
+                <MapPin className="w-3 h-3 md:w-3.5 md:h-3.5" />{" "}
+                {s.module2Badge}
+              </span>
+              <h2 className="mt-5 md:mt-6 text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
+                {s.module2Title}
+              </h2>
+
+              <div className="mt-8 md:mt-10 rounded-[2rem] border border-[#e5e0d8] bg-white/60 backdrop-blur-md p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden text-left">
+                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-[#e8dfd5] rounded-full blur-2xl md:blur-3xl -z-10" />
+                <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.26em] text-[#b7744f] font-bold">
+                  <CalendarCheck className="w-4 h-4 md:w-5 md:h-5" />{" "}
+                  {s.vipMinBadge}
+                </div>
+                <p className="mt-4 md:mt-5 text-[#73655c] leading-relaxed text-sm md:text-base font-light">
+                  {s.vipMinText}
+                </p>
+              </div>
+
+              <Link
+                to="/contact"
+                className="group mt-8 md:mt-10 inline-flex items-center justify-center gap-3 md:gap-4 rounded-full bg-[#4a3b32] hover:bg-[#b7744f] text-white px-6 md:px-8 py-3.5 md:py-4 text-[13px] md:text-sm font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
+              >
+                {s.btnProposal}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#4a3b32] to-[#2a221c] text-white p-7 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl shadow-[#4a3b32]/20 mt-4 lg:mt-0"
+            >
+              <div
+                className="absolute -top-20 -right-20 w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full opacity-20 md:opacity-30 blur-[80px] md:blur-[100px]"
+                style={{ background: "#b7744f" }}
+              />
+              <div
+                className="absolute -bottom-10 -left-10 w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full opacity-10 blur-[60px] md:blur-[80px]"
+                style={{ background: "#F7F5F2" }}
+              />
+
+              <h3 className="relative text-display text-2xl sm:text-3xl lg:text-4xl tracking-tight text-[#F7F5F2]">
+                {s.practicalInfoTitle}
+              </h3>
+
+              <ul className="relative mt-8 md:mt-12 space-y-6 md:space-y-8">
+                {s.practicalInfo.map((info: string, i: number) => {
+                  const Icon =
+                    [Info, MapPin, CalendarCheck, Wallet, ShieldCheck][i] ||
+                    Info;
+                  return (
+                    <li
+                      key={i}
+                      className="flex gap-4 md:gap-5 items-start group"
+                    >
+                      <span className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-[1rem] bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#b7744f]/20 group-hover:border-[#b7744f]/30 transition-all duration-300">
+                        <Icon className="w-4 h-4 md:w-5 md:h-5 text-[#d6a68d]" />
+                      </span>
+                      <span className="text-sm md:text-base leading-relaxed text-white/80 font-light pt-0.5 md:pt-1">
+                        {info}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── LEGAL ─── */}
+      <section className="pb-16 md:pb-24 relative z-10 bg-[#F7F5F2]">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-12">
+          <div className="rounded-[2rem] border border-[#e5e0d8] bg-white/40 backdrop-blur-sm p-6 sm:p-8 lg:p-10 text-center">
+            <div className="flex items-center justify-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-[#73655c] font-bold mb-3 md:mb-4">
+              <Info className="w-3.5 h-3.5 md:w-4 md:h-4" /> {s.legalBadge}
+            </div>
+            <p className="text-[13px] md:text-sm leading-relaxed text-[#73655c] max-w-3xl mx-auto font-light">
+              {s.legalDesc}
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export default Servicii;
