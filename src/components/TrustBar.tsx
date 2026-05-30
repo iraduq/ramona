@@ -90,7 +90,7 @@ export function TrustBar() {
                 onClick={() => setHoveredIndex(isHovered ? null : index)}
                 className={`relative rounded-[1.5rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col lg:flex-row ${flexBasis} ${mobileHeight} lg:h-full bg-[#eae6df] cursor-pointer border border-[#1a1816]/5 group`}
               >
-                {/* CONTAINER IMAGINE - ACUM CU BG-CONTAIN */}
+                {/* CONTAINER IMAGINE - CU OBJECT-CONTAIN PENTRU A ARATA TOATA IMAGINEA */}
                 <div
                   className="absolute inset-y-0 right-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden z-0 bg-[#eae6df]"
                   style={{
@@ -99,11 +99,10 @@ export function TrustBar() {
                       isHovered && window.innerWidth >= 1024 ? "55%" : "100%",
                   }}
                 >
-                  <div
-                    className="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-[800ms]"
-                    style={{
-                      backgroundImage: `url(${item.bgImage})`,
-                    }}
+                  <img
+                    src={item.bgImage}
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-contain transition-transform duration-[800ms]"
                   />
                   {/* Overlay pentru text mai lizibil pe mobil */}
                   <div
