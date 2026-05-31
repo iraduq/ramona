@@ -11,7 +11,6 @@ import {
   Wallet,
   CalendarCheck,
   Info,
-  Leaf,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BotanicalSVG } from "../components/BotanicalSVG";
@@ -161,7 +160,6 @@ export function Servicii() {
   const sx = useSpring(mouseX, { stiffness: 15, damping: 40 });
   const sy = useSpring(mouseY, { stiffness: 15, damping: 40 });
 
-  // Parallax separat pentru secțiuni de jos (mișcare inversă pentru varietate)
   const mx2 = useMotionValue(0);
   const my2 = useMotionValue(0);
   const sx2 = useSpring(mx2, { stiffness: 18, damping: 25 });
@@ -264,7 +262,6 @@ export function Servicii() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-center lg:text-left"
             >
-              {/* MODIFICAT AICI: Adăugat break-words pe h1 și inline-block în loc de whitespace-nowrap pe em */}
               <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight break-words">
                 {s.titlu1}{" "}
                 <em className="not-italic text-brand font-light italic relative inline-block">
@@ -347,19 +344,15 @@ export function Servicii() {
         </div>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16 lg:mb-20 text-center md:text-left">
-            <div className="flex flex-col items-center md:items-start">
-              <h2 className="mt-4 md:mt-6 text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-                {s.module1Title}
-              </h2>
-            </div>
-            <div className="inline-flex items-center justify-center gap-2.5 bg-surface/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-border-soft mx-auto md:mx-0">
+          <div className="flex flex-col items-center text-center gap-4 md:gap-6 mb-12 md:mb-16 lg:mb-20">
+            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+              {s.module1Title}
+            </h2>
+            <div className="inline-flex items-center justify-center gap-2.5 bg-surface/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-border-soft">
               <Wallet className="w-4 h-4 md:w-5 md:h-5 text-brand" />
-              <p className="text-xs md:text-sm text-ink-muted">
-                <span className="uppercase tracking-[0.2em] md:tracking-[0.22em] text-ink-soft font-bold mr-1.5">
-                  {s.startingFrom}
-                </span>
-              </p>
+              <span className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.22em] text-ink-soft font-bold">
+                {s.startingFrom}
+              </span>
             </div>
           </div>
 
@@ -548,7 +541,6 @@ export function Servicii() {
             </p>
           </div>
 
-          {/* ─── BLOCUL NOU ADĂUGAT LA FINAL ─── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
