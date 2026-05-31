@@ -203,7 +203,6 @@ export const translations = {
     servicesPage: {
       metaTitle: "Preise & Dienstleistungen — Ramona's Mobile Massage",
       metaDesc: "Büromassage, Corporate Events, Hotels und besondere Anlässe.",
-      topBadge: "Preise / Tarife",
       titlu1: "Massage im Büro & ",
       titluItalic: "Business Events",
       descriere:
@@ -214,7 +213,6 @@ export const translations = {
       ethicalBadge: "Ethikrichtlinie",
       ethicalTitle: "Ausschließlich Entspannung & Wohlbefinden",
       ethicalSub: "100% Non-Erotik",
-      module1Badge: "Büro & Business",
       module1Title: "Preise & Dauer",
       startingFrom: "Ab:", // Text nou pentru "Incepand de la"
       quote: "",
@@ -587,33 +585,30 @@ export const translations = {
       metaTitle: "Prețuri & Servicii — Ramona's Mobile Massage",
       metaDesc:
         "Masaj la birou, evenimente corporate, hoteluri și ocazii speciale.",
-      topBadge: "Prețuri / Tarife",
       titlu1: "Masaj la birou & ",
       titluItalic: "Evenimente Business",
       descriere:
-        "Pentru companii, birouri, evenimente corporate, workshopuri și Gesundheitstage.",
+        "Pentru companii, birouri, evenimente corporate, workshopuri și Zile de Sănătate.",
       whyTitle: "De ce Ramona's Mobile Massage?",
       whyDesc:
         "Direct la locație, cu echipament complet, flexibil și adaptat individual – discret și profesionist.",
       ethicalBadge: "Directivă de etică",
       ethicalTitle: "Exclusiv Relaxare & Stare de bine",
       ethicalSub: "100% Non-Erotic",
-      module1Badge: "Birou & Business",
       module1Title: "Tarife & Durată",
-      startingFrom: "Începând de la:", // Text nou adaugat aici
+      startingFrom: "Prețuri începând de la", // Text nou adaugat aici
       quote: "",
       module2Badge: "Hoteluri & Centre Wellness",
       module2Title: "Hoteluri, Centre Wellness & Ocazii Speciale",
       vipMinBadge: "Durată minimă de rezervare",
       vipMinText:
-        "Ședințele de masaj sunt realizate pe întregul corp, într-un cadru relaxat și personalizat. Durata minimă de rezervare este de 120 de minute, care poate fi împărțită flexibil, de exemplu 2 × 60 de minute sau 3 × 40 de minute.",
+        "In cadrul acestor rezervări, ședințele de masaj sunt realizate pe întregul corp, într-un cadru relaxat și personalizat. Durata minimă de rezervare este de 120 de minute, timp care poate fi împărțit flexibil între mai multe persoane, de exemplu 2 × 60 de minute sau 3 × 40 de minute. Pentru aceste servicii se solicită plata integrală la confirmarea programării.",
       practicalInfoTitle: "Informații practice",
       practicalInfo: [
-        "Prețurile pot varia în funcție de tipul evenimentului și al contextului, durata rezervării și locație.",
+        "Prețurile pot varia în funcție de numarul de persoane tipul evenimentului și al contextului, durata rezervării şi locație.",
         "Costurile de deplasare sunt incluse pentru regiunea Münsterland. Pentru locații în afara acestei regiuni pot fi percepute costuri suplimentare.",
         "Rezervările se realizează în funcție de disponibilitate și se confirmă în prealabil.",
         "Plata se poate efectua în numerar sau prin transfer bancar, cu emitere de factură.",
-        "Exclusiv pentru hoteluri și ocazii speciale (evenimente), plata integrală se solicită la confirmare.", // Informatie clarificata
       ],
       btnProposal: "📩 Programează / Cere ofertă",
       legalBadge: "Notă importantă",
@@ -625,25 +620,23 @@ export const translations = {
         {
           time: "15 minute",
           price: "21 €",
-          detail:
-            "O scurtă evadare pentru reîmprospătarea stării de bine în timpul zilei.",
+          detail: "O pauză binevenită în ritmul unei zile active.",
         },
         {
           time: "20 minute",
           price: "26 €",
-          detail:
-            "Momente dedicate echilibrului personal și relaxării imediate.",
+          detail: "Un moment de relaxare integrat armonios în programul tău.",
         },
         {
           time: "25 minute",
           price: "31 €",
           detail:
-            "O experiență de relaxare extinsă pentru o stare de spirit optimistă.",
+            "Durata ideală pentru a te bucura de o experiență confortabilă și echilibrată.",
         },
         {
           time: "30 minute",
           price: "36 €",
-          detail: "O pauză completă de reconectare și liniște interioară.",
+          detail: "Mai mult timp dedicat relaxării și stării de bine.",
         },
       ],
     },

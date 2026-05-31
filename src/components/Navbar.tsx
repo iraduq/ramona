@@ -22,20 +22,20 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-bg-soft/95 backdrop-blur-sm border-b border-border-soft">
       <div className="h-[3px] w-full bg-gradient-to-r from-brand to-brand-deep" />
 
-      {/* Inaltime echilibrata pe desktop (72px in loc de 80px) */}
       <div className="mx-auto max-w-7xl px-4 lg:px-10 h-[64px] lg:h-[72px] flex items-center justify-between transition-all duration-300">
         {/* Logo Section */}
         <Link
           to="/"
           className="flex items-center gap-3 shrink min-w-0 pr-2 group"
+          aria-label="Mergi la pagina principală"
         >
-          {/* Iconita usor ajustata */}
           <div className="flex h-10 w-10 lg:h-11 lg:w-11 shrink-0 items-center justify-center rounded-xl bg-card shadow-sm border border-border-soft transition-all group-hover:border-brand/30">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               className="h-6 w-6 text-brand stroke-[1.5]"
+              aria-hidden="true"
             >
               <circle cx="12" cy="7" r="4" />
               <circle cx="12" cy="15" r="5" />
@@ -47,15 +47,13 @@ export function Navbar() {
             </svg>
           </div>
 
-          {/* Text proportionat elegant */}
           <div className="flex flex-col min-w-0 justify-center py-1">
-            {/* Randul 1: Nume (15px pe desktop, echilibrat) */}
             <span className="text-[13px] lg:text-[15px] font-bold tracking-[0.05em] uppercase text-ink truncate leading-tight transition-colors">
               Ramona’s Mobile Massage
             </span>
 
-            {/* Randul 2: Locatie (10px pe desktop) */}
-            <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.15em] uppercase text-brand mt-[1px] lg:mt-[2px] truncate leading-tight">
+            {/* Contrast fixat aici: text-neutral-800 in loc de text-brand */}
+            <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-800 mt-[1px] lg:mt-[2px] truncate leading-tight">
               Münsterland | NRW
             </span>
 
@@ -66,7 +64,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav - text de 12px pe desktop */}
+        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <Link
@@ -75,8 +73,9 @@ export function Navbar() {
               className={`text-[11px] lg:text-[12px] tracking-[0.15em] uppercase font-bold transition-colors ${
                 pathname === l.to
                   ? "text-brand"
-                  : "text-ink-muted hover:text-ink-soft"
+                  : "text-neutral-700 hover:text-ink-soft"
               }`}
+              aria-current={pathname === l.to ? "page" : undefined}
             >
               {l.label}
             </Link>
@@ -90,10 +89,11 @@ export function Navbar() {
               <button
                 key={lang}
                 onClick={() => setLanguage(lang as "DE" | "EN")}
+                aria-label={`Schimba limba in ${lang}`}
                 className={`text-[10px] lg:text-[10px] font-bold px-3 py-1.5 rounded-full transition-colors ${
                   language === lang
                     ? "bg-ink-soft text-primary-foreground"
-                    : "text-ink-muted hover:text-ink-soft"
+                    : "text-neutral-700 hover:text-ink-soft"
                 }`}
               >
                 {lang}
@@ -114,6 +114,8 @@ export function Navbar() {
         <button
           className="lg:hidden p-2 z-50 text-ink-soft hover:text-brand transition-colors"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Închide meniul" : "Deschide meniul"}
+          aria-expanded={open}
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -137,6 +139,7 @@ export function Navbar() {
                   className={`text-[13px] tracking-wider uppercase font-bold py-2 border-b border-border-soft/60 transition-colors ${
                     pathname === l.to ? "text-brand" : "text-ink-soft"
                   }`}
+                  aria-current={pathname === l.to ? "page" : undefined}
                 >
                   {l.label}
                 </Link>
@@ -147,10 +150,11 @@ export function Navbar() {
                   <button
                     key={lang}
                     onClick={() => setLanguage(lang as "DE" | "EN")}
+                    aria-label={`Schimba limba in ${lang}`}
                     className={`flex-1 py-2.5 text-[12px] font-bold rounded-lg border transition-colors ${
                       language === lang
                         ? "bg-ink-soft text-primary-foreground border-ink-soft"
-                        : "bg-card text-ink-muted border-border-soft hover:border-ink-soft/30"
+                        : "bg-card text-neutral-700 border-border-soft hover:border-ink-soft/30"
                     }`}
                   >
                     {lang}

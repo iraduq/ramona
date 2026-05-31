@@ -45,16 +45,19 @@ export function Footer() {
             {t.footer.regiune}
           </p>
 
-          {/* ───── CONTACT QUICK (LEGAL BEST PRACTICE) ───── */}
-          <div className="pt-3 space-y-1 text-[12px] text-neutral-700">
+          <div className="pt-3 space-y-2 text-[12px] text-neutral-700">
             <a
               href="mailto:ramonasmobilemassage@gmail.com"
-              className="hover:text-black"
+              className="hover:text-black block py-2" // py-2 adaugă spațiu vertical
+              aria-label="Trimite email la ramonasmobilemassage@gmail.com"
             >
               ramonasmobilemassage@gmail.com
             </a>
-            <br />
-            <a href="tel:+4917663167411" className="hover:text-black">
+            <a
+              href="tel:+4917663167411"
+              className="hover:text-black block py-2" // py-2 adaugă spațiu vertical
+              aria-label="Sună la +49 176 63167411"
+            >
               +49 176 63167411
             </a>
           </div>
@@ -71,6 +74,7 @@ export function Footer() {
               <li key={path}>
                 <Link
                   to={path}
+                  aria-label={`Go to ${path === "/" ? "Home" : path.replace("/", "")} page`}
                   className="text-[13px] font-medium text-neutral-700 hover:text-[#4a3b32] transition-colors"
                 >
                   {path === "/"
@@ -92,6 +96,7 @@ export function Footer() {
             <li>
               <Link
                 to="/legal-notice"
+                aria-label={`Go to ${"Legal Notice"} page`}
                 className="text-[13px] font-medium hover:text-[#4a3b32]"
               >
                 {t.footer.impressum}
@@ -101,6 +106,7 @@ export function Footer() {
             <li>
               <Link
                 to="/confidentiality"
+                aria-label={`Go to ${"Confidentiality"} page`}
                 className="text-[13px] font-medium hover:text-[#4a3b32]"
               >
                 {t.footer.datenschutz}
@@ -111,6 +117,7 @@ export function Footer() {
             <li>
               <Link
                 to="/cookies"
+                aria-label={`Go to ${"Cookies"} page`}
                 className="text-[13px] font-medium hover:text-[#4a3b32]"
               >
                 Cookies
@@ -138,14 +145,16 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ───── LEGAL COMPANY LINE (IMPORTANT IN GERMANY) ───── */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-10 text-[10px] text-neutral-500 leading-relaxed">
+      {/* ───── LEGAL COMPANY LINE ───── */}
+      {/* Am schimbat text-neutral-500 in text-neutral-700 pentru contrast */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-10 text-[10px] text-neutral-700 leading-relaxed">
         Ramona · Mobile Balance Therapie · Deutschland ·
       </div>
 
       {/* ───── COPYRIGHT ───── */}
       <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-6 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row justify-between gap-4">
-        <p className="text-[11px] text-neutral-600 uppercase tracking-widest font-bold">
+        {/* Am schimbat text-neutral-600 in text-neutral-700 pentru contrast */}
+        <p className="text-[11px] text-neutral-700 uppercase tracking-widest font-bold">
           © {new Date().getFullYear()} Ramona's Mobile Balance Therapie
         </p>
       </div>

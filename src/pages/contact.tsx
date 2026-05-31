@@ -46,10 +46,6 @@ export function Contact() {
         <div className="lg:col-span-5">
           {/* Centrat pe mobil, stânga pe desktop */}
           <div className="text-center lg:text-left">
-            <span className="inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 border border-brand/20 px-3.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-brand font-bold mb-4 md:mb-6">
-              {t.contactPage.badge}
-            </span>
-
             <h1 className="mt-3 sm:mt-4 text-display text-4xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-tight font-light">
               {t.contactPage.titlu1}{" "}
               <span className="italic text-brand font-normal">

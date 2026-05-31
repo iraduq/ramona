@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 import {
   Sparkles,
   ShieldCheck,
-  CheckCircle2,
   ArrowRight,
   Clock,
   Star,
@@ -147,12 +146,7 @@ function RateCard({
       <div
         className={`relative z-10 mt-auto pt-5 md:pt-6 border-t ${featured ? "border-surface/10" : "border-border-soft"} flex items-center justify-between text-[11px] md:text-xs`}
       >
-        <span className="uppercase tracking-[0.25em] font-medium opacity-60">
-          Inkl. Setup
-        </span>
-        <CheckCircle2
-          className={`w-4 h-4 md:w-5 md:h-5 ${featured ? "text-brand-soft" : "text-ink-subtle"}`}
-        />
+        <span className="uppercase tracking-[0.25em] font-medium opacity-60"></span>
       </div>
     </motion.article>
   );
@@ -270,12 +264,10 @@ export function Servicii() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-center lg:text-left"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand/10 border border-brand/20 px-3.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-brand font-bold mb-6 md:mb-8">
-                <Leaf className="w-3 h-3 md:w-3.5 md:h-3.5" /> {s.topBadge}
-              </div>
-              <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+              {/* MODIFICAT AICI: Adăugat break-words pe h1 și inline-block în loc de whitespace-nowrap pe em */}
+              <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight break-words">
                 {s.titlu1}{" "}
-                <em className="not-italic text-brand font-light italic relative whitespace-nowrap">
+                <em className="not-italic text-brand font-light italic relative inline-block">
                   {s.titluItalic}
                   <svg
                     className="absolute w-full h-2 md:h-3 -bottom-0.5 md:-bottom-1 left-0 text-brand opacity-30"
@@ -295,50 +287,7 @@ export function Servicii() {
                 {s.descriere}
               </p>
             </motion.div>
-
-            <motion.aside
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative rounded-[2rem] bg-surface/80 backdrop-blur-xl border border-surface p-7 sm:p-8 lg:p-10 shadow-[0_20px_50px_-20px_color-mix(in_srgb,var(--color-ink-soft)_10%,transparent)]"
-            >
-              <div className="absolute top-0 right-0 p-5 md:p-6 opacity-5 pointer-events-none">
-                <ShieldCheck className="w-16 h-16 md:w-24 md:h-24 text-ink-soft" />
-              </div>
-              <div className="flex items-center gap-2.5 text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-brand font-bold">
-                <ShieldCheck className="w-4 h-4" /> {s.ethicalBadge}
-              </div>
-              <p className="mt-4 md:mt-5 text-ink-soft text-lg md:text-xl leading-snug font-medium pr-4">
-                {s.ethicalTitle}
-              </p>
-              <button className="mt-6 md:mt-8 group inline-flex items-center gap-3 rounded-full bg-ink-soft hover:bg-brand text-surface px-5 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-bold transition-all duration-300 w-full sm:w-auto justify-center">
-                {s.ethicalSub}
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </motion.aside>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16 md:mt-24 lg:mt-32 rounded-[2rem] border border-border-soft bg-gradient-to-br from-surface to-bg-soft px-6 sm:px-8 lg:px-12 py-7 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 lg:gap-12 shadow-sm"
-          >
-            <div className="flex items-center gap-4 md:min-w-[240px] lg:min-w-[280px]">
-              <span className="w-1.5 h-10 md:h-12 bg-gradient-to-b from-brand to-brand-deep rounded-full shrink-0" />
-              <h3 className="text-display text-xl md:text-2xl tracking-tight">
-                {s.whyTitle}
-              </h3>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-border-soft" />
-            <p className="text-ink-muted text-sm md:text-base leading-relaxed flex-1 font-light">
-              {s.whyDesc}
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -400,9 +349,6 @@ export function Servicii() {
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16 lg:mb-20 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
-              <span className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-border-soft px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand font-bold shadow-sm">
-                {s.module1Badge}
-              </span>
               <h2 className="mt-4 md:mt-6 text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
                 {s.module1Title}
               </h2>
@@ -413,10 +359,6 @@ export function Servicii() {
                 <span className="uppercase tracking-[0.2em] md:tracking-[0.22em] text-ink-soft font-bold mr-1.5">
                   {s.startingFrom}
                 </span>
-                <span className="text-base md:text-lg text-ink-soft font-medium">
-                  {rates[0]?.price}
-                </span>{" "}
-                <span className="opacity-80">{s.perSession}</span>
               </p>
             </div>
           </div>
@@ -575,7 +517,7 @@ export function Servicii() {
         </div>
       </section>
 
-      {/* ─── LEGAL ─── */}
+      {/* ─── LEGAL & WHY CHOOSE US ─── */}
       <section className="pb-16 md:pb-24 relative z-10 bg-background overflow-hidden">
         {/* Botanicals Legal — discret */}
         <div
@@ -596,8 +538,8 @@ export function Servicii() {
           </motion.div>
         </div>
 
-        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 relative z-10">
-          <div className="rounded-[2rem] border border-border-soft bg-surface/40 backdrop-blur-sm p-6 sm:p-8 lg:p-10 text-center">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
+          <div className="max-w-5xl mx-auto rounded-[2rem] border border-border-soft bg-surface/40 backdrop-blur-sm p-6 sm:p-8 lg:p-10 text-center">
             <div className="flex items-center justify-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-ink-muted font-bold mb-3 md:mb-4">
               <Info className="w-3.5 h-3.5 md:w-4 md:h-4" /> {s.legalBadge}
             </div>
@@ -605,6 +547,26 @@ export function Servicii() {
               {s.legalDesc}
             </p>
           </div>
+
+          {/* ─── BLOCUL NOU ADĂUGAT LA FINAL ─── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-16 md:mt-24 lg:mt-32 rounded-[2rem] border border-border-soft bg-gradient-to-br from-surface to-bg-soft px-6 sm:px-8 lg:px-12 py-7 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 lg:gap-12 shadow-sm"
+          >
+            <div className="flex items-center gap-4 md:min-w-[240px] lg:min-w-[280px]">
+              <span className="w-1.5 h-10 md:h-12 bg-gradient-to-b from-brand to-brand-deep rounded-full shrink-0" />
+              <h3 className="text-display text-xl md:text-2xl tracking-tight">
+                {s.whyTitle}
+              </h3>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-border-soft" />
+            <p className="text-ink-muted text-sm md:text-base leading-relaxed flex-1 font-light">
+              {s.whyDesc}
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>
