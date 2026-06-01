@@ -13,22 +13,16 @@ export function CookiesPage() {
   const t = translations[language].cookiePage;
 
   return (
-    <LegalLayout
-      eyebrow={t.eyebrow}
-      title={t.title}
-      intro={t.intro}
-      operator="Ramona's Mobile Massage"
-      updated="11.2026"
-    >
+    <LegalLayout eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
       <Helmet>
         <title>{t.metaTitle}</title>
       </Helmet>
 
-      <LegalSection index="01." title={t.sections.whatAreCookies}>
+      <LegalSection title={t.sections.whatAreCookies}>
         <p>{t.sections.whatAreCookiesDesc}</p>
       </LegalSection>
 
-      <LegalSection index="02." title={t.sections.types}>
+      <LegalSection title={t.sections.types}>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-border/60 rounded-xl p-5 bg-card">
             <div className="text-xs uppercase tracking-[0.2em] font-mono text-accent">
@@ -45,7 +39,7 @@ export function CookiesPage() {
         </div>
       </LegalSection>
 
-      <LegalSection index="03." title={t.sections.purposes}>
+      <LegalSection title={t.sections.purposes}>
         <ol className="space-y-3">
           {t.sections.purposeList.map((item, i) => (
             <li key={i}>
@@ -58,12 +52,12 @@ export function CookiesPage() {
         </ol>
       </LegalSection>
 
-      <LegalSection index="04." title={t.sections.manage}>
+      <LegalSection title={t.sections.manage}>
         <p>{t.sections.manageDesc}</p>
         <LegalCallout>{t.sections.note}</LegalCallout>
       </LegalSection>
 
-      <LegalSection index="05." title={t.sections.tableTitle}>
+      <LegalSection title={t.sections.tableTitle}>
         <div className="overflow-x-auto border border-border/60 rounded-xl">
           <table className="w-full text-sm">
             <thead className="bg-muted/40 text-xs uppercase tracking-[0.15em] font-mono text-muted-foreground">
