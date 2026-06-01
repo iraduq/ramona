@@ -36,7 +36,7 @@ export function CTA() {
           className="absolute right-[-5rem] lg:right-[-2rem] top-1/2 -translate-y-1/2 w-[32rem] md:w-[42rem] h-auto text-sage"
         >
           <BotanicalSVG
-            variant="branch"
+            variant="bloom"
             className="w-full h-full transform rotate-[-15deg]"
           />
         </motion.div>

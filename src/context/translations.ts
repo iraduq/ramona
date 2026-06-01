@@ -818,8 +818,6 @@ export const translations = {
         "Din această perspectivă am creat Ramona's Mobile Massage, un serviciu mobil conceput pentru a ajunge acolo unde oamenii se află deja: la locul de muncă, în cadrul evenimentelor, al zilelor dedicate sănătății , întâlnirilor de afaceri cat si la ocazii speciale . Pun preț pe profesionalism, respect, discreție și atenția acordată fiecărei persoane. Fiecare colaborare este diferită, iar obiectivul meu este să ofer o experiență bine organizată, adaptată contextului și integrată cât mai natural în desfășurarea  programului de lucru sau a evenimentului.",
         "Ramona's Mobile Massage reprezintă mai mult decât un serviciu mobil.Reprezintă dorința de a aduce mai aproape un moment de atenție și grijă față de oameni, într-un mod flexibil, profesionist și autentic.",
       ],
-      ariaBadge: "Aria Operațională",
-      ariaText: "Münster · NRW · Münsterland",
       butonConversatie: "Programează conversație",
 
       valuesBadge: "// Valorile Noastre",
