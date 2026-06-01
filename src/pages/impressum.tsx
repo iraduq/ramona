@@ -28,7 +28,7 @@ export function ImpressumPage() {
       {/* FURNIZOR / INHABER */}
       <LegalSection title={i.sections.provider}>
         <p>
-          {COMPANY.form} {COMPANY.name}
+          {COMPANY.name}
           <br />
           {COMPANY.street}
           <br />
@@ -43,11 +43,16 @@ export function ImpressumPage() {
         <p>
           <span className="text-foreground/50">{i.sections.phone} </span>
           <a
-            href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
+            href={`https://wa.me/${COMPANY.phone.replace(/\s|\+/g, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-accent underline"
           >
             {COMPANY.phone}
-          </a>
+          </a>{" "}
+          <span className="text-sm text-muted-foreground">
+            ({i.sections.phoneSub})
+          </span>
           <br />
           <span className="text-foreground/50">{i.sections.email} </span>
           <a href={`mailto:${COMPANY.email}`} className="text-accent underline">

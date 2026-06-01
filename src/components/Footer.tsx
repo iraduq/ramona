@@ -86,11 +86,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 pb-8">
         <div className="border-t border-neutral-200 pt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <p className="text-[11px] text-neutral-500 tracking-wide">
-            Ramona's Mobile Balance Therapie · Büro · Unternehmen · Business
-            Events
+            Deutschland · Corporate Wellbeing · EST. 2020
           </p>
           <p className="text-[11px] text-neutral-400">
-            © {new Date().getFullYear()} Ramona's Mobile Balance Therapie
+            © {new Date().getFullYear()} Ramona's Mobile Massage
           </p>
         </div>
       </div>

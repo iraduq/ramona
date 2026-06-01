@@ -39,7 +39,7 @@ export function AboutUs() {
   const s = t.aboutPage;
 
   // REZOLVARE EROARE TYPESCRIPT:
-  const descriereData = s.descriere as string | string[];
+  const descriereData = s.descriere as unknown as string | string[];
   const descArray: string[] = Array.isArray(descriereData)
     ? descriereData
     : typeof descriereData === "string"
