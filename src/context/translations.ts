@@ -6,91 +6,89 @@ export const translations = {
       eyebrow: "Rechtliches",
       title: "Impressum",
       intro:
-        "Anbieterkennzeichnung gemäß § 5 des Digitale-Dienste-Gesetzes (DDG) und § 18 des Medienstaatsvertrags (MStV) für die Website von Ramona's Mobile Massage.",
+        "Anbieterkennzeichnung gemäß dem Digitale-Dienste-Gesetz (DDG) § 5 und dem Medienstaatsvertrag (MStV) § 18 für die Website von Ramona's Mobile Massage.",
       sections: {
-        provider: "Diensteanbieter",
+        provider: "Verantwortlich für den Inhalt",
         providerName: "Ramona Aciu",
         address: "Schorlemerstraße 11, 48351 Everswinkel",
         contact: "Kontakt",
         phone: "Telefon:",
         phoneSub: "WhatsApp-Nachricht",
         email: "E-Mail:",
-        tax: "Steuerliche Angaben",
+        tax: "Steuerinformationen",
         taxNumber: "",
         smallBusiness:
-          "Hinweis: Gemäß § 19 UStG wird als Kleinunternehmerin keine Umsatzsteuer berechnet oder ausgewiesen.",
+          "Hinweis: Als Kleinunternehmerin gemäß § 19 UStG wird keine Umsatzsteuer berechnet oder ausgewiesen.",
         titleLabel: "Berufsbezeichnung",
         profession: "Massagepraktikerin (Wellness- und Entspannungsmassage)",
         grantedIn: "Verliehen in: Deutschland",
-        responsibility: "Verantwortlich für den Inhalt nach § 18 MStV",
+        responsibility: "Redaktionelle Verantwortung (gemäß § 18 MStV)",
         responsibilityName: "Ramona Aciu",
         dispute: "EU-Streitbeilegung",
         disputeDesc:
           "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
         disputeObligation:
           "Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
-        liability: "Haftung für Inhalte und Links",
+        liability: "Haftungsbeschränkung (Inhalte und Links)",
         liabilityDesc:
-          "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§ 8–10 DDG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Für die Inhalte verlinkter Websites ist ausschließlich der jeweilige externe Anbieter verantwortlich.",
+          "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§ 8 bis 10 DDG sind wir nicht verpflichtet, übermittelte Informationen von Dritten zu überwachen. Für den Inhalt der verlinkten Seiten ist der jeweilige externe Anbieter verantwortlich.",
         copyright: "Urheberrecht",
         copyrightDesc:
-          "Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Jede Vervielfältigung, Bearbeitung, Verbreitung oder Verwertung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des jeweiligen Urhebers.",
+          "Die Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des Autors.",
       },
     },
-
     servicesPage: {
       metaTitle: "Preise & Leistungen — Ramona's Mobile Massage",
       metaDesc:
-        "Büromassage, Firmenveranstaltungen, Hotels und besondere Anlässe.",
+        "Massage im Büro, bei Firmenveranstaltungen, in Hotels und zu besonderen Anlässen.",
       titlu1: "Büromassage & ",
-      titluItalic: "Firmenveranstaltungen",
+      titluItalic: "Business Events",
       descriere:
         "Für Unternehmen, Büros, Firmenveranstaltungen, Workshops und Gesundheitstage.",
       whyTitle: "Warum Ramona's Mobile Massage?",
       whyDesc:
-        "Direkt bei Ihnen vor Ort, mit kompletter Ausstattung, flexibel und individuell abgestimmt – diskret und professionell.",
-      ethicalBadge: "Ethische Richtlinie",
+        "Direkt vor Ort, voll ausgestattet, flexibel und auf Ihre Bedürfnisse zugeschnitten – diskret und professionell.",
+      ethicalBadge: "Ethikrichtlinie",
       ethicalTitle: "Ausschließlich Entspannung & Wohlbefinden",
-      ethicalSub: "100 % nicht-erotisch",
+      ethicalSub: "100% Nicht-erotisch",
       module1Title: "Preise & Dauer",
       startingFrom: "Preise ab",
       quote: "",
       module2Badge: "Hotels & Wellnesszentren",
-      module2Title: "Hotels, Wellnesszentren & besondere Anlässe",
+      module2Title: "Hotels, Wellnesszentren & Besondere Anlässe",
       vipMinBadge: "Mindestbuchungsdauer",
       vipMinText:
-        "Bei diesen Buchungen werden die Massagen als Ganzkörperbehandlungen in einer entspannten und individuellen Atmosphäre durchgeführt. Die Mindestbuchungsdauer beträgt 120 Minuten und kann flexibel auf mehrere Personen aufgeteilt werden, beispielsweise 2 × 60 Minuten oder 3 × 40 Minuten. Die vollständige Zahlung ist bei Buchungsbestätigung erforderlich.",
+        "Bei diesen Buchungen handelt es sich um Ganzkörperbehandlungen, die in einer entspannten und persönlichen Umgebung durchgeführt werden. Die Mindestbuchungsdauer beträgt 120 Minuten, die flexibel auf mehrere Personen aufgeteilt werden können, z. B. 2 × 60 Minuten oder 3 × 40 Minuten. Bei Terminbestätigung ist die vollständige Zahlung erforderlich.",
       practicalInfoTitle: "Praktische Informationen",
       practicalInfo: [
-        "Die Preise können je nach Teilnehmerzahl, Art der Veranstaltung, Buchungsdauer und Einsatzort variieren.",
-        "Die Anfahrtskosten innerhalb des Münsterlandes sind im Preis enthalten. Außerhalb dieses Gebiets können zusätzliche Kosten anfallen.",
-        "Buchungen erfolgen vorbehaltlich der Verfügbarkeit und müssen im Voraus bestätigt werden.",
-        "Die Zahlung kann in bar oder per Banküberweisung erfolgen. Rechnungen werden ausgestellt.",
+        "Die Preise können je nach Anzahl der Personen, Art der Veranstaltung und Kontext, Dauer der Buchung und dem Standort variieren.",
+        "Anfahrtskosten sind für die Region Münsterland inbegriffen. Für Orte außerhalb dieser Region können zusätzliche Kosten anfallen.",
+        "Buchungen erfolgen nach Verfügbarkeit und müssen im Voraus bestätigt werden.",
+        "Die Zahlung kann in bar oder per Überweisung erfolgen, wobei eine Rechnung ausgestellt wird.",
       ],
-      btnProposal: "📩 Buchen / Angebot anfordern",
+      btnProposal: "📩 Termin vereinbaren / Angebot anfordern",
       legalBadge: "Wichtiger Hinweis",
       legalDesc:
-        "Alle Leistungen dienen ausschließlich der Entspannung, dem Komfort und dem allgemeinen Wohlbefinden. Sie sind nicht-erotischer Natur und stellen keine medizinische oder therapeutische Behandlung dar. Die Leistungen werden ausschließlich für gesunde Personen erbracht. Sie ersetzen keine medizinische Beratung, Diagnose oder Behandlung. Die Verantwortung für die eigene Gesundheit liegt beim Kunden.",
+        "Alle angebotenen Dienstleistungen dienen ausschließlich der Entspannung, dem Komfort und dem allgemeinen Wohlbefinden. Sie sind nicht-erotischer Natur und stellen keine medizinischen oder therapeutischen Behandlungen dar. Die Behandlungen werden an einem gesunden Körper durchgeführt. Sie stellen keine Diagnose dar und ersetzen nicht die Beratung, Empfehlungen oder Behandlung durch medizinisches Fachpersonal. Die Verantwortung für die eigene Gesundheit liegt beim Kunden.",
       perSession: "/ Sitzung",
       popular: "Empfohlen",
-
       rates: [
         {
           time: "15 Minuten",
           price: "21 €",
-          detail: "Eine willkommene Pause während eines arbeitsreichen Tages.",
+          detail: "Eine willkommene Pause im Rhythmus eines aktiven Tages.",
         },
         {
           time: "20 Minuten",
           price: "26 €",
           detail:
-            "Ein entspannender Moment, der sich nahtlos in Ihren Tagesablauf integriert.",
+            "Ein Moment der Entspannung, nahtlos in Ihren Zeitplan integriert.",
         },
         {
           time: "25 Minuten",
           price: "31 €",
           detail:
-            "Die ideale Dauer für ein angenehmes und ausgewogenes Erlebnis.",
+            "Die ideale Dauer, um ein angenehmes und ausgewogenes Erlebnis zu genießen.",
         },
         {
           time: "30 Minuten",
@@ -99,109 +97,107 @@ export const translations = {
         },
       ],
     },
-
     agbPage: {
       eyebrow: "Rechtliches",
       title: "Allgemeine Geschäftsbedingungen",
       intro:
-        "Diese Allgemeinen Geschäftsbedingungen regeln die Nutzung dieser Website sowie die Buchung von Dienstleistungen von Ramona's Mobile Massage.",
+        "Diese Bedingungen regeln die Nutzung dieser Website und die Buchung der von Ramona's Mobile Massage angebotenen Dienstleistungen.",
       callout:
         'Diese Bedingungen stellen eine rechtsverbindliche Vereinbarung zwischen Ihnen und Ramona\'s Mobile Massage ("wir", "uns") dar. Durch die Nutzung dieser Website oder die Buchung unserer Dienstleistungen bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden und akzeptiert haben.',
       sections: [
         {
           index: "01.",
-          title: "Geltungsbereich & Leistungen",
+          title: "Geltungsbereich & Dienstleistungen",
           content:
-            "Wir bieten mobile Wellness- und Entspannungsmassagen für Unternehmen, Veranstaltungen, Hotels und Privatkunden im gesamten Münsterland und in Nordrhein-Westfalen an.",
+            "Wir bieten mobile Wellness- und Entspannungsmassagen für Unternehmen, Veranstaltungen und Privatkunden in der Region Münsterland / NRW an.",
         },
         {
           index: "02.",
           title: "Vertrag & Buchung",
           content:
-            "Anfragen über Kontaktformular, E-Mail, WhatsApp oder Telefon sind unverbindlich. Ein Vertrag kommt erst durch unsere schriftliche Bestätigung zustande.",
+            "Anfragen über das Kontaktformular, per E-Mail oder Telefon sind unverbindlich. Ein Vertrag kommt erst durch unsere schriftliche Bestätigung zustande.",
         },
         {
           index: "03.",
           title: "Preise & Zahlung",
           content:
-            "Es gelten die in der Buchungsbestätigung angegebenen Preise. Sofern nicht anders vereinbart, sind Rechnungen innerhalb von 14 Tagen ohne Abzug zahlbar.",
+            "Es gelten die in der Bestätigung angegebenen Preise. Sofern nicht anders vereinbart, sind Rechnungen innerhalb von 14 Tagen netto fällig.",
         },
         {
           index: "05.",
-          title: "Pflichten des Kunden",
+          title: "Mitarbeit des Kunden",
           content:
-            "Der Kunde ist dafür verantwortlich, eine geeignete, sichere und ruhige Umgebung für die Durchführung der Dienstleistung bereitzustellen sowie bei Bedarf Zugang zu Strom und fließendem Wasser zu gewährleisten.",
+            "Der Kunde stellt einen geeigneten, ruhigen Raum sowie Zugang zu Strom und fließendem Wasser zur Verfügung.",
         },
       ],
       cancellation: {
-        title: "Stornierungsbedingungen",
+        title: "Stornierung",
         items: [
           "Mehr als 7 Tage vor dem Termin: kostenfreie Stornierung.",
-          "3–7 Tage vor dem Termin: 50 % des vereinbarten Honorars.",
-          "Weniger als 48 Stunden vor dem Termin oder Nichterscheinen: 100 % des vereinbarten Honorars.",
+          "3–7 Tage vorher: 50 % des Honorars.",
+          "Weniger als 48 Stunden / Nichterscheinen: 100 % des Honorars.",
         ],
       },
     },
-
     datenschutzPage: {
       metaTitle: "Datenschutzerklärung — Ramona's Mobile Massage",
       metaDesc:
-        "Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
+        "Informationen zur Verarbeitung personenbezogener Daten gemäß der DSGVO.",
       eyebrow: "Rechtliches",
       title: "Datenschutzerklärung",
       intro:
-        "Diese Datenschutzerklärung erläutert, wie wir personenbezogene Daten erfassen, verwenden und schützen, wenn Sie mit unseren Massageleistungen und dieser Website interagieren.",
+        "Diese Richtlinie beschreibt, wie wir personenbezogene Daten erheben, verwenden und schützen, wenn Sie mit unseren Massagedienstleistungen und dieser Website interagieren.",
       sections: {
-        controller: "Verantwortlicher",
+        controller: "Datenverantwortlicher",
         controllerDesc:
-          "Verantwortlich für die Datenverarbeitung gemäß der Datenschutz-Grundverordnung (DSGVO) ist:",
+          "Der nach der Datenschutz-Grundverordnung (DSGVO) verantwortliche Datenverantwortliche ist:",
         email: "E-Mail",
         phone: "Telefon",
-        dataTypes: "Welche Daten wir erfassen",
+        dataTypes: "Welche Daten wir erheben",
         providedData: "Von Ihnen bereitgestellte Daten",
         providedDesc:
-          "Wenn Sie unser Kontaktformular nutzen, uns eine E-Mail senden oder telefonisch Kontakt aufnehmen, können wir Ihren Namen, Firmennamen, Ihre E-Mail-Adresse, Telefonnummer, Ihren Standort sowie den Inhalt Ihrer Anfrage erfassen.",
-        autoData: "Automatisch erfasste Daten",
+          "Wenn Sie das Kontaktformular nutzen, uns eine E-Mail senden oder uns anrufen: Name, Firma, E-Mail-Adresse, Telefonnummer, Standort und der Inhalt Ihrer Anfrage.",
+        autoData: "Automatisch erhobene Daten",
         autoDesc:
-          "IP-Adresse, Browser- und Geräteinformationen, Zeitstempel, verweisende URLs und besuchte Seiten (Server-Logs werden bis zu 30 Tage gespeichert).",
+          "IP-Adresse, Browser-/Geräteinformationen, Zeitstempel, verweisende URL, besuchte Seiten (Serverprotokolle, max. 30 Tage).",
         noSensitive: "Keine sensiblen Daten",
-        noThirdParty: "Keine Daten Dritter",
+        noThirdParty: "Keine Daten von Dritten",
         noMinors: "Keine Daten von Minderjährigen",
-        purposes: "Zwecke der Verarbeitung",
+        purposes: "Zweck der Verarbeitung",
         purposesList: [
-          "Bereitstellung und Organisation von Massageleistungen.",
-          "Kommunikation mit Ihnen bezüglich Terminen, Angeboten und Nachbetreuung.",
-          "Sicherheit der Website und Betrugsprävention.",
-          "Erfüllung gesetzlicher und steuerlicher Verpflichtungen.",
+          "Bereitstellung und Organisation von Massagedienstleistungen.",
+          "Kommunikation mit Ihnen (Termine, Angebote, Follow-up).",
+          "Website-Sicherheit und Betrugsprävention.",
+          "Einhaltung rechtlicher und steuerlicher Vorgriften.",
         ],
         legalBasis: "Rechtsgrundlagen (DSGVO)",
         consent: "Einwilligung",
         consentDesc:
-          "Wenn Sie ausdrücklich Ihre Einwilligung für einen bestimmten Verarbeitungsvorgang erteilt haben.",
+          "Wenn Sie ausdrücklich Ihre Einwilligung für eine bestimmte Verarbeitungsaktivität erteilt haben.",
         contract: "Vertragserfüllung",
         contractDesc:
-          "Zur Vorbereitung und Durchführung von Massageleistungen und Veranstaltungsvereinbarungen.",
-        legalObligation: "Rechtliche Verpflichtung",
+          "Zur Vorbereitung und Erfüllung des Massage-/Veranstaltungsvertrags.",
+        legalObligation: "Gesetzliche Verpflichtung",
         legalObligationDesc:
-          "Zur Einhaltung geltender steuerlicher, buchhalterischer und handelsrechtlicher Vorschriften.",
+          "Zur Einhaltung steuerlicher und handelsrechtlicher Vorschriften.",
         legitInterest: "Berechtigtes Interesse",
         legitInterestDesc:
-          "Zur Gewährleistung des sicheren Betriebs der Website und zur Verbesserung unserer Leistungen.",
-        recipients: "Empfänger & Auftragsverarbeiter",
+          "Sicherer Betrieb der Website und Verbesserung der Dienstleistungen.",
+        recipients: "Empfänger und Auftragsverarbeiter",
         recipientsList: [
-          "Hosting-Anbieter innerhalb der EU (Cloudflare und/oder Netlify, abhängig von der Konfiguration).",
-          "Steuerberater und Buchhaltungsdienstleister zur Erfüllung gesetzlicher Pflichten.",
-          "Behörden, sofern gesetzlich erforderlich.",
+          "In der EU ansässiger Hosting-Anbieter (Cloudflare / Netlify, je nach Konfiguration).",
+          "Buchhalter und Steuerberater für gesetzliche Zwecke.",
+          "Behörden, sofern gesetzlich vorgeschrieben.",
         ],
         dpaNote:
-          "Alle Auftragsverarbeiter arbeiten auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Artikel 28 DSGVO.",
-        cookies: "Cookies & Tracking",
+          "Alle Auftragsverarbeiter arbeiten im Rahmen eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO.",
+        cookies: "Cookies und Tracking",
         cookiesDesc:
-          "Wir verwenden ausschließlich technisch notwendige Cookies gemäß § 25 Abs. 2 Nr. 2 TTDSG. Es findet kein Marketing-Tracking statt. Weitere Informationen finden Sie in unserer ",
+          "Wir verwenden ausschließlich unbedingt notwendige Cookies (§ 25 Abs. 2 Nr. 2 TTDSG). Es findet kein Tracking zu Marketingzwecken statt. Details in der ",
         cookiesPolicy: "Cookie-Richtlinie",
-        retention: "Speicherdauer",
+        retention: "Aufbewahrungsfrist",
         retentionDesc:
-          "Personenbezogene Daten werden nur so lange gespeichert, wie es erforderlich ist. Vertragsunterlagen und Rechnungen werden gemäß § 147 AO und § 257 HGB für 6–10 Jahre aufbewahrt.",
+          "Wir bewahren personenbezogene Daten nur so lange auf, wie es erforderlich ist. Vertragsdaten und Rechnungen werden gemäß § 147 AO / § 257 HGB 6–10 Jahre aufbewahrt.",
         rights: "Ihre Rechte",
         rightsBadges: {
           access: "Auskunft",
@@ -210,49 +206,49 @@ export const translations = {
           restrict: "Einschränkung",
           portability: "Datenübertragbarkeit",
           object: "Widerspruch",
-          withdraw: "Einwilligung widerrufen",
+          withdraw: "Widerruf",
         },
         complaint:
-          "Beschwerderecht: Sie können sich an die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestr. 2–4, 40213 Düsseldorf, wenden.",
-        minors: "Daten von Kindern",
+          "Beschwerderecht: Sie können sich an die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW) wenden — Kavalleriestr. 2–4, 40213 Düsseldorf.",
+        minors: "Daten von Minderjährigen",
         minorsDesc:
-          "Wir erfassen wissentlich keine Daten von Personen unter 18 Jahren. Durch die Nutzung dieser Website bestätigen Sie, dass Sie mindestens 18 Jahre alt sind.",
-        encryption: "SSL-/TLS-Verschlüsselung",
+          "Wir erheben keine Daten von Personen unter 18 Jahren. Durch die Nutzung dieser Website bestätigen Sie, dass Sie mindestens 18 Jahre alt sind.",
+        encryption: "SSL/TLS-Verschlüsselung",
         encryptionDesc:
-          "Diese Website verwendet SSL-/TLS-Verschlüsselung (https://), um eine sichere Datenübertragung zu gewährleisten.",
+          "Diese Website verwendet aus Sicherheitsgründen SSL/TLS-Verschlüsselung (https://).",
         updates: "Aktualisierungen",
         updatesDesc:
-          "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Die jeweils aktuelle Version ist jederzeit auf dieser Seite verfügbar.",
+          "Wir können diese Richtlinie aktualisieren. Die aktuelle Version ist stets auf dieser Seite verfügbar.",
       },
     },
-
     contactPage: {
       metaTitle: "Kontakt",
       metaDesc:
-        "Buchen Sie eine kostenlose Vorführung oder fordern Sie ein Angebot für Ihr betriebliches Wohlfühlprogramm an.",
+        "Buchen Sie eine kostenlose Demo oder fordern Sie ein Angebot für Ihr Corporate-Wellness-Programm an.",
       badge: "Kontakt",
       titlu1: "Lassen Sie uns",
       titluItalic: "sprechen",
       titlu2: ".",
-      descriere: "Senden Sie eine E-Mail oder eine WhatsApp-Nachricht.",
+      descriere:
+        "Für Buchungen oder Anfragen senden Sie mir eine E-Mail oder eine WhatsApp-Nachricht.",
       infoWhatsappSub: "Nachricht über WhatsApp senden",
       infoLinkedinSub: "Auf LinkedIn vernetzen",
       infoMailSub: "E-Mail senden",
       infoPhoneSub: "Nachricht über WhatsApp senden",
       infoMapSub:
-        "Münsterland · Tecklenburger Land · Osnabrücker Land · umliegende Gebiete von Emsland, OWL und Ruhrgebiet · Bis ca. 80 km rund um Münster",
+        "Münsterland · Tecklenburger Land · Osnabrücker Land · angrenzende Gebiete im Emsland, OWL und im Ruhrgebiet · Bis ca. 80 km rund um Münster",
       form: {
         name: "Name",
         company: "Unternehmen",
         email: "Geschäftliche E-Mail",
         phone: "Telefon (optional)",
-        size: "Anzahl der Mitarbeitenden",
+        size: "Anzahl der Mitarbeiter",
         sizeOptions: ["Unter 30", "30–100", "100–300", "300+"],
         topic: "Interesse",
         topicOptions: [
           "Monatliches Programm",
-          "Veranstaltung / Gesundheitstag",
-          "Kostenlose Vorführung",
+          "Event / Gesundheitstag",
+          "Kostenlose Demo",
           "Nur Informationen",
         ],
         msg: "Nachricht",
@@ -261,439 +257,438 @@ export const translations = {
         btnSent: "Gesendet · Vielen Dank",
         toastSuccess: "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
         privacy:
-          "Mit dem Absenden dieses Formulars stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung zu.",
+          "Mit dem Absenden dieses Formulars erklären Sie sich mit der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung einverstanden.",
       },
     },
-
     aboutPage: {
       metaTitle: "Über mich — Ramona's Mobile Massage",
       metaDesc:
-        "Hinter Ramona's Mobile Massage stehe ich, Ramona. Entdecken Sie die Geschichte hinter meinem Projekt...",
+        "Hinter Ramona's Mobile Massage stehe ich, Ramona. Erfahren Sie die Geschichte meines Projekts...",
       badge: "",
       titlu1: "Über ",
       titluItalic: "mich",
       titlu2: "",
       descriere: [
         "Hinter Ramona's Mobile Massage stehe ich, Ramona.",
-        "Die Idee zu diesem Projekt entstand aus meinen bisherigen beruflichen Erfahrungen und meiner Überzeugung, dass Menschen in unserer schnelllebigen Welt Momente brauchen, um innezuhalten und sich etwas Zeit für sich selbst zu nehmen. Oft konzentrieren wir uns auf Verpflichtungen, Termine und den Alltag, während das persönliche Wohlbefinden in den Hintergrund rückt.",
-        "Mit diesem Gedanken habe ich Ramona's Mobile Massage gegründet – einen mobilen Service, der Menschen dort erreicht, wo sie sich bereits befinden: am Arbeitsplatz, bei Veranstaltungen, Gesundheitstagen, Geschäftstreffen und besonderen Anlässen. Professionalität, Respekt, Diskretion und individuelle Betreuung haben für mich höchste Priorität. Jede Zusammenarbeit ist einzigartig, und mein Ziel ist es, ein gut organisiertes Erlebnis zu schaffen, das sich harmonisch in den Arbeitsalltag oder den Ablauf einer Veranstaltung einfügt.",
-        "Ramona's Mobile Massage ist mehr als nur ein mobiler Service. Es ist der Wunsch, Momente der Aufmerksamkeit, Fürsorge und Entspannung auf flexible, professionelle und authentische Weise näher zu den Menschen zu bringen.",
+        "Die Idee zu diesem Projekt entstand aus meinen bisherigen beruflichen Erfahrungen und dem Glauben, dass Menschen in der heutigen, schnelllebigen Welt Momente brauchen, um innezuhalten und sich selbst ein wenig Aufmerksamkeit zu schenken. Oft konzentrieren wir uns auf Verpflichtungen, Termine und den Rhythmus der täglichen Aktivitäten, und die Zeit für uns selbst tritt in den Hintergrund.",
+        "Aus dieser Perspektive heraus habe ich Ramona's Mobile Massage ins Leben gerufen, einen mobilen Service, der darauf ausgelegt ist, Menschen dort zu erreichen, wo sie bereits sind: am Arbeitsplatz, bei Veranstaltungen, während Gesundheitstagen, bei Geschäftstreffen und zu besonderen Anlässen. Ich lege großen Wert auf Professionalität, Respekt, Diskretion und die Aufmerksamkeit, die jedem Einzelnen zuteilwird. Jede Zusammenarbeit ist anders, und mein Ziel ist es, ein gut organisiertes Erlebnis zu bieten, das auf den Kontext zugeschnitten und so natürlich wie möglich in den Ablauf des Arbeitstages oder der Veranstaltung integriert ist.",
+        "Ramona's Mobile Massage ist mehr als nur ein mobiler Service. Es repräsentiert den Wunsch, den Menschen einen Moment der Aufmerksamkeit und Fürsorge auf eine flexible, professionelle und authentische Weise zu bringen.",
       ],
-      butonConversatie: "Beratungsgespräch vereinbaren",
+      ariaBadge: "Einsatzgebiet",
+      ariaText: "Münster · NRW · Münsterland",
+      butonConversatie: "Gespräch vereinbaren",
+      philosophyBadge: "// Philosophie & Vision",
+      philosophyTitlu1: "Wohlbefinden ist ein Rahmen für Leistung, ",
+      philosophyItalic: "kein temporärer Luxus.",
+      philosophyDesc:
+        "Unsere mobilen therapeutischen Behandlungen werden direkt vor Ort für Unternehmen und Firmenveranstaltungen in Münster und der gesamten Region NRW durchgeführt.",
+      philosophyParagraphs: [
+        "Jedes Erlebnis wird individuell gestaltet, wobei der Schwerpunkt auf tiefer Entspannung, Balance und emotionalem Komfort in einem eleganten und diskreten Format liegt.",
+        "Wir reduzieren Muskelverspannungen, die durch die Schreibtischarbeit entstehen, verbessern die Konzentration und bieten Teams einen authentischen Moment des mentalen Resets direkt während der Arbeitszeit.",
+        "Wir bieten nicht nur eine physische Dienstleistung an — wir bauen eine Kultur des Wohlbefindens auf, die auf die Anforderungen moderner Unternehmen zugeschnitten ist.",
+      ],
       valuesBadge: "// Unsere Werte",
-      valuesTitlu: "Was uns besonders macht",
+      valuesTitlu: "Was uns unterscheidet",
       valuesItems: [
         {
           title: "Diskretion & Respekt",
-          desc: "Jede Sitzung wird mit größter Aufmerksamkeit für Komfort und Privatsphäre durchgeführt – stets in einem strikt professionellen Rahmen.",
+          desc: "Jede Sitzung wird mit größter Aufmerksamkeit für den Komfort und die Privatsphäre der Person in einem streng professionellen Rahmen durchgeführt.",
         },
         {
           title: "Premium-Qualität",
-          desc: "Professionelle Ausstattung, biologisch abbaubare Verbrauchsmaterialien und sorgfältig ausgewählte Bio-Öle – nichts wird dem Zufall überlassen.",
+          desc: "Professionelle Ausrüstung, biologisch abbaubare Materialien und ausgewählte Bio-Öle — nichts wird dem Zufall überlassen.",
         },
         {
-          title: "Auf Ihr Team abgestimmt",
-          desc: "Jedes Programm wird individuell an die Unternehmenskultur angepasst, anstatt einer standardisierten Vorlage zu folgen.",
+          title: "Teamorientiert",
+          desc: "Wir gestalten jedes Programm für die spezifische Kultur Ihres Unternehmens, nicht basierend auf einer generischen Vorlage.",
         },
       ],
-      ctaGlowBadge: "// B2B-Testangebot",
-      ctaGlowTitlu1: "Starten Sie mit einer ",
-      ctaGlowItalic: "kostenlosen Vorführung",
-      ctaGlowTitlu2: " in Ihrem Unternehmen.",
+      ctaGlowBadge: "// B2B Pilotangebot",
+      ctaGlowTitlu1: "Beginnen Sie mit einer ",
+      ctaGlowItalic: "kostenlosen Demo",
+      ctaGlowTitlu2: " in Ihrem Büro.",
       ctaGlowDesc:
-        "Wir bieten einen halbtägigen Probeeinsatz mit einer qualifizierten Massagefachkraft an – vollständig eigenständig und ohne vertragliche oder finanzielle Verpflichtungen im Anschluss.",
-      ctaGlowButton: "Kostenlose Vorführung anfragen",
+        "Wir bieten einen halben Testtag mit einer lizenzierten Therapeutin an, völlig zu Ihren Bedingungen, ohne anschließende vertragliche oder finanzielle Verpflichtungen.",
+      ctaGlowButton: "Kostenlose Demo anfordern",
     },
-
     meta: {
-      title: "Ramona",
-      desc: "Büromassage, betriebliches Wohlbefinden und Gesundheitstagsprogramme. Premium-, diskrete Dienstleistungen direkt an Ihrem Arbeitsplatz.",
-      ogTitle: "Ramona — Premium Firmenmassage",
+      title: "Ramona ",
+      desc: "Büromassage, Corporate Wellbeing und Gesundheitstage. Premium-, diskrete Dienstleistungen direkt an Ihrem Arbeitsplatz.",
+      ogTitle: "Ramona — Premium Corporate Massage",
       ogDesc:
-        "Wohlbefinden am Arbeitsplatz durch ergonomische Stuhlmassage, Gesundheitstage und monatliche Wellnessprogramme für Teams.",
+        "Wohlbefinden am Arbeitsplatz: ergonomische Stuhlmassage, Gesundheitstag-Events, monatliche Teamprogramme.",
     },
-
     notFound: {
       title: "404",
       subtitle: "Seite nicht gefunden",
-      desc: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
-      button: "Zur Startseite",
+      desc: "Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.",
+      button: "Zurück zur Startseite",
     },
-
     nav: {
       acasa: "Startseite",
-      servicii: "Leistungen",
+      servicii: "Dienstleistungen",
       despre: "Über mich",
       contact: "Kontakt",
-      programeaza: "Jetzt buchen",
-      programeazaLungi: "Gespräch vereinbaren",
-      subtitle: "Büro | Unternehmen | Firmenveranstaltungen",
+      programeaza: "Termin buchen",
+      programeazaLungi: "Einen Termin buchen",
+      subtitle: "Büro | Unternehmen | Business Events",
     },
-
     error: {
-      title: "Etwas ist schiefgelaufen",
+      title: "Etwas ist schief gelaufen",
       buttonTryAgain: "Erneut versuchen",
       buttonHome: "Startseite",
     },
-
     cta: {
-      badge: "Kostenlose Vorführung",
-      titlu1: "Starten Sie mit einer",
+      badge: "Kostenlose Demo",
+      titlu1: "Beginnen Sie mit einer",
       titluItalic: "kostenlosen",
-      titlu2: "Vorführung in Ihrem Unternehmen",
+      titlu2: "Demo im Büro",
       descriere:
-        "Eine halbtägige Sitzung mit einer professionellen Massagefachkraft – ohne finanzielle Verpflichtung. Erleben Sie selbst, wie sich die Atmosphäre verändert und wie das Wohlbefinden Ihres Teams unmittelbar gefördert wird.",
-      butonDemo: "Kostenlose Vorführung anfragen",
+        "Ein halber Tag, professioneller Therapeut, keine finanziellen Verpflichtungen. Überzeugen Sie sich selbst, wie sich die Atmosphäre verändert und sich die Energie und das Wohlbefinden des Teams sofort verbessern.",
+      butonDemo: "Kostenlose Demo anfordern",
       butonPachete: "Pakete ansehen",
     },
-
     events: {
-      imgAlt: "Entspannungsmoment im Büro",
+      imgAlt: "Ein Moment der Entspannung im Büro",
       tagHover: "Qualitätszeit",
+      badge: "// Event-Organisation",
       titlu1: "Die Pause, die einen Unterschied macht ",
-      titluItalic: "im Arbeitsalltag.",
+      titluItalic: "an einem Tag im Büro.",
       titlu2: "",
       descriere:
-        "Ein voller Terminkalender lässt oft wenig Raum für Momente zum Durchatmen. Deshalb sind meine Leistungen darauf ausgerichtet, Entspannung direkt an den Arbeitsplatz zu bringen – unkompliziert, komfortabel und leicht in jeden Tagesablauf integrierbar.",
+        "Volle Terminkalender lassen oft wenig Raum für einen Moment der Erholung. Deshalb sind meine Dienstleistungen darauf ausgerichtet, Entspannung genau dorthin zu bringen, wo Menschen arbeiten — einfach, komfortabel und leicht in jeden Zeitplan zu integrieren.",
     },
-
     footer: {
       navTitle: "NAVIGATION",
       contactTitle: "KONTAKT",
       tara: "Deutschland",
       impressum: "Impressum",
-      datenschutz: "Datenschutzerklärung",
+      datenschutz: "Datenschutz",
       cookies: "Cookies",
       euDispute: "EU-Streitbeilegung",
     },
-
     hero: {
-      titlu1: "Professionelle mobile Massage genau dort, wo Sie sie brauchen,",
+      titlu1: "Professionelle mobile Massage direkt dort, wo Sie sie brauchen,",
       titluItalic: "genau dann, wenn Sie sie brauchen.",
       titlu2: "",
       descriere:
-        "Ich komme vollständig ausgestattet und mit voller Aufmerksamkeit zu Ihnen. Jede Sitzung wird individuell an Ihr berufliches Umfeld oder Ihren besonderen Anlass angepasst. Sie bestimmen den Zeitpunkt – ich kümmere mich um den Rest. Verfügbar im Münsterland und den umliegenden Regionen.",
+        "Ich komme voll ausgestattet und mit meiner ungeteilten Aufmerksamkeit. Jede Sitzung wird individuell auf Ihr berufliches Umfeld oder Ihren besonderen Anlass zugeschnitten. Sie wählen die Zeit, und ich kümmere mich um den Rest. Verfügbar im Münsterland und Umgebung.",
       butonConversatie: "Jetzt buchen",
       butonServicii: "Details ansehen",
       imgAlt: "Professionelle mobile Massage",
       badgeTimp: "",
       badgeTimpLung: "",
       badgeDescriere:
-        "Keine Anfahrt erforderlich und kein Zeitverlust für Sie.",
+        "Keine Anreise erforderlich und keine Zeitverschwendung Ihrerseits.",
       badgeDescriereLunga:
-        "Keine Anfahrt erforderlich und kein Zeitverlust für Sie.",
+        "Keine Anreise erforderlich und keine Zeitverschwendung Ihrerseits.",
       stats: {
-        val1: "5,0 ★",
+        val1: "5.0 ★",
         companii: "Bewertungen",
-        partenere: " bei Google",
+        partenere: " auf Google",
         val2: "Mobil",
-        sedinte: "Komplette Ausstattung inklusive",
+        sedinte: "Volle Ausstattung inklusive",
         livrate: "",
         val3: "Premium",
         scor: "Sorgfältig ausgewählte Produkte",
         feedback: "",
       },
     },
-
     problem: {
-      imgAlt: "Entspannung und Körperbewusstsein im Büro",
-      badge: "// Die Realität des Büroalltags",
-      titlu1: "Acht Stunden am Schreibtisch –",
-      titluItalic: "dann Zeit für sich selbst.",
+      imgAlt: "Entspannung und Körperpflege im Büro",
+      badge: "// Dynamik des Büroalltags",
+      titlu1: "Acht Stunden auf einem Stuhl",
+      titluItalic: "dann Zeit für Sie selbst.",
       descriere:
-        "An hektischen Tagen sind Pausen oft das Erste, was aus dem Zeitplan verschwindet. Deshalb sind meine Leistungen darauf ausgerichtet, einen Moment der Entspannung direkt an den Arbeitsplatz zu bringen – ohne zusätzliche Wege und ohne aufwendige Organisation.",
+        "An einem geschäftigen Tag sind Pausen oft das Erste, was aus dem Zeitplan verschwindet. Deshalb sind meine Dienstleistungen darauf ausgelegt, einen Moment der Entspannung direkt dorthin zu bringen, wo Menschen arbeiten, ohne zusätzliche Anfahrtswege und ohne komplizierte Organisation.",
       stats: [
         {
-          n: "−42 %",
-          t: "berichtete Verringerung von Muskelverspannungen bei regelmäßigen Sitzungen",
+          n: "−42%",
+          t: "wahrgenommene Muskelverspannung nach konsequenter Anwendung",
         },
         {
-          n: "+27 %",
-          t: "wahrgenommenes Wohlbefinden während der Arbeitszeit",
+          n: "+27%",
+          t: "allgemeines Komfortgefühl während der Sitzung gemeldet",
         },
         {
           n: "15'",
-          t: "bewusste Entspannungspause mit Fokus auf Körperwahrnehmung",
+          t: "Entspannungspause, die der Körperwahrnehmung gewidmet ist",
         },
       ],
     },
-
     process: {
+      badge: "// Organisation der Dienstleistungen",
       titlu1: "Vier einfache Schritte",
       titluItalic: "",
       titlu2: "",
       pas: "SCHRITT",
       steps: [
         {
-          t: "Erstgespräch",
-          d: "Gemeinsam besprechen wir die Details und finden das passende Format.",
+          t: "Erstes Gespräch",
+          d: "Wir legen gemeinsam die Details und das geeignete Format fest.",
         },
         {
           t: "Planung",
-          d: "Das Angebot wird an Ort, Zeitplan und Teilnehmerzahl angepasst.",
+          d: "Die Organisation wird an den Standort, den Zeitplan und die Anzahl der Teilnehmer angepasst.",
         },
         {
           t: "Durchführung",
-          d: "Ich übernehme die gesamte Vorbereitung und Durchführung vor Ort.",
+          d: "Ich übernehme die Vorbereitung und Erbringung der Dienstleistung vor Ort.",
         },
         {
           t: "Entspannter Abschluss",
-          d: "Die Teilnehmenden genießen die Erfahrung, während ich mich um den Rest kümmere.",
+          d: "Die Teilnehmer genießen den Moment, und ich kümmere mich um den Rest.",
         },
       ],
     },
-
     cookiePage: {
       eyebrow: "Rechtliches",
       metaTitle: "Deutsch",
       title: "Cookie-Richtlinie",
       intro:
-        "Informationen darüber, wie wir Cookies und ähnliche Technologien auf der Website von Ramona's Mobile Massage verwenden.",
+        "Wie wir Cookies und ähnliche Technologien auf der Website von Ramona's Mobile Massage verwenden.",
       sections: {
         whatAreCookies: "Was sind Cookies?",
         whatAreCookiesDesc:
-          "Cookies sind kleine Textdateien, die beim Besuch einer Website auf Ihrem Gerät gespeichert werden. Sie ermöglichen es der Website, Ihr Gerät bei späteren Besuchen wiederzuerkennen oder bestimmte Funktionen bereitzustellen.",
+          "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie ermöglichen es der Website, Ihr Gerät bei späteren Besuchen wiederzuerkennen oder bestimmte Funktionen bereitzustellen.",
         types: "Arten von Cookies",
-        session: "Sitzungs-Cookies",
+        session: "Sitzung",
         sessionDesc:
           "Temporäre Dateien, die aktiv bleiben, bis Sie Ihren Browser schließen.",
-        persistent: "Persistente Cookies",
+        persistent: "Persistent",
         persistentDesc:
-          "Bleiben für einen festgelegten Zeitraum oder bis zur manuellen Löschung auf Ihrem Gerät gespeichert.",
+          "Sie verbleiben für einen festgelegten Zeitraum auf Ihrem Gerät oder bis Sie sie manuell löschen.",
         purposes: "Zwecke",
         purposeList: [
-          "Sicherer Betrieb der Website und grundlegende Funktionen (z. B. Sprachauswahl).",
-          "Speicherung Ihrer Cookie-Einstellungen über das externe Einwilligungsmanagement-Tool.",
-          "Optionale Analyse- oder Marketingfunktionen – nur mit Ihrer ausdrücklichen Zustimmung.",
+          "Sicherer Betrieb der Website und grundlegende Funktionalität (z. B. Sprachauswahl).",
+          "Speicherung Ihrer Cookie-Präferenz über das externe Consent-Tool.",
+          "Optionale Analysen oder Marketing — nur mit Ihrer ausdrücklichen Einwilligung.",
         ],
-        manage: "Verwaltung und Widerruf der Einwilligung",
+        manage: "Verwalten und Widerrufen",
         manageDesc:
-          "Sie können Ihre Cookie-Einwilligung jederzeit über das Einwilligungsbanner (Cookiebot) ändern oder widerrufen. Darüber hinaus können Cookies über die Einstellungen Ihres Browsers blockiert oder gelöscht werden.",
-        note: "Hinweis: Die Einschränkung von Cookies kann die Funktionalität der Website beeinträchtigen, beispielsweise das Kontaktformular, den Sprachwechsel oder die Schnellanruf-Funktion.",
+          "Sie können Ihre Cookie-Einwilligung jederzeit über das Consent-Banner (Cookiebot) widerrufen oder ändern. Sie können Cookies auch in Ihren Browsereinstellungen blockieren oder löschen.",
+        note: "Hinweis: Das Einschränken von Cookies kann die Funktionalität der Website beeinträchtigen, wie z. B. das Kontaktformular, die Sprachauswahl oder die Schnellwahlfunktion.",
         tableTitle: "Cookie-Tabelle",
         table: {
           name: "Name",
           category: "Kategorie",
           purpose: "Zweck",
           duration: "Dauer",
-          essential: "Erforderlich",
+          essential: "Essenziell",
           lang: "Sprachauswahl (DE/EN)",
           months: "Monate",
         },
         footer:
-          "Die vollständige und aktuelle Liste aller Cookies wird über das Einwilligungsmanagement-Tool (Cookiebot) bereitgestellt.",
+          "Eine vollständige und aktuelle Liste der Cookies wird durch das Consent-Tool (Cookiebot) bereitgestellt.",
       },
     },
-
     services: {
-      badge: "// Einsatzbereiche",
-      titlu1: "Drei Möglichkeiten,",
-      titluItalic: "Entspannung",
-      titlu2: "in Ihr Umfeld zu bringen.",
-      butonToate: "Alle Leistungen",
+      badge: "// Kontext-Portfolio",
+      titlu1: "Drei Möglichkeiten, eine",
+      titluItalic: "entspannende Pause",
+      titlu2: "in Ihren Raum zu bringen.",
+      butonToate: "Alle Dienstleistungen",
       detalii: "Details ansehen",
       items: [
         {
           tag: "Entspannung während der Arbeitszeit",
           title: "Entspannungsorientierte Massage",
-          desc: "15–20-minütige Sitzungen auf einem ergonomischen Massagestuhl, die gezielt für Ruhe- und Entspannungsmomente im Arbeitsalltag konzipiert sind.",
+          desc: "15–20-minütige Sitzungen, die direkt auf einem ergonomischen Stuhl durchgeführt werden, konzipiert für Momente der Ruhe und Entspannung während der Arbeitszeit.",
         },
         {
           tag: "Balance und Entspannung",
           title: "Organisierte Entspannungspausen",
-          desc: "Flexible und individuelle mobile Sitzungen, die in berufliche Umgebungen integriert werden, um Teams bewusste Zeit für sich selbst und körperliche Entspannung zu ermöglichen.",
+          desc: "Flexible und personalisierte mobile Sitzungen, die im professionellen Umfeld geplant werden, um dem Team Zeit für sich selbst und körperliche Entspannung zu geben.",
         },
         {
-          tag: "Mobile Entspannungsangebote",
-          title: "Firmenveranstaltungen & Events",
-          desc: "Eine ideale Ergänzung für Konferenzen, Workshops oder Gesundheitstage und eine Möglichkeit, Teilnehmenden eine ruhige und erholsame Atmosphäre zu bieten.",
+          tag: "Mobile Entspannungsdienste",
+          title: "Business Events & Meetings",
+          desc: "Eine ideale Ergänzung zu Konferenzen, Workshops oder Entspannungstagen, die den Teilnehmern eine ruhige und tröstliche Atmosphäre bietet.",
         },
       ],
     },
-
     trustBar: {
       badge: "",
       titlu1: "Jeder Mensch ist einzigartig.",
       wordRelaxare: "ENTSPANNUNG",
       titluItalic: "Genau das inspiriert mich.",
       descriere:
-        "Ich arbeite mit verschiedenen Techniken – von Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage sowie Fußreflexzonenmassage bis hin zu Lomi Lomi und sorgfältig ausgewählten Aromaölen. Die Techniken können einzeln oder kombiniert angewendet werden – je nach Wunsch und Situation. Neben jeder einzelnen Technik stehen Aufmerksamkeit für Details und ein ausgewogener Ansatz im Mittelpunkt jeder Anwendung.",
+        "Ich verwende eine Vielzahl von Techniken, die von Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage sowie Fußreflexzonenmassage bis hin zu Lomi Lomi und sorgfältig ausgewählten Aromaölen reichen. Die Techniken können einzeln oder in Kombination angewendet werden, abhängig von Ihren Vorlieben und dem Moment. Jenseits jeder spezifischen Technik definieren Liebe zum Detail und ein ausgewogener Ansatz jede Erfahrung.",
       statRegiune: "Regionale Abdeckung",
-      statExperienta: "Erfahrung mit mobilen Dienstleistungen",
-      legalBadge: "Professionelle Entspannung / Nicht-medizinische Leistungen",
+      statExperienta: "Erfahrung in mobilen Dienstleistungen",
+      legalBadge: "Professionelle Entspannung / Nicht-medizinische Dienste",
       legalTitlu: "Wichtiger rechtlicher Hinweis:",
+      legalDescriere:
+        "Unsere mobilen Dienstleistungen dienen ausschließlich der körperlichen Entspannung und dem Wohlbefinden und bewahren einen streng professionellen und nicht-erotischen Charakter. Diese Dienstleistungen stellen keine medizinischen Behandlungen, therapeutischen oder kurativen Interventionen dar, behandeln keine Beschwerden oder Krankheiten und ersetzen unter keinen Umständen spezialisierte medizinische Beratung, autorisierte Diagnosen oder von Ärzten oder qualifiziertem medizinischem Personal verschriebene Behandlungspläne.",
       items: [
         {
           title: "Büromassage",
           label:
-            "Geeignet für Unternehmen und professionelle Arbeitsumgebungen. Die Sitzungen konzentrieren sich auf Nacken, Schultern und Rücken; weitere Bereiche sind auf Anfrage möglich. Die Durchführung erfolgt auf einem Massagestuhl oder einer Massageliege und wird an die jeweiligen räumlichen Gegebenheiten angepasst.",
+            "Geeignet für Unternehmen und professionelle Räumlichkeiten. Die Sitzungen konzentrieren sich auf Nacken, Schultern und Rücken, und andere Bereiche können auf Anfrage einbezogen werden. Durchgeführt auf einem Massagestuhl oder einer Massageliege, angepasst an den Raum und die Anforderungen der Location.",
         },
         {
-          title: "Firmenveranstaltungen & Workshops",
+          title: "Business Events & Workshops",
           label:
-            "Eine geschätzte Ergänzung für Konferenzen, Workshops, Messen und Unternehmensveranstaltungen, die den Teilnehmenden einen besonderen Moment der Entspannung in professionellem Rahmen bietet.",
+            "Eine willkommene Ergänzung zu Konferenzen, Workshops, Messen und Firmenveranstaltungen, die den Teilnehmern einen Moment der Entspannung in einem professionellen Umfeld bietet.",
         },
         {
           title: "Gesundheitstage",
           label:
-            "Geeignet für betriebliche Gesundheitsprogramme und Initiativen zur Förderung des Wohlbefindens am Arbeitsplatz.",
+            "Geeignet für Mitarbeiterprogramme und Initiativen, die sich auf das Wohlbefinden am Arbeitsplatz konzentrieren.",
         },
         {
           title: "Hotels & Wellnesszentren",
           label:
-            "Leistungen für Hotels, Wellnesszentren und besondere Veranstaltungen für Gäste.",
+            "Dienstleistungen verfügbar für Hotels, Wellnesszentren und spezielle Veranstaltungen für Gäste.",
         },
         {
           title: "Besondere Anlässe",
           label:
-            "Ob Jubiläum oder anderer besonderer Anlass – die Leistungen werden diskret und stilvoll in die Veranstaltung integriert.",
+            "Ob es sich um einen Geburtstag oder einen anderen besonderen Anlass handelt, die Dienstleistungen werden diskret und elegant in die Veranstaltung integriert.",
         },
       ],
     },
   },
   EN: {
     impressumPage: {
-      metaTitle: "Imprint — Ramona's Mobile Massage",
+      metaTitle: "Legal Notice — Ramona's Mobile Massage",
       metaDesc: "Provider identification pursuant to § 5 DDG and § 18 MStV.",
       eyebrow: "Legal",
-      title: "Imprint",
+      title: "Legal Notice",
       intro:
-        "Provider identification pursuant to the German Digital Services Act (DDG) § 5 and the State Media Treaty (MStV) § 18 for the Ramona's Mobile Massage website.",
+        "Provider identification pursuant to the Digital Services Act (DDG) § 5 and the State Media Treaty (MStV) § 18 for the Ramona's Mobile Massage website.",
       sections: {
-        provider: "Content Provider",
+        provider: "Responsible for content",
         providerName: "Ramona Aciu",
         address: "Schorlemerstraße 11, 48351 Everswinkel",
         contact: "Contact",
         phone: "Phone:",
         phoneSub: "WhatsApp Message",
-        email: "E-Mail:",
+        email: "Email:",
         tax: "Tax Information",
         taxNumber: "",
         smallBusiness:
-          "Note: As a small business under § 19 UStG, VAT is neither charged nor shown.",
+          "Note: As a small business owner pursuant to § 19 UStG, VAT is neither charged nor displayed.",
         titleLabel: "Professional Title",
-        profession: "Massage Practitioner (Wellness & Relaxation Massage)",
+        profession: "Massage Therapist (Wellness and Relaxation Massage)",
         grantedIn: "Granted in: Germany",
-        responsibility: "Editorial Responsibility (according to § 18 MStV)",
+        responsibility: "Editorial responsibility (pursuant to § 18 MStV)",
         responsibilityName: "Ramona Aciu",
         dispute: "EU Dispute Resolution",
         disputeDesc:
-          "The European Commission provides an Online Dispute Resolution (ODR) platform:",
+          "The European Commission provides a platform for online dispute resolution (ODR):",
         disputeObligation:
-          "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
-        liability: "Liability for Content and Links",
+          "We are neither willing nor obligated to participate in dispute resolution proceedings before a consumer arbitration body.",
+        liability: "Limitation of Liability (Content and Links)",
         liabilityDesc:
-          "As a service provider, we are responsible for our own content in accordance with § 7 para. 1 DDG. According to §§ 8–10 DDG, we are not obliged to monitor third-party information transmitted or stored. The respective external provider is responsible for the content of linked websites.",
+          "As a service provider, we are responsible for our own content in accordance with § 7(1) of the German Data Protection Act (DDG). In accordance with §§ 8 to 10 of the DDG, we are not obligated to monitor information transmitted by third parties. The respective external provider is responsible for the content of the pages to which links are provided.",
         copyright: "Copyright",
         copyrightDesc:
-          "The content and works on this website are subject to German copyright law. Any reproduction, editing, distribution, or use beyond the limits of copyright law requires the written consent of the respective author.",
+          "The content and works on this site are subject to German copyright law. Reproduction, processing, distribution, and any kind of use outside the limits of copyright law require the written consent of the author.",
       },
     },
-
     servicesPage: {
       metaTitle: "Prices & Services — Ramona's Mobile Massage",
       metaDesc:
-        "Office massage, corporate events, hotels and special occasions.",
+        "Massage at the office, corporate events, hotels, and special occasions.",
       titlu1: "Office Massage & ",
       titluItalic: "Business Events",
       descriere:
-        "For companies, offices, corporate events, workshops and Health Days.",
+        "For companies, offices, corporate events, workshops, and Health Days.",
       whyTitle: "Why Ramona's Mobile Massage?",
       whyDesc:
-        "Directly at your location, with complete equipment, flexible and individually tailored – discreet and professional.",
-      ethicalBadge: "Ethical Guideline",
-      ethicalTitle: "Relaxation & Wellbeing Only",
+        "Directly on-site, fully equipped, flexible, and tailored to your needs – discreet and professional.",
+      ethicalBadge: "Ethics Policy",
+      ethicalTitle: "Exclusively Relaxation & Well-being",
       ethicalSub: "100% Non-Erotic",
       module1Title: "Rates & Duration",
-      startingFrom: "Prices starting from",
+      startingFrom: "Prices starting at",
       quote: "",
       module2Badge: "Hotels & Wellness Centers",
       module2Title: "Hotels, Wellness Centers & Special Occasions",
-      vipMinBadge: "Minimum Booking Duration",
+      vipMinBadge: "Minimum booking duration",
       vipMinText:
-        "For these bookings, massage sessions are performed as full-body treatments in a relaxing and personalized setting. The minimum booking duration is 120 minutes, which can be divided flexibly among several people, for example 2 × 60 minutes or 3 × 40 minutes. Full payment is required upon booking confirmation.",
+        "For these bookings, massage sessions are full-body treatments provided in a relaxed and personalized setting. The minimum booking duration is 120 minutes, which can be flexibly divided among several people, for example 2 × 60 minutes or 3 × 40 minutes. Full payment is required upon confirmation of the appointment.",
       practicalInfoTitle: "Practical Information",
       practicalInfo: [
-        "Prices may vary depending on the number of participants, event type, booking duration and location.",
-        "Travel costs are included within the Münsterland region. Additional charges may apply outside this area.",
+        "Prices may vary depending on the number of people, the type of event and context, the duration of the reservation, and the location.",
+        "Travel costs are included for the Münsterland region. Additional costs may apply for locations outside this region.",
         "Bookings are subject to availability and must be confirmed in advance.",
-        "Payment can be made in cash or by bank transfer. Invoices are available.",
+        "Payment can be made in cash or by bank transfer, with an invoice issued.",
       ],
-      btnProposal: "📩 Book / Request a Quote",
-      legalBadge: "Important Notice",
+      btnProposal: "📩 Schedule / Request a quote",
+      legalBadge: "Important note",
       legalDesc:
-        "All services are intended exclusively for relaxation, comfort and general wellbeing. They are non-erotic in nature and do not constitute medical or therapeutic treatment. Services are provided only to healthy individuals. They do not replace medical advice, diagnosis or treatment. Responsibility for personal health remains with the client.",
+        "All services offered are intended exclusively for relaxation, comfort, and general well-being. They are not of an erotic nature and do not constitute medical or therapeutic treatments. Treatments are performed on a healthy body. They do not constitute a diagnosis and do not replace the consultation, recommendations, or treatment provided by specialized medical personnel. Responsibility for one’s own health lies with the client.",
       perSession: "/ session",
       popular: "Recommended",
-
       rates: [
         {
           time: "15 minutes",
           price: "21 €",
-          detail: "A welcome break during a busy day.",
+          detail: "A welcome break in the rhythm of an active day.",
         },
         {
           time: "20 minutes",
           price: "26 €",
-          detail: "A relaxing moment seamlessly integrated into your schedule.",
+          detail:
+            "A moment of relaxation seamlessly integrated into your schedule.",
         },
         {
           time: "25 minutes",
           price: "31 €",
           detail:
-            "The ideal duration for a comfortable and balanced experience.",
+            "The ideal duration to enjoy a comfortable and balanced experience.",
         },
         {
           time: "30 minutes",
           price: "36 €",
-          detail: "More time dedicated to relaxation and wellbeing.",
+          detail: "More time dedicated to relaxation and well-being.",
         },
       ],
     },
-
     agbPage: {
       eyebrow: "Legal",
       title: "Terms & Conditions",
       intro:
-        "These terms and conditions govern the use of this website and the booking of services provided by Ramona's Mobile Massage.",
+        "These terms govern the use of this website and the booking of services provided by Ramona's Mobile Massage.",
       callout:
-        'These terms constitute a legally binding agreement between you and Ramona\'s Mobile Massage ("we", "us"). By using this website or booking our services, you confirm that you have read, understood, and accepted these terms.',
+        'These terms constitute a legally binding agreement between you and Ramona\'s Mobile Massage ("we", "us"). By using this website or booking our services, you confirm that you have read, understood and accepted these terms.',
       sections: [
         {
           index: "01.",
-          title: "Scope & Services",
+          title: "Scope & services",
           content:
-            "We provide mobile wellness and relaxation massage services for businesses, events, hotels, and private clients throughout the Münsterland and NRW region.",
+            "We provide mobile wellness and relaxation massages for businesses, events and private clients in the Münsterland / NRW region.",
         },
         {
           index: "02.",
-          title: "Contract & Booking",
+          title: "Contract & booking",
           content:
-            "Requests submitted via contact form, email, WhatsApp, or telephone are non-binding. A service agreement is concluded only after our written confirmation.",
+            "Enquiries via contact form, email or phone are non-binding. A contract is formed only upon our written confirmation.",
         },
         {
           index: "03.",
-          title: "Pricing & Payment",
+          title: "Pricing & payment",
           content:
-            "The prices stated in the booking confirmation apply. Unless otherwise agreed, invoices are payable within 14 days without deduction.",
+            "The prices stated in the confirmation apply. Unless otherwise agreed, invoices are due within 14 days net.",
         },
         {
           index: "05.",
-          title: "Client Responsibilities",
+          title: "Client cooperation",
           content:
-            "The client is responsible for providing a suitable, safe, and quiet environment for the service, as well as access to electricity and running water if required.",
+            "The client provides a suitable, quiet room and access to power and running water.",
         },
       ],
       cancellation: {
-        title: "Cancellation Policy",
+        title: "Cancellation",
         items: [
           "More than 7 days before the appointment: free cancellation.",
-          "3–7 days before the appointment: 50% of the agreed fee.",
-          "Less than 48 hours before the appointment or no-show: 100% of the agreed fee.",
+          "3–7 days before: 50 % of the fee.",
+          "Less than 48 hours / no-show: 100 % of the fee.",
         ],
       },
     },
-
     datenschutzPage: {
       metaTitle: "Privacy Policy — Ramona's Mobile Massage",
       metaDesc:
@@ -701,330 +696,298 @@ export const translations = {
       eyebrow: "Legal",
       title: "Privacy Policy",
       intro:
-        "This privacy policy explains how we collect, use, and protect personal data when you interact with our massage services and this website.",
+        "This policy describes how we collect, use, and protect personal data when you interact with our massage services and this website.",
       sections: {
         controller: "Data Controller",
         controllerDesc:
-          "The controller responsible for data processing under the General Data Protection Regulation (GDPR) is:",
+          "The data controller responsible under the General Data Protection Regulation (GDPR) is:",
         email: "Email",
         phone: "Phone",
-
-        dataTypes: "What Data We Collect",
-
-        providedData: "Data Provided by You",
+        dataTypes: "What data we collect",
+        providedData: "Data provided by you",
         providedDesc:
-          "When you use our contact form, send us an email, or contact us by phone, we may collect your name, company name, email address, phone number, location, and the content of your inquiry.",
-
-        autoData: "Automatically Collected Data",
+          "When you use the contact form, send us an email, or call us: name, company, email address, phone number, location, and the content of your request.",
+        autoData: "Automatically collected data",
         autoDesc:
-          "IP address, browser and device information, timestamps, referring URLs, and visited pages (server logs retained for up to 30 days).",
-
-        noSensitive: "No Sensitive Data",
-        noThirdParty: "No Third-Party Data",
-        noMinors: "No Data from Minors",
-
-        purposes: "Purpose of Processing",
+          "IP address, browser/device information, timestamps, referring URL, pages visited (server logs, max. 30 days).",
+        noSensitive: "No sensitive data",
+        noThirdParty: "No third-party data",
+        noMinors: "No data on minors",
+        purposes: "Purpose of processing",
         purposesList: [
           "Providing and organizing massage services.",
-          "Communicating with you regarding appointments, quotations, and follow-ups.",
+          "Communication with you (appointments, offers, follow-up).",
           "Website security and fraud prevention.",
-          "Compliance with legal and tax obligations.",
+          "Legal and tax compliance.",
         ],
-
-        legalBasis: "Legal Basis (GDPR)",
-
+        legalBasis: "Legal bases (GDPR)",
         consent: "Consent",
         consentDesc:
-          "Where you have explicitly given consent for a specific processing activity.",
-
-        contract: "Performance of a Contract",
+          "When you have explicitly given your consent for a specific processing activity.",
+        contract: "Performance of a contract",
         contractDesc:
-          "For preparing and fulfilling massage service and event agreements.",
-
+          "For the preparation and fulfillment of the massage/event contract.",
         legalObligation: "Legal Obligation",
-        legalObligationDesc:
-          "To comply with applicable tax, accounting, and commercial regulations.",
-
+        legalObligationDesc: "To comply with tax and commercial regulations.",
         legitInterest: "Legitimate Interest",
         legitInterestDesc:
-          "Ensuring the secure operation of the website and improving our services.",
-
-        recipients: "Recipients & Processors",
+          "Secure operation of the website and improvement of services.",
+        recipients: "Recipients and processors",
         recipientsList: [
-          "EU-based hosting providers (Cloudflare and/or Netlify, depending on configuration).",
-          "Accountants and tax consultants for statutory obligations.",
-          "Public authorities where legally required.",
+          "Hosting provider established in the EU (Cloudflare / Netlify, depending on configuration).",
+          "Accountant and tax advisor for statutory purposes.",
+          "Authorities, where required by law.",
         ],
-
         dpaNote:
-          "All processors operate under a Data Processing Agreement in accordance with Article 28 GDPR.",
-
-        cookies: "Cookies & Tracking",
+          "All processors operate under a data processing agreement in accordance with Art. 28 GDPR.",
+        cookies: "Cookies and tracking",
         cookiesDesc:
-          "We only use strictly necessary cookies in accordance with § 25 para. 2 no. 2 TTDSG. No marketing tracking is used. Further details can be found in our ",
+          "We use only strictly necessary cookies (§ 25 para. 2 no. 2 TTDSG). There is no tracking for marketing purposes. Details in ",
         cookiesPolicy: "Cookie Policy",
-
-        retention: "Data Retention",
+        retention: "Retention Period",
         retentionDesc:
-          "Personal data is retained only for as long as necessary. Contractual documents and invoices are stored for 6–10 years in accordance with § 147 AO and § 257 HGB.",
-
+          "We retain personal data only for as long as necessary. Contractual data and invoices are retained for 6–10 years in accordance with § 147 AO / § 257 HGB.",
         rights: "Your Rights",
         rightsBadges: {
           access: "Access",
           rectify: "Rectification",
           erase: "Erasure",
           restrict: "Restriction",
-          portability: "Data Portability",
+          portability: "Portability",
           object: "Objection",
-          withdraw: "Withdraw Consent",
+          withdraw: "Withdrawal",
         },
-
         complaint:
-          "Right to lodge a complaint: You may contact the Data Protection Commissioner of North Rhine-Westphalia (LDI NRW) — Kavalleriestr. 2–4, 40213 Düsseldorf, Germany.",
-
-        minors: "Children's Data",
+          "Right to file a complaint: You can contact the Data Protection Commissioner of North Rhine-Westphalia (LDI NRW) — Kavalleriestr. 2–4, 40213 Düsseldorf.",
+        minors: "Data of minors",
         minorsDesc:
-          "We do not knowingly collect data from individuals under the age of 18. By using this website, you confirm that you are at least 18 years old.",
-
+          "We do not collect data from individuals under the age of 18. By using this site, you confirm that you are at least 18 years old.",
         encryption: "SSL/TLS Encryption",
         encryptionDesc:
-          "This website uses SSL/TLS encryption (https://) to ensure secure data transmission.",
-
-        updates: "Policy Updates",
+          "This site uses SSL/TLS encryption for security (https://).",
+        updates: "Updates",
         updatesDesc:
-          "We may update this privacy policy from time to time. The current version is always available on this page.",
+          "We may update this policy. The current version is always available on this page.",
       },
     },
-
     contactPage: {
       metaTitle: "Contact",
       metaDesc:
-        "Book a free demonstration or request a quote for your corporate wellbeing program.",
+        "Schedule a free demo or request a quote for your corporate wellness program.",
       badge: "Contact",
       titlu1: "Let's",
       titluItalic: "talk",
       titlu2: ".",
-
-      descriere: "Send an email or a WhatsApp message.",
-
-      infoWhatsappSub: "Send a message via WhatsApp",
+      descriere:
+        "For bookings or inquiries, send me an email or a WhatsApp message.",
+      infoWhatsappSub: "Send a message on WhatsApp",
       infoLinkedinSub: "Connect on LinkedIn",
       infoMailSub: "Send an email",
-      infoPhoneSub: "Send a message via WhatsApp",
+      infoPhoneSub: "Send a message on WhatsApp",
       infoMapSub:
-        "Münsterland · Tecklenburger Land · Osnabrücker Land · surrounding areas of Emsland, OWL and Ruhrgebiet · Up to approximately 80 km around Münster",
-
+        "Münsterland · Tecklenburger Land · Osnabrücker Land · neighboring areas in Emsland, OWL, and the Ruhr region · Up to approximately 80 km around the city of Münster",
       form: {
         name: "Name",
         company: "Company",
-        email: "Business Email",
+        email: "Business email",
         phone: "Phone (optional)",
-        size: "Number of Employees",
+        size: "Number of employees",
         sizeOptions: ["Under 30", "30–100", "100–300", "300+"],
-
         topic: "Interest",
         topicOptions: [
-          "Monthly Program",
+          "Monthly schedule",
           "Event / Health Day",
-          "Free Demonstration",
-          "Information Only",
+          "Free demo",
+          "Just information",
         ],
-
         msg: "Message",
-        placeholder: "Tell us what you have in mind...",
-
-        btnSend: "Send Message",
-        btnSent: "Sent · Thank You",
-
-        toastSuccess: "Thank you! We will get back to you shortly.",
-
+        placeholder: "Tell us what's on your mind...",
+        btnSend: "Send message",
+        btnSent: "Sent · Thank you",
+        toastSuccess: "Thank you! We'll contact you shortly.",
         privacy:
           "By submitting this form, you agree to the processing of your data in accordance with our privacy policy.",
       },
     },
-
     aboutPage: {
       metaTitle: "About Me — Ramona's Mobile Massage",
       metaDesc:
-        "Behind Ramona's Mobile Massage is me, Ramona. Discover the story behind my project...",
-
+        "Behind Ramona's Mobile Massage is me, Ramona. Learn the story of my project...",
       badge: "",
-
       titlu1: "About ",
       titluItalic: "me",
       titlu2: "",
-
       descriere: [
         "Behind Ramona's Mobile Massage is me, Ramona.",
-
-        "The idea for this project was born from my previous professional experiences and my belief that, in today's fast-paced world, people need moments to pause and dedicate a little time to themselves. We are often focused on responsibilities, deadlines, and daily routines, while personal wellbeing is pushed to the background.",
-
-        "With this in mind, I created Ramona's Mobile Massage, a mobile service designed to reach people where they already are: at work, during events, health days, business meetings, and special occasions. I place great value on professionalism, respect, discretion, and individual attention. Every collaboration is unique, and my goal is to provide a well-organized experience that fits naturally into the working day or event schedule.",
-
-        "Ramona's Mobile Massage is more than just a mobile service. It represents the desire to bring moments of care, attention, and relaxation closer to people in a flexible, professional, and authentic way.",
+        "The idea for this project was born from my previous professional experiences and the belief that, in today’s fast-paced world, people need moments to pause and give themselves a little attention. We are often focused on responsibilities, deadlines, and the rhythm of daily activities, and time for ourselves takes a back seat.",
+        "From this perspective, I created Ramona’s Mobile Massage, a mobile service designed to reach people where they already are: at work, at events, during health-focused days, business meetings, and special occasions. I value professionalism, respect, discretion, and the attention given to each individual. Every collaboration is different, and my goal is to provide a well-organized experience, tailored to the context and integrated as naturally as possible into the flow of the workday or event.",
+        "Ramona's Mobile Massage is more than just a mobile service. It represents the desire to bring a moment of attention and care to people, in a flexible, professional, and authentic way.",
       ],
-
-      butonConversatie: "Schedule a Consultation",
+      ariaBadge: "Service Area",
+      ariaText: "Münster · NRW · Münsterland",
+      butonConversatie: "Schedule a conversation",
+      philosophyBadge: "// Philosophy & Vision",
+      philosophyTitlu1: "well-being is a framework for performance, ",
+      philosophyItalic: "not a temporary luxury.",
+      philosophyDesc:
+        "Our mobile therapeutic treatments are delivered directly on-site for companies and corporate events in Münster and the entire NRW region.",
+      philosophyParagraphs: [
+        "Each experience is individually designed, focusing on deep relaxation, balance, and emotional comfort in an elegant and discreet format.",
+        "We reduce muscle tension caused by desk posture, improve focus, and offer teams an authentic moment of mental reset directly during working hours.",
+        "We do not just provide a physical service — we build a culture of well-being, calibrated to the demands of modern businesses.",
+      ],
       valuesBadge: "// Our Values",
-      valuesTitlu: "What Makes Us Different",
+      valuesTitlu: "What Sets Us Apart",
       valuesItems: [
         {
           title: "Discretion & Respect",
-          desc: "Every session is carried out with the utmost attention to comfort and privacy, always within a strictly professional environment.",
+          desc: "Every session is conducted with the utmost attention to the person’s comfort and privacy, in a strictly professional setting.",
         },
         {
           title: "Premium Quality",
-          desc: "Professional equipment, biodegradable consumables, and carefully selected organic oils — nothing is left to chance.",
+          desc: "Professional equipment, biodegradable supplies, and selected organic oils—nothing is left to chance.",
         },
         {
-          title: "Team-Focused",
-          desc: "Every program is tailored to your company’s culture rather than following a generic template.",
+          title: "Team-Oriented",
+          desc: "We design each program for your company’s specific culture, not based on a generic template.",
         },
       ],
-
       ctaGlowBadge: "// B2B Pilot Offer",
       ctaGlowTitlu1: "Start with a ",
-      ctaGlowItalic: "free demonstration",
+      ctaGlowItalic: "free demo",
       ctaGlowTitlu2: "at your office.",
       ctaGlowDesc:
-        "We offer a half-day trial with a qualified massage therapist, fully self-sufficient and with no contractual or financial obligations afterward.",
-      ctaGlowButton: "Request a Free Demo",
+        "We offer a half-day trial with a licensed therapist, completely on your own terms, with no subsequent contractual or financial obligations.",
+      ctaGlowButton: "Request a free demo",
     },
     meta: {
-      title: "Ramona",
-      desc: "Office massage, corporate wellbeing, and health day programs. Premium, discreet services delivered directly to your workplace.",
+      title: "Ramona ",
+      desc: "Office massage, corporate wellbeing, and health days. Premium, discreet services delivered directly to your workplace.",
       ogTitle: "Ramona — Premium Corporate Massage",
       ogDesc:
-        "Workplace wellbeing through ergonomic chair massage, health day events, and monthly team wellness programs.",
+        "Wellbeing at work: ergonomic chair massage, Gesundheitstag events, monthly team programs.",
     },
     notFound: {
       title: "404",
-      subtitle: "Page Not Found",
+      subtitle: "Page not found",
       desc: "The page you are looking for does not exist or has been moved.",
-      button: "Back Home",
+      button: "Back to home",
     },
     nav: {
       acasa: "Home",
       servicii: "Services",
       despre: "About",
       contact: "Contact",
-      programeaza: "Book Now",
-      programeazaLungi: "Schedule a Meeting",
+      programeaza: "Schedule",
+      programeazaLungi: "Schedule an appointment",
       subtitle: "Office | Companies | Business Events",
     },
     error: {
-      title: "Something Went Wrong",
+      title: "Something went wrong",
       buttonTryAgain: "Try Again",
       buttonHome: "Home",
     },
     cta: {
-      badge: "Free Demonstration",
-
-      titlu1: "Start with a",
+      badge: "Free Demo",
+      titlu1: "Start with a demo",
       titluItalic: "free",
-      titlu2: "office demonstration",
+      titlu2: "at the office",
       descriere:
-        "A half-day session with a professional therapist and no financial obligation. See for yourself how the atmosphere changes and how your team’s energy and wellbeing improve instantly.",
-      butonDemo: "Request Free Demo",
-      butonPachete: "View Packages",
+        "Half a day, professional therapist, no financial obligations. See for yourself how the atmosphere transforms, and the team’s energy and well-being instantly improve.",
+      butonDemo: "Request a free demo",
+      butonPachete: "View packages",
     },
-
     events: {
-      imgAlt: "Relaxation moment at the office",
-      tagHover: "Quality Time",
+      imgAlt: "A moment of relaxation at the office",
+      tagHover: "Quality time",
+      badge: "// Event Organization",
       titlu1: "The break that makes a difference ",
-      titluItalic: "during a workday.",
+      titluItalic: "in a day at the office.",
       titlu2: "",
       descriere:
-        "Busy schedules often leave little room for a moment to recharge. That's why my services are designed to bring relaxation directly to where people work—simple, comfortable, and easy to integrate into any schedule.",
+        "Busy schedules often leave little room for a moment of respite. That’s why my services are designed to bring relaxation right where people work—simple, comfortable, and easy to integrate into any schedule.",
     },
-
     footer: {
       navTitle: "NAVIGATION",
       contactTitle: "CONTACT",
       tara: "Germany",
-      impressum: "Legal Notice",
-      datenschutz: "Privacy Policy",
+      impressum: "Legal Information",
+      datenschutz: "Privacy",
       cookies: "Cookies",
       euDispute: "EU Dispute Resolution",
     },
     hero: {
-      titlu1:
-        "Professional mobile massage delivered exactly where you need it,",
+      titlu1: "Professional mobile massage right where you need it,",
       titluItalic: "exactly when you need it.",
       titlu2: "",
       descriere:
-        "I arrive fully equipped and give you my full attention throughout the session. Every treatment is individually tailored to your workplace, event, or special occasion. You simply choose the time — I take care of everything else. Available across the Münsterland region and surrounding areas.",
+        "I arrive fully equipped and with my undivided attention. Every session is individually tailored to your professional setting or special occasion. You choose the time, and I take care of the rest. Available in the Münsterland region and surrounding areas.",
       butonConversatie: "Book now",
-      butonServicii: "View details",
+      butonServicii: "See details",
       imgAlt: "Professional mobile massage",
       badgeTimp: "",
       badgeTimpLung: "",
-      badgeDescriere: "No travel required and no time wasted on your side.",
-      badgeDescriereLunga:
-        "No travel required and no time wasted on your side.",
+      badgeDescriere: "No travel required and no time wasted on your end.",
+      badgeDescriereLunga: "No travel required and no time wasted on your end.",
       stats: {
         val1: "5.0 ★",
         companii: "reviews",
         partenere: " on Google",
-
         val2: "Mobile",
-        sedinte: "Fully equipped service",
+        sedinte: "Full equipment included",
         livrate: "",
-
         val3: "Premium",
         scor: "Carefully selected products",
         feedback: "",
       },
     },
     problem: {
-      imgAlt: "Relaxation and body awareness at the office",
-      badge: "// The Reality of Office Hours",
-      titlu1: "Eight hours at a desk —",
+      imgAlt: "Relaxation and body care at the office",
+      badge: "// Office work dynamics",
+      titlu1: "Eight hours in a chair",
       titluItalic: "then time for yourself.",
       descriere:
-        "On a busy day, breaks are often the first things to disappear from the schedule. That is why my services are designed to bring a moment of relaxation directly to where people work — with no additional travel and no complicated arrangements.",
+        "On a busy day, breaks are often the first things to disappear from the schedule. That’s why my services are designed to bring a moment of relaxation right where people work, without extra travel and without complicated organization.",
       stats: [
         {
           n: "−42%",
-          t: "reported reduction in muscle tension after consistent sessions",
+          t: "perceived muscle tension after consistent use",
         },
         {
           n: "+27%",
-          t: "overall sense of comfort reported during working hours",
+          t: "overall sense of comfort reported during the session",
         },
         {
           n: "15'",
-          t: "dedicated relaxation break focused on body awareness",
+          t: "relaxation break dedicated to body awareness",
         },
       ],
     },
-
     process: {
+      badge: "// Organization of Services",
       titlu1: "Four simple steps",
       titluItalic: "",
       titlu2: "",
       pas: "STEP",
       steps: [
         {
-          t: "Initial consultation",
-          d: "We work out the details and the right format together.",
+          t: "Initial discussion",
+          d: "We establish the details and appropriate format together.",
         },
         {
           t: "Planning",
-          d: "The arrangement is tailored to the location, schedule, and number of participants.",
+          d: "The organization is tailored to the location, schedule, and number of participants.",
         },
         {
-          t: "Execution",
-          d: "I handle all preparation and delivery of the service on-site.",
+          t: "Implementation",
+          d: "I handle the preparation and delivery of the service on-site.",
         },
         {
-          t: "A relaxed finish",
-          d: "Participants enjoy the experience while I take care of the rest.",
+          t: "Relaxed conclusion",
+          d: "Participants enjoy the moment, and I take care of the rest.",
         },
       ],
     },
-
     cookiePage: {
       eyebrow: "Legal",
       metaTitle: "English",
@@ -1034,25 +997,25 @@ export const translations = {
       sections: {
         whatAreCookies: "What are cookies?",
         whatAreCookiesDesc:
-          "Cookies are small text files stored on your device when you visit a website. They allow the site to recognise your device on subsequent visits or to provide certain functionalities.",
+          "Cookies are small text files stored on your device when you visit a website. They allow the site to recognize your device on subsequent visits or to provide certain features.",
         types: "Types of cookies",
         session: "Session",
         sessionDesc:
           "Temporary files that remain active until you close your browser.",
         persistent: "Persistent",
         persistentDesc:
-          "Remain on your device for a set period or until you delete them manually.",
+          "They remain on your device for a set period or until you manually delete them.",
         purposes: "Purposes",
         purposeList: [
-          "Secure operation of the website and core functionality (e.g. language selection).",
-          "Storing your cookie preference via the external consent management tool.",
+          "Secure operation of the site and basic functionality (e.g., language selection).",
+          "Storing your cookie preference via the external consent tool.",
           "Optional analytics or marketing — only with your explicit consent.",
         ],
-        manage: "Managing and withdrawing consent",
+        manage: "Manage and withdraw",
         manageDesc:
-          "You may withdraw or change your cookie consent at any time via the consent banner (Cookiebot). You can also block or delete cookies through your browser settings.",
-        note: "Note: Restricting cookies may affect site functionality, such as the contact form, language switching, or the quick-call feature.",
-        tableTitle: "Cookie table",
+          "You can withdraw or change your cookie consent at any time via the consent banner (Cookiebot). You can also block or delete cookies in your browser settings.",
+        note: "Note: Restricting cookies may affect the functionality of the website, such as the contact form, language selection, or quick call feature.",
+        tableTitle: "Cookie Table",
         table: {
           name: "Name",
           category: "Category",
@@ -1063,72 +1026,72 @@ export const translations = {
           months: "months",
         },
         footer:
-          "The complete and up-to-date list of cookies is provided by the consent management tool (Cookiebot).",
+          "A complete and up-to-date list of cookies is provided by the consent tool (Cookiebot).",
       },
     },
-
     services: {
       badge: "// Context Portfolio",
       titlu1: "Three ways to bring",
-      titluItalic: "the relaxation break",
-      titlu2: "into your space.",
-      butonToate: "All Services",
-      detalii: "View Details",
+      titluItalic: "a relaxing break",
+      titlu2: "to your space.",
+      butonToate: "All services",
+      detalii: "See details",
       items: [
         {
-          tag: "Relaxation during working hours",
+          tag: "Relaxation during work hours",
           title: "Relaxation-focused massage",
-          desc: "Sessions of 15–20 minutes performed directly in an ergonomic chair, designed for moments of rest and relaxation during the working day.",
+          desc: "15–20-minute sessions performed directly in an ergonomic chair, designed for moments of rest and relaxation during work hours.",
         },
         {
           tag: "Balance and relaxation",
-          title: "Organised relaxation breaks",
-          desc: "Flexible and individual mobile sessions, planned within professional settings to give teams dedicated time for themselves and for physical relaxation.",
+          title: "Organized relaxation breaks",
+          desc: "Flexible and personalized mobile sessions, scheduled in professional settings to give the team time for themselves and physical relaxation.",
         },
         {
           tag: "Mobile relaxation services",
-          title: "Business Events & Gatherings",
-          desc: "An ideal addition to conferences, workshops, or wellness days, offering participants a calm and restorative atmosphere.",
+          title: "Business Events & Meetings",
+          desc: "An ideal complement to conferences, workshops, or relaxation days, offering participants a calm and comforting atmosphere.",
         },
       ],
     },
-
     trustBar: {
       badge: "",
       titlu1: "Every person is unique.",
       wordRelaxare: "RELAXATION",
-      titluItalic: "That is exactly what inspires me.",
+      titluItalic: "That's exactly what inspires me.",
       descriere:
-        "I draw on a variety of techniques — from Wellnessmassage, Tiefengewebsmassage, Faszienmassage, Kopf- und Gesichtsmassage, and Fußreflexzonenmassage, to Lomi Lomi and carefully selected aromatic oils. Techniques can be used individually or combined, depending on preferences and the moment. Beyond any single technique, attention to detail and a balanced approach define every experience.",
+        "I use a variety of techniques ranging from wellness massage, deep tissue massage, fascia massage, head and face massage, and foot reflexology, to Lomi Lomi and carefully selected aromatic oils. The techniques can be used individually or in combination, depending on your preferences and the moment. Beyond any specific technique, attention to detail and a balanced approach define every experience.",
       statRegiune: "Regional coverage",
       statExperienta: "Experience in mobile services",
-      legalBadge: "Professional Relaxation / Non-Medical Services",
-      legalTitlu: "Important legal notice:",
+      legalBadge: "Professional relaxation / Non-medical services",
+      legalTitlu: "Important Legal Notice:",
+      legalDescriere:
+        "Our mobile services are strictly for physical relaxation and well-being, maintaining a highly professional and non-erotic nature. These services do not constitute medical treatments, therapeutic or curative interventions, do not treat any ailments or illnesses, and under no circumstances replace specialized medical advice, authorized diagnosis, or treatment plans prescribed by doctors or qualified medical personnel.",
       items: [
         {
           title: "Office Massage",
           label:
-            "Suitable for companies and professional settings. Sessions focus on the neck, shoulders, and back, with other areas available upon request. Performed on a massage chair or massage table, adapted to the space and location requirements.",
+            "Suitable for companies and professional spaces. Sessions focus on the neck, shoulders, and back, and other areas can be included upon request. Performed on a massage chair or massage table, adapted to the space and requirements of the location.",
         },
         {
           title: "Business Events & Workshops",
           label:
-            "A valued addition to conferences, workshops, trade fairs, and corporate events, offering participants a dedicated moment of relaxation in a professional setting.",
+            "A welcome addition to conferences, workshops, trade shows, and corporate events, offering participants a moment dedicated to relaxation in a professional setting.",
         },
         {
-          title: "Gesundheitstage",
+          title: "Health Days",
           label:
-            "Suitable for employee wellness programmes and workplace wellbeing initiatives.",
+            "Suitable for employee programs and initiatives focused on workplace well-being.",
         },
         {
-          title: "Hotels & Wellness Centres",
+          title: "Hotels & Wellness Centers",
           label:
-            "Services available for hotels, wellness centres, and special events organised for guests.",
+            "Services available for hotels, wellness centers, and special events organized for guests.",
         },
         {
           title: "Special Occasions",
           label:
-            "Whether for an anniversary or another special occasion, services are integrated discreetly and elegantly into the event.",
+            "Whether it’s a birthday or another special occasion, the services are discreetly and elegantly integrated into the event.",
         },
       ],
     },
