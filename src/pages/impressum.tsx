@@ -75,20 +75,6 @@ export function ImpressumPage() {
         </p>
       </LegalSection>
 
-      {/* TITLU PROFESIONAL */}
-      <LegalSection title={i.sections.titleLabel}>
-        <p>
-          {i.sections.profession}
-          <br />
-          <span className="text-foreground/50">{i.sections.grantedIn}</span>
-        </p>
-      </LegalSection>
-
-      {/* RESPONSABILITATE EDITORIALĂ */}
-      <LegalSection title={i.sections.responsibility}>
-        <p>{i.sections.responsibilityName}</p>
-      </LegalSection>
-
       {/* SOLUȚIONAREA LITIGIILOR */}
       <LegalSection title={i.sections.dispute}>
         <p>
