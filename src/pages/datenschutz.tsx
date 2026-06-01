@@ -7,7 +7,7 @@ import {
 import { Helmet } from "react-helmet-async";
 
 export const COMPANY = {
-  name: "Ramona [Nachname]",
+  name: "Ramona Aciu",
   form: "Einzelunternehmen",
   street: "[Straße und Hausnummer]",
   city: "[PLZ] [Ort]",
@@ -23,23 +23,17 @@ export function DatenschutzPage() {
   const d = t.datenschutzPage;
 
   return (
-    <LegalLayout
-      eyebrow={d.eyebrow}
-      title={d.title}
-      intro={d.intro}
-      operator="Ramona's Mobile Massage"
-      updated="21.05.2026"
-    >
+    <LegalLayout eyebrow={d.eyebrow} title={d.title} intro={d.intro}>
       <Helmet>
         <title>{d.metaTitle}</title>
         <meta name="description" content={d.metaDesc} />
       </Helmet>
-      <LegalSection index="01." title={d.sections.controller}>
+      <LegalSection title={d.sections.controller}>
         <p>{d.sections.controllerDesc}</p>
         <p>
-          Ramona [Nachname]
+          Ramona
           <br />
-          [Adresse]
+          Schorlemerstraße 11, 48351 Everswinkel
           <br />
           <span className="text-foreground/50">{d.sections.email} · </span>
           <a
@@ -51,7 +45,7 @@ export function DatenschutzPage() {
         </p>
       </LegalSection>
 
-      <LegalSection index="02." title={d.sections.dataTypes}>
+      <LegalSection title={d.sections.dataTypes}>
         <p className="font-medium text-foreground">{d.sections.providedData}</p>
         <p>{d.sections.providedDesc}</p>
         <p className="font-medium text-foreground mt-4">

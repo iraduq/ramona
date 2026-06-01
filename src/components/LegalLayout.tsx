@@ -6,19 +6,10 @@ type Props = {
   eyebrow: string;
   title: string;
   intro: string;
-  operator: string;
-  updated: string;
   children: ReactNode;
 };
 
-export function LegalLayout({
-  eyebrow,
-  title,
-  intro,
-  operator,
-  updated,
-  children,
-}: Props) {
+export function LegalLayout({ eyebrow, title, intro, children }: Props) {
   return (
     <div className="relative overflow-hidden bg-background">
       <BotanicalSVG
@@ -38,16 +29,6 @@ export function LegalLayout({
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
           {intro}
         </p>
-        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[0.18em] text-muted-foreground font-mono">
-          <span>
-            <span className="text-foreground/40">Operator · </span>
-            <span className="text-foreground">{operator}</span>
-          </span>
-          <span>
-            <span className="text-foreground/40">Update · </span>
-            <span className="text-foreground">{updated}</span>
-          </span>
-        </div>
       </header>
 
       <div className="mx-auto max-w-4xl px-6 lg:px-10 pb-24 space-y-10">
@@ -57,22 +38,19 @@ export function LegalLayout({
   );
 }
 
+// ───── COMPONENTA ACTUALIZATĂ FĂRĂ INDEX ─────
 export function LegalSection({
-  index,
   title,
   children,
 }: {
-  index: string;
   title: string;
   children: ReactNode;
 }) {
   return (
     <section className="grid md:grid-cols-12 gap-6 md:gap-10 border-t border-border/60 pt-10">
       <div className="md:col-span-3">
-        <div className="text-display text-5xl text-accent/30 leading-none">
-          {index}
-        </div>
-        <h2 className="mt-3 text-lg font-medium text-foreground leading-tight">
+        {/* Titlul perfect aliniat sus, fără mt-3 */}
+        <h2 className="text-lg font-medium text-foreground leading-tight">
           {title}
         </h2>
       </div>
@@ -99,6 +77,7 @@ export function LegalCallout({ children }: { children: ReactNode }) {
   );
 }
 
+// ───── FOOTER NAV ACTUALIZAT PENTRU LIMBA ROMÂNĂ PE CHEIA "EN" ─────
 export function LegalFooterNav({ language }: { language: "DE" | "EN" }) {
   const labels =
     language === "DE"
@@ -110,11 +89,11 @@ export function LegalFooterNav({ language }: { language: "DE" | "EN" }) {
           home: "← Startseite",
         }
       : {
-          agb: "Terms",
-          privacy: "Privacy",
-          cookies: "Cookies",
-          impressum: "Imprint",
-          home: "← Home",
+          agb: "Termeni și Condiții",
+          privacy: "Confidențialitate",
+          cookies: "Cookie-uri",
+          impressum: "Date legale (Impressum)",
+          home: "← Acasă",
         };
 
   return (

@@ -173,31 +173,32 @@ export const translations = {
       intro:
         "Anbieterkennzeichnung gemäß § 5 Digitale-Dienste-Gesetz (DDG) und § 18 Medienstaatsvertrag (MStV) für die Website von Ramona's Mobile Massage.",
       sections: {
-        provider: "Anbieterin",
-        disclaimer:
-          "Hinweis: Die angebotenen Massagen dienen ausschließlich der Entspannung und dem Wohlbefinden. Es handelt sich nicht um eine Heilbehandlung im Sinne des Heilpraktikergesetzes.",
+        provider: "Inhaber der Website",
+        providerName: "Ramona Aciu",
+        address: "Schorlemerstraße 11, 48351 Everswinkel",
         contact: "Kontakt",
-        phone: "Telefon",
-        email: "E-Mail",
+        phone: "Telefon:",
+        email: "E-Mail:",
         tax: "Umsatzsteuer & Steuernummer",
-        taxNumber: "Steuernummer (§ 27a UStG): ",
+        taxNumber: "Steuernummer: 346/5000/4820",
         smallBusiness:
-          "Hinweis: Als Kleinunternehmerin im Sinne von § 19 UStG wird ggf. keine Umsatzsteuer ausgewiesen.",
+          "Hinweis: Als Kleinunternehmerin im Sinne von § 19 UStG wird keine Umsatzsteuer ausgewiesen.",
         titleLabel: "Berufsbezeichnung",
         profession: "Masseurin (Wellness- und Entspannungsmassage)",
         grantedIn: "Verliehen in: Deutschland",
-        responsibility: "Redaktionell verantwortlich (§ 18 Abs. 2 MStV)",
+        responsibility: "Inhaltlich Verantwortlich gemäß § 18 MStV",
+        responsibilityName: "Ramona Aciu",
         dispute: "EU-Streitschlichtung",
         disputeDesc:
           "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
         disputeObligation:
           "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
-        liability: "Haftung für Inhalte & Links",
+        liability: "Haftungsausschluss – Disclaimer",
         liabilityDesc:
-          "Als Diensteanbieterin sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte verantwortlich. Nach §§ 8 bis 10 DDG besteht keine Pflicht, übermittelte fremde Informationen zu überwachen. Für verlinkte externe Inhalte ist der jeweilige Anbieter verantwortlich.",
+          "Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte fremde Informationen zu überwachen. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde.",
         copyright: "Urheberrecht",
         copyrightDesc:
-          "Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung der Autorin.",
+          "Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers.",
       },
     },
     servicesPage: {
@@ -546,38 +547,34 @@ export const translations = {
   },
   EN: {
     impressumPage: {
-      metaTitle: "Impressum — Ramona's Mobile Balance Therapie",
+      metaTitle: "Impressum — Ramona's Mobile Massage",
       metaDesc: "Identificarea furnizorului conform § 5 DDG și § 18 MStV.",
       eyebrow: "Legal",
       title: "Impressum (Informații legale)",
       intro:
-        "Identificarea furnizorului conform Legii serviciilor digitale (DDG) § 5 și Tratatului media de stat (MStV) § 18 pentru site-ul Ramona's Mobile Balance Therapie.",
+        "Identificarea furnizorului conform Legii serviciilor digitale (DDG) § 5 și Tratatului media de stat (MStV) § 18 pentru site-ul Ramona's Mobile Massage.",
       sections: {
-        provider: "Furnizor",
-        providerName:
-          "Ramona [Numele tău de familie] (Ramona's Mobile Balance Therapie)",
+        provider: "Deținătorul site-ului",
+        providerName: "Ramona Aciu",
         address: "Schorlemerstraße 11, 48351 Everswinkel",
-        disclaimer:
-          "Notă: Masajele oferite servesc exclusiv relaxării și stării de bine. Acestea nu reprezintă un tratament medical în sensul Legii privind practicienii în medicină (Heilpraktikergesetz).",
         contact: "Contact",
-        phone: "Telefon: [Numărul tău de telefon]",
-        email: "E-Mail: ramonasmobilemassage@gmail.com",
+        phone: "Telefon:",
+        email: "E-Mail:",
         tax: "Informații Fiscale",
-        taxNumber: "Număr fiscal (Steuernummer): 346/5000/4820",
+        taxNumber: "",
         smallBusiness:
           "Notă: În calitate de mic întreprinzător conform § 19 UStG, nu se percepe și nu se afișează TVA-ul.",
         titleLabel: "Titlu profesional",
         profession: "Maseuză (Masaj de wellness și relaxare)",
         grantedIn: "Acordat în: Germania",
-        responsibility: "Responsabil editorial (§ 18 alin. 2 MStV)",
-        responsibilityName:
-          "Ramona [Numele tău de familie], Schorlemerstraße 11, 48351 Everswinkel",
+        responsibility: "Responsabil editorial (conform § 18 MStV)",
+        responsibilityName: "Ramona Aciu",
         dispute: "Soluționarea litigiilor UE",
         disputeDesc:
-          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS): https://ec.europa.eu/consumers/odr/.",
+          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS):",
         disputeObligation:
           "Nu suntem dispuși sau obligați să participăm la proceduri de soluționare a litigiilor în fața unei entități de arbitraj pentru consumatori.",
-        liability: "Răspunderea pentru conținut și link-uri",
+        liability: "Limitarea răspunderii (Conținut și Link-uri)",
         liabilityDesc:
           "În calitate de furnizor de servicii, suntem responsabili pentru propriul conținut conform § 7 alin. 1 DDG. Conform §§ 8 până la 10 DDG, nu avem obligația de a monitoriza informațiile transmise de terți. Furnizorul extern respectiv este responsabil pentru conținutul paginilor către care există link-uri.",
         copyright: "Drepturi de autor",
@@ -617,7 +614,7 @@ export const translations = {
       btnProposal: "📩 Programează / Cere ofertă",
       legalBadge: "Notă importantă",
       legalDesc:
-        "Toate serviciile oferite sunt destinate exclusiv relaxării, confortului și stării generale de bine. Acestea nu au caracter erotic și nu reprezintă tratamente medicale sau terapeutice. Serviciile nu înlocuiesc consultul medical, diagnosticul sau recomandările personalului medical de specialitate.",
+        "Toate serviciile oferite sunt destinate exclusiv relaxării, confortului și stării generale de bine. Acestea nu au caracter erotic și nu reprezintă tratamente medicale sau terapeutice. Aplicările se realizează pe un corp sănătos. Nu constituie diagnostic și nu înlocuiesc consultul, recomandările sau tratamentul personalului medical de specialitate. Responsabilitatea privind starea proprie de sănătate revine clientului.",
       perSession: "/ ședință",
       popular: "Recomandat",
       rates: [
