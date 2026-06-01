@@ -778,11 +778,12 @@ export const translations = {
       infoWhatsappSub: "Trimite un mesaj pe WhatsApp",
       infoLinkedinSub: "Conectează-te pe LinkedIn",
       titlu2: ".",
-      descriere: "Trimite un Email sau un mesaj  pe WhatsApp.",
+      descriere:
+        "Pentru rezervări sau  întrebări scrie-mi pe email sau trimite-mi un mesaj pe WhatsApp.",
       infoMailSub: "Trimite un email",
       infoPhoneSub: "Trimite un mesaj pe WhatsApp",
       infoMapSub:
-        "Münsterland · Tecklenburger Land · Osnabrücker Land · zone limitrofe din Emsland, OWL și Ruhrgebiet · Până la aproximativ 80 km în jurul orașului Münster",
+        "Münsterland și regiunile limitrofe (Tecklenburger Land, Osnabrücker Land, precum și părți din Niederrhein, Emsland, OWL și Ruhrgebiet). Arie de acoperire: până la aproximativ 80 km în jurul orașului Münster.",
       form: {
         name: "Nume",
         company: "Companie",

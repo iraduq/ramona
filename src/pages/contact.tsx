@@ -115,9 +115,7 @@ export function Contact() {
             <li className="flex gap-3 items-start">
               <MapPin className="h-5 w-5 text-brand mt-0.5 shrink-0" />
               <div>
-                <div className="text-ink font-medium">
-                  Arie de acoperire. NRW
-                </div>
+                <div className="text-ink font-medium">Zona de activitate:</div>
                 <div className="text-ink-muted text-xs sm:text-sm mt-0.5">
                   {t.contactPage.infoMapSub}
                 </div>
