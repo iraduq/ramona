@@ -886,7 +886,6 @@ export const translations = {
     events: {
       imgAlt: "Moment de relaxare la birou",
       tagHover: "Timp de calitate",
-      badge: "// Relaxare",
       titlu1: "Pauza care face diferența ",
       titluItalic: "într-o zi la birou.",
       titlu2: "", // Lăsăm gol deoarece am mutat totul în 1 și Italic
@@ -954,7 +953,6 @@ export const translations = {
       ],
     },
     process: {
-      badge: "// Organizare",
       titlu1: "Patru pași simpli",
       titluItalic: "",
       titlu2: "",

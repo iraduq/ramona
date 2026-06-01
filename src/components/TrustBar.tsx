@@ -61,7 +61,8 @@ export function TrustBar() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-bg-soft py-24 md:py-32 select-none overflow-hidden antialiased text-ink"
+      // AM MODIFICAT AICI: din "py-24 md:py-32" în "pt-24 pb-10 md:pt-32 md:pb-12"
+      className="relative w-full bg-bg-soft pt-24 pb-10 md:pt-32 md:pb-12 select-none overflow-hidden antialiased text-ink"
     >
       <style dangerouslySetInnerHTML={{ __html: trustBarStyles }} />
 
@@ -137,12 +138,10 @@ export function TrustBar() {
           </p>
         </motion.div>
 
-        {/* ── GRID MODERN EXOTIC (Zig-Zag) ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 w-full relative z-10 items-start lg:pb-20">
+        {/* AM MODIFICAT AICI: am eliminat "lg:pb-20" pentru a tăia padding-ul excedentar de sub elemente */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 w-full relative z-10 items-start">
           {categories.map((item, index) => {
             const isHovered = hoveredIndex === index;
-
-            // MAGIA ESTE AICI: Dacă index-ul este impar (1 și 3, adică pozele 2 și 4), le împingem în jos
             const isStaggered = index % 2 !== 0;
             const staggerClass = isStaggered ? "lg:mt-24" : "lg:mt-0";
 
@@ -151,7 +150,6 @@ export function TrustBar() {
                 key={item.id}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                // h-fit se mulează exact pe poză, iar staggerClass le dă forma de "Val"
                 className={`h-fit relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-ink cursor-pointer group shadow-[0_8px_30px_color-mix(in_srgb,var(--color-ink)_4%,transparent)] hover:shadow-2xl transition-all duration-500 ${staggerClass}`}
               >
                 {/* 1. IMAGINEA PRINCIPALĂ */}
@@ -201,26 +199,6 @@ export function TrustBar() {
               </div>
             );
           })}
-        </div>
-
-        {/* FOOTER */}
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-border-soft flex flex-col space-y-8 relative z-10">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 px-1 text-center sm:text-left">
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-12 gap-y-4">
-              <div className="flex items-baseline justify-center gap-2">
-                <span className="text-display text-xl font-light text-ink">
-                  NRW
-                </span>
-                <span className="text-[10px] tracking-[0.2em] text-ink-muted uppercase font-bold">
-                  {t.trustBar.statRegiune}
-                </span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-2 tracking-[0.2em] uppercase font-bold text-[10px] text-ink">
-              <span className="w-2 h-2 rounded-full bg-brand block animate-pulse" />
-              {t.trustBar.legalBadge}
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -192,7 +192,8 @@ export function Servicii() {
       </Helmet>
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-4 pb-16 md:pb-20 lg:pb-24 overflow-hidden bg-background">
+      {/* Aici am redus mult padding-ul de jos (pb-6 md:pb-8 lg:pb-12 în loc de pb-16/24) */}
+      <section className="relative pt-4 pb-2 md:pb-8 lg:pb-12 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           {/* Glows */}
           <div
@@ -297,7 +298,8 @@ export function Servicii() {
       </div>
 
       {/* ─── PREȚURI ─── */}
-      <section className="relative py-16 md:py-24 lg:py-32 bg-bg-soft overflow-hidden">
+      {/* Aici am redus padding-ul de sus (pt-8 md:pt-10 lg:pt-12) și l-am lăsat intact pe cel de jos (pb-16 md:pb-24 lg:pb-32) */}
+      <section className="relative pt-8 md:pt-10 lg:pt-12 pb-16 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
         {/* Botanicals Prețuri */}
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"

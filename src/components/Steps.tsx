@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 
 import type { Variants } from "framer-motion";
-import { Sparkles } from "lucide-react";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -81,14 +80,6 @@ export function Process() {
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mb-24 border-b border-ink/10 pb-10"
         >
-          {/* BADGE — mai vizibil */}
-          <div className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface/70 border border-ink/10 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-brand-soft" />
-            <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-ink-muted font-semibold">
-              {t.process.badge}
-            </p>
-          </div>
-
           <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] tracking-tight">
             {t.process.titlu1}
             <span className="text-brand-soft">.</span> <br />

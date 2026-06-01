@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import eventImg from "../assets/durereCap.avif";
 
@@ -62,14 +61,7 @@ export function Events() {
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center gap-2 mb-6"
-          >
-            <span className="text-[#baa090]">
-              <Sparkles className="w-3.5 h-3.5" strokeWidth={1.5} />
-            </span>
-            <p className="text-[9px] uppercase tracking-[0.35em] text-[#baa090] font-mono font-bold">
-              {t.events.badge}
-            </p>
-          </motion.div>
+          ></motion.div>
           <motion.h2
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-light tracking-tight leading-[1.05] text-[#1a1816]"
@@ -102,14 +94,7 @@ export function Events() {
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center gap-2 mb-6"
-          >
-            <span className="text-[#baa090]">
-              <Sparkles className="w-3.5 h-3.5" strokeWidth={1.5} />
-            </span>
-            <p className="text-[9px] uppercase tracking-[0.35em] text-[#baa090] font-mono font-bold">
-              {t.events.badge}
-            </p>
-          </motion.div>
+          ></motion.div>
           <motion.h2
             variants={itemVariants}
             className="text-4xl font-light tracking-tight leading-[1.05] text-[#1a1816]"
