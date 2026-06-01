@@ -392,14 +392,13 @@ export const translations = {
         "Launches, Kick-offs, Town Halls oder Gesundheitstage — wir kommen mit einem engagierten Team, kompletter Infrastruktur und einem diskreten Ambiente. Wir kümmern uns um jedes Detail der körperlichen Entspannung, sodass nur die Erinnerung an das Erlebnis bleibt, nicht die Logistik.",
     },
     footer: {
-      descriere:
-        "Premium Wellbeing-Architektur für moderne Unternehmen. Wir bringen Fokus und Balance direkt in Ihren Arbeitsalltag.",
-      regiune: "Region Münsterland · NRW",
-      navTitle: "Navigation",
-      contactTitle: "Kontakt",
+      navTitle: "NAVIGATION",
+      contactTitle: "KONTAKT",
       tara: "Deutschland",
       impressum: "Impressum",
       datenschutz: "Datenschutz",
+      cookies: "Cookies",
+      euDispute: "EU-Streitbeilegung",
     },
     hero: {
       badge: "Corporate Wellbeing",
@@ -547,30 +546,35 @@ export const translations = {
   },
   EN: {
     impressumPage: {
-      metaTitle: "Impressum — Ramona's Mobile Massage",
+      metaTitle: "Impressum — Ramona's Mobile Balance Therapie",
       metaDesc: "Identificarea furnizorului conform § 5 DDG și § 18 MStV.",
       eyebrow: "Legal",
       title: "Impressum (Informații legale)",
       intro:
-        "Identificarea furnizorului conform Legii serviciilor digitale (DDG) § 5 și Tratatului media (MStV) § 18 pentru site-ul Ramona's Mobile Massage.",
+        "Identificarea furnizorului conform Legii serviciilor digitale (DDG) § 5 și Tratatului media de stat (MStV) § 18 pentru site-ul Ramona's Mobile Balance Therapie.",
       sections: {
         provider: "Furnizor",
+        providerName:
+          "Ramona [Numele tău de familie] (Ramona's Mobile Balance Therapie)",
+        address: "Schorlemerstraße 11, 48351 Everswinkel",
         disclaimer:
           "Notă: Masajele oferite servesc exclusiv relaxării și stării de bine. Acestea nu reprezintă un tratament medical în sensul Legii privind practicienii în medicină (Heilpraktikergesetz).",
         contact: "Contact",
-        phone: "Telefon",
-        email: "E-Mail",
-        tax: "TVA și Număr de identificare fiscală",
-        taxNumber: "Număr de identificare fiscală (§ 27a UStG): ",
+        phone: "Telefon: [Numărul tău de telefon]",
+        email: "E-Mail: ramonasmobilemassage@gmail.com",
+        tax: "Informații Fiscale",
+        taxNumber: "Număr fiscal (Steuernummer): 346/5000/4820",
         smallBusiness:
-          "Notă: În calitate de mic întreprinzător conform § 19 UStG, este posibil ca TVA-ul să nu fie perceput/afișat.",
+          "Notă: În calitate de mic întreprinzător conform § 19 UStG, nu se percepe și nu se afișează TVA-ul.",
         titleLabel: "Titlu profesional",
-        profession: "Maseur (Masaj de wellness și relaxare)",
+        profession: "Maseuză (Masaj de wellness și relaxare)",
         grantedIn: "Acordat în: Germania",
         responsibility: "Responsabil editorial (§ 18 alin. 2 MStV)",
+        responsibilityName:
+          "Ramona [Numele tău de familie], Schorlemerstraße 11, 48351 Everswinkel",
         dispute: "Soluționarea litigiilor UE",
         disputeDesc:
-          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS):",
+          "Comisia Europeană pune la dispoziție o platformă pentru soluționarea online a litigiilor (OS): https://ec.europa.eu/consumers/odr/.",
         disputeObligation:
           "Nu suntem dispuși sau obligați să participăm la proceduri de soluționare a litigiilor în fața unei entități de arbitraj pentru consumatori.",
         liability: "Răspunderea pentru conținut și link-uri",
@@ -891,14 +895,13 @@ export const translations = {
         "Agendele pline lasă adesea puțin loc pentru un moment de respiro. De aceea, serviciile mele sunt concepute pentru a aduce relaxare direct acolo unde oamenii își desfășoară activitatea, simplu, confortabil și ușor de integrat în orice program.",
     },
     footer: {
-      descriere:
-        "Arhitectura premium de wellbeing pentru companii moderne. Aducem focus si echilibru direct in viata de zi cu zi la birou.",
-      regiune: "Regiunea Münsterland · NRW",
-      navTitle: "Navigare",
-      contactTitle: "Contact",
-      tara: "Germania",
-      impressum: "Date legale",
-      datenschutz: "Confidentialitate",
+      navTitle: "NAVIGARE", // Sau "NAVIGATION" dacă vrei în germană pe varianta DE
+      contactTitle: "CONTACT", // Sau "KONTAKT"
+      tara: "Germania", // Sau "Deutschland"
+      impressum: "Date legale", // Sau "Impressum"
+      datenschutz: "Confidentialitate", // Sau "Datenschutz"
+      cookies: "Cookies",
+      euDispute: "EU-Streitbeilegung",
     },
     hero: {
       badge: "Corporate Wellbeing",

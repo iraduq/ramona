@@ -5,12 +5,12 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="w-full bg-[#f8f6f3] border-t border-neutral-200 py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* ───── BRAND ───── */}
-        <div className="col-span-1 md:col-span-2 space-y-4">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white border border-neutral-200">
+    <footer className="w-full bg-[#fcfbf9] border-t border-neutral-200/60">
+      {/* ───── TOP BRAND BAR ───── */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-14 pb-10 border-b border-neutral-200/60">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <Link to="/" className="flex items-center gap-4 group">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-neutral-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -26,138 +26,126 @@ export function Footer() {
                 />
               </svg>
             </div>
-
             <div className="flex flex-col">
-              <span className="text-[14px] font-bold tracking-[0.15em] uppercase text-neutral-900">
-                Ramona's
+              <span className="text-[17px] font-bold tracking-[0.18em] uppercase text-neutral-900">
+                RAMONA'S MOBILE MASSAGE
               </span>
-              <span className="text-[9px] font-bold tracking-[0.18em] uppercase text-[#7a6456]">
-                Mobile Balance Therapie
+              <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#8a7666]">
+                Münsterland · NRW
               </span>
             </div>
           </Link>
-
-          <p className="text-[13px] text-neutral-700 leading-relaxed max-w-sm pt-2">
-            {t.footer.descriere}
+          <p className="text-[12px] text-neutral-400 tracking-wide md:text-right">
+            Corporate Wellbeing · Est. 2019
           </p>
-
-          <p className="text-[12px] font-bold text-[#7a6456] uppercase tracking-wider">
-            {t.footer.regiune}
-          </p>
-
-          <div className="pt-3 space-y-2 text-[12px] text-neutral-700">
-            <a
-              href="mailto:ramonasmobilemassage@gmail.com"
-              className="hover:text-black block py-2" // py-2 adaugă spațiu vertical
-              aria-label="Trimite email la ramonasmobilemassage@gmail.com"
-            >
-              ramonasmobilemassage@gmail.com
-            </a>
-            <a
-              href="tel:+4917663167411"
-              className="hover:text-black block py-2" // py-2 adaugă spațiu vertical
-              aria-label="Sună la +49 176 63167411"
-            >
-              +49 176 63167411
-            </a>
-          </div>
         </div>
+      </div>
 
-        {/* ───── NAV ───── */}
-        <div className="space-y-4">
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900">
+      {/* ───── MAIN GRID ───── */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
+        {/* ── NAVIGARE ── */}
+        <div className="flex flex-col">
+          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
             {t.footer.navTitle}
-          </p>
-
-          <ul className="space-y-3">
-            {["/", "/services", "/about-us", "/contact"].map((path) => (
-              <li key={path}>
-                <Link
-                  to={path}
-                  aria-label={`Go to ${path === "/" ? "Home" : path.replace("/", "")} page`}
-                  className="text-[13px] font-medium text-neutral-700 hover:text-[#4a3b32] transition-colors"
-                >
-                  {path === "/"
-                    ? t.nav.acasa
-                    : t.nav[path.replace("/", "") as keyof typeof t.nav]}
-                </Link>
-              </li>
-            ))}
+          </h4>
+          <ul className="flex flex-col gap-3">
+            <li>
+              <Link
+                to="/"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
+              >
+                {t.nav.acasa}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/servicii"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
+              >
+                {t.nav.servicii}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/despre"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
+              >
+                {t.nav.despre}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
+              >
+                {t.nav.contact}
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* ───── LEGAL ───── */}
-        <div className="space-y-4">
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900">
+        {/* ── LEGAL ── */}
+        <div className="flex flex-col">
+          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
             {t.footer.contactTitle}
-          </p>
-
-          <ul className="space-y-3">
+          </h4>
+          <ul className="flex flex-col gap-3">
             <li>
               <Link
                 to="/legal-notice"
-                aria-label={`Go to ${"Legal Notice"} page`}
-                className="text-[13px] font-medium hover:text-[#4a3b32]"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
               >
                 {t.footer.impressum}
               </Link>
             </li>
-
             <li>
               <Link
                 to="/confidentiality"
-                aria-label={`Go to ${"Confidentiality"} page`}
-                className="text-[13px] font-medium hover:text-[#4a3b32]"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
               >
                 {t.footer.datenschutz}
               </Link>
             </li>
-
-            {/* GDPR / Cookies (IMPORTANT IN GERMANY) */}
             <li>
               <Link
                 to="/cookies"
-                aria-label={`Go to ${"Cookies"} page`}
-                className="text-[13px] font-medium hover:text-[#4a3b32]"
+                className="text-[14px] text-neutral-700 hover:text-[#b7744f] transition-colors duration-200"
               >
-                Cookies
+                {t.footer.cookies}
               </Link>
             </li>
-
-            {/* EU ODR (OBLIGATORIU pentru UE B2C) */}
             <li>
               <a
                 href="https://ec.europa.eu/consumers/odr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] font-medium hover:text-[#4a3b32]"
+                className="text-[14px]
+                text-neutral-700 hover:text-[#b7744f] transition-colors
+                duration-200"
               >
-                EU-Streitbeilegung
+                {t.footer.euDispute}
               </a>
             </li>
           </ul>
-
-          <div className="pt-4 border-t border-neutral-300">
-            <p className="text-[12px] font-bold text-neutral-800">
+          <div className="mt-6 pt-5 border-t border-neutral-200 w-full max-w-[280px]">
+            <span className="text-[13px] font-semibold text-neutral-800">
               {t.footer.tara}
-            </p>
+            </span>
           </div>
         </div>
       </div>
 
-      {/* ───── LEGAL COMPANY LINE ───── */}
-      {/* Am schimbat text-neutral-500 in text-neutral-700 pentru contrast */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-10 text-[10px] text-neutral-700 leading-relaxed">
-        Ramona · Mobile Balance Therapie · Deutschland ·
-      </div>
-
-      {/* ───── COPYRIGHT ───── */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 mt-6 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row justify-between gap-4">
-        {/* Am schimbat text-neutral-600 in text-neutral-700 pentru contrast */}
-        <p className="text-[11px] text-neutral-700 uppercase tracking-widest font-bold">
-          © {new Date().getFullYear()} Ramona's Mobile Balance Therapie
-        </p>
+      {/* ───── BOTTOM LINE ───── */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pb-8">
+        <div className="border-t border-neutral-200 pt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <p className="text-[11px] text-neutral-400">
+            © {new Date().getFullYear()} Ramona's Mobile Balance Therapie | Büro
+            | Unternehmen | Business Events & Sport
+          </p>
+        </div>
       </div>
     </footer>
   );
 }
+
+export default Footer;
