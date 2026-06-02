@@ -772,14 +772,13 @@ export const translations = {
       metaDesc:
         "Programează o demonstrație gratuită sau cere o ofertă pentru programul tău de wellbeing corporate.",
       badge: "Contact",
-      titlu1: "Hai să",
-      titluItalic: "vorbim",
+      titlu1: "Pentru rezervări",
+      titluItalic: "sau întrebări:",
 
       infoWhatsappSub: "Trimite un mesaj pe WhatsApp",
       infoLinkedinSub: "Conectează-te pe LinkedIn",
       titlu2: ".",
-      descriere:
-        "Pentru rezervări sau  întrebări scrie-mi pe email sau trimite-mi un mesaj pe WhatsApp.",
+      descriere: "",
       infoMailSub: "Trimite un email",
       infoPhoneSub: "Trimite un mesaj pe WhatsApp",
       infoMapSub:
