@@ -60,14 +60,15 @@ export function Contact() {
           </div>
 
           <ul className="mt-8 sm:mt-10 space-y-6 sm:space-y-5 text-sm">
+            {/* Email Section */}
             <li className="flex gap-3 items-start">
               <Mail className="h-5 w-5 text-brand mt-0.5 shrink-0" />
               <div>
+                <div className="text-ink-muted text-xs sm:text-sm mb-0.5">
+                  {t.contactPage.infoMailSub}
+                </div>
                 <div className="text-ink font-medium">
                   ramonasmobilemassage@gmail.com
-                </div>
-                <div className="text-ink-muted text-xs sm:text-sm mt-0.5">
-                  {t.contactPage.infoMailSub}
                 </div>
               </div>
             </li>
@@ -82,11 +83,11 @@ export function Contact() {
               >
                 <WhatsappIcon className="h-5 w-5 text-brand mt-0.5 shrink-0" />
                 <div>
+                  <div className="text-ink-muted text-xs sm:text-sm mb-0.5">
+                    {t.contactPage.infoWhatsappSub || "Message us on WhatsApp"}
+                  </div>
                   <div className="text-ink group-hover:text-brand transition-colors font-medium">
                     +49 176 63167411
-                  </div>
-                  <div className="text-ink-muted text-xs sm:text-sm mt-0.5">
-                    {t.contactPage.infoWhatsappSub || "Message us on WhatsApp"}
                   </div>
                 </div>
               </a>
@@ -102,21 +103,24 @@ export function Contact() {
               >
                 <LinkedinIcon className="h-5 w-5 text-brand mt-0.5 shrink-0" />
                 <div>
+                  <div className="text-ink-muted text-xs sm:text-sm mb-0.5">
+                    {t.contactPage.infoLinkedinSub || "Connect on LinkedIn"}
+                  </div>
                   <div className="text-ink group-hover:text-brand transition-colors font-medium">
                     LinkedIn
-                  </div>
-                  <div className="text-ink-muted text-xs sm:text-sm mt-0.5">
-                    {t.contactPage.infoLinkedinSub || "Connect on LinkedIn"}
                   </div>
                 </div>
               </a>
             </li>
 
+            {/* Map/Location Section */}
             <li className="flex gap-3 items-start">
               <MapPin className="h-5 w-5 text-brand mt-0.5 shrink-0" />
               <div>
-                <div className="text-ink font-medium">Zona de activitate:</div>
-                <div className="text-ink-muted text-xs sm:text-sm mt-0.5">
+                <div className="text-ink-muted text-xs sm:text-sm mb-0.5">
+                  Zona de activitate:
+                </div>
+                <div className="text-ink font-medium">
                   {t.contactPage.infoMapSub}
                 </div>
               </div>
@@ -191,7 +195,6 @@ export function Contact() {
             </Field>
           </div>
 
-          {/* Buton setat pe w-full pe mobil pentru a fi ușor de atins */}
           <Button
             type="submit"
             size="lg"
