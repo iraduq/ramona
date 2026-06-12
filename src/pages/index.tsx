@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 const SectionDivider = () => (
-  <div className="w-full flex items-center justify-center py-12 lg:py-20 opacity-60">
+  <div className="w-full flex items-center justify-center py-2 lg:py-4 opacity-60">
     <div className="w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-brand to-transparent" />
     <motion.div
       animate={{ rotate: 360 }}
