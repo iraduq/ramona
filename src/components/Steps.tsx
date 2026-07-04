@@ -118,51 +118,59 @@ export function Process() {
           ))}
         </div>
 
-        <motion.ol
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-5 relative -mt-2 lg:mt-2"
-        >
+        {/* 
+          FIX APPLIED HERE: 
+          1. Created a wrapper div for the relative positioning 
+          2. Moved the decorative background line outside of the <ol>
+        */}
+        <div className="relative -mt-2 lg:mt-2">
+          {/* Decorative vertical line is now a sibling to the list */}
           <div className="absolute top-4 bottom-4 left-[1.2rem] w-[1px] bg-gradient-to-b from-ink/15 via-ink/10 to-transparent lg:hidden z-0" />
 
-          {steps.map((s, idx) => (
-            <motion.li
-              key={idx}
-              variants={stepVariants}
-              className="relative flex flex-col pt-1 px-4 pb-4 sm:p-5 lg:pt-4 lg:px-6 lg:pb-6 rounded-xl z-10 transition-all duration-300 lg:hover:bg-surface/40 lg:hover:shadow-[0_8px_30px_rgb(0,0,0,0.02)] lg:hover:border-ink/[0.03] border border-transparent group"
-            >
-              <div className="lg:hidden absolute top-[0.9rem] left-[0.9rem] flex items-center justify-center w-3 h-3 z-10 bg-bg">
-                <div className="w-2.5 h-2.5 rounded-full bg-brand-soft ring-[3px] ring-bg shadow-sm" />
-              </div>
+          <motion.ol
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-5"
+          >
+            {steps.map((s, idx) => (
+              <motion.li
+                key={idx}
+                variants={stepVariants}
+                className="relative flex flex-col pt-1 px-4 pb-4 sm:p-5 lg:pt-4 lg:px-6 lg:pb-6 rounded-xl z-10 transition-all duration-300 lg:hover:bg-surface/40 lg:hover:shadow-[0_8px_30px_rgb(0,0,0,0.02)] lg:hover:border-ink/[0.03] border border-transparent group"
+              >
+                <div className="lg:hidden absolute top-[0.9rem] left-[0.9rem] flex items-center justify-center w-3 h-3 z-10 bg-bg">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-soft ring-[3px] ring-bg shadow-sm" />
+                </div>
 
-              <div className="pl-6 lg:pl-0 font-mono text-[9px] font-bold tracking-[0.2em] text-ink-subtle/80 mb-3 lg:group-hover:text-brand-soft transition-colors uppercase">
-                Step 0{idx + 1}
-              </div>
+                <div className="pl-6 lg:pl-0 font-mono text-[9px] font-bold tracking-[0.2em] text-ink-subtle/80 mb-3 lg:group-hover:text-brand-soft transition-colors uppercase">
+                  Step 0{idx + 1}
+                </div>
 
-              <div className="pl-6 lg:pl-0 space-y-2">
-                <h3
-                  className={[
-                    "text-display text-[1.15rem] lg:text-[1.35rem] font-medium tracking-tight",
-                    "text-ink/85 lg:group-hover:text-ink transition-colors duration-300",
-                    "relative inline-block",
-                    "after:content-[''] after:absolute after:left-0 after:-bottom-0.5",
-                    "after:h-[1.5px] after:w-0 after:bg-brand-soft after:transition-all after:duration-300",
-                    "active:after:w-full active:text-brand-soft",
-                    "lg:after:hidden lg:active:text-ink/85",
-                  ].join(" ")}
-                >
-                  {s.t}
-                </h3>
+                <div className="pl-6 lg:pl-0 space-y-2">
+                  <h3
+                    className={[
+                      "text-display text-[1.15rem] lg:text-[1.35rem] font-medium tracking-tight",
+                      "text-ink/85 lg:group-hover:text-ink transition-colors duration-300",
+                      "relative inline-block",
+                      "after:content-[''] after:absolute after:left-0 after:-bottom-0.5",
+                      "after:h-[1.5px] after:w-0 after:bg-brand-soft after:transition-all after:duration-300",
+                      "active:after:w-full active:text-brand-soft",
+                      "lg:after:hidden lg:active:text-ink/85",
+                    ].join(" ")}
+                  >
+                    {s.t}
+                  </h3>
 
-                <p className="text-[13.5px] leading-[1.65] text-ink-muted/80 lg:group-hover:text-ink-muted transition-colors duration-300 pr-2">
-                  {s.d}
-                </p>
-              </div>
-            </motion.li>
-          ))}
-        </motion.ol>
+                  <p className="text-[13.5px] leading-[1.65] text-ink-muted/80 lg:group-hover:text-ink-muted transition-colors duration-300 pr-2">
+                    {s.d}
+                  </p>
+                </div>
+              </motion.li>
+            ))}
+          </motion.ol>
+        </div>
       </div>
     </section>
   );

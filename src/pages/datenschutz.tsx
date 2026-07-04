@@ -41,7 +41,7 @@ export function DatenschutzPage() {
             </span>{" "}
             <a
               href={`tel:${COMPANY.phone}`}
-              className="hover:text-[#b7744f] transition-colors"
+              className="text-neutral-800 dark:text-neutral-200 font-medium hover:text-[#b7744f] transition-colors"
             >
               {COMPANY.phone}
             </a>
@@ -51,7 +51,7 @@ export function DatenschutzPage() {
             </span>{" "}
             <a
               href={`mailto:${COMPANY.email}`}
-              className="text-[#b7744f] underline break-all inline-block align-middle"
+              className="text-neutral-800 dark:text-neutral-200 font-medium underline hover:text-[#b7744f] transition-colors break-all inline-block align-middle"
             >
               {COMPANY.email}
             </a>
@@ -72,14 +72,14 @@ export function DatenschutzPage() {
           </p>
           <div className="text-[14px] leading-relaxed">
             <p className="mb-2">{s.complaint}</p>
-            <span className="text-neutral-500 block mb-1">
+            <span className="text-neutral-600 dark:text-neutral-400 block mb-1">
               {s.complaintLink}
             </span>{" "}
             <a
               href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#b7744f] hover:underline break-all inline-block font-medium w-full"
+              className="text-neutral-800 dark:text-neutral-200 underline hover:text-[#b7744f] transition-colors break-all inline-block font-medium w-full"
             >
               https://www.bfdi.bund.de
             </a>
@@ -152,7 +152,7 @@ export function DatenschutzPage() {
             {s.art21RecipientDesc}{" "}
             <a
               href={`mailto:${COMPANY.email}`}
-              className="text-[#b7744f] underline break-all inline-block align-middle"
+              className="text-neutral-800 dark:text-neutral-200 font-medium underline hover:text-[#b7744f] transition-colors break-all inline-block align-middle"
             >
               {COMPANY.email}
             </a>
@@ -162,7 +162,7 @@ export function DatenschutzPage() {
         <LegalSection title={s.changesTitle}>
           <p className="mb-6 leading-relaxed">{s.changesDesc}</p>
 
-          <h4 className="font-bold text-[14px] uppercase tracking-wider text-neutral-400 mb-2">
+          <h4 className="font-bold text-[14px] uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
             {s.questionsTitle}
           </h4>
           <p className="mb-6 leading-relaxed">{s.questionsDesc}</p>

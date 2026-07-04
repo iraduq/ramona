@@ -41,7 +41,6 @@ const botanicalStyles = `
 `;
 
 const SectionDivider = () => (
-  /* MODIFICARE: Mai puțin spațiu vertical (py-4) pe mobil */
   <div className="w-full flex items-center justify-center py-4 md:py-8 lg:py-16 opacity-60">
     <div className="w-20 md:w-32 h-px bg-gradient-to-r from-transparent via-brand to-transparent" />
     <motion.div
@@ -192,7 +191,8 @@ export function Servicii() {
         <meta name="description" content={s.metaDesc} />
       </Helmet>
 
-      <section className="relative pt-0 pb-4 md:pb-8 lg:pb-12 overflow-hidden bg-background">
+      {/* Hero Section */}
+      <section className="relative pt-0 pb-4 md:pb-6 lg:pb-8 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           <div
             className="absolute -top-20 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 md:opacity-60"
@@ -251,7 +251,7 @@ export function Servicii() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-2 md:mt-10 lg:mt-20">
+        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-6 md:mt-10 lg:mt-16">
           <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -259,7 +259,7 @@ export function Servicii() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-center"
             >
-              <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight break-words">
+              <h1 className="text-display text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
                 {s.titlu1}{" "}
                 <em className="not-italic text-brand font-light italic relative inline-block">
                   {s.titluItalic}
@@ -289,7 +289,9 @@ export function Servicii() {
         />
       </div>
 
-      <section className="relative pt-6 md:pt-10 lg:pt-12 pb-12 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
+      {/* Prices Section */}
+      {/* Am redus padding-ul de sus (pt-2 md:pt-4 lg:pt-6) pentru a ridica sectiunea */}
+      <section className="relative pt-2 md:pt-4 lg:pt-6 pb-12 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"
           aria-hidden
@@ -335,18 +337,29 @@ export function Servicii() {
         </div>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
-          <div className="flex flex-col items-center text-center gap-4 md:gap-6 mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+          {/* Centered Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            // Aici am marit mb (margin-bottom) pentru a impinge ecusonul mai jos
+            className="flex flex-col items-center text-center gap-4 md:gap-5 mb-12 md:mb-16 lg:mb-20"
+          >
+            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
               {s.module1Title}
             </h2>
-            <div className="inline-flex items-center justify-center gap-2.5 bg-surface/50 px-5 md:px-6 py-2.5 md:py-3 rounded-2xl border border-border-soft">
-              <Wallet className="w-4 h-4 md:w-5 md:h-5 text-brand" />
-              <span className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.22em] text-ink-soft font-bold">
-                {s.startingFrom}
-              </span>
-            </div>
+          </motion.div>
+
+          {/* Left-Aligned Badge (Preise ab) */}
+          <div className="w-full flex justify-start mb-10 md:mb-12 lg:mb-16">
+            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-brand/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-deep font-bold">
+              <Wallet className="w-3 h-3 md:w-3.5 md:h-3.5" />
+              {s.startingFrom}
+            </span>
           </div>
 
+          {/* Pricing Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
             {rates.map((r, i) => (
               <RateCard

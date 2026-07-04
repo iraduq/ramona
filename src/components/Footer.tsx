@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="w-full bg-[#fcfbf9] border-t border-neutral-200/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
         <div className="flex flex-col text-center md:text-left">
-          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
+          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-600 mb-5">
             {t.footer.navTitle}
           </h4>
           <ul className="flex flex-col md:flex-row md:flex-wrap gap-2.5 md:gap-2">
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col text-center md:text-left">
-          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
+          <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-600 mb-5">
             {t.footer.contactTitle}
           </h4>
           <ul className="flex flex-col md:flex-row md:flex-wrap gap-2.5 md:gap-2">
@@ -80,10 +80,10 @@ export function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10 pb-8">
         <div className="border-t border-neutral-200/60 pt-6 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-3">
-          <p className="text-[11px] text-neutral-500 tracking-wide order-1 md:order-none">
+          <p className="text-[11px] text-neutral-600 tracking-wide order-1 md:order-none">
             {t.footer.company_info}
           </p>
-          <p className="text-[11px] text-neutral-400 order-2 md:order-none">
+          <p className="text-[11px] text-neutral-600 order-2 md:order-none">
             © {new Date().getFullYear()} Ramona's Mobile Massage
           </p>
         </div>

@@ -51,7 +51,6 @@ export function Navbar() {
               Ramona’s Mobile Massage
             </span>
 
-            {/* Contrast fixat aici: text-neutral-800 in loc de text-brand */}
             <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-800 mt-[1px] lg:mt-[2px] truncate leading-tight">
               Münsterland | NRW
             </span>
@@ -70,7 +69,7 @@ export function Navbar() {
               to={l.to}
               className={`text-[11px] lg:text-[12px] tracking-[0.15em] uppercase font-bold transition-colors ${
                 pathname === l.to
-                  ? "text-brand"
+                  ? "text-neutral-800"
                   : "text-neutral-700 hover:text-ink-soft"
               }`}
               aria-current={pathname === l.to ? "page" : undefined}
@@ -108,7 +107,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="lg:hidden p-2 z-50 text-ink-soft hover:text-brand transition-colors"
+          className="lg:hidden p-2 z-50 text-ink-soft hover:text-neutral-800 transition-colors"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Închide meniul" : "Deschide meniul"}
           aria-expanded={open}
@@ -132,7 +131,7 @@ export function Navbar() {
                   to={l.to}
                   onClick={() => setOpen(false)}
                   className={`text-[13px] tracking-wider uppercase font-bold py-2 border-b border-border-soft/60 transition-colors ${
-                    pathname === l.to ? "text-brand" : "text-ink-soft"
+                    pathname === l.to ? "text-neutral-800" : "text-ink-soft"
                   }`}
                   aria-current={pathname === l.to ? "page" : undefined}
                 >

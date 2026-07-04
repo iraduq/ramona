@@ -39,12 +39,12 @@ export function ImpressumPage() {
 
       <LegalSection title={i.sections.contact}>
         <p>
-          <span className="text-foreground/50">{i.sections.phone} </span>
+          <span className="text-muted-foreground">{i.sections.phone} </span>
           <a
             href={`https://wa.me/${COMPANY.phone.replace(/\s|\+/g, "")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent underline"
+            className="text-foreground font-medium underline hover:opacity-80 transition-opacity"
           >
             {COMPANY.phone}
           </a>{" "}
@@ -52,8 +52,11 @@ export function ImpressumPage() {
             ({i.sections.phoneSub})
           </span>
           <br />
-          <span className="text-foreground/50">{i.sections.email} </span>
-          <a href={`mailto:${COMPANY.email}`} className="text-accent underline">
+          <span className="text-muted-foreground">{i.sections.email} </span>
+          <a
+            href={`mailto:${COMPANY.email}`}
+            className="text-foreground font-medium underline hover:opacity-80 transition-opacity"
+          >
             {COMPANY.email}
           </a>
         </p>
@@ -61,12 +64,12 @@ export function ImpressumPage() {
 
       <LegalSection title={i.sections.tax}>
         <p>
-          <span className="text-foreground/50">{i.sections.taxNumber} </span>
+          <span className="text-muted-foreground">{i.sections.taxNumber} </span>
           {COMPANY.taxId}
           {COMPANY.vat && (
             <>
               <br />
-              <span className="text-foreground/50">USt-IdNr.: </span>
+              <span className="text-muted-foreground">USt-IdNr.: </span>
               {COMPANY.vat}
             </>
           )}
@@ -83,7 +86,7 @@ export function ImpressumPage() {
             href="https://ec.europa.eu/consumers/odr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent underline break-all"
+            className="text-foreground font-medium underline hover:opacity-80 transition-opacity break-all"
           >
             https://ec.europa.eu/consumers/odr/
           </a>

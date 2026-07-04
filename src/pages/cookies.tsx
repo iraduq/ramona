@@ -25,13 +25,13 @@ export function CookiesPage() {
       <LegalSection title={t.sections.types}>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-border/60 rounded-xl p-5 bg-card">
-            <div className="text-xs uppercase tracking-[0.2em] font-mono text-accent">
+            <div className="text-xs uppercase tracking-[0.2em] font-mono text-foreground font-semibold">
               {t.sections.session}
             </div>
             <p className="mt-2 text-sm">{t.sections.sessionDesc}</p>
           </div>
           <div className="border border-border/60 rounded-xl p-5 bg-card">
-            <div className="text-xs uppercase tracking-[0.2em] font-mono text-accent">
+            <div className="text-xs uppercase tracking-[0.2em] font-mono text-foreground font-semibold">
               {t.sections.persistent}
             </div>
             <p className="mt-2 text-sm">{t.sections.persistentDesc}</p>
@@ -43,7 +43,7 @@ export function CookiesPage() {
         <ol className="space-y-3">
           {t.sections.purposeList.map((item, i) => (
             <li key={i}>
-              <span className="text-accent font-mono mr-2">
+              <span className="text-foreground font-bold font-mono mr-2">
                 [{i + 1 < 10 ? `0${i + 1}` : i + 1}]
               </span>
               {item}
