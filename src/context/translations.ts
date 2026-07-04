@@ -595,8 +595,8 @@ export const translations = {
       metaTitle: "Prices & Services | Ramona's Mobile Massage",
       metaDesc:
         "Prices from €21: office massage 15-30 min, business events, hotels & wellness centres in Münsterland. Request a quote today.",
-      titlu1: "Office Massage & ",
-      titluItalic: "Business Events",
+      titlu1: "Office Massage · Companies",
+      titluItalic: "Health Days & Business Events",
       whyTitle: "Why Ramona's Mobile Massage?",
       whyDesc:
         "At your location, with complete equipment, flexible, tailored to each professional setting, with professionalism and attention to detail.",
