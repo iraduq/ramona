@@ -192,7 +192,8 @@ export function Servicii() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative pt-0 pb-4 md:pb-6 lg:pb-8 overflow-hidden bg-background">
+      {/* Am redus padding-ul de jos la pb-0 pt a apropia de sectiunea urmatoare */}
+      <section className="relative pt-0 pb-0 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           <div
             className="absolute -top-20 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 md:opacity-60"
@@ -251,7 +252,8 @@ export function Servicii() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-6 md:mt-10 lg:mt-16">
+        {/* Am mărit mt (margin-top) ca să împing textul mai jos în pagină */}
+        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-12 md:mt-16 lg:mt-24">
           <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -290,7 +292,6 @@ export function Servicii() {
       </div>
 
       {/* Prices Section */}
-      {/* Am redus padding-ul de sus (pt-2 md:pt-4 lg:pt-6) pentru a ridica sectiunea */}
       <section className="relative pt-2 md:pt-4 lg:pt-6 pb-12 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"
@@ -351,7 +352,6 @@ export function Servicii() {
           </motion.div>
 
           {/* Left-Aligned Badge (Preise ab) */}
-          {/* Aici am micșorat mb-ul ca să fie mult mai aproape de cardurile cu prețuri */}
           <div className="w-full flex justify-start mb-4 md:mb-5 lg:mb-6">
             <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-brand/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-deep font-bold">
               <Wallet className="w-3 h-3 md:w-3.5 md:h-3.5" />
