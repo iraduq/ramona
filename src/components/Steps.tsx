@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
-
 import type { Variants } from "framer-motion";
 import { BotanicalSVG } from "./BotanicalSVG";
 import { useLanguage } from "../context/LanguageContext";
@@ -53,7 +52,8 @@ export function Process() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-gradient-to-b from-bg via-bg-soft to-bg-warm/30 pt-10 pb-16 lg:pt-16 lg:pb-24 text-ink overflow-hidden"
+      // Am redus pt-10 la pt-6 si pb-16 la pb-10 pe ecranele mici
+      className="relative w-full bg-gradient-to-b from-bg via-bg-soft to-bg-warm/30 pt-6 pb-10 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-24 text-ink overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/3 w-[50%] h-[50%] bg-surface/70 blur-[120px]" />
@@ -80,7 +80,7 @@ export function Process() {
         >
           <h2 className="text-display leading-[1.08] tracking-tight">
             <span
-              className="block text-[2.75rem] sm:text-6xl lg:text-[4.5rem] font-normal tracking-[-0.03em] text-transparent bg-clip-text bg-gradient-to-br from-ink via-ink/90 to-brand-soft pb-2"
+              className="block text-[36px] sm:text-6xl lg:text-[4.5rem] font-normal tracking-[-0.03em] text-transparent bg-clip-text bg-gradient-to-br from-ink via-ink/90 to-brand-soft pb-2"
               style={{ fontFamily: "var(--font-serif, Georgia, serif)" }}
             >
               {t.process.titlu1}
@@ -118,13 +118,8 @@ export function Process() {
           ))}
         </div>
 
-        {/* 
-          FIX APPLIED HERE: 
-          1. Created a wrapper div for the relative positioning 
-          2. Moved the decorative background line outside of the <ol>
-        */}
-        <div className="relative -mt-2 lg:mt-2">
-          {/* Decorative vertical line is now a sibling to the list */}
+        {/* Am modificat -mt-2 în -mt-5 pentru a trage secțiunea de pași mai aproape de titlu pe mobil */}
+        <div className="relative -mt-8 sm:-mt-2 lg:mt-2">
           <div className="absolute top-4 bottom-4 left-[1.2rem] w-[1px] bg-gradient-to-b from-ink/15 via-ink/10 to-transparent lg:hidden z-0" />
 
           <motion.ol

@@ -126,20 +126,24 @@ export function TrustBar() {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-          className="mb-12 sm:mb-20 flex flex-col gap-6 border-b border-ink/10 pb-8 max-w-7xl mx-auto"
+          className="mb-12 sm:mb-20 flex flex-col items-center text-center sm:items-start sm:text-left gap-6 border-b border-ink/10 pb-8 max-w-7xl mx-auto"
         >
-          <div className="space-y-2">
+          <div className="space-y-3 flex flex-col items-center sm:items-start">
             <span className="font-mono text-[9px] tracking-[0.35em] text-brand-soft uppercase block font-semibold">
               {t.trustBar.badge}
             </span>
-            <h2 className="text-display text-[2rem] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.1] text-ink">
-              {t.trustBar.titlu1} <br />
+
+            <div className="w-10 h-px bg-brand-soft/40 sm:hidden" />
+
+            <h2 className="text-display text-[2rem] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.15] text-ink max-w-[280px] sm:max-w-none">
+              {t.trustBar.titlu1} <br className="hidden sm:block" />{" "}
               <span className="italic font-normal text-ink-subtle">
                 {t.trustBar.titluItalic}
               </span>
             </h2>
           </div>
-          <p className="text-[15px] md:text-[16px] lg:text-[16px] text-ink-soft font-normal max-w-3xl leading-[1.7] font-sans mt-2">
+
+          <p className="text-[15px] md:text-[16px] text-ink-soft font-normal max-w-3xl leading-[1.7] font-sans mt-2 text-center sm:text-left">
             {t.trustBar.descriere}
           </p>
         </motion.div>

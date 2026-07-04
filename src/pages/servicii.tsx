@@ -192,7 +192,6 @@ export function Servicii() {
       </Helmet>
 
       {/* Hero Section */}
-      {/* Am redus padding-ul de jos la pb-0 pt a apropia de sectiunea urmatoare */}
       <section className="relative pt-0 pb-0 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           <div
@@ -252,21 +251,24 @@ export function Servicii() {
           />
         </div>
 
-        {/* Am mărit mt (margin-top) ca să împing textul mai jos în pagină */}
-        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-12 md:mt-16 lg:mt-24">
-          <div className="flex flex-col items-center justify-center">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-12 mt-14 md:mt-20 lg:mt-28">
+          <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center"
+              className="w-full"
             >
-              <h1 className="text-display text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
-                {s.titlu1}{" "}
-                <em className="not-italic text-brand font-light italic relative inline-block">
-                  {s.titluItalic}
+              <h1 className="w-full text-display text-[30px] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-tight text-ink">
+                <span className="block font-medium">{s.titlu1}</span>
+
+                <span className="block mt-2">
+                  <em className="text-brand font-serif font-light italic not-italic sm:italic">
+                    {s.titluItalic}
+                  </em>
+
                   <svg
-                    className="absolute w-full h-2 md:h-3 -bottom-0.5 md:-bottom-1 left-0 text-brand opacity-30"
+                    className="mt-3 h-3 w-full max-w-[650px] text-brand opacity-40"
                     viewBox="0 0 100 10"
                     preserveAspectRatio="none"
                   >
@@ -277,7 +279,7 @@ export function Servicii() {
                       fill="transparent"
                     />
                   </svg>
-                </em>
+                </span>
               </h1>
             </motion.div>
           </div>
@@ -338,29 +340,27 @@ export function Servicii() {
         </div>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10">
-          {/* Centered Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center text-center gap-4 md:gap-5 mb-12 md:mb-16 lg:mb-20"
+            className="flex flex-col items-center text-center gap-3 mb-8 md:mb-14 lg:mb-20"
           >
-            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
+            <h2 className="text-display text-[24px] md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               {s.module1Title}
             </h2>
           </motion.div>
 
-          {/* Left-Aligned Badge (Preise ab) */}
-          <div className="w-full flex justify-start mb-4 md:mb-5 lg:mb-6">
+          {/* Am adăugat mt-8 pentru mobil și mt-12 pentru ecrane mari pentru a-l distanța de titlu */}
+          <div className="w-full flex justify-start mt-12 md:mt-12 mb-5">
             <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-brand/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-deep font-bold">
               <Wallet className="w-3 h-3 md:w-3.5 md:h-3.5" />
               {s.startingFrom}
             </span>
           </div>
 
-          {/* Pricing Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {rates.map((r, i) => (
               <RateCard
                 key={i}

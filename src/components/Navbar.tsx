@@ -47,15 +47,15 @@ export function Navbar() {
           </div>
 
           <div className="flex flex-col min-w-0 justify-center py-1">
-            <span className="text-[13px] lg:text-[15px] font-bold tracking-[0.05em] uppercase text-ink truncate leading-tight transition-colors">
-              Ramona’s Mobile Massage
+            <span className="text-[13px] lg:text-[15px] font-semibold tracking-[0.04em] uppercase text-ink truncate leading-tight transition-colors">
+              Ramona's Mobile Massage
             </span>
 
-            <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-800 mt-[1px] lg:mt-[2px] truncate leading-tight">
+            <span className="text-[9px] lg:text-[10px] font-semibold tracking-[0.13em] uppercase text-neutral-700 mt-[1px] lg:mt-[2px] truncate leading-tight">
               Münsterland | NRW
             </span>
 
-            <span className="text-[7.5px] lg:text-[8.5px] font-semibold tracking-[0.1em] uppercase text-ink-muted mt-[2px] lg:mt-[2px] truncate leading-tight">
+            <span className="text-[7.5px] lg:text-[8.5px] font-medium tracking-[0.1em] uppercase text-ink-muted mt-[2px] lg:mt-[2px] truncate leading-tight">
               {navTranslations.subtitle ||
                 "Arbeitsplatz | Büro | Unternehmen | Business Events"}
             </span>

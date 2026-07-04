@@ -118,8 +118,8 @@ export function Hero() {
                 <h1
                   className="ha2 mt-1 sm:mt-3 font-light tracking-tight leading-[1.05] text-foreground"
                   style={{
-                    fontSize: "clamp(2.2rem, 7vw, 3.8rem)",
-
+                    // Am schimbat valoarea minimă la 30px
+                    fontSize: "clamp(30px, 7vw, 3.8rem)",
                     letterSpacing: "-0.025em",
                   }}
                 >

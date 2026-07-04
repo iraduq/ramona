@@ -68,7 +68,7 @@ export function Contact() {
       <section className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10 pt-8 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 z-10 relative">
         <div className="lg:col-span-5">
           <div className="text-center lg:text-left">
-            <h1 className="mt-3 sm:mt-4 text-display text-4xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-tight font-light">
+            <h1 className="mt-3 sm:mt-4 text-display text-[30px] sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-tight font-light">
               {t.contactPage.titlu1}{" "}
               <span className="italic text-brand font-normal">
                 {t.contactPage.titluItalic}
