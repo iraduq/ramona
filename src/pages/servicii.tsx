@@ -343,7 +343,6 @@ export function Servicii() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            // Aici am marit mb (margin-bottom) pentru a impinge ecusonul mai jos
             className="flex flex-col items-center text-center gap-4 md:gap-5 mb-12 md:mb-16 lg:mb-20"
           >
             <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] md:leading-[1.05] tracking-tight">
@@ -352,7 +351,8 @@ export function Servicii() {
           </motion.div>
 
           {/* Left-Aligned Badge (Preise ab) */}
-          <div className="w-full flex justify-start mb-10 md:mb-12 lg:mb-16">
+          {/* Aici am micșorat mb-ul ca să fie mult mai aproape de cardurile cu prețuri */}
+          <div className="w-full flex justify-start mb-4 md:mb-5 lg:mb-6">
             <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-brand/10 px-3.5 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-deep font-bold">
               <Wallet className="w-3 h-3 md:w-3.5 md:h-3.5" />
               {s.startingFrom}
