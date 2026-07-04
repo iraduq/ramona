@@ -41,12 +41,10 @@ export function Problem() {
   return (
     <section
       ref={sectionRef}
-      /* AICI AM PUS GRADIENTUL ȘI CULOAREA DE TEXT DIN TEMĂ */
       className="relative w-full bg-gradient-to-b from-bg via-bg-soft to-bg-warm/30 py-32 lg:py-40 select-none overflow-hidden antialiased text-ink"
     >
       <style dangerouslySetInnerHTML={{ __html: problemStyles }} />
 
-      {/* SVG Separator Sus (presupunând că secțiunea de deasupra e albă/surface) */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
         <svg
           className="block w-full h-[3.5vw] fill-surface"
@@ -60,7 +58,6 @@ export function Problem() {
         </svg>
       </div>
 
-      {/* SVG Separator Jos */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20 pointer-events-none rotate-180">
         <svg
           className="block w-full h-[3vw] fill-surface"
@@ -71,7 +68,6 @@ export function Problem() {
         </svg>
       </div>
 
-      {/* Elementele Botanice de Fundal (Folosind variabilele noi) */}
       <div
         className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
         aria-hidden="true"
@@ -111,9 +107,7 @@ export function Problem() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12 z-10">
-        {/* ── DESKTOP LAYOUT ── */}
         <div className="hidden lg:grid grid-cols-12 gap-24 items-center">
-          {/* Imagine */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97, x: -15 }}
             whileInView={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
@@ -137,7 +131,6 @@ export function Problem() {
             </div>
           </motion.div>
 
-          {/* Tot textul */}
           <div className="col-span-7 flex flex-col items-start w-full space-y-6">
             <span className="font-mono text-[9px] tracking-[0.35em] text-brand uppercase ">
               {t.problem.badge}
@@ -154,9 +147,7 @@ export function Problem() {
           </div>
         </div>
 
-        {/* ── MOBILE LAYOUT ── */}
         <div className="flex flex-col gap-10 lg:hidden">
-          {/* 1. Badge + Titlu */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={isInView ? { opacity: 1, y: 0 } : {}}
@@ -175,7 +166,6 @@ export function Problem() {
             </h2>
           </motion.div>
 
-          {/* 2. Imagine */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -199,7 +189,6 @@ export function Problem() {
             </div>
           </motion.div>
 
-          {/* 3. Descriere */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={isInView ? { opacity: 1, y: 0 } : {}}
@@ -210,7 +199,6 @@ export function Problem() {
             {t.problem.descriere}
           </motion.p>
 
-          {/* 4. Stats */}
           <div className="grid grid-cols-1 gap-8 w-full border-t border-ink/10 pt-10">
             {t.problem.stats.map((s, idx) => (
               <motion.div

@@ -41,7 +41,8 @@ const botanicalStyles = `
 `;
 
 const SectionDivider = () => (
-  <div className="w-full flex items-center justify-center py-8 lg:py-16 opacity-60">
+  /* MODIFICARE: Mai puțin spațiu vertical (py-4) pe mobil */
+  <div className="w-full flex items-center justify-center py-4 md:py-8 lg:py-16 opacity-60">
     <div className="w-20 md:w-32 h-px bg-gradient-to-r from-transparent via-brand to-transparent" />
     <motion.div
       animate={{ rotate: 360 }}
@@ -191,11 +192,8 @@ export function Servicii() {
         <meta name="description" content={s.metaDesc} />
       </Helmet>
 
-      {/* ─── HERO ─── */}
-      {/* Aici am redus mult padding-ul de jos (pb-6 md:pb-8 lg:pb-12 în loc de pb-16/24) */}
-      <section className="relative pt-4 pb-2 md:pb-8 lg:pb-12 overflow-hidden bg-background">
+      <section className="relative pt-0 pb-4 md:pb-8 lg:pb-12 overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
-          {/* Glows */}
           <div
             className="absolute -top-20 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 md:opacity-60"
             style={{
@@ -211,7 +209,6 @@ export function Servicii() {
             }}
           />
 
-          {/* Parallax botanicals — desktop */}
           <motion.div
             style={{ x: sx, y: sy }}
             className="absolute -right-10 top-0 w-[38rem] opacity-[0.05] hidden lg:block"
@@ -240,7 +237,6 @@ export function Servicii() {
             />
           </motion.div>
 
-          {/* Floating leaves — toate ecranele */}
           <FloatingLeaf
             className="top-[12%] left-[8%] w-10 sm:w-14 opacity-10 text-ink-soft hidden sm:block lg:w-16 lg:left-[18%]"
             delay={0}
@@ -255,13 +251,13 @@ export function Servicii() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 mt-6 lg:mt-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-24 items-center">
+        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 lg:px-12 mt-2 md:mt-10 lg:mt-20">
+          <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center lg:text-left"
+              className="text-center"
             >
               <h1 className="text-display text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight break-words">
                 {s.titlu1}{" "}
@@ -281,15 +277,11 @@ export function Servicii() {
                   </svg>
                 </em>
               </h1>
-              <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg lg:text-xl text-ink-muted leading-relaxed font-light">
-                {s.descriere}
-              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ─── WAVE: bg-background → bg-bg-soft ─── */}
       <div className="relative z-20 -mb-1">
         <WaveDividerInverted
           colorTop="var(--color-background)"
@@ -297,10 +289,7 @@ export function Servicii() {
         />
       </div>
 
-      {/* ─── PREȚURI ─── */}
-      {/* Aici am redus padding-ul de sus (pt-8 md:pt-10 lg:pt-12) și l-am lăsat intact pe cel de jos (pb-16 md:pb-24 lg:pb-32) */}
-      <section className="relative pt-8 md:pt-10 lg:pt-12 pb-16 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
-        {/* Botanicals Prețuri */}
+      <section className="relative pt-6 md:pt-10 lg:pt-12 pb-12 md:pb-24 lg:pb-32 bg-bg-soft overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"
           aria-hidden
@@ -329,12 +318,12 @@ export function Servicii() {
           >
             <BotanicalSVG variant="leaf" className="b-float-s w-full h-full" />
           </motion.div>
-          {/* top centru */}
+
           <BotanicalSVG
             variant="branch"
             className="b-sway absolute left-[44%] -top-24 w-[280px] text-sage-soft opacity-10 hidden xl:block rotate-90"
           />
-          {/* Mobile */}
+
           <FloatingLeaf
             className="top-[8%] right-[5%] w-10 opacity-10 text-brand sm:w-14 lg:hidden"
             delay={0.5}
@@ -373,7 +362,6 @@ export function Servicii() {
         </div>
       </section>
 
-      {/* ─── WAVE: bg-bg-soft → bg-background ─── */}
       <div className="relative z-20 -mb-1">
         <WaveDividerInverted
           colorTop="var(--color-bg-soft)"
@@ -381,9 +369,7 @@ export function Servicii() {
         />
       </div>
 
-      {/* ─── HOTELS / SPECIAL ─── */}
-      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-background">
-        {/* Botanicals Hotels */}
+      <section className="relative pt-2 pb-16 md:py-24 lg:py-32 overflow-hidden bg-background">
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"
           aria-hidden
@@ -412,12 +398,12 @@ export function Servicii() {
           >
             <BotanicalSVG variant="leaf" className="b-float-a w-full h-full" />
           </motion.div>
-          {/* top-centru branch */}
+
           <BotanicalSVG
             variant="branch"
             className="b-sway absolute right-[42%] -top-20 w-[260px] text-sage-soft opacity-10 hidden xl:block -rotate-90"
           />
-          {/* Mobile */}
+
           <FloatingLeaf
             className="top-[6%] left-[4%] w-10 opacity-10 text-ink-soft sm:w-12 lg:hidden"
             delay={0}
@@ -430,7 +416,7 @@ export function Servicii() {
 
         <SectionDivider />
 
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10 mt-8 lg:mt-0">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 relative z-10 mt-2 md:mt-8 lg:mt-0">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -512,9 +498,7 @@ export function Servicii() {
         </div>
       </section>
 
-      {/* ─── LEGAL & WHY CHOOSE US ─── */}
       <section className="pb-16 md:pb-24 relative z-10 bg-background overflow-hidden">
-        {/* Botanicals Legal — discret */}
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden z-0"
           aria-hidden

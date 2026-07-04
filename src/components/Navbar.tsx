@@ -23,7 +23,6 @@ export function Navbar() {
       <div className="h-[3px] w-full bg-gradient-to-r from-brand to-brand-deep" />
 
       <div className="mx-auto max-w-7xl px-4 lg:px-10 h-[64px] lg:h-[72px] flex items-center justify-between transition-all duration-300">
-        {/* Logo Section */}
         <Link
           to="/"
           className="flex items-center gap-3 shrink min-w-0 pr-2 group"
@@ -64,7 +63,6 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <Link
@@ -82,7 +80,6 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-4 lg:gap-5 shrink-0">
           <div className="flex bg-card rounded-full p-1 border border-border-soft shadow-sm">
             {["DE", "EN"].map((lang) => (
@@ -110,7 +107,6 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden p-2 z-50 text-ink-soft hover:text-brand transition-colors"
           onClick={() => setOpen(!open)}
@@ -121,7 +117,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav Dropdown */}
       <AnimatePresence>
         {open && (
           <motion.div

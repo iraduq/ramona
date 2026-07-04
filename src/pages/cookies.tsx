@@ -5,7 +5,6 @@ import {
   LegalLayout,
   LegalSection,
   LegalCallout,
-  LegalFooterNav,
 } from "../components/LegalLayout";
 
 export function CookiesPage() {
@@ -16,6 +15,7 @@ export function CookiesPage() {
     <LegalLayout eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
       <Helmet>
         <title>{t.metaTitle}</title>
+        <meta name="description" content={t.metaDesc} />
       </Helmet>
 
       <LegalSection title={t.sections.whatAreCookies}>
@@ -94,8 +94,6 @@ export function CookiesPage() {
           {t.sections.footer}
         </p>
       </LegalSection>
-
-      <LegalFooterNav language={language} />
     </LegalLayout>
   );
 }

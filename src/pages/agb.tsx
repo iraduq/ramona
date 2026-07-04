@@ -1,15 +1,29 @@
+import { useEffect } from "react"; // <-- Importăm useEffect pentru a schimba datele în browser
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../context/translations";
 import {
   LegalLayout,
   LegalSection,
   LegalCallout,
-  LegalFooterNav,
 } from "../components/LegalLayout";
 
 export default function AGBPage() {
   const { language } = useLanguage();
   const t = translations[language].agbPage;
+
+  useEffect(() => {
+    document.title = t.metaTitle;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", t.metaDesc);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = t.metaDesc;
+      document.head.appendChild(meta);
+    }
+  }, [t.metaTitle, t.metaDesc]);
 
   return (
     <LegalLayout eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
@@ -28,8 +42,6 @@ export default function AGBPage() {
           ))}
         </ul>
       </LegalSection>
-
-      <LegalFooterNav language={language} />
     </LegalLayout>
   );
 }

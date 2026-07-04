@@ -16,7 +16,7 @@ const COMPANY = {
 
 export function ImpressumPage() {
   const { t } = useLanguage();
-  const i = t.impressumPage; // Alias pentru acces rapid
+  const i = t.impressumPage;
 
   return (
     <LegalLayout eyebrow={i.eyebrow} title={i.title} intro={i.intro}>
@@ -25,7 +25,6 @@ export function ImpressumPage() {
         <meta name="description" content={i.metaDesc} />
       </Helmet>
 
-      {/* FURNIZOR / INHABER */}
       <LegalSection title={i.sections.provider}>
         <p>
           {COMPANY.name}
@@ -38,7 +37,6 @@ export function ImpressumPage() {
         </p>
       </LegalSection>
 
-      {/* CONTACT */}
       <LegalSection title={i.sections.contact}>
         <p>
           <span className="text-foreground/50">{i.sections.phone} </span>
@@ -61,12 +59,10 @@ export function ImpressumPage() {
         </p>
       </LegalSection>
 
-      {/* TAXE */}
       <LegalSection title={i.sections.tax}>
         <p>
           <span className="text-foreground/50">{i.sections.taxNumber} </span>
           {COMPANY.taxId}
-          {/* Afișăm USt-IdNr doar dacă există vreo valoare în COMPANY.vat pe viitor */}
           {COMPANY.vat && (
             <>
               <br />
@@ -80,7 +76,6 @@ export function ImpressumPage() {
         </p>
       </LegalSection>
 
-      {/* SOLUȚIONAREA LITIGIILOR */}
       <LegalSection title={i.sections.dispute}>
         <p>
           {i.sections.disputeDesc}{" "}
@@ -96,12 +91,10 @@ export function ImpressumPage() {
         <p className="mt-4">{i.sections.disputeObligation}</p>
       </LegalSection>
 
-      {/* RĂSPUNDEREA PENTRU CONȚINUT & LINK-URI */}
       <LegalSection title={i.sections.liability}>
         <p className="leading-relaxed">{i.sections.liabilityDesc}</p>
       </LegalSection>
 
-      {/* DREPTURI DE AUTOR */}
       <LegalSection title={i.sections.copyright}>
         <p className="leading-relaxed">{i.sections.copyrightDesc}</p>
       </LegalSection>

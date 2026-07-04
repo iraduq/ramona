@@ -61,8 +61,7 @@ export function TrustBar() {
   return (
     <section
       ref={sectionRef}
-      // AM MODIFICAT AICI: din "py-24 md:py-32" în "pt-24 pb-10 md:pt-32 md:pb-12"
-      className="relative w-full bg-bg-soft pt-24 pb-10 md:pt-32 md:pb-12 select-none overflow-hidden antialiased text-ink"
+      className="relative w-full bg-bg-soft pt-4 pb-10 md:pt-32 md:pb-12 select-none overflow-hidden antialiased text-ink"
     >
       <style dangerouslySetInnerHTML={{ __html: trustBarStyles }} />
 
@@ -73,8 +72,6 @@ export function TrustBar() {
           backgroundSize: "160px",
         }}
       />
-
-      {/* Decorative Botanicals */}
       <div
         className="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none"
         aria-hidden="true"
@@ -99,6 +96,15 @@ export function TrustBar() {
           className="absolute -right-24 bottom-16 w-44 sm:w-56 lg:w-[380px] text-brand-soft opacity-45 lg:opacity-70 hidden lg:block rotate-12"
         >
           <BotanicalSVG variant="bloom" className="bot-float w-full h-full" />
+        </motion.div>
+        <motion.div
+          style={{ x: springX, y: springY }}
+          className="absolute -right-16 top-20 w-52 sm:w-64 lg:w-[360px] text-sage-soft opacity-35 lg:opacity-55 hidden lg:block"
+        >
+          <BotanicalSVG
+            variant="leaf"
+            className="bot-float-delayed w-full h-full"
+          />
         </motion.div>
         <motion.div
           style={{ x: springX, y: springY }}
@@ -138,7 +144,6 @@ export function TrustBar() {
           </p>
         </motion.div>
 
-        {/* AM MODIFICAT AICI: am eliminat "lg:pb-20" pentru a tăia padding-ul excedentar de sub elemente */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 w-full relative z-10 items-start">
           {categories.map((item, index) => {
             const isHovered = hoveredIndex === index;
@@ -152,7 +157,6 @@ export function TrustBar() {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`h-fit relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-ink cursor-pointer group shadow-[0_8px_30px_color-mix(in_srgb,var(--color-ink)_4%,transparent)] hover:shadow-2xl transition-all duration-500 ${staggerClass}`}
               >
-                {/* 1. IMAGINEA PRINCIPALĂ */}
                 <img
                   src={item.bgImage}
                   alt={item.title}
@@ -161,7 +165,6 @@ export function TrustBar() {
                   }`}
                 />
 
-                {/* 2. GRADIENT PENTRU LIZIBILITATEA TEXTULUI */}
                 <div
                   className="absolute inset-0 pointer-events-none transition-opacity duration-500"
                   style={{
@@ -170,7 +173,6 @@ export function TrustBar() {
                   }}
                 />
 
-                {/* 3. CONȚINUT TEXT */}
                 <div className="absolute inset-0 p-5 sm:p-6 lg:p-5 xl:p-6 flex flex-col justify-end z-20 text-surface">
                   <div className="mt-auto relative z-20">
                     <span className="text-[9px] tracking-[0.3em] text-surface/60 font-mono mb-2 block">
@@ -180,7 +182,6 @@ export function TrustBar() {
                       {item.title}
                     </h3>
 
-                    {/* Descrierea apare finuț */}
                     <div
                       className="grid transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
                       style={{

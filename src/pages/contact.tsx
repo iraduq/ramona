@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Mail, MapPin, Send } from "lucide-react";
+import { useState, useRef } from "react";
+import { Mail, MapPin, Send, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -10,16 +11,41 @@ import { Toaster } from "../components/ui/sonner";
 import { useLanguage } from "../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
 
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
 export function Contact() {
   const { t } = useLanguage();
   const s = t.contactPage;
+  const formRef = useRef<HTMLFormElement>(null);
 
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    toast.success(t.contactPage.form.toastSuccess);
+    if (!formRef.current) return;
+
+    setLoading(true);
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      setSent(true);
+      toast.success(t.contactPage.form.toastSuccess);
+      formRef.current.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error(
+        "A apărut o eroare. Încearcă din nou sau scrie-ne direct pe email.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -30,7 +56,6 @@ export function Contact() {
       </Helmet>
       <Toaster />
 
-      {/* Dimensiuni și poziționări ajustate pentru fundalul botanic */}
       <BotanicalSVG
         variant="branch"
         className="pointer-events-none absolute -left-10 top-10 sm:top-20 w-48 sm:w-72 text-sage-soft/40 hidden sm:block"
@@ -40,18 +65,14 @@ export function Contact() {
         className="pointer-events-none absolute right-10 sm:right-20 top-20 sm:top-40 w-16 sm:w-20 text-ink/5"
       />
 
-      {/* Spațieri reduse pe mobil: pt-12, pb-16, gap-10 */}
       <section className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10 pt-8 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 z-10 relative">
-        {/* Coloana de text / contact info */}
         <div className="lg:col-span-5">
-          {/* Centrat pe mobil, stânga pe desktop */}
           <div className="text-center lg:text-left">
             <h1 className="mt-3 sm:mt-4 text-display text-4xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-tight font-light">
               {t.contactPage.titlu1}{" "}
               <span className="italic text-brand font-normal">
                 {t.contactPage.titluItalic}
-              </span>{" "}
-              {t.contactPage.titlu2}
+              </span>
             </h1>
 
             <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-muted leading-relaxed font-light">
@@ -60,7 +81,6 @@ export function Contact() {
           </div>
 
           <ul className="mt-8 sm:mt-10 space-y-6 sm:space-y-5 text-sm">
-            {/* Email Section */}
             <li className="flex gap-3 items-start">
               <Mail className="h-5 w-5 text-brand mt-0.5 shrink-0" />
               <div>
@@ -73,7 +93,6 @@ export function Contact() {
               </div>
             </li>
 
-            {/* WhatsApp Section */}
             <li>
               <a
                 href="https://wa.me/4917663167411"
@@ -93,7 +112,6 @@ export function Contact() {
               </a>
             </li>
 
-            {/* LinkedIn Section */}
             <li>
               <a
                 href="https://www.linkedin.com/in/ramona%E2%80%99s-mobile-massage-nrw-6b8a85351/"
@@ -113,12 +131,11 @@ export function Contact() {
               </a>
             </li>
 
-            {/* Map/Location Section */}
             <li className="flex gap-3 items-start">
               <MapPin className="h-5 w-5 text-brand mt-0.5 shrink-0" />
               <div>
                 <div className="text-ink-muted text-xs sm:text-sm mb-0.5">
-                  Zona de activitate:
+                  {t.contactPage.infoMapTitle}
                 </div>
                 <div className="text-ink font-medium">
                   {t.contactPage.infoMapSub}
@@ -128,8 +145,8 @@ export function Contact() {
           </ul>
         </div>
 
-        {/* Formular - Padding redus (p-6) pe mobil, rotunjime mai mică */}
         <form
+          ref={formRef}
           onSubmit={onSubmit}
           className="lg:col-span-7 bg-surface border border-border-soft rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl shadow-ink/5 relative"
         >
@@ -137,6 +154,7 @@ export function Contact() {
             <Field label={t.contactPage.form.name} id="name">
               <Input
                 id="name"
+                name="name"
                 required
                 className="h-12 sm:h-11 rounded-xl text-[16px] sm:text-sm bg-bg-soft border-border-soft focus-visible:ring-brand focus-visible:border-brand text-ink"
               />
@@ -144,6 +162,7 @@ export function Contact() {
             <Field label={t.contactPage.form.company} id="company">
               <Input
                 id="company"
+                name="company"
                 required
                 className="h-12 sm:h-11 rounded-xl text-[16px] sm:text-sm bg-bg-soft border-border-soft focus-visible:ring-brand focus-visible:border-brand text-ink"
               />
@@ -151,6 +170,7 @@ export function Contact() {
             <Field label={t.contactPage.form.email} id="email">
               <Input
                 id="email"
+                name="email"
                 type="email"
                 required
                 className="h-12 sm:h-11 rounded-xl text-[16px] sm:text-sm bg-bg-soft border-border-soft focus-visible:ring-brand focus-visible:border-brand text-ink"
@@ -159,12 +179,14 @@ export function Contact() {
             <Field label={t.contactPage.form.phone} id="phone">
               <Input
                 id="phone"
+                name="phone"
                 className="h-12 sm:h-11 rounded-xl text-[16px] sm:text-sm bg-bg-soft border-border-soft focus-visible:ring-brand focus-visible:border-brand text-ink"
               />
             </Field>
             <Field label={t.contactPage.form.size} id="size">
               <select
                 id="size"
+                name="size"
                 className="h-12 sm:h-11 w-full rounded-xl border border-border-soft bg-bg-soft px-3 text-[16px] sm:text-sm outline-none focus:ring-1 focus:ring-brand focus:border-brand text-ink"
               >
                 {t.contactPage.form.sizeOptions.map((opt: string) => (
@@ -175,6 +197,7 @@ export function Contact() {
             <Field label={t.contactPage.form.topic} id="topic">
               <select
                 id="topic"
+                name="topic"
                 className="h-12 sm:h-11 w-full rounded-xl border border-border-soft bg-bg-soft px-3 text-[16px] sm:text-sm outline-none focus:ring-1 focus:ring-brand focus:border-brand text-ink"
               >
                 {t.contactPage.form.topicOptions.map((opt: string) => (
@@ -188,6 +211,7 @@ export function Contact() {
             <Field label={t.contactPage.form.msg} id="msg">
               <Textarea
                 id="msg"
+                name="message"
                 rows={4}
                 className="rounded-xl text-[16px] sm:text-sm resize-none bg-bg-soft border-border-soft focus-visible:ring-brand focus-visible:border-brand text-ink"
                 placeholder={t.contactPage.form.placeholder}
@@ -198,9 +222,14 @@ export function Contact() {
           <Button
             type="submit"
             size="lg"
-            className="mt-6 sm:mt-7 rounded-full w-full sm:w-auto px-8 h-12 sm:h-12 bg-ink text-surface hover:bg-brand transition-colors duration-300 shadow-lg shadow-ink/10"
+            disabled={loading || sent}
+            className="mt-6 sm:mt-7 rounded-full w-full sm:w-auto px-8 h-12 sm:h-12 bg-ink text-surface hover:bg-brand transition-colors duration-300 shadow-lg shadow-ink/10 disabled:opacity-70"
           >
-            {sent ? (
+            {loading ? (
+              <div className="flex items-center justify-center font-bold tracking-wide">
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Se trimite...
+              </div>
+            ) : sent ? (
               t.contactPage.form.btnSent
             ) : (
               <div className="flex items-center justify-center font-bold tracking-wide">

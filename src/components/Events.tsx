@@ -77,14 +77,12 @@ export function Events() {
         </motion.div>
       </div>
 
-      {/* MOBILE */}
       <div className="flex flex-col gap-6 lg:hidden mt-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          // Am adăugat items-center și text-center pentru a centra textul pe mijloc
           className="flex flex-col items-center text-center w-full px-2"
         >
           <motion.h2
@@ -130,7 +128,6 @@ export function Events() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-          // Am centrat și paragraful descrierii pentru o simetrie perfectă pe mobil
           className="text-[15px] leading-relaxed font-normal text-ink-soft tracking-wide mt-2 text-center px-4 mx-auto"
         >
           {t.events.descriere}

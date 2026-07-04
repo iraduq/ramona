@@ -114,8 +114,6 @@ export function Hero() {
 
           <div className="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
             <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16 lg:items-center gap-y-6">
-              {/* LEFT: Text content */}
-
               <div className="w-full lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 order-1">
                 <h1
                   className="ha2 mt-1 sm:mt-3 font-light tracking-tight leading-[1.05] text-foreground"
@@ -156,8 +154,6 @@ export function Hero() {
                   {t.hero.descriere}
                 </p>
 
-                {/* Desktop buttons + stats */}
-
                 <div className="ha4 hidden lg:flex flex-col w-full mt-6">
                   <div className="flex flex-row gap-4">
                     <Button
@@ -186,8 +182,6 @@ export function Hero() {
                     className="w-full h-px bg-gradient-to-r from-foreground/10 to-transparent mt-8 mb-6"
                     aria-hidden="true"
                   />
-
-                  {/* Desktop stats */}
 
                   <dl className="grid grid-cols-3 w-full">
                     {[
@@ -262,8 +256,6 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* RIGHT: Image */}
-
               <div className="w-full lg:col-span-6 relative z-20 order-2">
                 <div className="relative mx-auto w-full max-w-[95vw] sm:max-w-[420px] lg:max-w-none xl:max-w-none lg:ml-auto">
                   <div
@@ -291,8 +283,6 @@ export function Hero() {
                       aria-hidden="true"
                     />
 
-                    {/* Mobile badge — over image */}
-
                     <div className="badge-in lg:hidden absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-20">
                       <div className="flex items-center gap-3 bg-card/95 backdrop-blur-xl border border-border/40 rounded-2xl p-3.5 shadow-lg shadow-foreground/15">
                         <div
@@ -317,8 +307,6 @@ export function Hero() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Desktop floating badge */}
 
                   <div className="badge-float hidden lg:block absolute -bottom-4 -left-16 z-20">
                     <div className="bg-card/95 backdrop-blur-xl border border-accent/10 rounded-2xl p-5 shadow-2xl shadow-accent/20 max-w-[240px] transition-all duration-300 hover:scale-105 group">
@@ -349,8 +337,6 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-
-              {/* Mobile: buttons + stats */}
 
               <div className="ha5 w-full lg:hidden flex flex-col items-center order-3 mt-0">
                 <div className="flex flex-col gap-2.5 w-full max-w-[95vw] sm:max-w-[420px]">
@@ -391,8 +377,6 @@ export function Hero() {
 
                   <div className="flex-1 h-px bg-gradient-to-l from-transparent via-foreground/10 to-transparent" />
                 </div>
-
-                {/* Mobile stats */}
 
                 <dl className="grid grid-cols-3 w-full max-w-[95vw] sm:max-w-[420px] divide-x divide-foreground/8">
                   {[

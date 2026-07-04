@@ -53,10 +53,8 @@ export function Process() {
   return (
     <section
       ref={sectionRef}
-      // Padding global ușor redus
       className="relative w-full bg-gradient-to-b from-bg via-bg-soft to-bg-warm/30 pt-10 pb-16 lg:pt-16 lg:pb-24 text-ink overflow-hidden"
     >
-      {/* Background abstract */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/3 w-[50%] h-[50%] bg-surface/70 blur-[120px]" />
         <motion.div
@@ -74,16 +72,13 @@ export function Process() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-        {/* HEADER ELEGANT */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          // AICI am facut modificarea cheie: mb-16 lg:mb-20 a devenit mb-8 lg:mb-10
-          className="max-w-3xl mb-8 lg:mb-10 flex flex-col items-start"
+          className="max-w-3xl mb-0 lg:mb-10 flex flex-col items-start"
         >
           <h2 className="text-display leading-[1.08] tracking-tight">
-            {/* Titlu special */}
             <span
               className="block text-[2.75rem] sm:text-6xl lg:text-[4.5rem] font-normal tracking-[-0.03em] text-transparent bg-clip-text bg-gradient-to-br from-ink via-ink/90 to-brand-soft pb-2"
               style={{ fontFamily: "var(--font-serif, Georgia, serif)" }}
@@ -104,22 +99,16 @@ export function Process() {
           </h2>
         </motion.div>
 
-        {/* CONNECTOR ROW — Desktop only */}
-        {/* Am eliminat si de aici mb-0 care nu facea nimic si am scazut putin vizualizarea daca era o problema */}
         <div className="hidden lg:grid grid-cols-4 gap-5 pointer-events-none select-none relative z-0">
           {steps.map((_, idx) => (
             <div key={idx} className="relative flex items-center h-6 w-full">
-              {/* Linie Stânga: Complet transparentă la primul element, vizibilă restul */}
               <div
                 className={`absolute left-0 right-[calc(100%-24px)] h-[1px] ${
                   idx === 0 ? "opacity-0" : "bg-ink/20"
                 }`}
               />
 
-              {/* Dot central */}
               <div className="absolute left-[24px] transform -translate-x-1/2 z-10 w-2.5 h-2.5 rounded-full bg-brand-soft ring-[3px] ring-bg shadow-sm" />
-
-              {/* Linie Dreapta: Complet transparentă la ultimul element, vizibilă restul */}
               <div
                 className={`absolute left-[24px] w-[calc(100%+20px)] h-[1px] ${
                   idx === steps.length - 1 ? "opacity-0" : "bg-ink/20"
@@ -129,37 +118,29 @@ export function Process() {
           ))}
         </div>
 
-        {/* STEPS GRID */}
         <motion.ol
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          // Am ajustat si mt-4 lg:mt-0 la mt-2 pe mobil si mt-2 pe desktop
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-5 relative mt-2 lg:mt-2"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-5 relative -mt-2 lg:mt-2"
         >
-          {/* Linia laterala — Mobile only */}
           <div className="absolute top-4 bottom-4 left-[1.2rem] w-[1px] bg-gradient-to-b from-ink/15 via-ink/10 to-transparent lg:hidden z-0" />
 
           {steps.map((s, idx) => (
             <motion.li
               key={idx}
               variants={stepVariants}
-              // Am redus foarte usor paddingul de sus la pas (p-4 -> pt-3, lg:p-6 -> lg:pt-4) ca sa stranga contentul mai sus langa linie
-              className="relative flex flex-col pt-3 px-4 pb-4 sm:p-5 lg:pt-4 lg:px-6 lg:pb-6 rounded-xl z-10 transition-all duration-300 lg:hover:bg-surface/40 lg:hover:shadow-[0_8px_30px_rgb(0,0,0,0.02)] lg:hover:border-ink/[0.03] border border-transparent group"
+              className="relative flex flex-col pt-1 px-4 pb-4 sm:p-5 lg:pt-4 lg:px-6 lg:pb-6 rounded-xl z-10 transition-all duration-300 lg:hover:bg-surface/40 lg:hover:shadow-[0_8px_30px_rgb(0,0,0,0.02)] lg:hover:border-ink/[0.03] border border-transparent group"
             >
-              {/* Dot — Mobile only */}
-              {/* Am ridicat putin bulina pe mobil ca sa corespunda cu noul padding de sus redus */}
               <div className="lg:hidden absolute top-[0.9rem] left-[0.9rem] flex items-center justify-center w-3 h-3 z-10 bg-bg">
                 <div className="w-2.5 h-2.5 rounded-full bg-brand-soft ring-[3px] ring-bg shadow-sm" />
               </div>
 
-              {/* Step index */}
               <div className="pl-6 lg:pl-0 font-mono text-[9px] font-bold tracking-[0.2em] text-ink-subtle/80 mb-3 lg:group-hover:text-brand-soft transition-colors uppercase">
                 Step 0{idx + 1}
               </div>
 
-              {/* Content */}
               <div className="pl-6 lg:pl-0 space-y-2">
                 <h3
                   className={[
