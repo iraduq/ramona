@@ -252,7 +252,7 @@ export function Servicii() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12 mt-14 md:mt-20 lg:mt-28">
-          <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
+          <div className="flex flex-col items-center justify-center text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

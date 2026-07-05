@@ -11,9 +11,9 @@ import { Toaster } from "../components/ui/sonner";
 import { useLanguage } from "../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_4dr2jvh";
+const EMAILJS_TEMPLATE_ID = "template_mhm79u4";
+const EMAILJS_PUBLIC_KEY = "pwzMV43GtFSGfICCU";
 
 export function Contact() {
   const { t } = useLanguage();
