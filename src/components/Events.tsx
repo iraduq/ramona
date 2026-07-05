@@ -59,14 +59,19 @@ export function Events() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-[3.2rem] font-light tracking-tight leading-[1.05] text-[#1a1816]"
+            className="font-light tracking-tight leading-[1.05] text-[#1a1816]"
             style={{ fontFamily: "'Georgia', serif" }}
           >
-            {t.events.titlu1} <br />
-            <span className="italic font-normal text-[#8c827a]">
+            <span className="text-[30px] sm:text-5xl lg:text-[3.2rem]">
+              {t.events.titlu1}
+            </span>
+            <br />
+            <span className="italic font-normal text-[#8c827a] text-[30px] sm:text-5xl lg:text-[3.2rem]">
               {t.events.titluItalic}
             </span>{" "}
-            {t.events.titlu2}
+            <span className="text-[30px] sm:text-5xl lg:text-[3.2rem]">
+              {t.events.titlu2}
+            </span>
           </motion.h2>
           <motion.p
             variants={itemVariants}

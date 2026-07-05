@@ -135,7 +135,7 @@ export function TrustBar() {
 
             <div className="w-10 h-px bg-brand-soft/40 sm:hidden" />
 
-            <h2 className="text-display text-[2rem] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.15] text-ink max-w-[280px] sm:max-w-none">
+            <h2 className="text-display text-[30px] sm:text-[2.4rem] md:text-[3rem] font-light tracking-tight leading-[1.15] text-ink max-w-[280px] sm:max-w-none">
               {t.trustBar.titlu1} <br className="hidden sm:block" />{" "}
               <span className="italic font-normal text-ink-subtle">
                 {t.trustBar.titluItalic}
